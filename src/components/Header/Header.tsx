@@ -1,44 +1,43 @@
 import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importa Bootstrap CSS
-import logo from '../../assets/logonofondo.png';
+import carrito from '../../assets/carrito.png';
 import './Header.css';
 
 const Header = () => {
 
     return (
         <>
-        <header className="mx-auto m-0  mt-2 border-2 rounded borde-marron-oscuro p-3">
-        <div className="container ">
-                <nav className="navbar navbar-expand-lg d-flex justify-around gap-5">
-                <a className="navbar-brand" href="#">
-                    <img src={logo} width={300} alt="Logo" />
-                </a>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav me-auto d-flex flex-row justify-content-center gap-3">
-                        <li className="nav-item">
-                            <NavLink className="nav-link texto-marron-oscuro" to="/home">Home</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link texto-marron-oscuro" to="/users">Users</NavLink>
-                        </li>
-                        <li className="nav-item custom-text">
-                            <NavLink className="nav-link texto-marron-oscuro" to="/register">Register</NavLink>
-                        </li>
-                    </ul>
+            <header className="mx-auto m-0 w-100 bg-white p-4">
+                <nav className="navbar navbar-expand-lg d-flex justify-content-between w-100 mx-auto gap-5">
+                    <a className="navbar-brand" href="#">
+                        <h1 className='fw-bold text-black'>SneakVault</h1>
+                    </a>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav me-auto d-flex flex-row justify-content-center fw-semibold gap-3">
+                            <li className="nav-item">
+                                <NavLink className="nav-link text-black" to="/home">HOME</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link text-black" to="/products">PRODUCTOS</NavLink>
+                            </li>
+                            <li className="nav-item custom-text">
+                                <NavLink className="nav-link text-black" to="/register">REGISTRO</NavLink>
+                            </li>
+                        </ul>
                     </div>
                     <form className="">
                         <input
-                            className="form-control borde-marron-oscuro"
+                            className="form-control"
                             type="search"
                             placeholder="Buscar"
                             aria-label="Search"
-                            />
+                        />
                     </form>
-                    <NavLink className="btn fw-semibold rounded-5 px-4 py-2 button-hover-marron-oscuro" to="/register">Register</NavLink>
-                            </nav>
-                            </div>
-                </header>
-            </>
+                    <NavLink className="btn fw-semibold rounded-5 px-4 py-2 bg-white" to="/register">Log in</NavLink>
+                    <NavLink className="btn fw-semibold rounded-5 px-4 py-2 bg-white" to="/"><img src={carrito} width={25} alt="Logo" /></NavLink>
+                </nav>
+            </header>
+        </>
     );
 };
 

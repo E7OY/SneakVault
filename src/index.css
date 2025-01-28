@@ -1,7 +1,7 @@
 body {
-   margin: 0 auto;
-    font-family: "Inter", serif;
-    width: 100%; 
+    margin: 0 auto;
+    font-family: "Big Shoulders Text", serif;
+    width: 80%; 
 }
 
 form {
@@ -38,10 +38,9 @@ form {
 }
 
 #root {
-  margin: 0 auto;
   min-height: 100vh;
 }
-
+ /*
 main {
   display: flex;
   flex-direction: column;
@@ -51,19 +50,11 @@ main {
   gap: 20px;
   padding: 20px;
   margin-bottom: 100px;
-}
+}*/
 
-main h2 {
-  font-size: 2rem;
-}
-
-header {
-  color: white;
-  width: 90%;
-}
-
-nav {
-  border: 1px solid white;
+main h1 {
+  font-size: 8rem;
+  width: 80%;
 }
 
 .no-items {
@@ -105,12 +96,79 @@ form {
 }
 
 footer {
-  width: 90%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
- 
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100px;
+  bottom: 0;
 }
 
+
+
+
+
+
+.swiper-hero {
+  width: 100%;
+}
+
+.swiper-hero .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+
+}
+
+.swiper-hero img {
+}
+
+@media (min-width: 1024px) {
+  .swiper-hero img {
+  }
+}
+
+.swiper-hero .swiper-button-prev,
+.swiper-hero .swiper-button-next {
+  --swiper-navigation-size: 20px;
+  background-color: white;
+  height: 70px;
+  width: 50px;
+  margin-top: -35px;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.swiper-hero .swiper-button-prev {
+  border-radius: 0 65px 65px 0;
+  left: -10px;
+}
+.swiper-hero .swiper-button-next {
+  border-radius: 65px 0 0 65px;
+  right: -10px;
+}
+
+.swiper-hero:hover .swiper-button-prev,
+.swiper-hero:hover .swiper-button-next {
+  opacity: 1;
+}
+
+.swiper-hero .swiper-pagination {
+  --swiper-pagination-color: white;
+  --swiper-pagination-bullet-size: 6px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.25;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 2px;
+}
+
+.swiper-hero .swiper-pagination-bullet {
+  box-shadow: inset 0 0 0 1px #fff;
+}
+
+.swiper-hero .swiper-pagination-bullet-active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
