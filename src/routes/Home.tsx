@@ -7,7 +7,19 @@ import yeezy from '../assets/yeezy.png';
 import campus from '../assets/campus.png';
 import jordanretro from '../assets/jordanretro.png';
 import logo from '../assets/logo.png';
+
+
 import supreme1 from '../assets/supreme1.jpg';
+import fftcent from '../assets/50cent.jpg';
+import jordan from '../assets/jordan.jpg';
+import nikeaircactus from '../assets/nikeaircactus.jpg';
+import nikejordan from '../assets/nikejordan.jpg';
+import stussy90s from '../assets/stussy90s.jpg';
+import stussy90s1 from '../assets/stussy90s1.jpg';
+
+
+
+
 import '../index.css';
 
 const Home = () => {
@@ -27,13 +39,16 @@ const Home = () => {
             },
         });
     }, []);
+    const images = [supreme1, fftcent, nikeaircactus, jordan, stussy90s1, nikejordan, stussy90s];
 
     return (
         <>
 
+
+
             <div className="row">
                 <div className="col-12">
-                    <h1 className='fw-bold text-start'>DESCUBRE ZAPATILLAS LIMITADAS SIN LIMITACIÓN</h1>
+                    <h1 className='fw-bold negro text-start'>DESCUBRE ZAPATILLAS LIMITADAS SIN LIMITACIÓN</h1>
                 </div>
             </div>
             <div className="swiper swiper-hero">
@@ -71,12 +86,39 @@ const Home = () => {
 
 
             <div className="row mt-5">
-                <div className="col-4">
-                    <img src={ supreme1 } width={300} alt="" />
+                <div className="col-12">
+                    <h1 className='fw-bold negro text-start'>PASIÓN POR EL STREETWEAR</h1>
+                </div>
+            </div>
+            <div className="container ">
+                <div className="collage-grid">
+                    {images.map((image, index) => (
+                        <div key={index} className="collage-item">
+                            <img src={image} className="collage-img" alt={`image-${index}`} />
+                        </div>
+                    ))}
                 </div>
             </div>
 
 
+            <div className="row bg-black mt-5 mb-3 py-5">
+                <p className='text-center w-50 mx-auto text-white'>
+                    Hypebeast culture is a subgenre of
+                    streetwear culture—a clothing style that
+                    emerged from Californian surf and skateboard
+                    lifestyle. Hypebeast generally refers to a
+                    person who is devoted to acquiring
+                    fashionable items, especially clothing and
+                    shoes. To satisfy your fashion need,
+                    HYPEBIZZ are here. The one and only place
+                    with dozens of high-end, street wear,
+                    fashionable sneaker brands come are here
+                    waiting for you to Cop “em down!
+
+                    From 70's to Travis, We got you all covered.
+                </p>
+            </div>
+            
 
 
 

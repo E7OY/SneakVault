@@ -1,3 +1,19 @@
+
+.negro {
+  color: #010101;
+}
+
+.button {
+  position: relative;
+  background-color: #000;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  width: 100px;
+  text-align: center;
+  border: 2px solid black;
+}
+
 body {
     margin: 0 auto;
     font-family: "Big Shoulders Text", serif;
@@ -54,7 +70,8 @@ main {
 
 main h1 {
   font-size: 8rem;
-  width: 80%;
+  line-height: 110px;
+  margin-bottom: 50px;
 }
 
 .no-items {
@@ -171,4 +188,35 @@ footer {
 
 .swiper-hero .swiper-pagination-bullet-active {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+
+.swiper-hero .swiper-pagination-bullet-active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+.swiper-hero .swiper-pagination-bullet-active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+
+
+
+.collage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.collage-item {
+  overflow: hidden;
+}
+
+.collage-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
