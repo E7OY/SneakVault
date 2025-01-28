@@ -1,0 +1,116 @@
+body {
+   margin: 0 auto;
+    font-family: "Inter", serif;
+    width: 100%; 
+}
+
+form {
+  width: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.form-field {
+  margin: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 400px;
+}
+
+.form-field label {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+#register {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
+  font-weight: bold;
+}
+
+#root {
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+main h2 {
+  font-size: 2rem;
+}
+
+header {
+  color: white;
+  width: 90%;
+}
+
+nav {
+  border: 1px solid white;
+}
+
+.no-items {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+form {
+  width: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.form-field {
+  margin: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 400px;
+}
+
+.form-field label {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+#register {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
+  font-weight: bold;
+}
+
+footer {
+  width: 90%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+ 
+  height: 100px;
+}
+
