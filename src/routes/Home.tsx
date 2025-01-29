@@ -55,9 +55,9 @@ const Home = () => {
 
 
 
-            <div className="row">
-                <div className="col-12">
-                    <h1 className='fw-bold negro text-start'>DESCUBRE ZAPATILLAS LIMITADAS SIN LIMITACIÓN</h1>
+            <div className="row p-0 m-0 mb-2">
+                <div className="col-12 m-0">
+                    <h1 className='fw-bold negro'>DESCUBRE ZAPATILLAS LIMITADAS SIN LIMITACIÓN</h1>
                 </div>
             </div>
             { /* SLIDER ZAPATILLAS */}
@@ -145,7 +145,7 @@ const Home = () => {
                     </div>
                     <div className="swiper-slide border border-1 border-dark text-start">
                         <img src={nikeshirt} alt="" />
-                        <h5 className='fw-bold'>Nike x Commer des Garcons</h5>
+                        <h5 className='fw-bold'>Nike x Commes des Garcons</h5>
                         <p className='text-decoration-underline'>Desde 150€</p>
                     </div>
                     <div className="swiper-slide border border-1 border-dark text-start">
@@ -221,7 +221,7 @@ const Home = () => {
 
             <div className="row mt-5">
                 <div className="col-12">
-                    <h1 className='fw-bold negro text-start'>PASIÓN POR EL STREETWEAR</h1>
+                    <h1 className='fw-bold negro text-start'>PASIÓN POR EL HYPEBEAST</h1>
                 </div>
             </div>
             <div className="container ">
@@ -237,19 +237,13 @@ const Home = () => {
 
             <div className="row bg-black mt-5 mb-3 py-5">
                 <p className='text-center w-50 mx-auto text-white'>
-                    Hypebeast culture is a subgenre of
-                    streetwear culture—a clothing style that
-                    emerged from Californian surf and skateboard
-                    lifestyle. Hypebeast generally refers to a
-                    person who is devoted to acquiring
-                    fashionable items, especially clothing and
-                    shoes. To satisfy your fashion need,
-                    HYPEBIZZ are here. The one and only place
-                    with dozens of high-end, street wear,
-                    fashionable sneaker brands come are here
-                    waiting for you to Cop “em down!
-
-                    From 70's to Travis, We got you all covered.
+                La cultura hypebeast es un subgénero de la cultura streetwear, un estilo de ropa 
+                que surgió del estilo de vida californiano del surf y el monopatín. Hypebeast 
+                generalmente se refiere a una persona que se dedica a la adquisición de artículos 
+                de moda, especialmente ropa y zapatos. Para satisfacer tu necesidad de moda, 
+                SneakVault está aquí. ¡El único lugar con docenas de marcas de zapatillas de alta 
+                gama, ropa de calle y de moda están aquí esperando a que Cop «em down! De los 70
+                 a Travis, tenemos todo cubierto.
                 </p>
             </div>
 

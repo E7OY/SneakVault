@@ -2,16 +2,29 @@
 .negro {
   color: #010101;
 }
+.text-black {
+  color: #010101 !important;
+}
+.bg-black {
+  background-color: #010101 !important;
+}
+
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Asegúrate de que el header esté por encima de otros elementos */
+}
 
 .button {
   position: relative;
-  background-color: #000;
+  background-color: #010101;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
   width: 100px;
   text-align: center;
-  border: 2px solid black;
+  border: 2px solid #010101;
 }
 
 body {
@@ -95,6 +108,18 @@ form {
 }
 
 
+
+.container .collage-item img {
+  opacity: 0.8;
+}
+
+.container .collage-item img:hover {
+  cursor: crosshair;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
 footer {
   background-color: #333;
   color: white;
@@ -163,7 +188,7 @@ footer {
 .swiper-hero .swiper-pagination {
   --swiper-pagination-color: white;
   --swiper-pagination-bullet-size: 6px;
-  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-color: #010101;
   --swiper-pagination-bullet-inactive-opacity: 0.25;
   --swiper-pagination-bullet-opacity: 1;
   --swiper-pagination-bullet-horizontal-gap: 2px;
@@ -206,4 +231,36 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+
+
+
+
+.moving-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  
+}
+
+.moving-text h6 {
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.moving-text h6.active {
+  display: block;
+}
+
+
+
+.marcas img:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
