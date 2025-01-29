@@ -21,6 +21,11 @@ import stussylogo from '../assets/stussylogo.png';
 import palacelogo from '../assets/palacelogo.png';
 import yeezylogo from '../assets/yeezylogo.png';
 
+import offwhiteshirt from '../assets/offwhiteshirt.png';
+import supremeshirt from '../assets/supremeshirt.png';
+import offwhiteshirtblack from '../assets/offwhiteshirtblack.png';
+import nikeshirt from '../assets/nikeshirt.png';
+import suprememm6 from '../assets/suprememm6.png';
 
 import '../index.css';
 
@@ -53,7 +58,7 @@ const Home = () => {
                     <h1 className='fw-bold negro text-start'>DESCUBRE ZAPATILLAS LIMITADAS SIN LIMITACIÓN</h1>
                 </div>
             </div>
-            { /* SLIDER PRODUCTOS */}
+            { /* SLIDER ZAPATILLAS */}
             <div className="row d-flex justify-content-between align-items-center">
                 <div className="col">
                     <h2 className='fw-bolder negro text-start display-6'>ZAPATILLAS DESTACADAS</h2>
@@ -95,12 +100,10 @@ const Home = () => {
             </div>
 
 
-
-
-            { /* SLIDER MARCAS */}
+            { /* SLIDER ROPA */}
             <div className="row d-flex justify-content-between align-items-center mt-5">
                 <div className="col">
-                    <h2 className='fw-bolder negro text-start display-6'>MARCAS EN TENDENCIA</h2>
+                    <h2 className='fw-bolder negro text-start display-6'>ROPA EN TENDENCIA</h2>
                 </div>
                 <div className="col text-end">
                     <button className='button fw-bolder'>VER MÁS</button>
@@ -109,19 +112,29 @@ const Home = () => {
             <div className="swiper swiper-hero">
                 <div className="swiper-wrapper">
                     <div className="swiper-slide border border-1 border-dark text-start">
-                        <img src={supremelogo} alt="supreme logo" />
+                        <img src={offwhiteshirt} alt="" />
+                        <h5 className='fw-bold'>Off-White camiseta shared logo</h5>
+                        <p className='text-decoration-underline'>Desde 300€</p>
                     </div>
                     <div className="swiper-slide border border-1 border-dark text-start">
-                        <img src={nikelogo} alt="logo nike" />
+                        <img src={supremeshirt} alt="" />
+                        <h5 className='fw-bold'>Supreme x Undercover face</h5>
+                        <p className='text-decoration-underline'>Desde 150€</p>
                     </div>
                     <div className="swiper-slide border border-1 border-dark text-start">
-                        <img src={stussylogo} alt="stussy logo" />
+                        <img src={nikeshirt} alt="" />
+                        <h5 className='fw-bold'>Nike x Commer des Garcons</h5>
+                        <p className='text-decoration-underline'>Desde 150€</p>
                     </div>
                     <div className="swiper-slide border border-1 border-dark text-start">
-                        <img src={palacelogo} alt="" />
+                        <img src={offwhiteshirtblack} alt="" />
+                        <h5 className='fw-bold'>Off-White camiseta con estampado</h5>
+                        <p className='text-decoration-underline'>Desde 250€</p>
                     </div>
                     <div className="swiper-slide border border-1 border-dark text-start">
-                        <img src={yeezylogo} alt="" />
+                        <img src={suprememm6} alt="" />
+                        <h5 className='fw-bold'>Camiseta Supreme x MM6</h5>
+                        <p className='text-decoration-underline'>Desde 550€</p>
                     </div>
                 </div>
                 <div className="swiper-button-prev text-black border border-1 border-black"></div>
@@ -129,6 +142,44 @@ const Home = () => {
             </div>
 
 
+
+
+            <div className="row d-flex justify-content-between align-items-center mt-5">
+                <div className="col">
+                    <h2 className='fw-bolder negro text-start display-6'>MARCAS EN TENDENCIA</h2>
+                </div>
+            </div>
+
+            <div className="container-fluid marcas d-flex flex-column m-0 mx-0">
+            <div className="row">
+                <div className="col-3">
+                    <img src={supremelogo} className='w-75' alt="" />
+                </div>
+                <div className="col-3">
+                    <img src={nikelogo} className='w-75' alt="" />
+                </div>
+                <div className="col-3">
+                    <img src={stussylogo} className='w-75' alt="" />
+                </div>
+                <div className="col-3">
+                    <img src={palacelogo} className='w-75' alt="" />
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-3">
+                    <img src={yeezylogo} className='w-75' alt="" />
+                </div>
+                <div className="col-3">
+                    <img src={supremelogo} className='w-75' alt="" />
+                </div>
+                <div className="col-3">
+                    <img src={yeezylogo} className='w-75' alt="" />
+                </div>
+                <div className="col-3">
+                    <img src={supremelogo} className='w-75' alt="" />
+                </div>
+            </div>
+            </div>
 
 
             <div className="row mt-5">

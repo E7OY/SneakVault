@@ -11,23 +11,27 @@ const Register = () => (
                     <p>Registrate y consigue un 10% de descuento</p>
                     <h1 className='position-absolute bottom-0 text-opacity-100'>SneakVault</h1>
                 </div>
-                <div className="col-12 col-md-6 border border-2 border-black p-5">
+                <div className="col-12 col-md-6 border border-2 border-black py-5">
                     <Form method='post'>
-                        <div className="container d-flex flex-column justify-content-center gap-4">
-                            <div className='form-field'>
-                                <label htmlFor='email' id='email'>Email</label>
+                        <div className="container d-flex flex-column justify-content-center gap-3">
+                            <div className='form-field w-50'>
+                                <label htmlFor='email' id='email'>Email *</label>
                                 <input type='text' name='email' id='email' required />
                             </div>
-                            <div className='form-field'>
-                                <label htmlFor='name' id='name'>Nombre</label>
+                            <div className='form-field w-50'>
+                                <label htmlFor='name' id='name'>Nombre *</label>
                                 <input type='text' name='name' id='name' required />
                             </div>
-                            <div className='form-field'>
-                                <label htmlFor='password' id='password'>Contraseña</label>
+                            <div className='form-field w-50'>
+                                <label htmlFor='telf' id='telf'>Telefono</label>
+                                <input type='tel' name='telf' id='telf' />
+                            </div>
+                            <div className='form-field w-50'>
+                                <label htmlFor='password' id='password'>Contraseña *</label>
                                 <input type='password' name='password' id='password' required />
                             </div>
-                            <div className='form-field'>
-                                <label htmlFor='password2' id='password2'>Repetir Contraseña</label>
+                            <div className='form-field w-50'>
+                                <label htmlFor='password2' id='password2'>Repetir Contraseña *</label>
                                 <input type='password' name='password2' id='password2' required />
                             </div>
                             <button type='submit' className='button'>Registrarse</button>
