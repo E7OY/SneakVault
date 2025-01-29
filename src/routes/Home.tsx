@@ -20,6 +20,8 @@ import nikelogo from '../assets/nikelogo.png';
 import stussylogo from '../assets/stussylogo.png';
 import palacelogo from '../assets/palacelogo.png';
 import yeezylogo from '../assets/yeezylogo.png';
+import offwhitelogo from '../assets/offwhitelogo.png';
+import mm6logo from '../assets/mm6logo.png';
 
 import offwhiteshirt from '../assets/offwhiteshirt.png';
 import supremeshirt from '../assets/supremeshirt.png';
@@ -150,33 +152,33 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="container-fluid marcas d-flex flex-column m-0 mx-0">
+            <div className="container-fluid marcas d-flex flex-column align-items-center m-0 mx-0">
             <div className="row">
-                <div className="col-3">
+            <div className="col-3 border border-1 border-black d-flex flex-column align-items-center ">
                     <img src={supremelogo} className='w-75' alt="" />
                 </div>
-                <div className="col-3">
-                    <img src={nikelogo} className='w-75' alt="" />
+                <div className="col-3 border border-1 border-black d-flex flex-column align-items-center ">
+                <img src={nikelogo} className='w-75' alt="" />
                 </div>
-                <div className="col-3">
-                    <img src={stussylogo} className='w-75' alt="" />
+                <div className="col-3 border border-1 border-black d-flex flex-column align-items-center ">
+                <img src={stussylogo} className='w-75' alt="" />
                 </div>
-                <div className="col-3">
-                    <img src={palacelogo} className='w-75' alt="" />
+                <div className="col-3 border border-1 border-black d-flex flex-column align-items-center ">
+                <img src={palacelogo} className='w-75' alt="" />
                 </div>
             </div>
             <div className="row">
-                <div className="col-3">
-                    <img src={yeezylogo} className='w-75' alt="" />
+            <div className="col-3 border border-1 border-black d-flex flex-column align-items-center ">
+            <img src={yeezylogo} className='w-75' alt="" />
                 </div>
-                <div className="col-3">
-                    <img src={supremelogo} className='w-75' alt="" />
+                <div className="col-3 border border-1 border-black d-flex flex-column align-items-center ">
+                <img src={offwhitelogo} className='w-75' alt="" />
                 </div>
-                <div className="col-3">
-                    <img src={yeezylogo} className='w-75' alt="" />
+                <div className="col-3 border border-1 border-black d-flex flex-column align-items-center ">
+                <img src={yeezylogo} className='w-75' alt="" />
                 </div>
-                <div className="col-3">
-                    <img src={supremelogo} className='w-75' alt="" />
+                <div className="col-3 border border-1 border-black d-flex flex-column align-items-center ">
+                <img src={mm6logo} className='w-75' alt="" />
                 </div>
             </div>
             </div>
