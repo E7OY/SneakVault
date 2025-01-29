@@ -41,7 +41,7 @@ const Home = () => {
                 pauseOnMouseEnter: true,
                 disableOnInteraction: false,
             },
-            slidesPerView: 4,
+            slidesPerView: 5,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -96,6 +96,26 @@ const Home = () => {
                         <h5 className='fw-bold'>Jordan Retro Canyon Purple</h5>
                         <p className='text-decoration-underline'>Desde 400€</p>
                     </div>
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={jordanretro} alt="" />
+                        <h5 className='fw-bold'>Jordan Retro Canyon Purple</h5>
+                        <p className='text-decoration-underline'>Desde 400€</p>
+                    </div>
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={jordanretro} alt="" />
+                        <h5 className='fw-bold'>Jordan Retro Canyon Purple</h5>
+                        <p className='text-decoration-underline'>Desde 400€</p>
+                    </div>
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={jordanretro} alt="" />
+                        <h5 className='fw-bold'>Jordan Retro Canyon Purple</h5>
+                        <p className='text-decoration-underline'>Desde 400€</p>
+                    </div>
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={jordanretro} alt="" />
+                        <h5 className='fw-bold'>Jordan Retro Canyon Purple</h5>
+                        <p className='text-decoration-underline'>Desde 400€</p>
+                    </div>
                 </div>
                 <div className="swiper-button-prev text-black border border-1 border-black"></div>
                 <div className="swiper-button-next text-black border border-1 border-black"></div>
@@ -130,8 +150,23 @@ const Home = () => {
                     </div>
                     <div className="swiper-slide border border-1 border-dark text-start">
                         <img src={offwhiteshirtblack} alt="" />
-                        <h5 className='fw-bold'>Off-White camiseta con estampado</h5>
+                        <h5 className='fw-bold'>Off-White black t-shirt</h5>
                         <p className='text-decoration-underline'>Desde 250€</p>
+                    </div>
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={suprememm6} alt="" />
+                        <h5 className='fw-bold'>Camiseta Supreme x MM6</h5>
+                        <p className='text-decoration-underline'>Desde 550€</p>
+                    </div>
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={suprememm6} alt="" />
+                        <h5 className='fw-bold'>Camiseta Supreme x MM6</h5>
+                        <p className='text-decoration-underline'>Desde 550€</p>
+                    </div>
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={suprememm6} alt="" />
+                        <h5 className='fw-bold'>Camiseta Supreme x MM6</h5>
+                        <p className='text-decoration-underline'>Desde 550€</p>
                     </div>
                     <div className="swiper-slide border border-1 border-dark text-start">
                         <img src={suprememm6} alt="" />
