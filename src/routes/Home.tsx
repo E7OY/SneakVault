@@ -6,8 +6,6 @@ import jordan1 from '../assets/jordan1.png';
 import yeezy from '../assets/yeezy.png';
 import campus from '../assets/campus.png';
 import jordanretro from '../assets/jordanretro.png';
-import logo from '../assets/logo.png';
-
 
 import supreme1 from '../assets/supreme1.jpg';
 import fftcent from '../assets/50cent.jpg';

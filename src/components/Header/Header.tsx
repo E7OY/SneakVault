@@ -7,10 +7,12 @@ const Header = () => {
 
     return (
         <>
-            <header className="w-100 bg-white py-4 ">
+            <header className="w-100 bg-white py-4">
                 <nav className="navbar navbar-expand-lg d-flex justify-content-between w-100 mx-auto gap-5">
                     <a className="navbar-brand" href="#">
-                        <h1 className='fw-bold negro'>SneakVault</h1>
+                        <h1 className='fw-bold negro'>
+                            <NavLink  className="nav-link negro" to="/home">SneakVault</NavLink>
+                            </h1>
                     </a>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav me-auto d-flex flex-row justify-content-center fw-semibold gap-3">
@@ -27,7 +29,7 @@ const Header = () => {
                     </div>
                     <form className="">
                         <input
-                            className="form-control rounded-0 border-2 py-2 border-black"
+                            className="form-control rounded-0 border-2 py-2 w-100 border-black"
                             type="search"
                             placeholder="Buscar"
                             aria-label="Search"

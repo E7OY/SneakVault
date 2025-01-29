@@ -20,39 +20,6 @@ body {
     width: 80%; 
 }
 
-form {
-  width: 500px;
-  margin: 20px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
-
-.form-field {
-  margin: 10px 0px;
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  width: 400px;
-}
-
-.form-field label {
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-#register {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 200px;
-  font-weight: bold;
-}
-
 #root {
   min-height: 100vh;
 }
@@ -79,6 +46,9 @@ main h1 {
   color: #666;
 }
 
+
+
+/*
 form {
   width: 500px;
   margin: 20px auto;
@@ -88,13 +58,7 @@ form {
   align-items: center;
 }
 
-.form-field {
-  margin: 10px 0px;
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  width: 400px;
-}
+
 
 .form-field label {
   font-size: 1.2rem;
@@ -111,6 +75,25 @@ form {
   width: 200px;
   font-weight: bold;
 }
+*/
+
+.register h1 {
+  opacity: 0.1;
+  transform: ;
+}
+.register h2 {
+  font-size: 5rem;
+} 
+.register p {
+  font-size: 1.5rem;
+}
+
+.form-field {
+  display: flex;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+
 
 footer {
   background-color: #333;
