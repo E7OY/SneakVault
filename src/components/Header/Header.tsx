@@ -31,11 +31,11 @@ const Header = () => {
                         <input
                             className="form-control rounded-0 border-2 py-2 w-100 border-black"
                             type="search"
-                            placeholder="Buscar"
+                            placeholder="Buscar..."
                             aria-label="Search"
                         />
                     </form>
-                    <NavLink className="fw-semibold button" to="/register">Log in</NavLink>
+                    <NavLink className="fw-bolder button" to="/register">LOG IN</NavLink>
                     <NavLink className="btn fw-semibold rounded-5 px-4 py-2 bg-white" to="/"><img src={carrito} width={25} alt="Logo" /></NavLink>
                 </nav>
             </header>

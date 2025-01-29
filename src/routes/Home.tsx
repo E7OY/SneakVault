@@ -15,7 +15,11 @@ import nikejordan from '../assets/nikejordan.jpg';
 import stussy90s from '../assets/stussy90s.jpg';
 import stussy90s1 from '../assets/stussy90s1.jpg';
 
-
+import supremelogo from '../assets/supremelogo.png';
+import nikelogo from '../assets/nikelogo.png';
+import stussylogo from '../assets/stussylogo.png';
+import palacelogo from '../assets/palacelogo.png';
+import yeezylogo from '../assets/yeezylogo.png';
 
 
 import '../index.css';
@@ -49,38 +53,82 @@ const Home = () => {
                     <h1 className='fw-bold negro text-start'>DESCUBRE ZAPATILLAS LIMITADAS SIN LIMITACIÓN</h1>
                 </div>
             </div>
+            { /* SLIDER PRODUCTOS */}
+            <div className="row d-flex justify-content-between align-items-center">
+                <div className="col">
+                    <h2 className='fw-bolder negro text-start display-6'>ZAPATILLAS DESTACADAS</h2>
+                </div>
+                <div className="col text-end">
+                    <button className='button fw-bolder'>VER MÁS</button>
+                </div>
+            </div>
+            <div className="swiper swiper-hero mb-5">
+                <div className="swiper-wrapper">
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={offwhite} alt="" />
+                        <h5 className='fw-bold'>Nike Air Force 1 x Louis Vuitton</h5>
+                        <p className='text-decoration-underline'>Desde 6.900€</p>
+                    </div>
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={jordan1} alt="" />
+                        <h5 className='fw-bold'>Air Jordan 1 x Cactus Jack</h5>
+                        <p className='text-decoration-underline'>Desde 2.500€</p>
+                    </div>
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={yeezy} alt="" />
+                        <h5 className='fw-bold'>Yeezy Foam</h5>
+                        <p className='text-decoration-underline'>Desde 200€</p>
+                    </div>
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={campus} alt="" />
+                        <h5 className='fw-bold'>Adidas Campus x Bad Bunny</h5>
+                        <p className='text-decoration-underline'>Desde 240€</p>
+                    </div>
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={jordanretro} alt="" />
+                        <h5 className='fw-bold'>Jordan Retro Canyon Purple</h5>
+                        <p className='text-decoration-underline'>Desde 400€</p>
+                    </div>
+                </div>
+                <div className="swiper-button-prev text-black border border-1 border-black"></div>
+                <div className="swiper-button-next text-black border border-1 border-black"></div>
+            </div>
+
+
+
+
+            { /* SLIDER MARCAS */}
+            <div className="row d-flex justify-content-between align-items-center mt-5">
+                <div className="col">
+                    <h2 className='fw-bolder negro text-start display-6'>MARCAS EN TENDENCIA</h2>
+                </div>
+                <div className="col text-end">
+                    <button className='button fw-bolder'>VER MÁS</button>
+                </div>
+            </div>
             <div className="swiper swiper-hero">
                 <div className="swiper-wrapper">
-
-                <div className="swiper-slide border border-1 border-dark text-start">
-                    <img src={offwhite} alt="" />
-                    <h5 className='fw-bold'>Nike Air Force 1 x Louis Vuitton</h5>
-                    <p className='text-decoration-underline'>Desde 6.900€</p>
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={supremelogo} alt="supreme logo" />
+                    </div>
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={nikelogo} alt="logo nike" />
+                    </div>
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={stussylogo} alt="stussy logo" />
+                    </div>
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={palacelogo} alt="" />
+                    </div>
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={yeezylogo} alt="" />
+                    </div>
                 </div>
-                <div className="swiper-slide border border-1 border-dark text-start">
-                    <img src={jordan1} alt="" />
-                    <h5 className='fw-bold'>Air Jordan 1 x Cactus Jack</h5>
-                    <p className='text-decoration-underline'>Desde 2.500€</p>
-                </div>
-                <div className="swiper-slide border border-1 border-dark text-start">
-                    <img src={yeezy} alt="" />
-                    <h5 className='fw-bold'>Yeezy Foam</h5>
-                    <p className='text-decoration-underline'>Desde 200€</p>
-                </div>
-                <div className="swiper-slide border border-1 border-dark text-start">
-                    <img src={campus} alt="" />
-                    <h5 className='fw-bold'>Adidas Campus x Bad Bunny</h5>
-                    <p className='text-decoration-underline'>Desde 240€</p>
-                </div>
-                <div className="swiper-slide border border-1 border-dark text-start">
-                    <img src={jordanretro} alt="" />
-                    <h5 className='fw-bold'>Jordan Retro Canyon Purple</h5>
-                    <p className='text-decoration-underline'>Desde 400€</p>
-                </div>
-                </div>
-                <div className="swiper-button-prev"></div>
-                <div className="swiper-button-next"></div>
+                <div className="swiper-button-prev text-black border border-1 border-black"></div>
+                <div className="swiper-button-next text-black border border-1 border-black"></div>
             </div>
+
+
 
 
             <div className="row mt-5">
@@ -116,7 +164,7 @@ const Home = () => {
                     From 70's to Travis, We got you all covered.
                 </p>
             </div>
-            
+
 
 
 
