@@ -66,7 +66,7 @@ const Home = () => {
 
 
 
-            <div className="row  mb-2">
+            <div className="row  mb-5">
                 <div className="col-12 ">
               {/*  <h1 className='fw-bold bg-black text-white'>DESCUBRE ZAPATILLAS LIMITADAS SIN LIMITACIÓN</h1>  */}
                     <img src={ bannernike } className='img-fluid' alt="" />
