@@ -37,6 +37,9 @@ import palaceshirt from '../assets/palaceshirt.png';
 import palacelongsleeve from '../assets/palacelongsleeve.png';
 
 
+import bannernike from '../assets/bannernike.png';
+
+
 import '../index.css';
 
 const Home = () => {
@@ -63,9 +66,10 @@ const Home = () => {
 
 
 
-            <div className="row p-0 m-0 mb-2">
-                <div className="col-12 m-0">
-                    <h1 className='fw-bold negro'>DESCUBRE ZAPATILLAS LIMITADAS SIN LIMITACIÓN</h1>
+            <div className="row  mb-2">
+                <div className="col-12 ">
+              {/*  <h1 className='fw-bold bg-black text-white'>DESCUBRE ZAPATILLAS LIMITADAS SIN LIMITACIÓN</h1>  */}
+                    <img src={ bannernike } className='img-fluid' alt="" />
                 </div>
             </div>
             { /* SLIDER ZAPATILLAS */}
