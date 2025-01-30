@@ -6,6 +6,10 @@ import jordan1 from '../assets/jordan1.png';
 import yeezy from '../assets/yeezy.png';
 import campus from '../assets/campus.png';
 import jordanretro from '../assets/jordanretro.png';
+import offwhitenike from '../assets/offwhitenike.png';
+import jordanfrozen from '../assets/jordanfrozen.png';
+import yeezyblack from '../assets/yeezyblack.png';
+import nikexstussy from '../assets/nikexstussy.png';
 
 import supreme1 from '../assets/supreme1.jpg';
 import fftcent from '../assets/50cent.jpg';
@@ -28,6 +32,10 @@ import supremeshirt from '../assets/supremeshirt.png';
 import offwhiteshirtblack from '../assets/offwhiteshirtblack.png';
 import nikeshirt from '../assets/nikeshirt.png';
 import suprememm6 from '../assets/suprememm6.png';
+import jordanshirt from '../assets/jordanshirt.png';
+import palaceshirt from '../assets/palaceshirt.png';
+import palacelongsleeve from '../assets/palacelongsleeve.png';
+
 
 import '../index.css';
 
@@ -97,24 +105,24 @@ const Home = () => {
                         <p className='text-decoration-underline'>Desde 400€</p>
                     </div>
                     <div className="swiper-slide border border-1 border-dark text-start">
-                        <img src={jordanretro} alt="" />
-                        <h5 className='fw-bold'>Jordan Retro Canyon Purple</h5>
+                        <img src={offwhitenike} alt="" />
+                        <h5 className='fw-bold'>Air Force 1 Mid x Off-White</h5>
+                        <p className='text-decoration-underline'>Desde 179,90€</p>
+                    </div>
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={jordanfrozen} alt="" />
+                        <h5 className='fw-bold'>Jordan Frozen Moments</h5>
+                        <p className='text-decoration-underline'>Desde 550€</p>
+                    </div>
+                    <div className="swiper-slide border border-1 border-dark text-start">
+                        <img src={yeezyblack} alt="" />
+                        <h5 className='fw-bold'>Yeezy Boost 700 V3</h5>
                         <p className='text-decoration-underline'>Desde 400€</p>
                     </div>
                     <div className="swiper-slide border border-1 border-dark text-start">
-                        <img src={jordanretro} alt="" />
-                        <h5 className='fw-bold'>Jordan Retro Canyon Purple</h5>
-                        <p className='text-decoration-underline'>Desde 400€</p>
-                    </div>
-                    <div className="swiper-slide border border-1 border-dark text-start">
-                        <img src={jordanretro} alt="" />
-                        <h5 className='fw-bold'>Jordan Retro Canyon Purple</h5>
-                        <p className='text-decoration-underline'>Desde 400€</p>
-                    </div>
-                    <div className="swiper-slide border border-1 border-dark text-start">
-                        <img src={jordanretro} alt="" />
-                        <h5 className='fw-bold'>Jordan Retro Canyon Purple</h5>
-                        <p className='text-decoration-underline'>Desde 400€</p>
+                        <img src={nikexstussy} alt="" />
+                        <h5 className='fw-bold'>Nike Air Zoom x Stussy</h5>
+                        <p className='text-decoration-underline'>Desde 1.800€</p>
                     </div>
                 </div>
                 <div className="swiper-button-prev text-black border border-1 border-black"></div>
@@ -154,9 +162,9 @@ const Home = () => {
                         <p className='text-decoration-underline'>Desde 250€</p>
                     </div>
                     <div className="swiper-slide border border-1 border-dark text-start">
-                        <img src={suprememm6} alt="" />
-                        <h5 className='fw-bold'>Camiseta Supreme x MM6</h5>
-                        <p className='text-decoration-underline'>Desde 550€</p>
+                        <img src={jordanshirt} alt="" />
+                        <h5 className='fw-bold'>Camiseta Off-White x Jordan</h5>
+                        <p className='text-decoration-underline'>Desde 105€</p>
                     </div>
                     <div className="swiper-slide border border-1 border-dark text-start">
                         <img src={suprememm6} alt="" />
@@ -164,14 +172,14 @@ const Home = () => {
                         <p className='text-decoration-underline'>Desde 550€</p>
                     </div>
                     <div className="swiper-slide border border-1 border-dark text-start">
-                        <img src={suprememm6} alt="" />
-                        <h5 className='fw-bold'>Camiseta Supreme x MM6</h5>
-                        <p className='text-decoration-underline'>Desde 550€</p>
+                        <img src={palaceshirt} alt="" />
+                        <h5 className='fw-bold'>Palace x Oakley T-Shirt</h5>
+                        <p className='text-decoration-underline'>Desde 130</p>
                     </div>
                     <div className="swiper-slide border border-1 border-dark text-start">
-                        <img src={suprememm6} alt="" />
-                        <h5 className='fw-bold'>Camiseta Supreme x MM6</h5>
-                        <p className='text-decoration-underline'>Desde 550€</p>
+                        <img src={palacelongsleeve} alt="" />
+                        <h5 className='fw-bold'>Palace x Carhartt WIP</h5>
+                        <p className='text-decoration-underline'>Desde 150€</p>
                     </div>
                 </div>
                 <div className="swiper-button-prev text-black border border-1 border-black"></div>

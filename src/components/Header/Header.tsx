@@ -33,7 +33,7 @@ const Header = () => {
                     <h6>Últimas Rebajas de invierno hasta -60%</h6>
                     <h6>Off-White -45% en productos seleccionados</h6>
                     <h6>Envíos Gratis a partir de 50€</h6>
-                </span>
+                    </span>
             </div>
             <header className="w-100 bg-white py-4 sticky-header">
                 <nav className="navbar navbar-expand-lg d-flex justify-content-between w-100 mx-auto gap-5">
