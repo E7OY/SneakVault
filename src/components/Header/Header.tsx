@@ -4,6 +4,7 @@ import carrito from '../../assets/carrito.png';
 import './Header.css';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { useEffect } from 'react';
+import '../../index.css';
 
 const Header = () => {
     useEffect(() => {
@@ -33,9 +34,9 @@ const Header = () => {
                     <h6>Últimas Rebajas de invierno hasta -60%</h6>
                     <h6>Off-White -45% en productos seleccionados</h6>
                     <h6>Envíos Gratis a partir de 50€</h6>
-                    </span>
+                </span>
             </div>
-            <header className="w-100 bg-white py-4 sticky-header">
+            <header className="w-100 bg-white p-4 sticky-header">
                 <nav className="navbar navbar-expand-lg d-flex justify-content-between w-100 mx-auto gap-5">
                     <a className="navbar-brand" href="#">
                         <h1 className='fw-bold negro'>
@@ -43,7 +44,7 @@ const Header = () => {
                         </h1>
                     </a>
                     <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav me-auto d-flex flex-row justify-content-center fw-semibold gap-3">
+                        <ul className="navbar-nav me-auto d-flex flex-row justify-content-center fw-bolder gap-3">
                             <li className="nav-item">
                                 <NavLink className="nav-link negro fw-bold" to="/home">HOME</NavLink>
                             </li>
@@ -53,12 +54,14 @@ const Header = () => {
                                 <Nav>
                                     <NavDropdown
                                         id="nav-dropdown"
-                                        title="PRODUCTOS"
+                                        title="ZAPATILLAS"
                                         menuVariant="light"
                                         className='text-black'
                                     >
-                                        <NavDropdown.Item href="/home">Zapatillas</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.2">Ropa</NavDropdown.Item>
+                                        <NavDropdown.Item href="/home">Nike</NavDropdown.Item>
+                                        <NavDropdown.Item href="#action/3.2">Jordan</NavDropdown.Item>
+                                        <NavDropdown.Item href="#action/3.2">Yeezy</NavDropdown.Item>
+
                                         {/*     <NavDropdown.Divider />
            <NavDropdown.Item href="#action/3.4">
                 Separated link
@@ -68,14 +71,33 @@ const Header = () => {
                             </Navbar.Collapse>
 
 
-                            <li className="nav-item custom-text">
-                                <NavLink className="nav-link negro fw-bold" to="/register">REGISTRO</NavLink>
-                            </li>
+                            <Navbar.Toggle aria-controls="navbar-dark-example" className='menu-desplegable' />
+                            <Navbar.Collapse id="navbar-dark-example">
+                                <Nav>
+                                    <NavDropdown
+                                        id="nav-dropdown"
+                                        title="ROPA"
+                                        menuVariant="light"
+                                        className='text-black'
+                                    >
+                                        <NavDropdown.Item href="/home">Nike</NavDropdown.Item>
+                                        <NavDropdown.Item href="#action/3.2">Supreme</NavDropdown.Item>
+                                        <NavDropdown.Item href="#action/3.2">Palace</NavDropdown.Item>
+                                        <NavDropdown.Item href="#action/3.2">Stussy</NavDropdown.Item>
+                                        <NavDropdown.Item href="#action/3.2">Off-White</NavDropdown.Item>
+                                        {/*     <NavDropdown.Divider />
+           <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item> */}
+                                    </NavDropdown>
+                                </Nav>
+                            </Navbar.Collapse>
+
                         </ul>
                     </div>
                     <form className="w-50">
                         <input
-                            className="form-control rounded-0 border-2 py-2 w-100 border-black"
+                            className="form-control rounded-0 border-2 py-2 w-50 border-black"
                             type="search"
                             placeholder="Buscar..."
                             aria-label="Search"
