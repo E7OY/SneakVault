@@ -18,6 +18,10 @@ import nikeaircactus from "../assets/nikeaircactus.jpg";
 import nikejordan from "../assets/nikejordan.jpg";
 import stussy90s from "../assets/stussy90s.jpg";
 import stussy90s1 from "../assets/stussy90s1.jpg";
+import travis1 from "../assets/travis1.png";
+import travis2 from "../assets/travis2.png";
+import travis3 from "../assets/travis3.png";
+
 
 import supremelogo from "../assets/supremelogo.png";
 import nikelogo from "../assets/nikelogo.png";
@@ -37,10 +41,11 @@ import palaceshirt from "../assets/palaceshirt.png";
 import palacelongsleeve from "../assets/palacelongsleeve.png";
 
 import bannercactusjack from "../assets/bannercactusjack.png";
-
+import bannerjaxx from "../assets/bannerjaxx.png";
 import bannernike from "../assets/bannernike.png";
 
 import "../index.css";
+import { tr } from "framer-motion/client";
 
 const Home = () => {
     useEffect(() => {
@@ -85,26 +90,23 @@ const Home = () => {
         stussy90s1,
         nikejordan,
         stussy90s,
-        supreme1,
-        fftcent,
-        nikeaircactus,
+        travis1,
+        travis2,
+        travis3
     ];
 
     return (
         <>
             <div className="swiperBanners swiper-banner mb-5">
                 <div className="swiper-wrapper">
-                    <div className="swiper-slide border border-1 border-dark text-start">
+                    <div className="swiper-slide text-start">
                         <img src={bannernike} alt="" />
                     </div>
                     <div className="swiper-slide ">
                         <img src={bannercactusjack} alt="" />
                     </div>
-                    <div className="swiper-slide border border-1 border-dark text-start">
-                        <img src={bannernike} alt="" />
-                    </div>
-                    <div className="swiper-slide ">
-                        <img src={bannercactusjack} alt="" />
+                    <div className="swiper-slide bordertext-start">
+                        <img src={bannerjaxx} alt="" />
                     </div>
                 </div>
                 <div className="swiper-button-prev text-black border border-1 border-black"></div>
