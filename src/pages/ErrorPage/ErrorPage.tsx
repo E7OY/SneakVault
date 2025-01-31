@@ -2,11 +2,12 @@ import { NavLink } from 'react-router-dom';
 import './ErrorPage.css';
 
 const ErrorPage = () => (
+    <body>
 <div id='error'>
-    <h1>ERROR</h1>
-    <p>There was an unexpected error. Please try again later.</p>
-    <NavLink to='/'>Go back to the main page</NavLink>
+    <p>404 <span>|</span> This page could not be found.</p>
+    <NavLink to='/'>Go back to home</NavLink>
 </div>
+</body>
 );
 
 export default ErrorPage;
