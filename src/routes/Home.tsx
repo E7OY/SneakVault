@@ -43,6 +43,7 @@ import palacelongsleeve from "../assets/palacelongsleeve.png";
 import bannercactusjack from "../assets/bannercactusjack.png";
 import bannerjaxx from "../assets/bannerjaxx.png";
 import bannernike from "../assets/bannernike.png";
+import bannercactusjackvelvet from "../assets/bannercactusjackvelvet.png";
 
 import "../index.css";
 import { tr } from "framer-motion/client";
@@ -107,6 +108,9 @@ const Home = () => {
                     </div>
                     <div className="swiper-slide bordertext-start">
                         <img src={bannerjaxx} alt="" />
+                    </div>
+                    <div className="swiper-slide bordertext-start">
+                        <img src={bannercactusjackvelvet} alt="" />
                     </div>
                 </div>
                 <div className="swiper-button-prev text-black border border-1 border-black"></div>
