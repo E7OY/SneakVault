@@ -2,6 +2,16 @@ import React from 'react';
 import { Form } from 'react-router-dom';
 import '../index.css'; // Importa el archivo CSS
 
+import logogoogle from '../assets/logogoogle.png';
+
+import { signInWithGooglePopup } from "../utils/firebase.utils.tsx";
+
+//funcion para loguear con google
+const logGoogleUser = async () => {
+    const response = await signInWithGooglePopup();
+    console.log(response);
+};
+
 const Register = () => (
     <>
         <div className="register container mx-auto mt-5 mb-5">
@@ -34,7 +44,13 @@ const Register = () => (
                                 <label htmlFor='password2' id='password2'>Repetir Contraseña *</label>
                                 <input type='password' name='password2' id='password2' required />
                             </div>
-                            <button type='submit' className='button'>Registrarse</button>
+                            <div className='row d-flex gap-2 container'>
+                                    <button type='submit' className='button'>Registrarse</button>
+                                    <button className='button-google' onClick={logGoogleUser}>
+                                    <img src={logogoogle } className='mx-2' width={20} alt="" />
+                                        Sign In With Google
+                                    </button>
+                            </div>
                         </div>
                     </Form>
                 </div>
@@ -42,5 +58,6 @@ const Register = () => (
         </div>
     </>
 );
+
 
 export default Register;

@@ -6,6 +6,9 @@ import RootLayout from './routes/Root';
 import Home from './routes/Home';
 import Register from './routes/Register';
 
+import auth from '@react-native-firebase/auth';
+
+
 const router = createBrowserRouter([
     {
         path: '/',
@@ -36,8 +39,15 @@ const router = createBrowserRouter([
 ]);
 
 
-const App = () => <RouterProvider router={router} />;
+const App = () => {
 
+    return(
+        <>
+            <RouterProvider router={router} />;
+        </>
+    );
+
+};
 
 
 export default App;
