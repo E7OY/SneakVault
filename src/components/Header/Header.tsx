@@ -5,8 +5,11 @@ import './Header.css';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { useEffect } from 'react';
 import '../../index.css';
+import './Header.css';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ user }) => {
     useEffect(() => {
         const texts = document.querySelectorAll('.moving-text h6');
         let index = 0;
@@ -103,7 +106,11 @@ const Header = () => {
                             aria-label="Search"
                         />
                     </form>
-                    <NavLink className="fw-bolder button" to="/register">LOG IN</NavLink>
+                    {user ? (
+            <li>{user.displayName || user.email}</li>
+          ) : (
+            <li><Link to="/register">Log In</Link></li>
+          )}
                     <NavLink className="btn rounded-0 fw-semibold px-4 py-2 bg-white" to="/"><img src={carrito} width={25} alt="Logo" /></NavLink>
                 </nav>
             </header>

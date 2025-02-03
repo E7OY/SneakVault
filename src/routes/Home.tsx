@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import offwhite from "../assets/off-white.png";
 import jordan1 from "../assets/jordan1.png";
 import yeezy from "../assets/yeezy.png";
@@ -45,7 +47,7 @@ import bannerjaxx from "../assets/bannerjaxx.png";
 import bannernike from "../assets/bannernike.png";
 import bannercactusjackvelvet from "../assets/bannercactusjackvelvet.png";
 
-import "../index.css";
+import '../index.css';
 import { tr } from "framer-motion/client";
 
 const Home = () => {

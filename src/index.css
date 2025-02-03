@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
 
 .negro {
   color: #010101;
@@ -12,7 +14,6 @@
 .menu-desplegable {
   color: black !important;
 }
-
 
 .sticky-header {
   position: sticky;
@@ -30,6 +31,18 @@
   text-align: center;
   border: 2px solid #010101;
 }
+
+.button-google {
+  position: relative;
+  background-color: #010101;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  width: 200px;
+  text-align: center;
+  border: 2px solid #010101;
+}
+
 
 body {
     margin: 0;
