@@ -13,7 +13,7 @@ const Footer = () => {
                     <p className="text-center text-black custom-text">C/Liceo La Paz</p>
                 </div>
             </div>
-            <div className="row bg-black text-white w-100 p-2 m-0 p-0">
+            <div className="row bg-black text-white w-100 p-2 ">
                     <p className="text-center custom-text">© 2025 SneakVault. Todos los derechos reservados.</p>
             </div>
         </footer>

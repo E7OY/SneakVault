@@ -158,20 +158,6 @@ form {
 }
 
 
-footer {
-  background-color: #333;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  bottom: 0;
-}
-
-
-
-
-
 
 .swiper-hero {
   width: 100%;

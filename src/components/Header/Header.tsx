@@ -3,26 +3,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import carrito from '../../assets/carrito.png';
 import './Header.css';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import '../../index.css';
 import './Header.css';
 import React from 'react';
 import UserContext from '../../context/userContext';
+import { getAuth, signOut } from 'firebase/auth';
 
 const Header = () => {
     const userContext = useContext(UserContext);
     const user = userContext ? userContext.user : null;
-
-    function cutMail(email: string | string[]): string | string[] {
-        if (typeof email === 'string') {
-            for (let i = 0; i < email.length; i++) {
-                if (email[i] === '@') {
-                    return email.slice(0, i);
-                }
+ 
+    const setUser = userContext ? userContext.setUser : () => {};
+    const errorMessage = document.getElementsByClassName('error');
+        const handleSignOut = async () => {
+            try {
+                await signOut(getAuth());
+                setUser(null);
+            } catch (error) {
+                Array.from(errorMessage).forEach((element) => {
+                    element.textContent = 'Error al cerrar sesion: ' + error;
+                });
             }
-        }
-        return email;
-    }
+        };
+
 
     useEffect(() => {
         const texts = document.querySelectorAll('.moving-text h6');
@@ -122,9 +126,7 @@ const Header = () => {
 
                     {user ? (
                         <>
-                        <NavLink to="/register" className='nav-link fw-bold button'>
-                        <span>{user.email ? cutMail(user.email) : ''}</span>
-                            </NavLink>
+                        <button className='button' onClick={handleSignOut}>Cerrar Sesión</button>
                         <NavLink className="btn rounded-0 fw-semibold px-4 py-2 bg-white" to="/">
                             <img src={carrito} width={25} alt="Logo" />
                         </NavLink>

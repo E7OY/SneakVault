@@ -1,10 +1,11 @@
 import React, { useState, useContext } from 'react';
-import { Form } from 'react-router-dom';
+import { Form, Navigate, Route } from 'react-router-dom';
 import UserContext from '../context/userContext';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { signInWithGooglePopup } from '../utils/firebase.utils';
 import logogoogle from '../assets/logogoogle.png';
 import logoapple from '../assets/logoapple.png';
+import Home from './Home';
 
 const Register = () => {
     const [isRegistering, setIsRegistering] = useState(true);
@@ -86,10 +87,7 @@ const Register = () => {
                 </div>
                 <div className="col-12 col-md-6 border border-2 border-black py-5 d-flex flex-column justify-content-center">
                     {user ? (
-                        <div className="container d-flex flex-column justify-content-center gap-3">
-                            <h3>Bienvenido, {user.displayName || (user.email ? cutMail(user.email) : '') }</h3>
-                            <button className='button' onClick={handleSignOut}>Cerrar Sesión</button>
-                        </div>
+                        <Navigate to="/home"/>
                     ) : (
                         <Form method='post' onSubmit={isRegistering ? handleRegister : handleSignIn}>
                             <div className="container d-flex flex-column justify-content-center gap-4">

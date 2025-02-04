@@ -48,7 +48,8 @@ import bannernike from "../assets/bannernike.png";
 import bannercactusjackvelvet from "../assets/bannercactusjackvelvet.png";
 
 import '../index.css';
-import { tr } from "framer-motion/client";
+
+
 
 const Home = () => {
     useEffect(() => {
