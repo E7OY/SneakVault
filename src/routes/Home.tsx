@@ -42,10 +42,23 @@ import jordanshirt from "../assets/jordanshirt.png";
 import palaceshirt from "../assets/palaceshirt.png";
 import palacelongsleeve from "../assets/palacelongsleeve.png";
 
+/*
 import bannercactusjack from "../assets/bannercactusjack.png";
 import bannerjaxx from "../assets/bannerjaxx.png";
 import bannernike from "../assets/bannernike.png";
 import bannercactusjackvelvet from "../assets/bannercactusjackvelvet.png";
+*/
+import shoksnike from "../assets/shoksnike.jpg";
+import newbalancebanner from "../assets/newbalancebanner.jpg";
+import adidasbanner from "../assets/adidasbanner.jpg";
+import airjordanbanner from "../assets/airjordanbanner.jpg";
+
+
+import original from "../assets/original.png";
+import envio from "../assets/envios.png";
+import devolucion from "../assets/devolucion.png";
+
+
 
 import '../index.css';
 
@@ -104,16 +117,16 @@ const Home = () => {
             <div className="swiperBanners swiper-banner mb-5">
                 <div className="swiper-wrapper">
                     <div className="swiper-slide text-start">
-                        <img src={bannernike} alt="" />
+                        <img src={shoksnike} alt="" />
                     </div>
                     <div className="swiper-slide ">
-                        <img src={bannercactusjack} alt="" />
+                        <img src={newbalancebanner} alt="" />
                     </div>
-                    <div className="swiper-slide bordertext-start">
-                        <img src={bannerjaxx} alt="" />
+                    <div className="swiper-slide ">
+                        <img src={adidasbanner} alt="" />
                     </div>
-                    <div className="swiper-slide bordertext-start">
-                        <img src={bannercactusjackvelvet} alt="" />
+                    <div className="swiper-slide ">
+                        <img src={airjordanbanner} alt="" />
                     </div>
                 </div>
                 <div className="swiper-button-prev text-black border border-1 border-black"></div>
@@ -307,6 +320,42 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
+                </div>
+
+                <div className="row d-flex justify-content-evenly mt-5">
+
+                        <div className="col-3 border border-black border-2 p-4">
+                            <img src={original} width={30} alt="" />
+                            <div>
+                            <h4>SneakVault Verified</h4>
+                            <p>
+                                StockX Verified is our own designation and means that we inspect every item, every time.
+                                StockX Verified is our own designation and means that we inspect every item, every time.Learn More
+                            </p>
+                            </div>
+                        </div>
+
+                        <div className="col-3 border border-black border-2 p-4">
+                            <img src={envio} width={30} alt="" />
+                            <div>
+                            <h4>SneakVault Verified</h4>
+                            <p>
+                                StockX Verified is our own designation and means that we inspect every item, every time.
+                                StockX Verified is our own designation and means that we inspect every item, every time.Learn More
+                            </p>
+                            </div>
+                        </div>
+
+                        <div className="col-3 border border-black border-2 p-4">
+                            <img src={devolucion} width={30} alt="" />
+                            <div>
+                            <h4>SneakVault Verified</h4>
+                            <p>
+                                StockX Verified is our own designation and means that we inspect every item, every time.
+                                StockX Verified is our own designation and means that we inspect every item, every time.Learn More
+                            </p>
+                            </div>
+                        </div>
                 </div>
 
                 <div className="row bg-black mt-5 mb-3 py-5">

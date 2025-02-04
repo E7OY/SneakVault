@@ -6,27 +6,39 @@ import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { useContext, useEffect, useState } from 'react';
 import '../../index.css';
 import './Header.css';
-import React from 'react';
-import UserContext from '../../context/userContext';
+
 import { getAuth, signOut } from 'firebase/auth';
+import UserContext from '../../context/UserContext';
 
 const Header = () => {
     const userContext = useContext(UserContext);
     const user = userContext ? userContext.user : null;
- 
+
+    function cutMail(email: string | string[]): string | string[] {
+        if (typeof email === 'string') {
+            for (let i = 0; i < email.length; i++) {
+                if (email[i] === '@') {
+                    return email.slice(0, i);
+                }
+            }
+        }
+        return email;
+    }
+
     const setUser = userContext ? userContext.setUser : () => {};
     const errorMessage = document.getElementsByClassName('error');
-        const handleSignOut = async () => {
-            try {
-                await signOut(getAuth());
-                setUser(null);
-            } catch (error) {
-                Array.from(errorMessage).forEach((element) => {
-                    element.textContent = 'Error al cerrar sesion: ' + error;
-                });
-            }
-        };
 
+    const handleSignOut = async () => {
+        try {
+            await signOut(getAuth());
+            setUser(null);
+        } catch (error) {
+            Array.from(errorMessage).forEach((element) => {
+                element.textContent = 'Error al cerrar sesión: ' + error;
+            });
+        }
+    };
+    
 
     useEffect(() => {
         const texts = document.querySelectorAll('.moving-text h6');
@@ -130,6 +142,7 @@ const Header = () => {
                         <NavLink className="btn rounded-0 fw-semibold px-4 py-2 bg-white" to="/">
                             <img src={carrito} width={25} alt="Logo" />
                         </NavLink>
+                            <h3 className='message'>Bienvenid@ {cutMail(user.email)} </h3>
                         </>
                     ) : (
                         <>
