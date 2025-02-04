@@ -6,7 +6,7 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 const Footer = () => {
     return (
-        <footer className="bg-white w-100 mt-5">
+        <footer className="bg-white w-100 mt-5 border border-2 border-dark">
 
             <div className="row w-100 mb-5 d-flex align-items-center flex-row justify-content-evenly">
 
