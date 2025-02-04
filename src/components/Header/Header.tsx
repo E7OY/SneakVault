@@ -7,7 +7,6 @@ import { useContext, useEffect } from 'react';
 import '../../index.css';
 import './Header.css';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import UserContext from '../../context/userContext';
 
 const Header = () => {
@@ -124,7 +123,7 @@ const Header = () => {
                     {user ? (
                         <>
                         <NavLink to="/register" className='nav-link fw-bold button'>
-                        <span>{user.displayName || (user.email ? cutMail(user.email) : '') }</span>
+                        <span>{user.email ? cutMail(user.email) : ''}</span>
                             </NavLink>
                         <NavLink className="btn rounded-0 fw-semibold px-4 py-2 bg-white" to="/">
                             <img src={carrito} width={25} alt="Logo" />
@@ -137,7 +136,7 @@ const Header = () => {
                         </NavLink>
                     </>
                     )}
-                    { /*si el usuario existe, se muestra o nombre de usuario o email, sino "Log In" */ }
+                    { /*si el usuario existe, se muestra o nombre de usuario o email y carrito, sino "Log In" */ }
                     
 
                 </nav>

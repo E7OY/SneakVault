@@ -4,12 +4,15 @@ import UserContext from '../context/userContext';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { signInWithGooglePopup } from '../utils/firebase.utils';
 import logogoogle from '../assets/logogoogle.png';
+import logoapple from '../assets/logoapple.png';
 
 const Register = () => {
     const [isRegistering, setIsRegistering] = useState(true);
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [name, setName] = useState('');
+    const [date, setDate] = useState('');
     const userContext = useContext(UserContext);
     const user = userContext ? userContext.user : null;
     const setUser = userContext ? userContext.setUser : () => {};
@@ -81,7 +84,7 @@ const Register = () => {
                     <p>{isRegistering ? 'Registrate y consigue un 10% de descuento' : 'Inicia sesión para poder comprar'}</p>
                     <h1 className='position-absolute bottom-0 text-opacity-100'>SneakVault</h1>
                 </div>
-                <div className="col-12 col-md-6 border border-2 border-black py-5">
+                <div className="col-12 col-md-6 border border-2 border-black py-5 d-flex flex-column justify-content-center">
                     {user ? (
                         <div className="container d-flex flex-column justify-content-center gap-3">
                             <h3>Bienvenido, {user.displayName || (user.email ? cutMail(user.email) : '') }</h3>
@@ -89,37 +92,57 @@ const Register = () => {
                         </div>
                     ) : (
                         <Form method='post' onSubmit={isRegistering ? handleRegister : handleSignIn}>
-                            <div className="container d-flex flex-column justify-content-center gap-3">
+                            <div className="container d-flex flex-column justify-content-center gap-4">
                                 {isRegistering && (
-                                    <div className='form-field w-50'>
+                                    <div className='form-field w-50 d-flex gap-0'>
                                         <label htmlFor='username' id='username'>Nombre de Usuario *</label>
                                         <input type='text' name='username' id='username' required value={username} onChange={(e) => setUsername(e.target.value)} />
                                     </div>
                                 )}
-                                <div className='form-field w-50'>
+                                <div className='form-field w-50 d-flex gap-0'>
                                     <label htmlFor='email' id='email'>Email *</label>
                                     <input type='text' name='email' id='email' required value={email} onChange={(e) => setEmail(e.target.value)} />
                                 </div>
-                                <div className='form-field w-50'>
+                                <div className='form-field w-50 d-flex gap-0'>
                                     <label htmlFor='password' id='password'>Contraseña *</label>
                                     <input type='password' name='password' id='password' required value={password} onChange={(e) => setPassword(e.target.value)} />
                                 </div>
+                                {isRegistering && (
+                                <>
+                                <div className='form-field w-50 d-flex gap-0'>
+                                    <label htmlFor='name' id='name'>Nombre y apellidos *</label>
+                                    <input type='text' name='name' id='name' required value={name} onChange={(e) => setName(e.target.value)} />
+                                </div>
+                                <div className='form-field w-50 d-flex gap-0'>
+                                    <label htmlFor='date' id='date'>Fecha de Nacimiento *</label>
+                                    <input type='date' name='date' id='date' required value={date} onChange={(e) => setDate(e.target.value)} />
+                                </div>
+                                </>
+                                )}
                                 <div className="error"></div>
                                 <button type='submit' className='button'>{isRegistering ? 'Registrar' : 'Iniciar Sesión'}</button>
                             </div>
                         </Form>
                     )}
 
-                    <div className='container d-flex flex-row justify-content-center gap-2 mt-2'>
+                    <div className='container row  d-flex justify-content-between mx-auto mt-1'>
                     {!user && (
-                        <button className='button w-50' onClick={logGoogleUser}>Iniciar Sesión con Google
-                        <img src={ logogoogle } className='mx-3' width={20} alt="" />
-                        </button>
+                        <>
+                        <div onClick={logGoogleUser} className="col-4 button-google d-flex flex-row gap-2 w-auto justify-content-center align-items-center py-2 px-4">
+                            <img  src={ logogoogle } className=' ' width={20} alt="" /> Sign in with Google
+                        </div>
+                        <div onClick={logGoogleUser}  className="col-4 button-apple d-flex flex-row gap-2 w-auto justify-content-center align-items-center py-2 px-4">
+                            <img  src={ logoapple } className='' width={20} alt="" /> Sign in with Apple
+                        </div>
+                        <div className="col-4 button-google d-flex flex-row gap-2 w-auto justify-content-center align-items-center py-2 px-4">
+                            <button className='button-google' onClick={() => setIsRegistering(!isRegistering)}>
+                                {isRegistering ? 'Ya tienes una cuenta? Inicia Sesión' : 'No tienes una cuenta? Regístrate'}
+                            </button>
+                        </div>
+                        </>
                     )}
-                    <button className='button w-50' onClick={() => setIsRegistering(!isRegistering)}>
-                        {isRegistering ? 'Ya tienes una cuenta? Inicia Sesión' : 'No tienes una cuenta? Regístrate'}
-                    </button>
                     </div>
+
                 </div>
             </div>
         </div>

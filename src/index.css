@@ -32,21 +32,34 @@
   border: 2px solid #010101;
 }
 .button:hover {
-  color: black;
   background-color: white;
   border: 2px solid black;
+  color: black;
 }
+
 
 .button-google {
   position: relative;
   background-color: #010101;
   color: white;
-  padding: 10px 20px;
   text-decoration: none;
-  width: 200px;
   text-align: center;
   border: 2px solid #010101;
+  cursor: pointer;
+  color: white;
 }
+
+.button-apple {
+  position: relative;
+  background-color: #010101;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid #010101;
+  cursor: pointer;
+  color: white;
+}
+
 
 .error {
   color: red;
