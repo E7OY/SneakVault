@@ -3,13 +3,28 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import carrito from '../../assets/carrito.png';
 import './Header.css';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import '../../index.css';
 import './Header.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import UserContext from '../../context/userContext';
 
-const Header = ({ user }) => {
+const Header = () => {
+    const userContext = useContext(UserContext);
+    const user = userContext ? userContext.user : null;
+
+    function cutMail(email: string | string[]): string | string[] {
+        if (typeof email === 'string') {
+            for (let i = 0; i < email.length; i++) {
+                if (email[i] === '@') {
+                    return email.slice(0, i);
+                }
+            }
+        }
+        return email;
+    }
+
     useEffect(() => {
         const texts = document.querySelectorAll('.moving-text h6');
         let index = 0;
@@ -64,11 +79,10 @@ const Header = ({ user }) => {
                                         <NavDropdown.Item href="/home">Nike</NavDropdown.Item>
                                         <NavDropdown.Item href="#action/3.2">Jordan</NavDropdown.Item>
                                         <NavDropdown.Item href="#action/3.2">Yeezy</NavDropdown.Item>
-
-                                        {/*     <NavDropdown.Divider />
-           <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item> */}
+                                        <NavDropdown.Divider />
+                                        <NavDropdown.Item href="#action/3.4">
+                                            Ver todas
+                                        </NavDropdown.Item>
                                     </NavDropdown>
                                 </Nav>
                             </Navbar.Collapse>
@@ -88,10 +102,10 @@ const Header = ({ user }) => {
                                         <NavDropdown.Item href="#action/3.2">Palace</NavDropdown.Item>
                                         <NavDropdown.Item href="#action/3.2">Stussy</NavDropdown.Item>
                                         <NavDropdown.Item href="#action/3.2">Off-White</NavDropdown.Item>
-                                        {/*     <NavDropdown.Divider />
-           <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item> */}
+                                        <NavDropdown.Divider />
+                                        <NavDropdown.Item href="#action/3.4">
+                                            Ver todo
+                                        </NavDropdown.Item>
                                     </NavDropdown>
                                 </Nav>
                             </Navbar.Collapse>
@@ -106,12 +120,26 @@ const Header = ({ user }) => {
                             aria-label="Search"
                         />
                     </form>
+
                     {user ? (
-            <li>{user.displayName || user.email}</li>
-          ) : (
-            <li><Link to="/register">Log In</Link></li>
-          )}
-                    <NavLink className="btn rounded-0 fw-semibold px-4 py-2 bg-white" to="/"><img src={carrito} width={25} alt="Logo" /></NavLink>
+                        <>
+                        <NavLink to="/register" className='nav-link fw-bold button'>
+                        <span>{user.displayName || (user.email ? cutMail(user.email) : '') }</span>
+                            </NavLink>
+                        <NavLink className="btn rounded-0 fw-semibold px-4 py-2 bg-white" to="/">
+                            <img src={carrito} width={25} alt="Logo" />
+                        </NavLink>
+                        </>
+                    ) : (
+                        <>
+                        <NavLink to="/register" className='nav-link fw-bold button'>
+                            Log In
+                        </NavLink>
+                    </>
+                    )}
+                    { /*si el usuario existe, se muestra o nombre de usuario o email, sino "Log In" */ }
+                    
+
                 </nav>
             </header>
         </>

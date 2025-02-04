@@ -3,16 +3,23 @@ import { Outlet } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../index.css';
+import { UserProvider } from '../context/userContext';
 
 
-const RootLayout = ({ user }) => {
+interface RootLayoutProps {
+  user: string;
+}
+
+const RootLayout: React.FC<RootLayoutProps> = ({ user }) => {
   return (
     <>
+    <UserProvider>
       <Header user={user} />
       <main>
         <Outlet />
       </main>
       <Footer />
+    </UserProvider>
     </>
   );
 };
