@@ -324,7 +324,7 @@ const Home = () => {
 
                 <div className="row d-flex justify-content-evenly mt-5">
 
-                        <div className="col-3 border border-black border-2 p-4">
+                        <div className="col-3 info border border-black border-2 p-4">
                             <img src={original} width={30} alt="" />
                             <div>
                             <h4>SneakVault Verified</h4>
@@ -335,7 +335,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="col-3 border border-black border-2 p-4">
+                        <div className="col-3 info border border-black border-2 p-4">
                             <img src={envio} width={30} alt="" />
                             <div>
                             <h4>SneakVault Verified</h4>
@@ -345,8 +345,7 @@ const Home = () => {
                             </p>
                             </div>
                         </div>
-
-                        <div className="col-3 border border-black border-2 p-4">
+                        <div className="col-3 info border border-black border-2 p-4">
                             <img src={devolucion} width={30} alt="" />
                             <div>
                             <h4>SneakVault Verified</h4>
@@ -360,6 +359,10 @@ const Home = () => {
 
                 <div className="row bg-black mt-5 mb-3 py-5">
                     <h4 className="text-center w-50 mx-auto text-white">
+
+                        <h4>Registrate ahora y obtén un descuento del -30% en tu próxima compra</h4>
+                        <button>Register</button>
+                        {/*
                         La cultura hypebeast es un subgénero de la cultura streetwear, un
                         estilo de ropa que surgió del estilo de vida californiano del surf y
                         el monopatín. Hypebeast generalmente se refiere a una persona que se
@@ -368,6 +371,7 @@ const Home = () => {
                         ¡El único lugar con docenas de marcas de zapatillas de alta gama,
                         ropa de calle y de moda están aquí esperando a que Cop «em down! De
                         los 70 a Travis, tenemos todo cubierto.
+                        */}
                     </h4>
                 </div>
             </main>

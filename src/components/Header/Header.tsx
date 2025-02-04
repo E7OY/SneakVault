@@ -14,19 +14,8 @@ const Header = () => {
     const userContext = useContext(UserContext);
     const user = userContext ? userContext.user : null;
 
-    function cutMail(email: string | string[]): string | string[] {
-        if (typeof email === 'string') {
-            for (let i = 0; i < email.length; i++) {
-                if (email[i] === '@') {
-                    return email.slice(0, i);
-                }
-            }
-        }
-        return email;
-    }
-
     const setUser = userContext ? userContext.setUser : () => {};
-    const errorMessage = document.getElementsByClassName('error');
+    const errorMessage = document.querySelectorAll('.error-message');
 
     const handleSignOut = async () => {
         try {
@@ -55,81 +44,54 @@ const Header = () => {
         };
 
         showNextText();
-        const interval = setInterval(showNextText, 2000);
+        const interval = setInterval(showNextText, 3000);
 
         return () => clearInterval(interval);
     }, []);
 
     return (
         <>
-            <div className="bg-black text-white w-100 text-center py-4 moving-container">
+            <div className="bg-black text-white w-100 text-center py-3 moving-container">
                 <span className="moving-text">
                     <h6>Últimas Rebajas de invierno hasta -60%</h6>
                     <h6>Off-White -45% en productos seleccionados</h6>
                     <h6>Envíos Gratis a partir de 50€</h6>
                 </span>
             </div>
-            <header className="w-100 bg-white p-4 sticky-header">
-                <nav className="navbar navbar-expand-lg d-flex justify-content-between w-100 mx-auto gap-5">
+            <header className="w-100 bg-white p-4 border-bottom border-2 border-black">
+                <nav className="navbar navbar-expand-lg d-flex justify-content-between w-100 gap-5">
                     <a className="navbar-brand" href="#">
                         <h1 className='fw-bold negro'>
                             <NavLink className="nav-link negro" to="/home">SneakVault</NavLink>
                         </h1>
                     </a>
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav me-auto d-flex flex-row justify-content-center fw-bolder gap-3">
-                            <li className="nav-item">
-                                <NavLink className="nav-link negro fw-bold" to="/home">HOME</NavLink>
-                            </li>
+                    <Navbar expand="lg">
+                        <Navbar.Collapse id="navbar-footer">
+                            <Nav className="d-flex flex-row fw-bolder m-0 p-0">
+                                <Nav.Link as={NavLink} to="/home" className="negro fw-bold">HOME</Nav.Link>
+                                <NavDropdown title="ZAPATILLAS" id="nav-dropdown" menuVariant="light" className='text-black'>
+                                    <NavDropdown.Item as={NavLink} to="/home">Nike</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.2">Jordan</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.2">Yeezy</NavDropdown.Item>
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item href="#action/3.4">Ver todas</NavDropdown.Item>
+                                </NavDropdown>
+                                <NavDropdown title="ROPA" id="nav-dropdown" menuVariant="light" className='text-black'>
+                                    <NavDropdown.Item as={NavLink} to="/home">Nike</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.2">Supreme</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.2">Palace</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.2">Stussy</NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.2">Off-White</NavDropdown.Item>
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item href="#action/3.4">Ver todo</NavDropdown.Item>
+                                </NavDropdown>
+                            </Nav>
+                        </Navbar.Collapse>
+                    </Navbar>
 
-                            <Navbar.Toggle aria-controls="navbar-dark-example" />
-                            <Navbar.Collapse id="navbar-dark-example">
-                                <Nav>
-                                    <NavDropdown
-                                        id="nav-dropdown"
-                                        title="ZAPATILLAS"
-                                        menuVariant="light"
-                                        className='text-black'
-                                    >
-                                        <NavDropdown.Item href="/home">Nike</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.2">Jordan</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.2">Yeezy</NavDropdown.Item>
-                                        <NavDropdown.Divider />
-                                        <NavDropdown.Item href="#action/3.4">
-                                            Ver todas
-                                        </NavDropdown.Item>
-                                    </NavDropdown>
-                                </Nav>
-                            </Navbar.Collapse>
-
-
-                            <Navbar.Toggle aria-controls="navbar-dark-example" className='menu-desplegable' />
-                            <Navbar.Collapse id="navbar-dark-example">
-                                <Nav>
-                                    <NavDropdown
-                                        id="nav-dropdown"
-                                        title="ROPA"
-                                        menuVariant="light"
-                                        className='text-black'
-                                    >
-                                        <NavDropdown.Item href="/home">Nike</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.2">Supreme</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.2">Palace</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.2">Stussy</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.2">Off-White</NavDropdown.Item>
-                                        <NavDropdown.Divider />
-                                        <NavDropdown.Item href="#action/3.4">
-                                            Ver todo
-                                        </NavDropdown.Item>
-                                    </NavDropdown>
-                                </Nav>
-                            </Navbar.Collapse>
-
-                        </ul>
-                    </div>
-                    <form className="w-50">
+                    <form className="w-50 d-flex justify-content-center">
                         <input
-                            className="form-control rounded-0 border-2 py-2 w-50 border-black"
+                            className="form-control rounded-0 border-1 w-75 border-black"
                             type="search"
                             placeholder="Buscar..."
                             aria-label="Search"
@@ -142,7 +104,6 @@ const Header = () => {
                         <NavLink className="btn rounded-0 fw-semibold px-4 py-2 bg-white" to="/">
                             <img src={carrito} width={25} alt="Logo" />
                         </NavLink>
-                            <h3 className='message'>Bienvenid@ {cutMail(user.email)} </h3>
                         </>
                     ) : (
                         <>

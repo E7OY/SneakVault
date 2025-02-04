@@ -15,10 +15,11 @@
   color: black !important;
 }
 
-.sticky-header {
+header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  
 }
 
 .button {
@@ -89,7 +90,7 @@ main {
 }*/
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .no-items {
@@ -190,17 +191,14 @@ form {
   height: 70px;
   width: 50px;
   margin-top: -35px;
-
   opacity: 0;
   transition: opacity 0.3s;
 }
 
 .swiper-hero .swiper-button-prev {
-  border-radius: 0 65px 65px 0;
   left: -10px;
 }
 .swiper-hero .swiper-button-next {
-  border-radius: 65px 0 0 65px;
   right: -10px;
 }
 
@@ -276,11 +274,9 @@ form {
 }
 
 .swiper-banner .swiper-button-prev {
-  border-radius: 0 65px 65px 0;
   left: -10px;
 }
 .swiper-banner .swiper-button-next {
-  border-radius: 65px 0 0 65px;
   right: -10px;
 }
 
@@ -386,7 +382,7 @@ form {
     font-size: 1.5rem;
     color: #010101;
     background-color: white;
-    padding: 50px 20px;
+    padding: 20px 20px;
     width: 100%;
     top: 50%;
     left: 50%;
@@ -416,3 +412,14 @@ form {
 
 
 
+
+
+
+.info:hover {
+  cursor: pointer;
+  background-color: #010101;
+  color: white;
+}
+.info img:hover{
+  filter: brightness(0) invert(1);
+}
