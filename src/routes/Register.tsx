@@ -1,11 +1,10 @@
 import React, { useState, useContext } from 'react';
-import { Form, Navigate, Route } from 'react-router-dom';
+import { Form, Navigate } from 'react-router-dom';
 import UserContext from '../context/userContext';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { signInWithGooglePopup } from '../utils/firebase.utils';
 import logogoogle from '../assets/logogoogle.png';
 import logoapple from '../assets/logoapple.png';
-import Home from './Home';
 
 const Register = () => {
     const [isRegistering, setIsRegistering] = useState(true);
@@ -19,17 +18,7 @@ const Register = () => {
     const setUser = userContext ? userContext.setUser : () => {};
     const errorMessage = document.getElementsByClassName('error');
 
-    function cutMail(email: string | string[]): string | string[] {
-        if (typeof email === 'string') {
-            for (let i = 0; i < email.length; i++) {
-                if (email[i] === '@') {
-                    return email.slice(0, i);
-                }
-            }
-        }
-        return email;
-    }
-
+    /*cerrar sesion
     const handleSignOut = async () => {
         try {
             await signOut(getAuth());
@@ -40,7 +29,9 @@ const Register = () => {
             });
         }
     };
+    */
 
+    //registro
     const handleRegister = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         try {
@@ -54,6 +45,7 @@ const Register = () => {
         }
     };
 
+    //inicar sesion
     const handleSignIn = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         try {
@@ -67,6 +59,7 @@ const Register = () => {
         }
     };
 
+    //inicio de sesion con google
     const logGoogleUser = async () => {
         try {
             const response = await signInWithGooglePopup();

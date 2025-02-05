@@ -1,7 +1,7 @@
+//archivo para manejar el estado del usuario en toda la app
+
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
-import { auth } from '../utils/firebase.utils';
-
 
 interface UserContextType {
     user: User | null;

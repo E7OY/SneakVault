@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -61,6 +61,9 @@ import devolucion from "../assets/devolucion.png";
 
 
 import '../index.css';
+import { NavLink } from "react-router-dom";
+import { getAuth, signOut } from "firebase/auth";
+import UserContext from '../context/userContext';
 
 
 
@@ -98,6 +101,36 @@ const Home = () => {
             },
         });
     }, []);
+
+
+        function cutMail(email: string | string[]): string | string[] {
+            if (typeof email === 'string') {
+                for (let i = 0; i < email.length; i++) {
+                    if (email[i] === '@') {
+                        return email.slice(0, i);
+                    }
+                }
+            }
+            return email;
+        }
+
+
+    const userContext = useContext(UserContext);
+    const user = userContext?.user || null;
+
+    const setUser = userContext?.setUser || (() => {});
+    const errorMessage = document.querySelectorAll('.error-message');
+
+        const handleSignOut = async () => {
+            try {
+                await signOut(getAuth());
+                setUser(null);
+            } catch (error) {
+                Array.from(errorMessage).forEach((element) => {
+                    element.textContent = 'Error al cerrar sesión: ' + error;
+                });
+            }
+        };
 
     const images = [
         supreme1,
@@ -357,11 +390,25 @@ const Home = () => {
                         </div>
                 </div>
 
-                <div className="row bg-black mt-5 mb-3 py-5">
-                    <h4 className="text-center w-50 mx-auto text-white">
-
-                        <h4>Registrate ahora y obtén un descuento del -30% en tu próxima compra</h4>
-                        <button>Register</button>
+                <div className="row bg-black mt-5 p-5 mx-auto m-0 d-flex gap-5 justify-content-center">
+                    <div className="col-3 w-25 p-3">
+                        <h4 className="text-start text-white">
+                            Registrate ahora y obtén un descuento del -30% en tu próxima compra
+                        </h4>
+                    </div>
+                    <div className="col-3 w-auto p-3">
+                        {user ? (
+                        <>
+                        <button className='fw-bold bg-white text-black p-3 px-5' onClick={handleSignOut}>Cerrar Sesión en {user.email ? cutMail(user.email) : ''}</button>
+                        </>
+                    ) : (
+                        <>
+                        <NavLink to="/register" className='nav-link fw-bold bg-white text-black p-3 px-5'>
+                            Registrate Ahora
+                        </NavLink>
+                    </>
+                    )}
+                    </div>
                         {/*
                         La cultura hypebeast es un subgénero de la cultura streetwear, un
                         estilo de ropa que surgió del estilo de vida californiano del surf y
@@ -372,7 +419,6 @@ const Home = () => {
                         ropa de calle y de moda están aquí esperando a que Cop «em down! De
                         los 70 a Travis, tenemos todo cubierto.
                         */}
-                    </h4>
                 </div>
             </main>
         </>
