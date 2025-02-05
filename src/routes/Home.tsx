@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import  { useContext, useEffect } from "react";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -42,12 +42,6 @@ import jordanshirt from "../assets/jordanshirt.png";
 import palaceshirt from "../assets/palaceshirt.png";
 import palacelongsleeve from "../assets/palacelongsleeve.png";
 
-/*
-import bannercactusjack from "../assets/bannercactusjack.png";
-import bannerjaxx from "../assets/bannerjaxx.png";
-import bannernike from "../assets/bannernike.png";
-import bannercactusjackvelvet from "../assets/bannercactusjackvelvet.png";
-*/
 import shoksnike from "../assets/shoksnike.jpg";
 import newbalancebanner from "../assets/newbalancebanner.jpg";
 import adidasbanner from "../assets/adidasbanner.jpg";

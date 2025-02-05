@@ -5,6 +5,9 @@ import RootLayout from './routes/Root';
 import Home from './routes/Home';
 import Register from './routes/Register';
 import ErrorPage from './pages/ErrorPage';
+import Productos from './routes/Products';
+import ProductList from './routes/Products';
+import Products from './routes/Products';
 
 const App = () => {
   const [user, setUser] = useState<{ displayName?: string; email: string } | null>(null);
@@ -27,6 +30,11 @@ const App = () => {
           path: 'register',
           element: <Register setUser={setUser} />,
         },
+        {
+          path: 'products',
+          element: <Products/>,
+        },
+
       ],
     },
     {
