@@ -70,8 +70,6 @@ const Register = () => {
             });        }
     };
 
-    
-
     return (
         <div className="register container mx-auto mt-5 mb-5">
             <div className="row">

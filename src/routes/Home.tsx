@@ -115,11 +115,11 @@ const Home = () => {
         }
 
 
-    const userContext = useContext(UserContext);
-    const user = userContext?.user || null;
+        const userContext = useContext(UserContext);
+        const user = userContext?.user || null;
 
-    const setUser = userContext?.setUser || (() => {});
-    const errorMessage = document.querySelectorAll('.error-message');
+        const setUser = userContext?.setUser || (() => {});
+        const errorMessage = document.querySelectorAll('.error-message');
 
         const handleSignOut = async () => {
             try {
@@ -165,15 +165,6 @@ const Home = () => {
                 <div className="swiper-button-prev text-black border border-1 border-black"></div>
                 <div className="swiper-button-next text-black border border-1 border-black"></div>
             </div>
-
-            {/*  
-            <div className="row  mb-5">
-                <div className="col-12 ">
-                      <h1 className='fw-bold bg-black text-white'>DESCUBRE ZAPATILLAS LIMITADAS SIN LIMITACIÓN</h1>  
-                    <img src={bannernike} className="img-fluid" alt="" />
-                </div>
-            </div>
-            */}
 
             <main className="mx-1">
                 {/* SLIDER ZAPATILLAS */}
