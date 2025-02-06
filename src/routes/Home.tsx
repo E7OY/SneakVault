@@ -32,6 +32,7 @@ import palacelogo from "../assets/palacelogo.png";
 import yeezylogo from "../assets/yeezylogo.png";
 import offwhitelogo from "../assets/offwhitelogo.png";
 import mm6logo from "../assets/mm6logo.png";
+import adidaslogo from "../assets/adidaslogo.png";
 
 import offwhiteshirt from "../assets/offwhiteshirt.png";
 import supremeshirt from "../assets/supremeshirt.png";
@@ -55,7 +56,7 @@ import devolucion from "../assets/devolucion.png";
 
 
 import '../index.css';
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
 import UserContext from '../context/userContext';
 
@@ -219,8 +220,12 @@ const Home = () => {
                     </div>
                     <div className="swiper-button-prev text-black border border-1 border-black"></div>
                     <div className="swiper-button-next text-black border border-1 border-black"></div>
-                    <div className="col text-start">
-                        <button className="button fw-bolder">VER MÁS</button>
+                    <div className=""> 
+                        <Link to="/products" className="text-decoration-none">
+                        <button className="button text-start">
+                            VES MAS
+                        </button>
+                        </Link>
                     </div>
                 </div>
 
@@ -277,7 +282,7 @@ const Home = () => {
                     </div>
                     <div className="swiper-button-prev text-black border border-1 border-black"></div>
                     <div className="swiper-button-next text-black border border-1 border-black"></div>
-                    <div className="col text-start">
+                    <div className="text-start">
                         <button className="button fw-bolder">VER MÁS</button>
                     </div>
                 </div>
@@ -313,7 +318,7 @@ const Home = () => {
                             <img src={offwhitelogo} className="w-75" alt="" />
                         </div>
                         <div className="col-3 border border-1 border-black d-flex flex-column align-items-center ">
-                            <img src={yeezylogo} className="w-75" alt="" />
+                            <img src={adidaslogo} className="w-75" alt="" />
                         </div>
                         <div className="col-3 border border-1 border-black d-flex flex-column align-items-center ">
                             <img src={mm6logo} className="w-75" alt="" />
@@ -375,11 +380,20 @@ const Home = () => {
                         </div>
                 </div>
 
-                <div className="row bg-black mt-5 p-5 mx-auto m-0 d-flex gap-5 justify-content-center">
-                    <div className="col-3 w-25 p-3">
+                <div className="row bg-black mt-5 p-5 mx-auto m-0 d-flex gap-5 justify-content-center align-items-center">
+                    <div className="col-3 w-25 py-5">
+                    {user ? (
+                        <>
+                        <h4 className="text-start text-white">
+                            Tu cupón: BIENVENIDO30
+                        </h4>
+                        <span className="text-light">*Para compras superiores a 49€</span>
+                        </>
+                    ) : (
                         <h4 className="text-start text-white">
                             Registrate ahora y obtén un descuento del -30% en tu próxima compra
-                        </h4>
+                        </h4>   
+                    )}
                     </div>
                     <div className="col-3 w-auto p-3">
                         {user ? (
@@ -387,6 +401,7 @@ const Home = () => {
                         <button className='fw-bold bg-white text-black p-3 px-5' onClick={handleSignOut}>Cerrar Sesión en {user.email ? cutMail(user.email) : ''}</button>
                         </>
                     ) : (
+                        
                         <>
                         <NavLink to="/register" className='nav-link fw-bold bg-white text-black p-3 px-5'>
                             Registrate Ahora
