@@ -74,7 +74,7 @@ const Header = () => {
                                     <NavDropdown.Item href="#action/3.2">Jordan</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">Yeezy</NavDropdown.Item>
                                     <NavDropdown.Divider />
-                                    <NavDropdown.Item href="#action/3.4">Ver todas</NavDropdown.Item>
+                                    <NavDropdown.Item href="/products">Ver todas</NavDropdown.Item>
                                 </NavDropdown>
                                 <NavDropdown title="ROPA" id="nav-dropdown" menuVariant="light" className='text-black'>
                                     <NavDropdown.Item as={NavLink} to="/home">Nike</NavDropdown.Item>

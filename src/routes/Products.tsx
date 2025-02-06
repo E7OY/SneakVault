@@ -2,12 +2,22 @@ import { useState, useEffect } from 'react';
 import { db } from '../utils/firebase.utils';
 import { collection, getDocs } from 'firebase/firestore';
 
+import '../index.css';
+
 import imagen1 from '../assets/jordan1.png';
 import imagen2 from '../assets/yeezy.png';
+import imagen3 from '../assets/yeezyblack.png';
+import imagen4 from '../assets/jordanretro.png';
+import imagen5 from '../assets/off-white.png';
+import imagen6 from '../assets/offwhitenike.png';
 
 const imageMap: { [key: string]: string } = {
-    'product1': imagen1,
-    'product2': imagen2,
+    'Air Jordan 1 x Cactus Jack': imagen1,
+    'Yeezy Foam': imagen2,
+    'Yeezy Boost 700 V3': imagen3,
+    'Jordan Retro Canyon Purple': imagen4,
+    'Nike Air Force 1 x Louis Vuitton': imagen5,
+    'Air Force 1 Mid x Off-White' :imagen6,
 };
 
 const Products = () => {
@@ -40,14 +50,13 @@ const Products = () => {
 
 
     return (
-        <div className="row w-100 h-100 mt-5 text-black">
+        <div className="row mt-5 text-black d-flex justify-content-center align-items-stretch productos">
             {products.map(product => (
-                <div className="col-4">
-                    <h4>{product.categoria}</h4>
-                    <div key={product.id} className=" border border-2 border-black">
-                        <img src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = 'fallback-image-url'; }} />
-                        <h3>{product.nombre}</h3>
-                        <p>{product.precio}€</p>
+                <div className="col-6 col-md-3 m-0 p-0">
+                    <div key={product.id} className=" producto">
+                    <img className='img-fluid' src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />
+                    <h3 className='mx-3'>{product.nombre}</h3>
+                    <p className='mx-3'>{product.precio}€</p>
                     </div>
                 </div>
             ))}
