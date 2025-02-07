@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react';
 import { db } from '../utils/firebase.utils';
 import { collection, getDocs } from 'firebase/firestore';
 
-import carrito from '../assets/carrito.png';
-
 import '../index.css';
 
 import imagen1 from '../assets/jordan1.png';
@@ -59,9 +57,12 @@ const Products = () => {
                 <div className="m-0 p-0">
                     <div key={product.id} className=" producto">
                     <img className='img-fluid' src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />
-                    <h6 className='mx-3'>{product.categoria}</h6>
+                    <h6 className='mx-3 mt-3'>{product.categoria}</h6>
                     <h3 className='mx-3'>{product.nombre}</h3>
                     <p className='mx-3'>{product.precio}€</p>
+                    <p className='mx-3 position-absolute'>
+                        {product.stock <= 10 && <span className='text-danger'>Pocas unidades en stock.</span>}
+                    </p>
                     </div>
                 </div>
             ))}
