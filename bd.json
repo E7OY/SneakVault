@@ -1,0 +1,64 @@
+{
+    "productos": {
+        "zapatillas": {
+            "nike": {
+                "air-max-1": {
+                    "nombre": "Nike Air Max 1",
+                    "descripcion": "Las zapatillas icónicas de Nike, perfectas para el día a día.",
+                    "precio": 120,
+                    "marca": "Nike",
+                    "categoria": "zapatillas",
+                    "imagen": "url-de-la-imagen-air-max-1.jpg"
+                },
+                "air-force-1": {
+                    "nombre": "Nike Air Force 1",
+                    "descripcion": "Un clásico atemporal, ideal para cualquier ocasión.",
+                    "precio": 100,
+                    "marca": "Nike",
+                    "categoria": "zapatillas",
+                    "imagen": "url-de-la-imagen-air-force-1.jpg"
+                }
+            },
+            "adidas": {
+                "stan-smith": {
+                    "nombre": "Adidas Stan Smith",
+                    "descripcion": "El estilo minimalista y elegante que nunca pasa de moda.",
+                    "precio": 80,
+                    "marca": "Adidas",
+                    "categoria": "zapatillas",
+                    "imagen": "url-de-la-imagen-stan-smith.jpg"
+                },
+                "superstar": {
+                    "nombre": "Adidas Superstar",
+                    "descripcion": "Un icono de la cultura urbana, cómodas y con estilo.",
+                    "precio": 90,
+                    "marca": "Adidas",
+                    "categoria": "zapatillas",
+                    "imagen": "url-de-la-imagen-superstar.jpg"
+                }
+            }
+        },
+        "camisetas": {
+            "nike": {
+                "dri-fit": {
+                    "nombre": "Camiseta Nike Dri-FIT",
+                    "descripcion": "Camiseta técnica para deporte, ligera y transpirable.",
+                    "precio": 30,
+                    "marca": "Nike",
+                    "categoria": "camisetas",
+                    "imagen": "url-de-la-imagen-dri-fit.jpg"
+                }
+            },
+            "adidas": {
+                "originals": {
+                    "nombre": "Camiseta Adidas Originals",
+                    "descripcion": "Camiseta de algodón con el logo clásico de Adidas.",
+                    "precio": 25,
+                    "marca": "Adidas",
+                    "categoria": "camisetas",
+                    "imagen": "url-de-la-imagen-originals.jpg"
+                }
+            }
+        }
+    }
+}
