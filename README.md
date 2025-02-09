@@ -1,5 +1,42 @@
 ![Captura de pantalla 2025-01-29 131433](https://github.com/user-attachments/assets/b634aef3-5447-4f60-aa16-42bf58023d9b)
 
+# SneakVault - E-commerce de Zapatillas y Camisetas
+
+Este proyecto consiste en una aplicación web de venta de zapatillas y camisetas, desarrollada con React para el frontend Y Firebase para la base de datos y la parte de autenticación. El objetivo principal es ofrecer una plataforma intuitiva y atractiva para la compra de productos relacionados con el calzado y la vestimenta urbana.
+
+## Funcionalidades Principales
+
+- **Página Principal:** Muestra una descripción de SneakVault, productos destacados y información de contacto.
+- **Página de Productos:** Permite visualizar todos los productos, con opciones de paginación, búsqueda y filtros por categoría y rango de precios.
+- **Página de Detalle de Producto:** Muestra información detallada de cada producto y permite agregarlo al carrito (para usuarios logueados) o iniciar sesión (para usuarios no logueados).
+- **Página de Carrito:** Permite visualizar los productos seleccionados, modificar cantidades, eliminar productos y calcular el precio total.
+- **Página de Login:** Formulario para iniciar sesión en la aplicación.
+- **Página de Registro:** Formulario para registrar nuevos usuarios, con validaciones y mensajes de error.
+
+## Tecnologías Utilizadas
+
+- **Frontend:** React, [especificar framework de estilos CSS utilizado (ej: CSS Modules, Bootstrap, Tailwind)]
+- **Backend:** [especificar tecnología backend utilizada (ej: Node.js, Spring Boot)]
+- **Base de Datos:** [especificar base de datos utilizada (ej: MySQL, MongoDB)]
+- **Otras:** [especificar otras tecnologías utilizadas (ej: Axios para peticiones HTTP, React Router para navegación)]
+
+## Instalación y Configuración
+
+1. **Clonar el Repositorio:**
+   ```bash
+   git clone [https://github.com/tu-usuario/SneakVault.git](https://www.google.com/search?q=https://github.com/tu-usuario/SneakVault.git)
+
+
+
+
+
+
+
+
+
+
+
+
 
 # React + TypeScript + Vite
 
