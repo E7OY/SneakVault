@@ -72,7 +72,7 @@ const Home = () => {
                 pauseOnMouseEnter: true,
                 disableOnInteraction: false,
             },
-            slidesPerView: 5,
+            slidesPerView: 7,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",

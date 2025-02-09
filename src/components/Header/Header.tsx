@@ -3,12 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import carrito from '../../assets/carrito.png';
 import './Header.css';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import '../../index.css';
 import './Header.css';
 
 import { getAuth, signOut } from 'firebase/auth';
 import UserContext from '../../context/UserContext';
+
 
 const Header = () => {
     const userContext = useContext(UserContext);
@@ -27,7 +28,6 @@ const Header = () => {
             });
         }
     };
-    
 
     useEffect(() => {
         const texts = document.querySelectorAll('.moving-text h6');
@@ -70,20 +70,16 @@ const Header = () => {
                             <Nav className="d-flex flex-row fw-bolder m-0 p-0">
                                 <Nav.Link as={NavLink} to="/home" className="negro fw-bold">HOME</Nav.Link>
                                 <NavDropdown title="ZAPATILLAS" id="nav-dropdown" menuVariant="light" className='text-black'>
-                                    <NavDropdown.Item as={NavLink} to="/home">Nike</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Jordan</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Yeezy</NavDropdown.Item>
+                                    <NavDropdown.Item as={NavLink} to="/zapatillas/nike">Nike</NavDropdown.Item>
+                                    <NavDropdown.Item as={NavLink} to="/zapatillas/adidas">Adidas</NavDropdown.Item>
                                     <NavDropdown.Divider />
-                                    <NavDropdown.Item href="/products">Ver todas</NavDropdown.Item>
+                                    <NavDropdown.Item as={NavLink} to="/zapatillas">Ver todas</NavDropdown.Item>
                                 </NavDropdown>
-                                <NavDropdown title="ROPA" id="nav-dropdown" menuVariant="light" className='text-black'>
-                                    <NavDropdown.Item as={NavLink} to="/home">Nike</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Supreme</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Palace</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Stussy</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Off-White</NavDropdown.Item>
+                                <NavDropdown title="CAMISETAS" id="nav-dropdown" menuVariant="light" className='text-black'>
+                                    <NavDropdown.Item as={NavLink} to="/camisetas/nike">Nike</NavDropdown.Item>
+                                    <NavDropdown.Item as={NavLink} to="/camisetas/adidas">Adidas</NavDropdown.Item>
                                     <NavDropdown.Divider />
-                                    <NavDropdown.Item href="#action/3.4">Ver todo</NavDropdown.Item>
+                                    <NavDropdown.Item as={NavLink} to="/camisetas">Ver todas</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                         </Navbar.Collapse>
@@ -100,21 +96,18 @@ const Header = () => {
 
                     {user ? (
                         <>
-                        <button className='button' onClick={handleSignOut}>Cerrar Sesión</button>
-                        <NavLink className="btn rounded-0 fw-semibold px-4 py-2 bg-white" to="/">
-                            <img src={carrito} width={25} alt="Logo" />
-                        </NavLink>
+                            <button className='button' onClick={handleSignOut}>Cerrar Sesión</button>
+                            <NavLink className="btn rounded-0 fw-semibold px-4 py-2 bg-white" to="/">
+                                <img src={carrito} width={25} alt="Logo" />
+                            </NavLink>
                         </>
                     ) : (
                         <>
-                        <NavLink to="/register" className='nav-link fw-bold button'>
-                            Log In
-                        </NavLink>
-                    </>
+                            <NavLink to="/register" className='nav-link fw-bold button'>
+                                Log In
+                            </NavLink>
+                        </>
                     )}
-                    { /*si el usuario existe, se muestra o nombre de usuario o email y carrito, sino "Log In" */ }
-                    
-
                 </nav>
             </header>
         </>

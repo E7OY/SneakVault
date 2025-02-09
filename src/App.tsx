@@ -5,8 +5,6 @@ import RootLayout from './routes/Root';
 import Home from './routes/Home';
 import Register from './routes/Register';
 import ErrorPage from './pages/ErrorPage';
-import Productos from './routes/Products';
-import ProductList from './routes/Products';
 import Products from './routes/Products';
 
 const App = () => {
@@ -31,10 +29,21 @@ const App = () => {
           element: <Register setUser={setUser} />,
         },
         {
-          path: 'products',
-          element: <Products/>,
+          path: 'zapatillas',
+          element: <Products />,
         },
-
+        {
+          path: 'zapatillas/:marca',
+          element: <Products />,
+        },
+        {
+          path: 'camisetas',
+          element: <Products />,
+        },
+        {
+          path: 'camisetas/:marca',
+          element: <Products />,
+        },
       ],
     },
     {
