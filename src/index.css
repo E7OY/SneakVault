@@ -456,6 +456,9 @@ form {
 .producto img:hover {
   transform: rotateY(180deg);
 }
+.swiper-slide img:hover{
+  transform: rotateY(180deg);
+}
 @media (max-width: 1200px) {
   .productos {
     grid-template-columns: repeat(2, 1fr);
