@@ -63,6 +63,8 @@ const Products = () => {
             }
         };
 
+        
+
         fetchProducts();
     }, [categoria, marca]);
 

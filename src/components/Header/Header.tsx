@@ -91,7 +91,7 @@ const Header = () => {
                             type="search"
                             placeholder="Buscar..."
                             aria-label="Search"
-                        />
+                        />     
                     </form>
 
                     {user ? (
