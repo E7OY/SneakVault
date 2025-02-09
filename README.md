@@ -2,7 +2,7 @@
 
 # SneakVault - E-commerce de Zapatillas y Camisetas
 
-Este proyecto consiste en una aplicación web de venta de zapatillas y camisetas, desarrollada con React para el frontend y [especificar tecnología backend] para el backend. El objetivo principal es ofrecer una plataforma intuitiva y atractiva para la compra de productos relacionados con el calzado y la vestimenta urbana.
+Este proyecto consiste en una aplicación web de venta de zapatillas y camisetas, desarrollada con React para el frontend Y Firebase para la base de datos y la parte de autenticación. El objetivo principal es ofrecer una plataforma intuitiva y atractiva para la compra de productos relacionados con el calzado y la vestimenta urbana.
 
 ## Funcionalidades Principales
 
