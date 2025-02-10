@@ -71,13 +71,18 @@ const Header = () => {
                                 <Nav.Link as={NavLink} to="/home" className="negro fw-bold">HOME</Nav.Link>
                                 <NavDropdown title="ZAPATILLAS" id="nav-dropdown" menuVariant="light" className='text-black'>
                                     <NavDropdown.Item as={NavLink} to="/zapatillas/nike">Nike</NavDropdown.Item>
+                                    <NavDropdown.Item as={NavLink} to="/zapatillas/yeezy">Yeezy</NavDropdown.Item>
+                                    <NavDropdown.Item as={NavLink} to="/zapatillas/jordan">Jordan</NavDropdown.Item>
                                     <NavDropdown.Item as={NavLink} to="/zapatillas/adidas">Adidas</NavDropdown.Item>
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item as={NavLink} to="/zapatillas">Ver todas</NavDropdown.Item>
                                 </NavDropdown>
                                 <NavDropdown title="CAMISETAS" id="nav-dropdown" menuVariant="light" className='text-black'>
+                                    <NavDropdown.Item as={NavLink} to="/camisetas/off-white">Off-white</NavDropdown.Item>
+                                    <NavDropdown.Item as={NavLink} to="/camisetas/supreme">Supreme</NavDropdown.Item>
                                     <NavDropdown.Item as={NavLink} to="/camisetas/nike">Nike</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/camisetas/adidas">Adidas</NavDropdown.Item>
+                                    <NavDropdown.Item as={NavLink} to="/camisetas/palace">Palace</NavDropdown.Item>
+
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item as={NavLink} to="/camisetas">Ver todas</NavDropdown.Item>
                                 </NavDropdown>

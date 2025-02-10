@@ -2,61 +2,175 @@
     "productos": {
         "zapatillas": {
             "nike": {
-                "air-max-1": {
-                    "nombre": "Nike Air Max 1",
-                    "descripcion": "Las zapatillas icónicas de Nike, perfectas para el día a día.",
-                    "precio": 120,
-                    "marca": "Nike",
-                    "categoria": "zapatillas",
-                    "imagen": "url-de-la-imagen-air-max-1.jpg"
-                },
                 "air-force-1": {
-                    "nombre": "Nike Air Force 1",
-                    "descripcion": "Un clásico atemporal, ideal para cualquier ocasión.",
-                    "precio": 100,
+                    "nombre": "Nike Air Force 1 x Louis Vuitton",
+                    "descripcion": "Las zapatillas icónicas de Nike, perfectas para el día a día.",
+                    "precio": 6.900,
                     "marca": "Nike",
                     "categoria": "zapatillas",
-                    "imagen": "url-de-la-imagen-air-force-1.jpg"
+                    "imagen": "../assets/off-white.png",
+                    "stock": 10
+                },
+                "off-white-mid": {
+                    "nombre": "Air Force 1 Mid x Off-White",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Nike.",
+                    "precio": 179,
+                    "marca": "Nike",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/offwhitenike.png",
+                    "stock": 60
+                },
+                "air-zoom-stussy": {
+                    "nombre": "Nike Air Zoom x Stussy",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Nike.",
+                    "precio": 1800,
+                    "marca": "Nike",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/nikexstussy.png",
+                    "stock": 25
                 }
             },
-            "adidas": {
-                "stan-smith": {
-                    "nombre": "Adidas Stan Smith",
-                    "descripcion": "El estilo minimalista y elegante que nunca pasa de moda.",
-                    "precio": 80,
-                    "marca": "Adidas",
+
+            "yeezy": {
+                "foam": {
+                    "nombre": "Yeezy Foam",
+                    "descripcion": "Las zapatillas más cómodas y ligeras de la historia.",
+                    "precio": 200,
+                    "marca": "Yeezy",
                     "categoria": "zapatillas",
-                    "imagen": "url-de-la-imagen-stan-smith.jpg"
+                    "imagen": "../assets/yeezy.png",
+                    "stock": 59
                 },
-                "superstar": {
-                    "nombre": "Adidas Superstar",
-                    "descripcion": "Un icono de la cultura urbana, cómodas y con estilo.",
-                    "precio": 90,
+                "boost-700": {
+                    "nombre": "Yeezy Boost 700 V3",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 400,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/yeezyblack.png",
+                    "stock": 100
+                }
+            },
+
+
+            "jordan": {
+                "air-jordan-1": {
+                    "nombre": "Air Jordan 1 x Cactus Jack",
+                    "descripcion": "Un clásico atemporal, ideal para cualquier ocasión.",
+                    "precio": 2.500,
+                    "marca": "Jordan",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/jordan1.png",
+                    "stock": 40
+                },
+                "retro-canyon": {
+                    "nombre": "Jordan Retro Canyon Purple",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "precio": 400,
+                    "marca": "Jordan",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/jordanretro.png",
+                    "stock": 5
+                },
+                "frozen-moments": {
+                    "nombre": "Jordan Frozen Moments",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "precio": 550,
+                    "marca": "Jordan",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/jordanfrozen.png",
+                    "stock": 56
+                }
+            },
+
+            "adidas": {
+                "campus": {
+                    "nombre": "Adidas Campus x Bad Bunny",
+                    "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
+                    "precio": 240,
                     "marca": "Adidas",
                     "categoria": "zapatillas",
-                    "imagen": "url-de-la-imagen-superstar.jpg"
+                    "imagen": "../assets/campus.png",
+                    "stock": 5
                 }
             }
         },
+
+
         "camisetas": {
-            "nike": {
-                "dri-fit": {
-                    "nombre": "Camiseta Nike Dri-FIT",
-                    "descripcion": "Camiseta técnica para deporte, ligera y transpirable.",
-                    "precio": 30,
-                    "marca": "Nike",
+
+            "off-white": {
+                "shared-logo": {
+                    "nombre": "Off-White camiseta shared logo",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Off-White.",
+                    "precio": 300,
+                    "marca": "Off-white",
                     "categoria": "camisetas",
-                    "imagen": "url-de-la-imagen-dri-fit.jpg"
+                    "imagen": "../assets/offwhiteshirt.png",
+                    "stock": 14
+                },
+                "black-shirt": {
+                    "nombre": "Off-White black t-shirt",
+                    "descripcion": "Camiseta de algodón con el logo de Off",
+                    "precio": 250,
+                    "marca": "Off-white",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/offwhiteshirtblack.png",
+                    "stock": 9
                 }
             },
-            "adidas": {
-                "originals": {
-                    "nombre": "Camiseta Adidas Originals",
-                    "descripcion": "Camiseta de algodón con el logo clásico de Adidas.",
-                    "precio": 25,
-                    "marca": "Adidas",
+
+            "supreme": {
+                "undercover-face": {
+                    "nombre": "Supreme Off-White black t-shirt",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Supreme y Undercover.",
+                    "precio": 150,
+                    "marca": "Supreme",
                     "categoria": "camisetas",
-                    "imagen": "url-de-la-imagen-originals.jpg"
+                    "imagen": "../assets/supremeshirt.png",
+                    "stock": 106
+                },
+                "mm6": {
+                    "nombre": "Camiseta Supreme x MM6",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Supreme y MM6.",
+                    "precio": 550,
+                    "marca": "Supreme",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/suprememm6.png",
+                    "stock": 155
+                }
+            },
+
+            "nike": {
+                "commes-des-garcons": {
+                    "nombre": "Nike x Commes des Garcons",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Nike y Commes des Garcons.",
+                    "precio": 150,
+                    "marca": "Nike",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/nikeshirt.png",
+                    "stock": 160
+                }
+            },
+
+            "palace": {
+                "oackley-shirt": {
+                    "nombre": "Palace x Oakley T-Shirt",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Palace y Oakley.",
+                    "precio": 130,
+                    "marca": "Palace",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/palaceshirt.png",
+                    "stock": 10
+                },
+                "long-sleeve-carhartt": {
+                    "nombre": "Palace x Carhartt WIP",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Palace y Carhartt WIP.",
+                    "precio": 150,
+                    "marca": "Palace",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/palacelongsleeve.png",
+                    "stock": 10
                 }
             }
         }
