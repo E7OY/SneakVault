@@ -7,7 +7,7 @@ import logogoogle from '../assets/logogoogle.png';
 import logoapple from '../assets/logoapple.png';
 
 const Register = () => {
-    const [isRegistering, setIsRegistering] = useState(true);
+    const [isRegistering, setIsRegistering] = useState(false);
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -17,19 +17,6 @@ const Register = () => {
     const user = userContext ? userContext.user : null;
     const setUser = userContext ? userContext.setUser : () => {};
     const errorMessage = document.getElementsByClassName('error');
-
-    /*cerrar sesion
-    const handleSignOut = async () => {
-        try {
-            await signOut(getAuth());
-            setUser(null);
-        } catch (error) {
-            Array.from(errorMessage).forEach((element) => {
-                element.textContent = 'Error al cerrar sesion: ' + error;
-            });
-        }
-    };
-    */
 
     //registro
     const handleRegister = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -54,7 +41,7 @@ const Register = () => {
             setUser(user);
         } catch (error) {
             Array.from(errorMessage).forEach((element) => {
-                element.textContent = 'Error al iniciar sesion: ' + error;
+                element.textContent = 'Error al iniciar sesion: email y/o contraseña incorrectos.'; {/* + error */}
             });
         }
     };
@@ -74,17 +61,17 @@ const Register = () => {
         <div className="register container mx-auto mt-5 mb-5">
             <div className="row">
                 <div className="col-12 col-md-6 bg-black text-white p-5 position-relative text-end">
-                    <h2>{!isRegistering ? 'Registro' : 'Iniciar Sesión'}</h2>
-                    <p>{!isRegistering ? 'Registrate y consigue un 10% de descuento' : 'Inicia sesión para poder comprar'}</p>
+                    <h2>{isRegistering ? 'Registro' : 'Iniciar Sesión'}</h2>
+                    <p>{isRegistering ? 'Registrate y consigue un 10% de descuento' : 'Inicia sesión para poder comprar'}</p>
                     <h1 className='position-absolute bottom-0 text-opacity-100'>SneakVault</h1>
                 </div>
                 <div className="col-12 col-md-6 border border-2 border-black py-5 d-flex flex-column justify-content-center">
                     {user ? (
                         <Navigate to="/home"/>
                     ) : (
-                        <Form method='post' onSubmit={!isRegistering ? handleRegister : handleSignIn}>
+                        <Form method='post' onSubmit={isRegistering ? handleRegister : handleSignIn}>
                             <div className="container d-flex flex-column justify-content-center gap-4">
-                                {!isRegistering && (
+                                {isRegistering && (
                                     <div className='form-field w-50 d-flex gap-0'>
                                         <label htmlFor='username' id='username'>Nombre de Usuario *</label>
                                         <input type='text' name='username' id='username' required value={username} onChange={(e) => setUsername(e.target.value)} />
@@ -98,7 +85,7 @@ const Register = () => {
                                     <label htmlFor='password' id='password'>Contraseña *</label>
                                     <input type='password' name='password' id='password' required value={password} onChange={(e) => setPassword(e.target.value)} />
                                 </div>
-                                {!isRegistering && (
+                                {isRegistering && (
                                 <>
                                 <div className='form-field w-50 d-flex gap-0'>
                                     <label htmlFor='name' id='name'>Nombre y apellidos *</label>
@@ -111,7 +98,7 @@ const Register = () => {
                                 </>
                                 )}
                                 <div className="error"></div>
-                                <button type='submit' className='button'>{!isRegistering ? 'Registrar' : 'Iniciar Sesión'}</button>
+                                <button type='submit' className='button'>{isRegistering ? 'Registrar' : 'Iniciar Sesión'}</button>
                             </div>
                         </Form>
                     )}
@@ -127,7 +114,7 @@ const Register = () => {
                         </div>
                         <div className="col-4 button-google d-flex flex-row gap-2 w-auto justify-content-center align-items-center py-2 px-4">
                             <button className='button-google' onClick={() => setIsRegistering(!isRegistering)}>
-                                {!isRegistering ? 'Ya tienes una cuenta? Inicia Sesión' : 'No tienes una cuenta? Regístrate'}
+                                {isRegistering ? 'Ya tienes una cuenta? Inicia Sesión' : 'No tienes una cuenta? Regístrate'}
                             </button>
                         </div>
                         </>

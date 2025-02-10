@@ -173,26 +173,6 @@ header {
   }
 }
 
-
-/*
-.productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  padding: 20px;
-  justify-content: start;
-}
-
-.producto:hover {
-  cursor: pointer;
-}
-
-
-.producto h3 {
-  font-size: 1.4rem;
-  margin: 0;
-  flex-grow: 1;
-}
-*/
 .swiper-wrapper {
     display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -203,7 +183,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10px;
+  padding: 20px;
   outline: 2px solid #010101;
   background-color: rgb(255, 255, 255);
   color: #010101;
@@ -211,7 +191,7 @@ header {
   height: auto;
   box-sizing: border-box;
 }
- .swiper-banner img {
+.swiper-banner img {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -283,6 +263,8 @@ header {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   padding: 20px;
   justify-content: start;
+  align-items: center;
+
 }
 
 .producto:hover {
@@ -295,21 +277,28 @@ header {
   justify-content: space-between;
   padding: 10px;
   outline: 2px solid #010101;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   color: #010101;
   width: 100%;
+  height: auto;
   box-sizing: border-box;
 }
 
-.producto h3 {
-  font-size: 1.4rem;
-  margin: 0;
-  flex-grow: 1;
+.producto:hover {
+  box-shadow: 10px 10px 0px rgb(0, 0, 0);
+  transform: scale(1.05);
+}
+
+.producto h5 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 
 .producto img {
   width: 100%;
-  height: 200px;
+  height:auto;
   object-fit: cover;
 }
 

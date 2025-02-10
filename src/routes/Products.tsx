@@ -25,6 +25,25 @@ import imagen18 from '../assets/palaceshirt.png';
 import imagen19 from '../assets/palacelongsleeve.png';
 
 
+
+/*  NO EN HOME */ 
+import imagen20 from '../assets/yeezy-350-cloud.png';
+import imagen21 from '../assets/yeezy-350-granite.png';
+import imagen22 from '../assets/yeezy-350-beluga.png';
+import imagen23 from '../assets/yeezy-350-frozen-yellow.png';
+import imagen24 from '../assets/yeezy-foam-sulfur.png';
+import imagen25 from '../assets/yeezy-slides-onyx.png';
+import imagen26 from '../assets/yeezy-foam-cinder.png';
+
+import imagen27 from '../assets/jordan-retro-seafoam.png';
+import imagen28 from '../assets/jordan-retro-low-fragment-travis.png';
+import imagen29 from '../assets/jordan-retro-low-travis.png';
+import imagen30 from '../assets/jordan-retro-low-travis-mocha.png';
+import imagen31 from '../assets/jordan-jumpman-travis.png';
+import imagen32 from '../assets/jordan-low-travis-black-phantom.png';
+
+
+
 const imageMap: { [key: string]: string } = {
     'Air Jordan 1 x Cactus Jack': imagen1,   //meter nombres de los productos en la bbdd
     'Nike Air Force 1 x Louis Vuitton': imagen5,
@@ -36,14 +55,28 @@ const imageMap: { [key: string]: string } = {
     'Jordan Frozen Moments' : imagen11,
     'Adidas Campus x Bad Bunny' : imagen12,
 
-
     'Off-White camiseta shared logo' :imagen13,
     'Off-White black t-shirt' : imagen14,
-    'Supreme x Undercover' : imagen15,
+    'Supreme x Undercover face' : imagen15,
     'Camiseta Supreme x MM6' : imagen16,
     'Nike x Commes des Garcons' :imagen17,
     'Palace x Oakley T-Shirt' : imagen18,
-    'Palace x Carhartt WIP' : imagen19
+    'Palace x Carhartt WIP' : imagen19,
+
+    'Yeezy 350 V2 Cloud White' : imagen20,
+    'Yeezy 350 V2 Granite' : imagen21,
+    'Yeezy 350 V2 Beluga' : imagen22,
+    'Yeezy 350 V2 Frozen Yellow' : imagen23,
+    'Yeezy Foam Runner Sulfur' : imagen24,
+    'Yeezy Slides Onyx' : imagen25,
+    'Yeezy Foam Runner Cinder' : imagen26,
+    'Jordan 4 Retro Seafoam' : imagen27,
+    'Air Jordan 1 Low OG SP x Fragment Design x Travis Scott' : imagen28,
+    'Jordan 1 Retro Low OG SP Travis Scott' : imagen29,
+    'Air Jordan 1 Low Travis Scott Reverse Mocha' : imagen30,
+    'Jordan Jumpman Travis Scott' : imagen31,
+    'Jordan 1 Low OG SP Travis Scott Black Phantom' : imagen32,
+
 };
 
 
@@ -99,14 +132,14 @@ const Products = () => {
             <h1 className='fw-bold display-1 mt-4 w-5 mx-3'>DESCUBRE PRODUCTOS ILIMITADOS SIN LIMITACION</h1>
             <div className="productos">
                 {products.map(product => (
-                    <div className="m-0 p-0" key={product.id}>
+                    <div className="m-0 p-0 " key={product.id}>
                         <div className="producto">
                         <img className='img-fluid' src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />                            
                         <h6 className='mx-3 mt-3'>{product.categoria}</h6>
-                            <h3 className='mx-3'>{product.nombre}</h3>
+                            <h5 className='fw-semibold mx-3 '>{product.nombre}</h5>
                             <p className='mx-3'>{product.precio}€</p>
-                        {product.stock <= 10 ? <h6 className='mx-3 text-danger position-absolute'>Bajo stock</h6> :
-                        <h6 className='mx-3 text-success position-absolute'>{product.stock} en stock</h6> }
+                        {product.stock <= 10 ? <h6 className='mx-3 fw-light text-danger position-absolute '>Bajo stock</h6> :
+                        <h6 className='mx-3 fw-light position-absolute'>{product.stock} en stock</h6> }
                         </div>
                     </div>
                 ))}

@@ -49,6 +49,69 @@
                     "categoria": "zapatillas",
                     "imagen": "../assets/yeezyblack.png",
                     "stock": 100
+                },
+                "350-cloud-white": {
+                    "nombre": "Yeezy 350 V2 Cloud White",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 450,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/yeezy-350-cloud.png",
+                    "stock": 4
+                },
+                "350-granite": {
+                    "nombre": "Yeezy 350 V2 Granite",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 380,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/yeezy-350-granite.png",
+                    "stock": 27
+                },
+                "350-beluga": {
+                    "nombre": "Yeezy 350 V2 Beluga",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 400,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/yeezy-350-beluga.png",
+                    "stock": 0
+                },
+                "350-frozen-yellow": {
+                    "nombre": "Yeezy 350 V2 Frozen Yellow",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 800,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": ".../assets/yeezy-350-frozen-yellow.png",
+                    "stock": 2
+                },
+                "foam-runner-sulfur": {
+                    "nombre": "Yeezy Foam Runner Sulfur",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 180,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/yeezy-foam-sulfur.png",
+                    "stock": 2
+                },
+                "slides-onyx": {
+                    "nombre": "Yeezy Slides Onyx",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 200,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/yeezy-slides-onyx.png",
+                    "stock": 22
+                },
+                "foam-runner-cinder": {
+                    "nombre": "Yeezy Foam Runner Cinder",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 230,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/yeezy-foam-cinder.png",
+                    "stock": 22
                 }
             },
 
@@ -80,6 +143,60 @@
                     "categoria": "zapatillas",
                     "imagen": "../assets/jordanfrozen.png",
                     "stock": 56
+                },
+                "retro-seafoam": {
+                    "nombre": "Jordan 4 Retro Seafoam",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "precio": 370,
+                    "marca": "Jordan",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/jordan-retro-seafoam.png",
+                    "stock": 24
+                },
+                "air-low-fragment-travis": {
+                    "nombre": "Air Jordan 1 Low OG SP x Fragment Design x Travis Scott",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "precio": 2500,
+                    "marca": "Jordan",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/jordan-retro-low-fragment-travis.png",
+                    "stock": 3
+                },
+                "retro-low-og-travis": {
+                    "nombre": "Jordan 1 Retro Low OG SP Travis Scott",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "precio": 2500,
+                    "marca": "Jordan",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/jordan-retro-low-travis.png",
+                    "stock": 15
+                },
+                "low-reverse-mocha-travis": {
+                    "nombre": "Air Jordan 1 Low Travis Scott Reverse Mocha",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "precio": 2000,
+                    "marca": "Jordan",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/jordan-retro-low-travis-mocha.png",
+                    "stock": 29
+                },
+                "jumpman-travis-scott": {
+                    "nombre": "Jordan Jumpman Travis Scott",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "precio": 800,
+                    "marca": "Jordan",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/jordan-jumpman-travis.png",
+                    "stock": 49
+                },
+                "low-og-travis-black-phantom": {
+                    "nombre": "Jordan 1 Low OG SP Travis Scott Black Phantom",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "precio": 1300,
+                    "marca": "Jordan",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/jordan-low-travis-black-phantom.png",
+                    "stock": 0
                 }
             },
 
@@ -122,7 +239,7 @@
 
             "supreme": {
                 "undercover-face": {
-                    "nombre": "Supreme Off-White black t-shirt",
+                    "nombre": "Supreme x Undercover face",
                     "descripcion": "Camiseta de algodón con el logo compartido de Supreme y Undercover.",
                     "precio": 150,
                     "marca": "Supreme",
