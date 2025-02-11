@@ -66,8 +66,6 @@ import imagen54 from '../assets/response-cl-blue-bad-bunny.png';
 import imagen55 from '../assets/jordan-jumpman-travis-dark-mocha.png';
 import imagen56 from '../assets/jordan-jumpman-travis-university-red.png';
 
-
-
 import imagen57 from '../assets/yeezy-350-zebra.png';
 import imagen58 from '../assets/yeezy-350-dazzling-blue.png';
 import imagen59 from '../assets/yeezy-slides-granite.png';
@@ -150,7 +148,6 @@ const imageMap: { [key: string]: string } = {
     'Adidas Forum x Bad Bunny Black' : imagen64,
     'Adidas Forum x Bad Bunny Blue' : imagen65,
     'Adidas Campus Cream x Bad Bunny' : imagen66,
-
 };
 
 
@@ -193,8 +190,6 @@ const Products = () => {
                 console.error(error);
             }
         };
-
-        
 
         fetchProducts();
     }, [categoria, marca]);

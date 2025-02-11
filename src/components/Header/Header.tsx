@@ -8,8 +8,9 @@ import '../../index.css';
 import './Header.css';
 
 import { getAuth, signOut } from 'firebase/auth';
-import UserContext from '../../context/UserContext';
+import UserContext from '../../context/userContext';
 
+import SneakVaultLogo from '../../assets/Sneakvault.png';
 
 const Header = () => {
     const userContext = useContext(UserContext);
@@ -62,9 +63,12 @@ const Header = () => {
                 <nav className="navbar navbar-expand-lg d-flex justify-content-between w-100 gap-5">
                     <a className="navbar-brand" href="#">
                         <h1 className='fw-bold negro'>
-                            <NavLink className="nav-link negro" to="/home">SneakVault</NavLink>
+                            <NavLink className="nav-link negro" to="/home">
+                            <img src={SneakVaultLogo} width={180} alt="logo sneak vault"/>
+                            </NavLink>
                         </h1>
                     </a>
+
                     <Navbar expand="lg">
                         <Navbar.Collapse id="navbar-footer">
                             <Nav className="d-flex flex-row fw-bolder m-0 p-0">
@@ -82,7 +86,6 @@ const Header = () => {
                                     <NavDropdown.Item as={NavLink} to="/camisetas/supreme">Supreme</NavDropdown.Item>
                                     <NavDropdown.Item as={NavLink} to="/camisetas/nike">Nike</NavDropdown.Item>
                                     <NavDropdown.Item as={NavLink} to="/camisetas/palace">Palace</NavDropdown.Item>
-
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item as={NavLink} to="/camisetas">Ver todas</NavDropdown.Item>
                                 </NavDropdown>
@@ -98,7 +101,7 @@ const Header = () => {
                             aria-label="Search"
                         />     
                     </form>
-
+                    
                     {user ? (
                         <>
                             <button className='button' onClick={handleSignOut}>Cerrar Sesión</button>
@@ -113,6 +116,7 @@ const Header = () => {
                             </NavLink>
                         </>
                     )}
+
                 </nav>
             </header>
         </>
