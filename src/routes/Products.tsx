@@ -34,7 +34,6 @@ import imagen23 from '../assets/yeezy-350-frozen-yellow.png';
 import imagen24 from '../assets/yeezy-foam-sulfur.png';
 import imagen25 from '../assets/yeezy-slides-onyx.png';
 import imagen26 from '../assets/yeezy-foam-cinder.png';
-
 import imagen27 from '../assets/jordan-retro-seafoam.png';
 import imagen28 from '../assets/jordan-retro-low-fragment-travis.png';
 import imagen29 from '../assets/jordan-retro-low-travis.png';
@@ -42,6 +41,30 @@ import imagen30 from '../assets/jordan-retro-low-travis-mocha.png';
 import imagen31 from '../assets/jordan-jumpman-travis.png';
 import imagen32 from '../assets/jordan-low-travis-black-phantom.png';
 
+import imagen33 from '../assets/yeezy-350-black.png';
+import imagen34 from '../assets/yeezy-380-alien.png';
+import imagen35 from '../assets/yeezy-350-light.png';
+import imagen36 from '../assets/yeezy-700-wave.png';
+import imagen37 from '../assets/yeezy-700-static.png';
+import imagen38 from '../assets/yeezy-slides-ochre.png';
+import imagen39 from '../assets/jordan-retro-fear.png';
+import imagen40 from '../assets/jordan-retro-wet-cement.png';
+import imagen41 from '../assets/jordan-retro-olive.png';
+import imagen42 from '../assets/jordan-retro-A-Ma-Maniére.png';
+import imagen43 from '../assets/zoom-vomero-5.png';
+import imagen44 from '../assets/nocta-black.png';
+import imagen45 from '../assets/nocta-white.png';
+import imagen46 from '../assets/nocta-eggplant.png'
+import imagen47 from '../assets/nocta-glide-white.png'
+import imagen48 from '../assets/nocta-rattan.png';
+import imagen49 from '../assets/nocta-orange.png';
+import imagen50 from '../assets/forum-bad-bunny-white.png';
+import imagen51 from '../assets/response-cl-bad-bunny.png';
+import imagen52 from '../assets/response-cl-white-bad-bunny.png'
+import imagen53 from '../assets/response-cl-black-bad-bunny.png';
+import imagen54 from '../assets/response-cl-blue-bad-bunny.png';
+import imagen55 from '../assets/jordan-jumpman-travis-dark-mocha.png';
+import imagen56 from '../assets/jordan-jumpman-travis-university-red.png';
 
 
 const imageMap: { [key: string]: string } = {
@@ -51,10 +74,9 @@ const imageMap: { [key: string]: string } = {
     'Nike Air Zoom x Stussy' : imagen7,
     'Yeezy Foam' : imagen8,
     'Yeezy Boost 700 V3' : imagen9,
-    'Jordan Retro Canyon Purple' : imagen10,
-    'Jordan Frozen Moments' : imagen11,
+    'Jordan 4 Retro Canyon Purple' : imagen10,
+    'Jordan 4 Retro Frozen Moments' : imagen11,
     'Adidas Campus x Bad Bunny' : imagen12,
-
     'Off-White camiseta shared logo' :imagen13,
     'Off-White black t-shirt' : imagen14,
     'Supreme x Undercover face' : imagen15,
@@ -77,9 +99,35 @@ const imageMap: { [key: string]: string } = {
     'Jordan Jumpman Travis Scott' : imagen31,
     'Jordan 1 Low OG SP Travis Scott Black Phantom' : imagen32,
 
+
+    'Yeezy 350 V2 Core Black Red' : imagen33,
+    'Yeezy 380 Alien' : imagen34,
+    'Yeezy 350 V2 Light' :imagen35,
+    'Yeezy 700 Wave Runner' : imagen36,
+    'Yeezy 700 Static' : imagen37,
+    'Yeezy Slides Ochre' : imagen38,
+
+    'Jordan 4 Retro Fear' : imagen39,
+    'Jordan 4 Retro Wet Cement' : imagen40,
+    'Jordan 4 Retro Olive' : imagen41,
+    'Jordan 3 Retro A Ma Maniére' : imagen42,
+
+    'Nike Zoom Vomero 5' : imagen43,
+    'Nike Hot Step Nocta Black' : imagen44,
+    'Nike Hot Step 2 Nocta Drake White' : imagen45,
+    'Nike Hot Step 2 Nocta Eggplant' : imagen46,
+    'Nike Nocta Glide Drake White' : imagen47,
+    'Nike Hot Step 2 Nocta Rattan' : imagen48,
+    'Nike Hot Step 2 Nocta Orange' : imagen49,
+    'Adidas Forum x Bad Bunny White' : imagen50,
+    'Adidas Response CL x Bad Bunny' : imagen51,
+    'Adidas Response CL White x Bad Bunny' : imagen52,
+    'Adidas Response CL Black x Bad Bunny' : imagen53,
+    'Adidas Response CL Blue x Bad Bunny' : imagen54,
+    'Jordan Jumpman Travis Scott Dark Mocha' : imagen55,
+    'Jordan Jumpman Travis Scott University Red' : imagen56,
+
 };
-
-
 
 
 const Products = () => {

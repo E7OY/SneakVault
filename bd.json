@@ -28,6 +28,69 @@
                     "categoria": "zapatillas",
                     "imagen": "../assets/nikexstussy.png",
                     "stock": 25
+                },
+                "zoom-vomero-5": {
+                    "nombre": "Nike Zoom Vomero 5",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Nike.",
+                    "precio": 200,
+                    "marca": "Nike",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/zoom-vomero-5.png",
+                    "stock": 25
+                },
+                "hot-step-nocta-black": {
+                    "nombre": "Nike Hot Step Nocta Black",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Nike.",
+                    "precio": 320,
+                    "marca": "Nike",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/nocta-black.png",
+                    "stock": 8
+                },
+                "hot-step-nocta-drake-white": {
+                    "nombre": "Nike Hot Step 2 Nocta Drake White",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Nike.",
+                    "precio": 420,
+                    "marca": "Nike",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/nocta-white.png",
+                    "stock": 8
+                },
+                "hot-step-nocta-eggplant": {
+                    "nombre": "Nike Hot Step 2 Nocta Eggplant",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Nike.",
+                    "precio": 400,
+                    "marca": "Nike",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/nocta-eggplant.png",
+                    "stock": 12
+                },
+                "nocta-glide-drake-white": {
+                    "nombre": "Nike Nocta Glide Drake White",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Nike.",
+                    "precio": 350,
+                    "marca": "Nike",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/nocta-glide-white.png",
+                    "stock": 19
+                },
+                "hot-step-nocta-rattan": {
+                    "nombre": "Nike Hot Step 2 Nocta Rattan",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Nike.",
+                    "precio": 350,
+                    "marca": "Nike",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/nocta-rattan.png",
+                    "stock": 27
+                },
+                "hot-step-nocta-orange": {
+                    "nombre": "Nike Hot Step 2 Nocta Orange",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Nike.",
+                    "precio": 350,
+                    "marca": "Nike",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/nocta-orange.png",
+                    "stock": 2
                 }
             },
 
@@ -112,6 +175,60 @@
                     "categoria": "zapatillas",
                     "imagen": "../assets/yeezy-foam-cinder.png",
                     "stock": 22
+                },
+                "350-core-black": {
+                    "nombre": "Yeezy 350 V2 Core Black Red",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 380,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/yeezy-350-black.png",
+                    "stock": 14
+                },
+                "380-alien": {
+                    "nombre": "Yeezy 380 Alien",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 400,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/yeezy-380-alien.png",
+                    "stock": 14
+                },
+                "350-light": {
+                    "nombre": "Yeezy 350 V2 Light",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 400,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/yeezy-350-light.png",
+                    "stock": 9
+                },
+                "700-wave-runner": {
+                    "nombre": "Yeezy 700 Wave Runner",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 700,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/yeezy-700-wave.png",
+                    "stock": 138
+                },
+                "700-static": {
+                    "nombre": "Yeezy 700 Static",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 450,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/yeezy-700-static.png",
+                    "stock": 218
+                },
+                "slides-ochre": {
+                    "nombre": "Yeezy Slides Ochre",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 200,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/yeezy-slides-ochre.png",
+                    "stock": 58
                 }
             },
 
@@ -127,7 +244,7 @@
                     "stock": 40
                 },
                 "retro-canyon": {
-                    "nombre": "Jordan Retro Canyon Purple",
+                    "nombre": "Jordan 4 Retro Canyon Purple",
                     "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
                     "precio": 400,
                     "marca": "Jordan",
@@ -135,8 +252,8 @@
                     "imagen": "../assets/jordanretro.png",
                     "stock": 5
                 },
-                "frozen-moments": {
-                    "nombre": "Jordan Frozen Moments",
+                "retro-frozen-moments": {
+                    "nombre": "Jordan 4 Retro Frozen Moments",
                     "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
                     "precio": 550,
                     "marca": "Jordan",
@@ -189,6 +306,24 @@
                     "imagen": "../assets/jordan-jumpman-travis.png",
                     "stock": 49
                 },
+                "jumpman-travis-scott-dark-mocha": {
+                    "nombre": "Jordan Jumpman Travis Scott Dark Mocha",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "precio": 550,
+                    "marca": "Jordan",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/jordan-jumpman-travis-dark-mocha.png",
+                    "stock": 12
+                },
+                "jumpman-travis-scott-university-red": {
+                    "nombre": "Jordan Jumpman Travis Scott University Red",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "precio": 650,
+                    "marca": "Jordan",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/jordan-jumpman-travis-university-red.png",
+                    "stock": 3
+                },
                 "low-og-travis-black-phantom": {
                     "nombre": "Jordan 1 Low OG SP Travis Scott Black Phantom",
                     "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
@@ -197,6 +332,42 @@
                     "categoria": "zapatillas",
                     "imagen": "../assets/jordan-low-travis-black-phantom.png",
                     "stock": 0
+                },
+                "retro-fear": {
+                    "nombre": "Jordan 4 Retro Fear",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "precio": 280,
+                    "marca": "Jordan",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/jordan-retro-fear.png",
+                    "stock": 60
+                },
+                "retro-wet-cement": {
+                    "nombre": "Jordan 4 Retro Wet Cement",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "precio": 250,
+                    "marca": "Jordan",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/jordan-retro-wet-cement.png",
+                    "stock": 20
+                },
+                "retro-olive": {
+                    "nombre": "Jordan 4 Retro Olive",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "precio": 250,
+                    "marca": "Jordan",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/jordan-retro-olive.png",
+                    "stock": 20
+                },
+                "retro-a-ma-maniere": {
+                    "nombre": "Jordan 3 Retro A Ma Maniére",
+                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "precio": 350,
+                    "marca": "Jordan",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/jordan-retro-A-Ma-Maniére.png",
+                    "stock": 20
                 }
             },
 
@@ -209,6 +380,51 @@
                     "categoria": "zapatillas",
                     "imagen": "../assets/campus.png",
                     "stock": 5
+                },
+                "forum-bad-bunny-white": {
+                    "nombre": "Adidas Forum x Bad Bunny White",
+                    "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
+                    "precio": 330,
+                    "marca": "Adidas",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/forum-badd-bunny-white.png",
+                    "stock": 15
+                },
+                "response-cl-bad-bunny": {
+                    "nombre": "Adidas Response CL x Bad Bunny",
+                    "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
+                    "precio": 380,
+                    "marca": "Adidas",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/response-cl-badd-bunny.png",
+                    "stock": 15
+                },
+                "response-cl-white-bad-bunny": {
+                    "nombre": "Adidas Response CL White x Bad Bunny",
+                    "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
+                    "precio": 350,
+                    "marca": "Adidas",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/response-cl-white-badd-bunny.png",
+                    "stock": 2
+                },
+                "response-cl-black-bad-bunny": {
+                    "nombre": "Adidas Response CL Black x Bad Bunny",
+                    "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
+                    "precio": 250,
+                    "marca": "Adidas",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/response-cl-black-badd-bunny.png",
+                    "stock": 12
+                },
+                "response-cl-blue-bad-bunny": {
+                    "nombre": "Adidas Response CL Blue x Bad Bunny",
+                    "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
+                    "precio": 280,
+                    "marca": "Adidas",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/response-cl-blue-badd-bunny.png",
+                    "stock": 19
                 }
             }
         },
