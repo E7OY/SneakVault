@@ -6,9 +6,9 @@ import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 const Footer = () => {
     return (
-        <footer className="bg-white w-100 mt-5 border border-2 border-dark">
+        <footer className="bg-white w-100 mt-5 border-top border-2 border-dark">
 
-            <div className="row w-100 mb-5 d-flex align-items-center flex-row justify-content-evenly p-4">
+            <div className="row w-75 mx-auto d-flex align-items-center flex-row justify-content-between pt-5">
 
                 <div className="col-3 w-auto">
                     <h5 className="fw-bold">Informacion</h5>
@@ -76,8 +76,8 @@ const Footer = () => {
 
             </div>
 
-            <div className="row text-black w-100 mt-5 border-top border-2 border-dark">
-                <p className="pt-3 text-center fw-bold">© 2025 SneakVault. Todos los derechos reservados.</p>
+            <div className="mt-5">
+                <p className="texto-footer">SNEAKVAULT</p>
             </div>
         </footer>
     );

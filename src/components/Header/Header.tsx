@@ -64,15 +64,15 @@ const Header = () => {
                     <a className="navbar-brand" href="#">
                         <h1 className='fw-bold negro'>
                             <NavLink className="nav-link negro" to="/home">
-                            <img src={SneakVaultLogo} width={180} alt="logo sneak vault"/>
+                            <h3 className='fw-semibold logo'>SneakVault</h3>
                             </NavLink>
                         </h1>
                     </a>
 
                     <Navbar expand="lg">
                         <Navbar.Collapse id="navbar-footer">
-                            <Nav className="d-flex flex-row fw-bolder m-0 p-0">
-                                <Nav.Link as={NavLink} to="/home" className="negro fw-bold">HOME</Nav.Link>
+                            <Nav className="d-flex flex-row fw-medium m-0 p-0">
+                                <Nav.Link as={NavLink} to="/home" className="negro fw-regular">HOME</Nav.Link>
                                 <NavDropdown title="ZAPATILLAS" id="nav-dropdown" menuVariant="light" className='text-black'>
                                     <NavDropdown.Item as={NavLink} to="/zapatillas/nike">Nike</NavDropdown.Item>
                                     <NavDropdown.Item as={NavLink} to="/zapatillas/yeezy">Yeezy</NavDropdown.Item>
@@ -86,6 +86,7 @@ const Header = () => {
                                     <NavDropdown.Item as={NavLink} to="/camisetas/supreme">Supreme</NavDropdown.Item>
                                     <NavDropdown.Item as={NavLink} to="/camisetas/nike">Nike</NavDropdown.Item>
                                     <NavDropdown.Item as={NavLink} to="/camisetas/palace">Palace</NavDropdown.Item>
+                                    <NavDropdown.Item as={NavLink} to="/camisetas/stussy">Stussy</NavDropdown.Item>
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item as={NavLink} to="/camisetas">Ver todas</NavDropdown.Item>
                                 </NavDropdown>
@@ -111,7 +112,7 @@ const Header = () => {
                         </>
                     ) : (
                         <>
-                            <NavLink to="/register" className='nav-link fw-bold button'>
+                            <NavLink to="/register" className='nav-link fw-regular button'>
                                 Log In
                             </NavLink>
                         </>

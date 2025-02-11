@@ -72,7 +72,7 @@ const Home = () => {
                 pauseOnMouseEnter: true,
                 disableOnInteraction: false,
             },
-            slidesPerView: 6,
+            slidesPerView: 7,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
@@ -136,8 +136,8 @@ const Home = () => {
         nikejordan,
         stussy90s,
         travis1,
-        travis2,
-        travis3
+        /*travis2,
+        travis3*/
     ];
 
     return (
@@ -158,13 +158,20 @@ const Home = () => {
                 <div className="swiper-button-next text-black border border-1 border-black"></div>
             </div>
 
-            <main className="mx-1">
+            <main className="mx-1 px-5">
                 {/* SLIDER ZAPATILLAS */}
-                <div className="row d-flex justify-content-between align-items-center">
-                    <div className="col">
-                        <h2 className="fw-bolder negro text-start display-6">
+                <div className="d-flex flex-row justify-content-between align-items-end">
+                    <div className="">
+                        <h2 className="fw-bolder negro text-center display-6">
                             ZAPATILLAS DESTACADAS
                         </h2>
+                    </div>
+                    <div className=""> 
+                        <Link to="/products" className="text-decoration-none">
+                        <button className="button text-start">
+                            VES MAS
+                        </button>
+                        </Link>
                     </div>
                 </div>
                 <div className="swiper swiper-hero mb-5">
@@ -217,21 +224,21 @@ const Home = () => {
                     </div>
                     <div className="swiper-button-prev text-black border border-1 border-black"></div>
                     <div className="swiper-button-next text-black border border-1 border-black"></div>
+                </div>
+
+                {/* SLIDER ROPA */}
+                <div className="d-flex flex-row justify-content-between align-items-end">
+                    <div className="">
+                        <h2 className="fw-bolder negro text-center display-6">
+                            NUEVA COLECCION
+                        </h2>
+                    </div>
                     <div className=""> 
                         <Link to="/products" className="text-decoration-none">
                         <button className="button text-start">
                             VES MAS
                         </button>
                         </Link>
-                    </div>
-                </div>
-
-                {/* SLIDER ROPA */}
-                <div className="row d-flex justify-content-between align-items-center mt-5">
-                    <div className="col">
-                        <h2 className="fw-bolder negro text-start display-6">
-                            ROPA EN TENDENCIA
-                        </h2>
                     </div>
                 </div>
                 <div className="swiper swiper-hero">
@@ -279,9 +286,6 @@ const Home = () => {
                     </div>
                     <div className="swiper-button-prev text-black border border-1 border-black"></div>
                     <div className="swiper-button-next text-black border border-1 border-black"></div>
-                    <div className="text-start">
-                        <button className="button fw-bolder">VER MÁS</button>
-                    </div>
                 </div>
 
                 <div className="row d-flex justify-content-between align-items-center mt-5">
@@ -294,89 +298,36 @@ const Home = () => {
 
                 <div className="container-fluid marcas d-flex flex-column align-items-start m-0 mx-0">
                     <div className="row">
-                        <div className="col-3 border border-1 border-black d-flex flex-column align-items-center ">
+                        <div className="col-2 border border-1 border-black d-flex flex-column align-items-center ">
                             <img src={supremelogo} className="w-75" alt="" />
                         </div>
-                        <div className="col-3 border border-1 border-black d-flex flex-column align-items-center ">
+                        <div className="col-2 border border-1 border-black d-flex flex-column align-items-center ">
                             <img src={nikelogo} className="w-75" alt="" />
                         </div>
-                        <div className="col-3 border border-1 border-black d-flex flex-column align-items-center ">
+                        <div className="col-2 border border-1 border-black d-flex flex-column align-items-center ">
                             <img src={stussylogo} className="w-75" alt="" />
                         </div>
-                        <div className="col-3 border border-1 border-black d-flex flex-column align-items-center ">
+                        <div className="col-2 border border-1 border-black d-flex flex-column align-items-center ">
                             <img src={palacelogo} className="w-75" alt="" />
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-3 border border-1 border-black d-flex flex-column align-items-center ">
+                        <div className="col-2 border border-1 border-black d-flex flex-column align-items-center ">
                             <img src={yeezylogo} className="w-75" alt="" />
                         </div>
-                        <div className="col-3 border border-1 border-black d-flex flex-column align-items-center ">
+                        <div className="col-2 border border-1 border-black d-flex flex-column align-items-center ">
                             <img src={offwhitelogo} className="w-75" alt="" />
                         </div>
-                        <div className="col-3 border border-1 border-black d-flex flex-column align-items-center ">
+                        <div className="col-2 border border-1 border-black d-flex flex-column align-items-center ">
                             <img src={adidaslogo} className="w-75" alt="" />
                         </div>
-                        <div className="col-3 border border-1 border-black d-flex flex-column align-items-center ">
+                        <div className="col-2 border border-1 border-black d-flex flex-column align-items-center ">
                             <img src={mm6logo} className="w-75" alt="" />
                         </div>
                     </div>
                 </div>
 
-                <div className="row mt-5 d-flex justify-content-start">
-                    <div className="col-12">
-                        <h1 className="fw-bold negro text-start">
-                            PASIÓN POR EL HYPEBEAST
-                        </h1>
-                    </div>
-                    <div className="collage-grid">
-                        {images.map((image, index) => (
-                            <div key={index} className="collage-item">
-                                <img
-                                    src={image}
-                                    className="collage-img"
-                                    alt={`image-${index}`}
-                                />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                <div className="row d-flex justify-content-evenly mt-5">
-
-                        <div className="col-3 info border border-black border-2 p-4">
-                            <img src={original} width={30} alt="" />
-                            <div>
-                            <h4>SneakVault Verified</h4>
-                            <p>
-                                StockX Verified is our own designation and means that we inspect every item, every time.
-                                StockX Verified is our own designation and means that we inspect every item, every time.Learn More
-                            </p>
-                            </div>
-                        </div>
-
-                        <div className="col-3 info border border-black border-2 p-4">
-                            <img src={envio} width={30} alt="" />
-                            <div>
-                            <h4>SneakVault Verified</h4>
-                            <p>
-                                StockX Verified is our own designation and means that we inspect every item, every time.
-                                StockX Verified is our own designation and means that we inspect every item, every time.Learn More
-                            </p>
-                            </div>
-                        </div>
-                        <div className="col-3 info border border-black border-2 p-4">
-                            <img src={devolucion} width={30} alt="" />
-                            <div>
-                            <h4>SneakVault Verified</h4>
-                            <p>
-                                StockX Verified is our own designation and means that we inspect every item, every time.
-                                StockX Verified is our own designation and means that we inspect every item, every time.Learn More
-                            </p>
-                            </div>
-                        </div>
-                </div>
-
+                
                 <div className="row bg-black mt-5 p-5 mx-auto m-0 d-flex gap-5 justify-content-center align-items-center">
                     <div className="col-3 w-25 py-5">
                     {user ? (
@@ -417,6 +368,61 @@ const Home = () => {
                         los 70 a Travis, tenemos todo cubierto.
                         */}
                 </div>
+
+                <div className="row mt-5 d-flex justify-content-start">
+                    <div className="col-12">
+                        <h2 className="fw-bold display-5 pasion negro text-start">
+                            PASIÓN POR EL HYPEBEAST
+                        </h2>
+                    </div>
+                    <div className="collage-grid">
+                        {images.map((image, index) => (
+                            <div key={index} className="collage-item">
+                                <img
+                                    src={image}
+                                    className="collage-img"
+                                    alt={`image-${index}`}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="row d-flex justify-content-start gap-5 mt-5">
+
+                        <div className="col-3 info border border-black border-2 p-4">
+                            <img src={original} width={30} alt="" />
+                            <div>
+                            <h4>SneakVault Verified</h4>
+                            <p>
+                                StockX Verified is our own designation and means that we inspect every item, every time.
+                                StockX Verified is our own designation and means that we inspect every item, every time.Learn More
+                            </p>
+                            </div>
+                        </div>
+
+                        <div className="col-3 info border border-black border-2 p-4">
+                            <img src={envio} width={30} alt="" />
+                            <div>
+                            <h4>SneakVault Verified</h4>
+                            <p>
+                                StockX Verified is our own designation and means that we inspect every item, every time.
+                                StockX Verified is our own designation and means that we inspect every item, every time.Learn More
+                            </p>
+                            </div>
+                        </div>
+                        <div className="col-3 info border border-black border-2 p-4">
+                            <img src={devolucion} width={30} alt="" />
+                            <div>
+                            <h4>SneakVault Verified</h4>
+                            <p>
+                                StockX Verified is our own designation and means that we inspect every item, every time.
+                                StockX Verified is our own designation and means that we inspect every item, every time.Learn More
+                            </p>
+                            </div>
+                        </div>
+                </div>
+
             </main>
         </>
     );

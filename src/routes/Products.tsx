@@ -76,6 +76,19 @@ import imagen63 from '../assets/yeezy-350-yeezreel.png';
 import imagen64 from '../assets/forum-bad-bunny-black.png';
 import imagen65 from '../assets/forum-bad-bunny-blue.png';
 import imagen66 from '../assets/campus-cream.png';
+import imagen67 from '../assets/supreme-4-life.png';
+import imagen68 from '../assets/jordan-biggie-tee.png';
+import imagen69 from '../assets/tyler-the-creator-tee-white.png';
+import imagen70 from '../assets/backwards-tee-white.png';
+import imagen71 from '../assets/wave-outline-tee-white.png';
+import imagen72 from '../assets/jumbo-arrow-tee-white.png';
+import imagen73 from '../assets/jumbo-arrow-tee-purple.png';
+import imagen74 from '../assets/nocta-nrg-tee-grey.png';
+import imagen75 from '../assets/nocta-nrg-rf-tee.png';
+import imagen76 from '../assets/nocta-nrg-tee-oil-green.png';
+import imagen77 from '../assets/nocta-souvenir-cactus.png';
+import imagen78 from '../assets/8-ball-tee-khaki.png';
+import imagen79 from '../assets/8-ball-tee-natural.png';
 
 
 const imageMap: { [key: string]: string } = {
@@ -148,6 +161,21 @@ const imageMap: { [key: string]: string } = {
     'Adidas Forum x Bad Bunny Black' : imagen64,
     'Adidas Forum x Bad Bunny Blue' : imagen65,
     'Adidas Campus Cream x Bad Bunny' : imagen66,
+    'Supreme 4 Life Tee White' : imagen67,
+    'Supreme Jordan Biggie Tee Black' : imagen68,
+    'Supreme Tyler The Creator Tee White' : imagen69,
+    'Supreme Backwards Tee White' : imagen70,
+    'Off-White Wave Outline Tee White' : imagen71,
+    'Off-White Jumbo Arrow Tee White' : imagen72,
+    'Off-White Jumbo Arrow Tee Purple' : imagen73,
+    'Nike Nocta NRG Tee Grey' : imagen74,
+    'Nike Nocta NRG RF Tee' : imagen75,
+    'Nike Nocta NRG Tee Oil Green' : imagen76,
+    'Nike Nocta Souvenir Cactus' : imagen77,
+
+    'Stussy 8 Ball Tee Khaki' : imagen78,
+    'Stussy 8 Ball Tee Natural' : imagen79,
+
 };
 
 

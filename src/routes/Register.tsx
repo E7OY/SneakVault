@@ -98,21 +98,21 @@ const Register = () => {
                                 </>
                                 )}
                                 <div className="error"></div>
-                                <button type='submit' className='button'>{isRegistering ? 'Registrar' : 'Iniciar Sesión'}</button>
+                                <button type='submit' className='button fw-regular'>{isRegistering ? 'Registrar' : 'Iniciar Sesión'}</button>
                             </div>
                         </Form>
                     )}
 
-                    <div className='container row  d-flex justify-content-between mx-auto mt-1'>
+                    <div className='container row  d-flex justify-content-between fw-regular mx-auto mt-1'>
                     {!user && (
                         <>
-                        <div onClick={logGoogleUser} className="col-4 button-google d-flex flex-row gap-2 w-auto justify-content-center align-items-center py-2 px-4">
+                        <div onClick={logGoogleUser} className="col-4 button-google d-flex flex-row gap-2 w-auto justify-content-center align-items-center py-2 px-3">
                             <img  src={ logogoogle } className=' ' width={20} alt="" /> Sign in with Google
                         </div>
-                        <div onClick={logGoogleUser}  className="col-4 button-apple d-flex flex-row gap-2 w-auto justify-content-center align-items-center py-2 px-4">
+                        <div onClick={logGoogleUser}  className="col-4 button-apple d-flex flex-row gap-2 w-auto justify-content-center align-items-center py-2 px-3">
                             <img  src={ logoapple } className='' width={20} alt="" /> Sign in with Apple
                         </div>
-                        <div className="col-4 button-google d-flex flex-row gap-2 w-auto justify-content-center align-items-center py-2 px-4">
+                        <div className="col-4 button-google d-flex flex-row gap-2 w-auto justify-content-center align-items-center py-2 px-3">
                             <button className='button-google' onClick={() => setIsRegistering(!isRegistering)}>
                                 {isRegistering ? 'Ya tienes una cuenta? Inicia Sesión' : 'No tienes una cuenta? Regístrate'}
                             </button>

@@ -540,6 +540,33 @@
                     "categoria": "camisetas",
                     "imagen": "../assets/offwhiteshirtblack.png",
                     "stock": 9
+                },
+                "wave-outline-tee-white": {
+                    "nombre": "Off-White Wave Outline Tee White",
+                    "descripcion": "Camiseta de algodón con el logo de Off",
+                    "precio": 320,
+                    "marca": "Off-white",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/wave-outline-tee-white.png",
+                    "stock": 67
+                },
+                "jumbo-arrow-tee-white": {
+                    "nombre": "Off-White Jumbo Arrow Tee White",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Supreme y MM6.",
+                    "precio": 150,
+                    "marca": "Off-white",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/jumbo-arrow-tee-white.png",
+                    "stock": 94
+                },
+                "jumbo-arrow-tee-purple": {
+                    "nombre": "Off-White Jumbo Arrow Tee Purple",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Supreme y MM6.",
+                    "precio": 320,
+                    "marca": "Off-white",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/jumbo-arrow-tee-purple.png",
+                    "stock": 94
                 }
             },
 
@@ -561,6 +588,42 @@
                     "categoria": "camisetas",
                     "imagen": "../assets/suprememm6.png",
                     "stock": 155
+                },
+                "4-life-tee-white": {
+                    "nombre": "Supreme 4 Life Tee White",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Supreme y MM6.",
+                    "precio": 150,
+                    "marca": "Supreme",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/supreme-4-life.png",
+                    "stock": 14
+                },
+                "jordan-biggie-tee-black": {
+                    "nombre": "Supreme Jordan Biggie Tee Black",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Supreme y MM6.",
+                    "precio": 150,
+                    "marca": "Supreme",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/jordan-biggie-tee.png",
+                    "stock": 4
+                },
+                "tyler-the-creator-tee-white": {
+                    "nombre": "Supreme Tyler The Creator Tee White",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Supreme y MM6.",
+                    "precio": 150,
+                    "marca": "Supreme",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/tyler-the-creator-tee-white.png",
+                    "stock": 44
+                },
+                "backwards-tee-white": {
+                    "nombre": "Supreme Backwards Tee White",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Supreme y MM6.",
+                    "precio": 150,
+                    "marca": "Supreme",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/backwards-tee-white.png",
+                    "stock": 94
                 }
             },
 
@@ -573,6 +636,42 @@
                     "categoria": "camisetas",
                     "imagen": "../assets/nikeshirt.png",
                     "stock": 160
+                },
+                "nocta-nrg-tee-grey": {
+                    "nombre": "Nike Nocta NRG Tee Grey",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Nike y Commes des Garcons.",
+                    "precio": 130,
+                    "marca": "Nike",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/nocta-nrg-tee-grey.png",
+                    "stock": 120
+                },
+                "nocta-nrg-tee-oil-green": {
+                    "nombre": "Nike Nocta NRG Tee Oil Green",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Nike y Commes des Garcons.",
+                    "precio": 130,
+                    "marca": "Nike",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/nocta-nrg-tee-oil-green.png",
+                    "stock": 3
+                },
+                "nocta-nrg-rf-tee": {
+                    "nombre": "Nike Nocta NRG RF Tee",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Nike y Commes des Garcons.",
+                    "precio": 130,
+                    "marca": "Nike",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/nocta-nrg-rf-tee.png",
+                    "stock": 20
+                },
+                "nocta-souvenir-cactus": {
+                    "nombre": "Nike Nocta Souvenir Cactus",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Nike y Commes des Garcons.",
+                    "precio": 150,
+                    "marca": "Nike",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/nocta-souvenir-cactus.png",
+                    "stock": 1
                 }
             },
 
@@ -595,6 +694,29 @@
                     "imagen": "../assets/palacelongsleeve.png",
                     "stock": 10
                 }
+            },
+
+
+            "stussy": {
+                "8-ball-tee-khaki": {
+                    "nombre": "Stussy 8 Ball Tee Khaki",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Palace y Oakley.",
+                    "precio": 100,
+                    "marca": "Palace",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/8-ball-tee-khaki.png",
+                    "stock": 15
+                },
+                "8-ball-tee-natural": {
+                    "nombre": "Stussy 8 Ball Tee Natural",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Palace y Oakley.",
+                    "precio": 150,
+                    "marca": "Palace",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/8-ball-tee-nartural.png",
+                    "stock": 5
+                }
+
             }
         }
     }

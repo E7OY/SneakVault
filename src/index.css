@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
 /* ESTILOS GLOBALES */
 body {
   margin: 0;
   padding: 0;
-  font-family: "Big Shoulders Text", serif;
+  font-family: "Oswald", serif;
   width: 100%; 
   overflow-x: hidden;
 }
@@ -16,6 +17,7 @@ body {
 
 h1 {
   font-size: 2rem;
+  transform: skewX(-10deg);
 }
 
 .text-black {
@@ -57,14 +59,39 @@ h1 {
   color: red;
 }
 
-/* ESTILOS HEADER */
+/* ESTILOS HEADER Y FOOTER */
 header {
   position: sticky;
   top: 0;
   z-index: 1000;
 }
+.texto-footer {
+  text-align: center;
+  font-size: 15rem;
+  font-weight: 800;
+  position: relative;
+  bottom: 0;
+  line-height: 0.8;
+  padding: 0;
+  margin: 0;
+  margin-bottom: -100px;
+  overflow: hidden;
+  opacity: 0.1;
+  animation: fadeText 2s ease-in-out infinite alternate;
+  transform: skewX(-10deg);
+}
+
+@keyframes fadeText {
+  from {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 0.85;
+  }
+}
 
 /* ESTILOS HOME */
+
 .negro {
   color: #010101;
 }
@@ -178,6 +205,7 @@ header {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   padding: 20px;
   justify-content: start;
+  font-family: "Big Shoulders Text", serif;
 }
 .swiper-hero .swiper-slide {
   display: flex;
@@ -259,6 +287,7 @@ header {
 
 /* ESTILOS PRODUCTOS */
 .productos {
+  font-family: "Big Shoulders Text", serif;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   padding: 20px;
