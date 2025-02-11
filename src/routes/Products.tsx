@@ -67,6 +67,19 @@ import imagen55 from '../assets/jordan-jumpman-travis-dark-mocha.png';
 import imagen56 from '../assets/jordan-jumpman-travis-university-red.png';
 
 
+
+import imagen57 from '../assets/yeezy-350-zebra.png';
+import imagen58 from '../assets/yeezy-350-dazzling-blue.png';
+import imagen59 from '../assets/yeezy-slides-granite.png';
+import imagen60 from '../assets/yeezy-slides-bone.png';
+import imagen61 from '../assets/yeezy-slides-resin.png';
+import imagen62 from '../assets/yeezy-350-sesame.png';
+import imagen63 from '../assets/yeezy-350-yeezreel.png';
+import imagen64 from '../assets/forum-bad-bunny-black.png';
+import imagen65 from '../assets/forum-bad-bunny-blue.png';
+import imagen66 from '../assets/campus-cream.png';
+
+
 const imageMap: { [key: string]: string } = {
     'Air Jordan 1 x Cactus Jack': imagen1,   //meter nombres de los productos en la bbdd
     'Nike Air Force 1 x Louis Vuitton': imagen5,
@@ -126,6 +139,17 @@ const imageMap: { [key: string]: string } = {
     'Adidas Response CL Blue x Bad Bunny' : imagen54,
     'Jordan Jumpman Travis Scott Dark Mocha' : imagen55,
     'Jordan Jumpman Travis Scott University Red' : imagen56,
+
+    'Yeezy 350 V2 Zebra' : imagen57,
+    'Yeezy 350 V2 Dazzling Blue' : imagen58,
+    'Yeezy Slides Granite' : imagen59,
+    'Yeezy Slides Bone' : imagen60,
+    'Yeezy Slides Resin' : imagen61,
+    'Yeezy 350 V2 Sesame' : imagen62,
+    'Yeezy 350 V2 Yeezreel' : imagen63,
+    'Adidas Forum x Bad Bunny Black' : imagen64,
+    'Adidas Forum x Bad Bunny Blue' : imagen65,
+    'Adidas Campus Cream x Bad Bunny' : imagen66,
 
 };
 

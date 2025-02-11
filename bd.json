@@ -149,6 +149,24 @@
                     "imagen": ".../assets/yeezy-350-frozen-yellow.png",
                     "stock": 2
                 },
+                "350-zebra": {
+                    "nombre": "Yeezy 350 V2 Zebra",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 400,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": ".../assets/yeezy-350-zebra.png",
+                    "stock": 52
+                },
+                "350-dazzling-blue": {
+                    "nombre": "Yeezy 350 V2 Dazzling Blue",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 350,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": ".../assets/yeezy-350-dazzling-blue.png",
+                    "stock": 52
+                },
                 "foam-runner-sulfur": {
                     "nombre": "Yeezy Foam Runner Sulfur",
                     "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
@@ -166,6 +184,33 @@
                     "categoria": "zapatillas",
                     "imagen": "../assets/yeezy-slides-onyx.png",
                     "stock": 22
+                },
+                "slides-granite": {
+                    "nombre": "Yeezy Slides Granite",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 160,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/yeezy-slides-granite.png",
+                    "stock": 4
+                },
+                "slides-bone": {
+                    "nombre": "Yeezy Slides Bone",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 230,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/yeezy-slides-bone.png",
+                    "stock": 53
+                },
+                "slides-resin": {
+                    "nombre": "Yeezy Slides Resin",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 200,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/yeezy-slides-resin.png",
+                    "stock": 59
                 },
                 "foam-runner-cinder": {
                     "nombre": "Yeezy Foam Runner Cinder",
@@ -202,6 +247,24 @@
                     "categoria": "zapatillas",
                     "imagen": "../assets/yeezy-350-light.png",
                     "stock": 9
+                },
+                "350-sesame": {
+                    "nombre": "Yeezy 350 V2 Sesame",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 350,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/yeezy-350-sesame.png",
+                    "stock": 59
+                },
+                "350-yeezreel": {
+                    "nombre": "Yeezy 350 V2 Yeezreel",
+                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "precio": 250,
+                    "marca": "Yeezy",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/yeezy-350-yeezreel.png",
+                    "stock": 3
                 },
                 "700-wave-runner": {
                     "nombre": "Yeezy 700 Wave Runner",
@@ -381,6 +444,15 @@
                     "imagen": "../assets/campus.png",
                     "stock": 5
                 },
+                "campus-cream": {
+                    "nombre": "Adidas Campus Cream x Bad Bunny",
+                    "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
+                    "precio": 420,
+                    "marca": "Adidas",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/campus-cream.png",
+                    "stock": 15
+                },
                 "forum-bad-bunny-white": {
                     "nombre": "Adidas Forum x Bad Bunny White",
                     "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
@@ -389,6 +461,24 @@
                     "categoria": "zapatillas",
                     "imagen": "../assets/forum-badd-bunny-white.png",
                     "stock": 15
+                },
+                "forum-bad-bunny-black": {
+                    "nombre": "Adidas Forum x Bad Bunny Black",
+                    "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
+                    "precio": 600,
+                    "marca": "Adidas",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/forum-badd-bunny-black.png",
+                    "stock": 3
+                },
+                "forum-bad-bunny-blue": {
+                    "nombre": "Adidas Forum x Bad Bunny Blue",
+                    "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
+                    "precio": 500,
+                    "marca": "Adidas",
+                    "categoria": "zapatillas",
+                    "imagen": "../assets/forum-badd-bunny-blue.png",
+                    "stock": 46
                 },
                 "response-cl-bad-bunny": {
                     "nombre": "Adidas Response CL x Bad Bunny",
