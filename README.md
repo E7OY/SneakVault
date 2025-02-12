@@ -1,3 +1,4 @@
+![Group 71](https://github.com/user-attachments/assets/a7a75833-3547-4802-b857-636d1424bb35)
 
 
 # SneakVault - E-commerce de Zapatillas y Camisetas
