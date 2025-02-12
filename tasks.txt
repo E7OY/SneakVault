@@ -1,0 +1,5 @@
+improve menu functionality
+implement search bar
+implement shopping cart
+add product details page
+make all the website responsive
