@@ -89,6 +89,13 @@ import imagen76 from '../assets/nocta-nrg-tee-oil-green.png';
 import imagen77 from '../assets/nocta-souvenir-cactus.png';
 import imagen78 from '../assets/8-ball-tee-khaki.png';
 import imagen79 from '../assets/8-ball-tee-natural.png';
+import imagen80 from '../assets/8-ball-tee-black.png';
+import imgen81 from '../assets/thermal-stock-tee.png';
+import imagen82 from '../assets/surfwalk-tee-black.png';
+import imagen83 from '../assets/surfwalk-tee-white.png';
+import imagen84 from '../assets/surfwalk-tee-navy.png';
+import imagen85 from '../assets/heat-sensi-tee-navy.png';
+import imagen86 from '../assets/save-thyself-tee-white.png';
 
 
 const imageMap: { [key: string]: string } = {
@@ -175,13 +182,21 @@ const imageMap: { [key: string]: string } = {
 
     'Stussy 8 Ball Tee Khaki' : imagen78,
     'Stussy 8 Ball Tee Natural' : imagen79,
+    'Stussy 8 Ball Tee Black' : imagen80,
+    'Stussy Thermal Stock Tee' : imgen81,
+
+    'Stussy Surfwalk Tee Black' : imagen82,
+    'Stussy Surfwalk Tee White' : imagen83,
+    'Stussy Surfwalk Tee Navy' : imagen84,
+    'Palace Heat Sensi Tee Navy' : imagen85,
+    'Palace Save Thyself Tee White' : imagen86
 
 };
 
 
 const Products = () => {
     const { categoria, marca } = useParams<{ categoria: string, marca: string }>();
-    const [products, setProducts] = useState<{ stock: number; id: string; categoria: string, imagen: string; nombre: string; precio: number; descripcion: string }[]>([]);
+    const [products, setProducts] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string }[]>([]);
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -206,7 +221,8 @@ const Products = () => {
                                     precio: product.precio || 0,
                                     descripcion: product.descripcion || '',
                                     categoria: product.categoria || '',
-                                    stock: product.stock || 0
+                                    stock: product.stock || 0,
+                                    marca: product.marca || ''
                                 });
                             }
                         }

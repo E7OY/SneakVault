@@ -113,7 +113,7 @@ const Header = () => {
                     ) : (
                         <>
                             <NavLink to="/register" className='nav-link fw-regular button'>
-                                Log In
+                                Iniciar Sesión
                             </NavLink>
                         </>
                     )}
