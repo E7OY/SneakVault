@@ -3,22 +3,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import carrito from '../../assets/carrito.png';
 import './Header.css';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import '../../index.css';
 import './Header.css';
 
 import { getAuth, signOut } from 'firebase/auth';
 import UserContext from '../../context/userContext';
 
-import SneakVaultLogo from '../../assets/Sneakvault.png';
 
 const Header = () => {
     const userContext = useContext(UserContext);
     const user = userContext ? userContext.user : null;
-
     const setUser = userContext ? userContext.setUser : () => {};
     const errorMessage = document.querySelectorAll('.error-message');
 
+
+    //cerrar sesion
     const handleSignOut = async () => {
         try {
             await signOut(getAuth());
@@ -30,6 +30,7 @@ const Header = () => {
         }
     };
 
+    //barra de texto en movimiento
     useEffect(() => {
         const texts = document.querySelectorAll('.moving-text h6');
         let index = 0;
@@ -49,6 +50,7 @@ const Header = () => {
 
         return () => clearInterval(interval);
     }, []);
+    
 
     return (
         <>
@@ -86,7 +88,7 @@ const Header = () => {
                                     <NavDropdown.Item as={NavLink} to="/camisetas/supreme">Supreme</NavDropdown.Item>
                                     <NavDropdown.Item as={NavLink} to="/camisetas/nike">Nike</NavDropdown.Item>
                                     <NavDropdown.Item as={NavLink} to="/camisetas/palace">Palace</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/camisetas/stussy">Stussy</NavDropdown.Item>
+                                    <NavDropdown.Item as={NavLink} to="/camisetas/stüssy">Stüssy</NavDropdown.Item>
                                     <NavDropdown.Divider />
                                     <NavDropdown.Item as={NavLink} to="/camisetas">Ver todas</NavDropdown.Item>
                                 </NavDropdown>

@@ -47,6 +47,8 @@ import shoksnike from "../assets/shoksnike.jpg";
 import newbalancebanner from "../assets/newbalancebanner.jpg";
 import adidasbanner from "../assets/adidasbanner.jpg";
 import airjordanbanner from "../assets/airjordanbanner.jpg";
+import bannercj from "../assets/banner-cj.png";
+import bannercjmocha from "../assets/banner-cj-mocha.png";
 
 
 import original from "../assets/original.png";
@@ -151,7 +153,13 @@ const Home = () => {
                         <img src={newbalancebanner} alt="" />
                     </div>
                     <div className="swiper-slide ">
+                        <img src={bannercjmocha} alt="" />
+                    </div>
+                    <div className="swiper-slide ">
                         <img src={airjordanbanner} alt="" />
+                    </div>
+                    <div className="swiper-slide ">
+                        <img src={bannercj} alt="" />
                     </div>
                 </div>
                 <div className="swiper-button-prev text-black border border-1 border-black"></div>

@@ -715,12 +715,12 @@
             },
 
 
-            "stussy": {
+            "stüssy": {
                 "8-ball-tee-khaki": {
                     "nombre": "Stussy 8 Ball Tee Khaki",
                     "descripcion": "Camiseta de algodón con el logo compartido de Palace y Oakley.",
                     "precio": 100,
-                    "marca": "Stussy",
+                    "marca": "stüssy",
                     "categoria": "camisetas",
                     "imagen": "../assets/8-ball-tee-khaki.png",
                     "stock": 15
@@ -729,7 +729,7 @@
                     "nombre": "Stussy 8 Ball Tee Natural",
                     "descripcion": "Camiseta de algodón con el logo compartido de Palace y Oakley.",
                     "precio": 150,
-                    "marca": "Stussy",
+                    "marca": "stüssy",
                     "categoria": "camisetas",
                     "imagen": "../assets/8-ball-tee-nartural.png",
                     "stock": 5
@@ -738,7 +738,7 @@
                     "nombre": "Stussy 8 Ball Tee Black",
                     "descripcion": "Camiseta de algodón con el logo compartido de Palace y Oakley.",
                     "precio": 130,
-                    "marca": "Stussy",
+                    "marca": "stüssy",
                     "categoria": "camisetas",
                     "imagen": "../assets/8-ball-tee-black.png",
                     "stock": 15
@@ -747,7 +747,7 @@
                     "nombre": "Stussy Thermal Stock Tee",
                     "descripcion": "Camiseta de algodón con el logo compartido de Palace y Oakley.",
                     "precio": 130,
-                    "marca": "Stussy",
+                    "marca": "stüssy",
                     "categoria": "camisetas",
                     "imagen": "../assets/thermal-stock-tee.png",
                     "stock": 62
@@ -756,7 +756,7 @@
                     "nombre": "Stussy Surfwalk Tee Black",
                     "descripcion": "Camiseta de algodón con el logo compartido de Palace y Oakley.",
                     "precio": 130,
-                    "marca": "Stussy",
+                    "marca": "stüssy",
                     "categoria": "camisetas",
                     "imagen": "../assets/surfwalk-tee-black.png",
                     "stock": 24
@@ -765,7 +765,7 @@
                     "nombre": "Stussy Surfwalk Tee White",
                     "descripcion": "Camiseta de algodón con el logo compartido de Palace y Oakley.",
                     "precio": 130,
-                    "marca": "Stussy",
+                    "marca": "stüssy",
                     "categoria": "camisetas",
                     "imagen": "../assets/surfwalk-tee-white.png",
                     "stock": 1
@@ -774,7 +774,7 @@
                     "nombre": "Stussy Surfwalk Tee Navy",
                     "descripcion": "Camiseta de algodón con el logo compartido de Palace y Oakley.",
                     "precio": 130,
-                    "marca": "Stussy",
+                    "marca": "stüssy",
                     "categoria": "camisetas",
                     "imagen": "../assets/surfwalk-tee-navy.png",
                     "stock": 17

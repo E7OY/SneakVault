@@ -240,7 +240,8 @@ const Products = () => {
 
     return (
         <>
-            <h1 className='fw-bold display-1 mt-4 w-5 mx-3'>DESCUBRE PRODUCTOS ILIMITADOS SIN LIMITACION</h1>
+            <h2 className='fw-bold display-1 mt-4 w-5 mx-3'>DESCUBRE PRODUCTOS ILIMITADOS SIN LIMITACION</h2>
+            <h1 className='fw-bold display-2 mt-4 w-5 mx-3'>{marca}</h1>
             <div className="productos">
                 {products.map(product => (
                     <div className="m-0 p-0 " key={product.id}>
@@ -249,8 +250,10 @@ const Products = () => {
                         <h6 className='mx-3 mt-3'>{product.categoria}</h6>
                             <h5 className='fw-semibold mx-3 '>{product.nombre}</h5>
                             <p className='mx-3'>{product.precio}€</p>
-                        {product.stock <= 10 ? <h6 className='mx-3 fw-light text-danger position-absolute '>Bajo stock</h6> :
-                        <h6 className='mx-3 fw-light position-absolute'>{product.stock} en stock</h6> }
+                        {product.stock > 0 ? 
+                        (product.stock <= 10 ? <h6 className='mx-3 fw-light text-danger position-absolute '>Bajo stock</h6> :
+                        <h6 className='mx-3 fw-light position-absolute'>{product.stock} en stock</h6>) :
+                        <h6 className='mx-3 text-white bg-black position-absolute'>Agotado</h6>}
                         </div>
                     </div>
                 ))}
