@@ -1,4 +1,5 @@
-![Sneakvault](https://github.com/user-attachments/assets/3dc6aaae-5ca5-4bbe-a9f1-02bac0229601)
+
+![Group 71](https://github.com/user-attachments/assets/21a5697a-bf87-4496-9797-3f17fff6aa01)
 
 
 # SneakVault - E-commerce de Zapatillas y Camisetas
@@ -24,9 +25,6 @@ Este proyecto consiste en una aplicación web de venta de zapatillas y camisetas
 ## Instalación y Configuración
 
 1. **Clonar el Repositorio:**
-   ```bash
-   git clone [https://github.com/tu-usuario/SneakVault.git](https://www.google.com/search?q=https://github.com/tu-usuario/SneakVault.git)
-
 
 
 
