@@ -34,7 +34,6 @@ import offwhitelogo from "../assets/offwhitelogo.png";
 import mm6logo from "../assets/mm6logo.png";
 import adidaslogo from "../assets/adidaslogo.png";
 
-import offwhiteshirt from "../assets/offwhiteshirt.png";
 import supremeshirt from "../assets/supremeshirt.png";
 import offwhiteshirtblack from "../assets/offwhiteshirtblack.png";
 import nikeshirt from "../assets/nikeshirt.png";
@@ -251,11 +250,6 @@ const Home = () => {
                 </div>
                 <div className="swiper swiper-hero">
                     <div className="swiper-wrapper">
-                    <div className="swiper-slide text-start">
-                    <img src={offwhiteshirt} alt="" />
-                            <h5 className="fw-bold">Off-White camiseta shared logo</h5>
-                            <p className="text-decoration-underline">Desde 300€</p>
-                        </div>
                         <div className="swiper-slide text-start">
                             <img src={supremeshirt} alt="" />
                             <h5 className="fw-bold">Supreme x Undercover face</h5>
@@ -268,7 +262,7 @@ const Home = () => {
                         </div>
                         <div className="swiper-slide text-start">
                             <img src={offwhiteshirtblack} alt="" />
-                            <h5 className="fw-bold">Off-White black t-shirt</h5>
+                            <h5 className="fw-bold">Off-White x Nike 005 T-Shirts Beige</h5>
                             <p className="text-decoration-underline">Desde 250€</p>
                         </div>
                         <div className="swiper-slide text-start">

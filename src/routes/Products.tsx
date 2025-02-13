@@ -17,7 +17,6 @@ import imagen10 from '../assets/jordanretro.png';
 import imagen11 from '../assets/jordanfrozen.png';
 import imagen12 from '../assets/campus.png';
 
-import imagen13 from '../assets/offwhiteshirt.png';
 import imagen14 from '../assets/offwhiteshirtblack.png';
 import imagen15 from '../assets/supremeshirt.png';
 import imagen16 from '../assets/suprememm6.png';
@@ -108,8 +107,7 @@ const imageMap: { [key: string]: string } = {
     'Jordan 4 Retro Canyon Purple': imagen10,
     'Jordan 4 Retro Frozen Moments': imagen11,
     'Adidas Campus x Bad Bunny': imagen12,
-    'Off-White camiseta shared logo': imagen13,
-    'Off-White black t-shirt': imagen14,
+    'Off-White x Nike 005 T-Shirts Beige': imagen14,
     'Supreme x Undercover face': imagen15,
     'Camiseta Supreme x MM6': imagen16,
     'Nike x Commes des Garcons': imagen17,
@@ -247,7 +245,7 @@ const Products = () => {
                     <div className="m-0 p-0 " key={product.id}>
                         <div className="producto">
                             <Link to={`/${categoria}/${encodeURIComponent(product.nombre)}`}>
-                            <img className='img-fluid' src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />                            
+                            <img className='img-fluid imagen-producto' src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />                            
                             </Link>
                             <h6 className='mx-3 mt-3'>{product.categoria}</h6>
                             <h5 className='fw-semibold mx-3 '>{product.nombre}</h5>

@@ -523,17 +523,8 @@
         "camisetas": {
 
             "off-white": {
-                "shared-logo": {
-                    "nombre": "Off-White camiseta shared logo",
-                    "descripcion": "Camiseta de algodón con el logo compartido de Off-White.",
-                    "precio": 300,
-                    "marca": "Off-white",
-                    "categoria": "camisetas",
-                    "imagen": "../assets/offwhiteshirt.png",
-                    "stock": 14
-                },
                 "black-shirt": {
-                    "nombre": "Off-White black t-shirt",
+                    "nombre": "Off-White x Nike 005 T-Shirts Beige",
                     "descripcion": "Camiseta de algodón con el logo de Off",
                     "precio": 250,
                     "marca": "Off-white",

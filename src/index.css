@@ -360,9 +360,11 @@ header {
 }
 
 .imagen-producto {
+  width: 100%;
     height: auto;
     object-fit: contain;
 }
+
 .imagen-producto:hover {
     transform: rotateY(180deg);
 }

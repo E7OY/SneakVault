@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { db } from '../utils/firebase.utils';
 import { ref, onValue } from 'firebase/database';
 
+import prohibido from '../assets/prohibido.png';
 
 import imagen1 from '../assets/jordan1.png';
 import imagen5 from '../assets/off-white.png';
@@ -16,7 +17,6 @@ import imagen10 from '../assets/jordanretro.png';
 import imagen11 from '../assets/jordanfrozen.png';
 import imagen12 from '../assets/campus.png';
 
-import imagen13 from '../assets/offwhiteshirt.png';
 import imagen14 from '../assets/offwhiteshirtblack.png';
 import imagen15 from '../assets/supremeshirt.png';
 import imagen16 from '../assets/suprememm6.png';
@@ -108,14 +108,12 @@ const imageMap: { [key: string]: string } = {
     'Jordan 4 Retro Canyon Purple': imagen10,
     'Jordan 4 Retro Frozen Moments': imagen11,
     'Adidas Campus x Bad Bunny': imagen12,
-    'Off-White camiseta shared logo': imagen13,
-    'Off-White black t-shirt': imagen14,
+    'Off-White x Nike 005 T-Shirts Beige': imagen14,
     'Supreme x Undercover face': imagen15,
     'Camiseta Supreme x MM6': imagen16,
     'Nike x Commes des Garcons': imagen17,
     'Palace x Oakley T-Shirt': imagen18,
     'Palace x Carhartt WIP': imagen19,
-
     'Yeezy 350 V2 Cloud White': imagen20,
     'Yeezy 350 V2 Granite': imagen21,
     'Yeezy 350 V2 Beluga': imagen22,
@@ -129,20 +127,16 @@ const imageMap: { [key: string]: string } = {
     'Air Jordan 1 Low Travis Scott Reverse Mocha': imagen30,
     'Jordan Jumpman Travis Scott': imagen31,
     'Jordan 1 Low OG SP Travis Scott Black Phantom': imagen32,
-
-
     'Yeezy 350 V2 Core Black Red': imagen33,
     'Yeezy 380 Alien': imagen34,
     'Yeezy 350 V2 Light': imagen35,
     'Yeezy 700 Wave Runner': imagen36,
     'Yeezy 700 Static': imagen37,
     'Yeezy Slides Ochre': imagen38,
-
     'Jordan 4 Retro Fear': imagen39,
     'Jordan 4 Retro Wet Cement': imagen40,
     'Jordan 4 Retro Olive': imagen41,
     'Jordan 3 Retro A Ma Maniére': imagen42,
-
     'Nike Zoom Vomero 5': imagen43,
     'Nike Hot Step Nocta Black': imagen44,
     'Nike Hot Step 2 Nocta Drake White': imagen45,
@@ -237,24 +231,108 @@ const ProductDetails = () => {
 
     return (
         <div>
-            <div className="row d-flex flex-row mx-auto justify-content-center align-items-center gap-5">
+            <div className="row d-flex flex-row mt-5 mx-auto justify-content-center align-items-center gap-5">
                 <div className="col-6 p-0 m-0">
-                <img className='imagen-producto ' width={600} src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />
+                    <img className='imagen-producto' width={600} src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />
                 </div>
                 <div className="col-5">
-                <p>{product.marca}</p>
-                <h1 className='display-4 fw-bold'>{product.nombre}</h1>
-                <summary className='display-6 fw-semibold'> 
-                    <details>
-                    <p className=''>{product.descripcion}</p>
-                    </details>
-                </summary>
-                <p className='display-5 fw-bolder text-end'>{product.precio}€</p>
-                <p>{product.stock > 0 ? `${product.stock} en stock` : 'Agotado'}</p>
+                    {product.stock > 0 ?
+                        (product.stock <= 10 ? <h6 className='fw-bold text-danger'>Menos de {product.stock} unidades</h6> :
+                            <h6 className='fw-bold'>{product.stock} en stock</h6>) :
+                        <h5 className='text-danger'>Agotado</h5>}
+                    <h2>{product.marca}</h2>
+                    <h2 className='display-3 fw-bold'>{product.nombre}</h2>
+                    <h5 className='display-6 fw-medium'>{product.descripcion}</h5>
+                    <p className='display-5 fw-bolder mt-3'>{product.precio}€</p>
+                    {product.stock <= 0 ?
+
+                        (<>
+                            <a className='btn rounded-0 btn-dark text-danger p-3 mb-3'><img src={prohibido} className='mx-1' width={20}></img>Añadir a la cesta</a></>)
+                        :
+                        <a href="" className='btn rounded-0 text-white bg-dark p-3 mb-3'>Añadir a la cesta</a>
+                    }
+
+                    <br />
+                    <a className="mt-5" data-toggle="modal" data-target="#myModal">
+                        Guía de tallas
+                    </a>
+
+                    <div id="myModal" className="modal fade" role="dialog">
+                        <div className="modal-dialog">
+                            <div className="modal-content p-3 rounded-0">
+                                <div className="modal-header">
+                                <h4 className="text-start modal-title">Guía de Tallas {product.categoria}</h4>
+                                    <button type="button" className="close" data-dismiss="modal">
+                                        &times;
+                                    </button>
+                                </div>
+                                <div className="modal-body">
+                                    <h5>{product.nombre}</h5>
+                                    <img className='imagen-producto mx-auto m-0' width={400} src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />
+                                    {product.marca === 'Yeezy'&& (
+                                
+                                        <h5 className='my-4'>Para zapatillas yeezy se recomienda una talla más de la habitual.</h5>
+                                    )} 
+                                    <>
+                                    {product.categoria === 'zapatillas' ?
+                                        (
+                                            <>
+                                                <table className="table table-bordered table-striped">
+                                                    <thead className="thead-dark">
+                                                        <tr>
+                                                            <th>Talla EU</th>
+                                                            <th>Talla US Hombre</th>
+                                                            <th>Talla UK Hombre</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr><td>35.5</td><td>3.5</td><td>2.5</td></tr>
+                                                        <tr><td>36</td><td>4</td><td>3</td></tr>
+                                                        <tr><td>36.5</td><td>4.5</td><td>3.5</td></tr>
+                                                        <tr><td>37.5</td><td>5</td><td>4</td></tr>
+                                                        <tr><td>38</td><td>5.5</td><td>4.5</td></tr>
+                                                        <tr><td>38.5</td><td>6</td><td>5</td></tr>
+                                                        <tr><td>39</td><td>6.5</td><td>5.5</td></tr>
+                                                        <tr><td>40</td><td>7</td><td>6</td></tr>
+                                                        <tr><td>40.5</td><td>7.5</td><td>6.5</td></tr>
+                                                        <tr><td>41</td><td>8</td><td>7</td></tr>
+                                                        <tr><td>42</td><td>8.5</td><td>7.5</td></tr>
+                                                        <tr><td>42.5</td><td>9</td><td>8</td></tr>
+                                                        <tr><td>43</td><td>9.5</td><td>8.5</td></tr>
+                                                        <tr><td>44</td><td>10</td><td>9</td></tr>
+                                                        <tr><td>44.5</td><td>10.5</td><td>9.5</td></tr>
+                                                        <tr><td>45</td><td>11</td><td>10</td></tr>
+                                                        <tr><td>45.5</td><td>11.5</td><td>10.5</td></tr>
+                                                        <tr><td>46</td><td>12</td><td>11</td></tr>
+                                                        <tr><td>47</td><td>12.5</td><td>11.5</td></tr>
+                                                        <tr><td>47.5</td><td>13</td><td>12</td></tr>
+                                                        <tr><td>48.5</td><td>14</td><td>13</td></tr>
+                                                        <tr><td>49.5</td><td>15</td><td>14</td></tr>
+                                                    </tbody>
+                                                </table>
+                                            </>
+                                        )
+                                        :
+                                        (
+                                            <>
+                                                <p>Para encontrar la talla correcta de camisetas, mide el contorno de tu pecho en su parte más ancha. Usa la tabla de tallas para encontrar la talla correspondiente.</p>
+                                            </>
+                                        )
+                                    
+                                    }
+                                    </> 
+                                </div>
+                                <div className="modal-footer">
+                                    <button type="button" className="btn btn-default" data-dismiss="modal">
+                                        Cerrar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     );
 };
-
 export default ProductDetails;
