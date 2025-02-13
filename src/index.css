@@ -207,6 +207,12 @@ header {
   justify-content: start;
   font-family: "Big Shoulders Text", serif;
 }
+.imagen-producto  img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 200px;
+}
 .swiper-hero .swiper-slide {
   display: flex;
   flex-direction: column;
@@ -226,11 +232,6 @@ header {
   padding: 0;
 }
 
-.swiper-hero img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
 
 .swiper-hero .swiper-button-prev, .swiper-hero .swiper-button-next,
 .swiper-banner .swiper-button-prev, .swiper-banner .swiper-button-next {
@@ -359,10 +360,14 @@ header {
   }
 }
 
-.imagen-producto {
-  width: 100%;
+.imagen-producto-home {
     height: auto;
     object-fit: contain;
+    position: relative;
+    left: -30px;
+    bottom: 30px;
+    transform: rotate(5deg);
+
 }
 
 .imagen-producto:hover {

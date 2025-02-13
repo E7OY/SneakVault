@@ -2,15 +2,6 @@
     "productos": {
         "zapatillas": {
             "nike": {
-                "air-force-1": {
-                    "nombre": "Nike Air Force 1 x Louis Vuitton",
-                    "descripcion": "Una colaboración de lujo entre Nike y Louis Vuitton, fusionando el diseño icónico de las Air Force 1 con la elegancia de la marca francesa. Perfectas para destacar con estilo y exclusividad.",
-                    "precio": 6.900,
-                    "marca": "Nike",
-                    "categoria": "zapatillas",
-                    "imagen": "../assets/off-white.png",
-                    "stock": 0
-                },
                 "off-white-mid": {
                     "nombre": "Air Force 1 Mid x Off-White",
                     "descripcion": "Diseño vanguardista que combina la silueta clásica de Nike con la estética deconstruida de Off-White. Detalles únicos y materiales premium para un look audaz y moderno.",
@@ -19,15 +10,6 @@
                     "categoria": "zapatillas",
                     "imagen": "../assets/offwhitenike.png",
                     "stock": 60
-                },
-                "air-zoom-stussy": {
-                    "nombre": "Nike Air Zoom x Stussy",
-                    "descripcion": "Colaboración entre Nike y Stussy que fusiona el estilo urbano con la tecnología deportiva Air Zoom. Comodidad y diseño para un look casual y moderno.",
-                    "precio": 1800,
-                    "marca": "Nike",
-                    "categoria": "zapatillas",
-                    "imagen": "../assets/nikexstussy.png",
-                    "stock": 25
                 },
                 "zoom-vomero-5": {
                     "nombre": "Nike Zoom Vomero 5",
@@ -562,24 +544,6 @@
             },
 
             "supreme": {
-                "undercover-face": {
-                    "nombre": "Supreme x Undercover face",
-                    "descripcion": "Camiseta de colaboración entre Supreme y Undercover con un diseño de cara. Estilo urbano y moderno, perfecta para los amantes de la moda streetwear.",
-                    "precio": 150,
-                    "marca": "Supreme",
-                    "categoria": "camisetas",
-                    "imagen": "../assets/supremeshirt.png",
-                    "stock": 106
-                },
-                "mm6": {
-                    "nombre": "Camiseta Supreme x MM6",
-                    "descripcion": "Camiseta de colaboración entre Supreme y MM6. Diseño exclusivo y moderno, perfecta para los amantes de la moda de vanguardia.",
-                    "precio": 550,
-                    "marca": "Supreme",
-                    "categoria": "camisetas",
-                    "imagen": "../assets/suprememm6.png",
-                    "stock": 155
-                },
                 "4-life-tee-white": {
                     "nombre": "Supreme 4 Life Tee White",
                     "descripcion": "Camiseta blanca de Supreme con el diseño 4 Life. Estilo urbano y moderno, perfecta para los seguidores de la marca.",
@@ -619,15 +583,6 @@
             },
 
             "nike": {
-                "commes-des-garcons": {
-                    "nombre": "Nike x Commes des Garcons",
-                    "descripcion": "Camiseta de colaboración entre Nike y Commes des Garcons. Diseño exclusivo y moderno, perfecta para los amantes de la moda de vanguardia.",
-                    "precio": 150,
-                    "marca": "Nike",
-                    "categoria": "camisetas",
-                    "imagen": "../assets/nikeshirt.png",
-                    "stock": 160
-                },
                 "nocta-nrg-tee-grey": {
                     "nombre": "Nike Nocta NRG Tee Grey",
                     "descripcion": "Camiseta gris de la línea Nocta de Nike. Diseño moderno y minimalista, perfecta para un look urbano y casual.",
@@ -645,6 +600,33 @@
                     "categoria": "camisetas",
                     "imagen": "../assets/nocta-nrg-tee-oil-green.png",
                     "stock": 3
+                },
+                "nocta-nrg-tee-mineral-slate": {
+                    "nombre": "Nike Nocta NRG Tee Mineral Slate",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Nike y Commes des Garcons.",
+                    "precio": 130,
+                    "marca": "Nike",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/nocta-nrg-tee-mineral-slate.png",
+                    "stock": 19
+                },
+                "nocta-nrg-tee-dark-grey": {
+                    "nombre": "Nike Nocta NRG Tee Dark Grey",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Nike y Commes des Garcons.",
+                    "precio": 150,
+                    "marca": "Nike",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/nocta-nrg-tee-dark-grey.png",
+                    "stock": 19
+                },
+                "nocta-nrg-tee-orange": {
+                    "nombre": "Nike Nocta NRG Tee Orange",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Nike y Commes des Garcons.",
+                    "precio": 130,
+                    "marca": "Nike",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/nocta-nrg-tee-orane.png",
+                    "stock": 32
                 },
                 "nocta-nrg-rf-tee": {
                     "nombre": "Nike Nocta NRG RF Tee",
@@ -769,6 +751,24 @@
                     "categoria": "camisetas",
                     "imagen": "../assets/surfwalk-tee-navy.png",
                     "stock": 17
+                },
+                "shells-black-tee": {
+                    "nombre": "Stussy Shells Black Tee",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Palace y Oakley.",
+                    "precio": 130,
+                    "marca": "stüssy",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/shells-black-tee.png",
+                    "stock": 29
+                },
+                "basic-stussy-tee-pigment-died-white": {
+                    "nombre": "Stussy Basic Stussy Tee Pigment Died White",
+                    "descripcion": "Camiseta de algodón con el logo compartido de Palace y Oakley.",
+                    "precio": 150,
+                    "marca": "stüssy",
+                    "categoria": "camisetas",
+                    "imagen": "../assets/basic-stussy-tee-pigment-died-white.png",
+                    "stock": 2
                 }
 
             }
