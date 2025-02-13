@@ -8,10 +8,6 @@ import imagen12 from '../assets/campus.png';
 import imagen14 from '../assets/offwhiteshirtblack.png';
 import imagen18 from '../assets/palaceshirt.png';
 import imagen19 from '../assets/palacelongsleeve.png';
-
-
-
-/*  NO EN HOME */
 import imagen20 from '../assets/yeezy-350-cloud.png';
 import imagen21 from '../assets/yeezy-350-granite.png';
 import imagen22 from '../assets/yeezy-350-beluga.png';
@@ -25,7 +21,6 @@ import imagen29 from '../assets/jordan-retro-low-travis.png';
 import imagen30 from '../assets/jordan-retro-low-travis-mocha.png';
 import imagen31 from '../assets/jordan-jumpman-travis.png';
 import imagen32 from '../assets/jordan-low-travis-black-phantom.png';
-
 import imagen33 from '../assets/yeezy-350-black.png';
 import imagen34 from '../assets/yeezy-380-alien.png';
 import imagen35 from '../assets/yeezy-350-light.png';
@@ -50,7 +45,6 @@ import imagen53 from '../assets/response-cl-black-bad-bunny.png';
 import imagen54 from '../assets/response-cl-blue-bad-bunny.png';
 import imagen55 from '../assets/jordan-jumpman-travis-dark-mocha.png';
 import imagen56 from '../assets/jordan-jumpman-travis-university-red.png';
-
 import imagen57 from '../assets/yeezy-350-zebra.png';
 import imagen58 from '../assets/yeezy-350-dazzling-blue.png';
 import imagen59 from '../assets/yeezy-slides-granite.png';
@@ -88,8 +82,6 @@ import imagen90 from '../assets/shells-black-tee.png';
 import imagen91 from '../assets/basic-stussy-tee-pigment-died-white.png';
 
 
-
-
 export const imageMap: { [key: string]: string } = {
     'Air Jordan 1 x Cactus Jack': imagen1,   //meter nombres de los productos en la bbdd
     'Air Force 1 Mid x Off-White': imagen6,
@@ -115,20 +107,16 @@ export const imageMap: { [key: string]: string } = {
     'Air Jordan 1 Low Travis Scott Reverse Mocha': imagen30,
     'Jordan Jumpman Travis Scott': imagen31,
     'Jordan 1 Low OG SP Travis Scott Black Phantom': imagen32,
-
-
     'Yeezy 350 V2 Core Black Red': imagen33,
     'Yeezy 380 Alien': imagen34,
     'Yeezy 350 V2 Light': imagen35,
     'Yeezy 700 Wave Runner': imagen36,
     'Yeezy 700 Static': imagen37,
     'Yeezy Slides Ochre': imagen38,
-
     'Jordan 4 Retro Fear': imagen39,
     'Jordan 4 Retro Wet Cement': imagen40,
     'Jordan 4 Retro Olive': imagen41,
     'Jordan 3 Retro A Ma Maniére': imagen42,
-
     'Nike Zoom Vomero 5': imagen43,
     'Nike Hot Step Nocta Black': imagen44,
     'Nike Hot Step 2 Nocta Drake White': imagen45,
@@ -143,7 +131,6 @@ export const imageMap: { [key: string]: string } = {
     'Adidas Response CL Blue x Bad Bunny': imagen54,
     'Jordan Jumpman Travis Scott Dark Mocha': imagen55,
     'Jordan Jumpman Travis Scott University Red': imagen56,
-
     'Yeezy 350 V2 Zebra': imagen57,
     'Yeezy 350 V2 Dazzling Blue': imagen58,
     'Yeezy Slides Granite': imagen59,
@@ -165,12 +152,10 @@ export const imageMap: { [key: string]: string } = {
     'Nike Nocta NRG RF Tee': imagen75,
     'Nike Nocta NRG Tee Oil Green': imagen76,
     'Nike Nocta Souvenir Cactus': imagen77,
-
     'Stussy 8 Ball Tee Khaki': imagen78,
     'Stussy 8 Ball Tee Natural': imagen79,
     'Stussy 8 Ball Tee Black': imagen80,
     'Stussy Thermal Stock Tee': imgen81,
-
     'Stussy Surfwalk Tee Black': imagen82,
     'Stussy Surfwalk Tee White': imagen83,
     'Stussy Surfwalk Tee Navy': imagen84,
