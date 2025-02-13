@@ -358,3 +358,11 @@ header {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+.imagen-producto {
+    height: auto;
+    object-fit: contain;
+}
+.imagen-producto:hover {
+    transform: rotateY(180deg);
+}

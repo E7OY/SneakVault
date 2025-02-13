@@ -1,9 +1,8 @@
+// filepath: /C:/Users/soyel/Desktop/2ºDAW/2ºEVAL/DAWC/SneakVault/src/routes/ProductDetails.tsx
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { db } from '../utils/firebase.utils';
-import { onValue, ref } from 'firebase/database';
-import { Link, useParams } from 'react-router-dom';
-
-import '../index.css';
+import { ref, onValue } from 'firebase/database';
 
 
 import imagen1 from '../assets/jordan1.png';
@@ -97,6 +96,7 @@ import imagen83 from '../assets/surfwalk-tee-white.png';
 import imagen84 from '../assets/surfwalk-tee-navy.png';
 import imagen85 from '../assets/heat-sensi-tee-navy.png';
 import imagen86 from '../assets/save-thyself-tee-white.png';
+
 
 const imageMap: { [key: string]: string } = {
     'Air Jordan 1 x Cactus Jack': imagen1,   //meter nombres de los productos en la bbdd
@@ -192,76 +192,69 @@ const imageMap: { [key: string]: string } = {
     'Palace Save Thyself Tee White': imagen86
 
 };
-
-
-const Products = () => {
-    const { categoria, marca } = useParams<{ categoria: string, marca: string }>();
-    const [products, setProducts] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string }[]>([]);
+const ProductDetails = () => {
+    const { nombre } = useParams<{ nombre: string }>();
+    const [product, setProduct] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string } | null>(null);
 
     useEffect(() => {
-        const fetchProducts = async () => {
+        const fetchProduct = async () => {
             try {
                 const productsRef = ref(db, 'productos');
                 onValue(productsRef, (snapshot) => {
                     const productsData = snapshot.val();
-                    const productsArray = [];
-
                     for (const category in productsData) {
-                        if (categoria && category !== categoria) continue;
-
                         for (const brand in productsData[category]) {
-                            if (marca && brand !== marca) continue;
-
                             for (const productId in productsData[category][brand]) {
                                 const product = productsData[category][brand][productId];
-                                productsArray.push({
-                                    id: productId,
-                                    imagen: product.imagen || '',
-                                    nombre: product.nombre || '',
-                                    precio: product.precio || 0,
-                                    descripcion: product.descripcion || '',
-                                    categoria: category || '',
-                                    stock: product.stock || 0,
-                                    marca: product.marca || ''
-                                });
+                                if (product.nombre === nombre) {
+                                    setProduct({
+                                        id: productId,
+                                        imagen: product.imagen || '',
+                                        nombre: product.nombre || '',
+                                        precio: product.precio || 0,
+                                        descripcion: product.descripcion || '',
+                                        categoria: product.categoria || '',
+                                        stock: product.stock || 0,
+                                        marca: product.marca || ''
+                                    });
+                                    return;
+                                }
                             }
                         }
                     }
-
-                    setProducts(productsArray);
                 });
             } catch (error) {
                 console.error(error);
             }
         };
 
-        fetchProducts();
-    }, [categoria, marca]);
+        fetchProduct();
+    }, [nombre]);
+
+    if (!product) {
+        return <div>Loading...</div>;
+    }
 
     return (
-        <>
-            <h2 className='fw-bold display-1 mt-4 w-5 mx-3'>DESCUBRE PRODUCTOS ILIMITADOS SIN LIMITACION</h2>
-            <h1 className='fw-bold display-2 mt-4 w-5 mx-3'>{marca}</h1>
-            <div className="productos">
-                {products.map(product => (
-                    <div className="m-0 p-0 " key={product.id}>
-                        <div className="producto">
-                            <Link to={`/${categoria}/${encodeURIComponent(product.nombre)}`}>
-                            <img className='img-fluid' src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />                            
-                            </Link>
-                            <h6 className='mx-3 mt-3'>{product.categoria}</h6>
-                            <h5 className='fw-semibold mx-3 '>{product.nombre}</h5>
-                            <p className='mx-3'>{product.precio}€</p>
-                            {product.stock > 0 ?
-                                (product.stock <= 10 ? <h6 className='mx-3 fw-light text-danger position-absolute '>Bajo stock</h6> :
-                                    <h6 className='mx-3 fw-light position-absolute'>{product.stock} en stock</h6>) :
-                                <h6 className='mx-3 text-white bg-black position-absolute'>Agotado</h6>}
-                        </div>
-                    </div>
-                ))}
+        <div>
+            <div className="row d-flex flex-row mx-auto justify-content-center align-items-center gap-5">
+                <div className="col-6 p-0 m-0">
+                <img className='imagen-producto ' width={600} src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />
+                </div>
+                <div className="col-5">
+                <p>{product.marca}</p>
+                <h1 className='display-4 fw-bold'>{product.nombre}</h1>
+                <summary className='display-6 fw-semibold'> 
+                    <details>
+                    <p className=''>{product.descripcion}</p>
+                    </details>
+                </summary>
+                <p className='display-5 fw-bolder text-end'>{product.precio}€</p>
+                <p>{product.stock > 0 ? `${product.stock} en stock` : 'Agotado'}</p>
+                </div>
             </div>
-        </>
+        </div>
     );
 };
 
-export default Products;
+export default ProductDetails;
