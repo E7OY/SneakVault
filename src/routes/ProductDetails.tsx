@@ -242,7 +242,7 @@ const ProductDetails = () => {
                         <h5 className='text-danger'>Agotado</h5>}
                     <h2>{product.marca}</h2>
                     <h2 className='display-3 fw-bold'>{product.nombre}</h2>
-                    <h5 className='display-6 fw-medium'>{product.descripcion}</h5>
+                    <h4 className=' fw-medium'>{product.descripcion}</h4>
                     <p className='display-5 fw-bolder mt-3'>{product.precio}€</p>
                     {product.stock <= 0 ?
 

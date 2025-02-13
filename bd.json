@@ -4,16 +4,16 @@
             "nike": {
                 "air-force-1": {
                     "nombre": "Nike Air Force 1 x Louis Vuitton",
-                    "descripcion": "Las zapatillas icónicas de Nike, perfectas para el día a día.",
+                    "descripcion": "Una colaboración de lujo entre Nike y Louis Vuitton, fusionando el diseño icónico de las Air Force 1 con la elegancia de la marca francesa. Perfectas para destacar con estilo y exclusividad.",
                     "precio": 6.900,
                     "marca": "Nike",
                     "categoria": "zapatillas",
                     "imagen": "../assets/off-white.png",
-                    "stock": 10
+                    "stock": 0
                 },
                 "off-white-mid": {
                     "nombre": "Air Force 1 Mid x Off-White",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Nike.",
+                    "descripcion": "Diseño vanguardista que combina la silueta clásica de Nike con la estética deconstruida de Off-White. Detalles únicos y materiales premium para un look audaz y moderno.",
                     "precio": 179,
                     "marca": "Nike",
                     "categoria": "zapatillas",
@@ -22,7 +22,7 @@
                 },
                 "air-zoom-stussy": {
                     "nombre": "Nike Air Zoom x Stussy",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Nike.",
+                    "descripcion": "Colaboración entre Nike y Stussy que fusiona el estilo urbano con la tecnología deportiva Air Zoom. Comodidad y diseño para un look casual y moderno.",
                     "precio": 1800,
                     "marca": "Nike",
                     "categoria": "zapatillas",
@@ -31,7 +31,7 @@
                 },
                 "zoom-vomero-5": {
                     "nombre": "Nike Zoom Vomero 5",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Nike.",
+                    "descripcion": "Zapatillas de running retro con tecnología Zoom Air para una amortiguación superior. Diseño clásico y materiales de alta calidad para un rendimiento óptimo y un estilo único.",
                     "precio": 200,
                     "marca": "Nike",
                     "categoria": "zapatillas",
@@ -40,7 +40,7 @@
                 },
                 "hot-step-nocta-black": {
                     "nombre": "Nike Hot Step Nocta Black",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Nike.",
+                    "descripcion": "Diseño innovador de Nike en colaboración con Nocta, la marca de Drake. Estilo urbano y detalles técnicos para un look moderno y funcional en color negro.",
                     "precio": 320,
                     "marca": "Nike",
                     "categoria": "zapatillas",
@@ -49,7 +49,7 @@
                 },
                 "hot-step-nocta-drake-white": {
                     "nombre": "Nike Hot Step 2 Nocta Drake White",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Nike.",
+                    "descripcion": "La segunda versión de la colaboración entre Nike y Nocta de Drake. Diseño elegante en color blanco con detalles distintivos y tecnología de vanguardia para un estilo único.",
                     "precio": 420,
                     "marca": "Nike",
                     "categoria": "zapatillas",
@@ -58,7 +58,7 @@
                 },
                 "hot-step-nocta-eggplant": {
                     "nombre": "Nike Hot Step 2 Nocta Eggplant",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Nike.",
+                    "descripcion": "Atrevido diseño en color berenjena de la colaboración Nike x Nocta. Detalles exclusivos y materiales premium para un estilo llamativo y sofisticado.",
                     "precio": 400,
                     "marca": "Nike",
                     "categoria": "zapatillas",
@@ -67,16 +67,16 @@
                 },
                 "nocta-glide-drake-white": {
                     "nombre": "Nike Nocta Glide Drake White",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Nike.",
+                    "descripcion": "Zapatillas de estilo running diseñadas en colaboración con Drake y su marca Nocta. Diseño aerodinámico en color blanco con detalles reflectantes y tecnología de amortiguación para un rendimiento superior.",
                     "precio": 350,
                     "marca": "Nike",
                     "categoria": "zapatillas",
                     "imagen": "../assets/nocta-glide-white.png",
-                    "stock": 19
+                    "stock": 0
                 },
                 "hot-step-nocta-rattan": {
                     "nombre": "Nike Hot Step 2 Nocta Rattan",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Nike.",
+                    "descripcion": "Diseño exclusivo en color rattan de la colaboración Nike x Nocta. Detalles únicos y materiales de alta calidad para un estilo distintivo y moderno.",
                     "precio": 350,
                     "marca": "Nike",
                     "categoria": "zapatillas",
@@ -85,7 +85,7 @@
                 },
                 "hot-step-nocta-orange": {
                     "nombre": "Nike Hot Step 2 Nocta Orange",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Nike.",
+                    "descripcion": "Color vibrante en naranja para esta colaboración entre Nike y Nocta. Diseño llamativo y detalles exclusivos para un estilo audaz y moderno.",
                     "precio": 350,
                     "marca": "Nike",
                     "categoria": "zapatillas",
@@ -97,7 +97,7 @@
             "yeezy": {
                 "foam": {
                     "nombre": "Yeezy Foam",
-                    "descripcion": "Las zapatillas más cómodas y ligeras de la historia.",
+                    "descripcion": "Diseño futurista y minimalista fabricado con espuma moldeada. Comodidad y estilo vanguardista para un look único y moderno.",
                     "precio": 200,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -106,7 +106,7 @@
                 },
                 "boost-700": {
                     "nombre": "Yeezy Boost 700 V3",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño innovador con tecnología Boost para una amortiguación superior. Estilo futurista y materiales de alta calidad para un look moderno y cómodo.",
                     "precio": 400,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -115,7 +115,7 @@
                 },
                 "350-cloud-white": {
                     "nombre": "Yeezy 350 V2 Cloud White",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad y ajuste excepcionales. Color blanco nube para un estilo limpio y moderno.",
                     "precio": 450,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -124,7 +124,7 @@
                 },
                 "350-granite": {
                     "nombre": "Yeezy 350 V2 Granite",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño moderno con tecnología Boost y Primeknit para una comodidad superior. Color granite para un estilo urbano y sofisticado.",
                     "precio": 380,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -133,7 +133,7 @@
                 },
                 "350-beluga": {
                     "nombre": "Yeezy 350 V2 Beluga",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad excepcional. Color beluga con detalles distintivos para un estilo único.",
                     "precio": 400,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -142,7 +142,7 @@
                 },
                 "350-frozen-yellow": {
                     "nombre": "Yeezy 350 V2 Frozen Yellow",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño llamativo con tecnología Boost y Primeknit para una comodidad superior. Color amarillo frozen para un estilo audaz y moderno.",
                     "precio": 800,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -151,7 +151,7 @@
                 },
                 "350-zebra": {
                     "nombre": "Yeezy 350 V2 Zebra",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad excepcional. Patrón de cebra para un estilo llamativo y moderno.",
                     "precio": 400,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -160,7 +160,7 @@
                 },
                 "350-dazzling-blue": {
                     "nombre": "Yeezy 350 V2 Dazzling Blue",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño moderno con tecnología Boost y Primeknit para una comodidad superior. Color azul deslumbrante para un estilo llamativo y único.",
                     "precio": 350,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -169,7 +169,7 @@
                 },
                 "foam-runner-sulfur": {
                     "nombre": "Yeezy Foam Runner Sulfur",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño futurista y minimalista fabricado con espuma moldeada. Color sulfur para un estilo moderno y vanguardista.",
                     "precio": 180,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -178,7 +178,7 @@
                 },
                 "slides-onyx": {
                     "nombre": "Yeezy Slides Onyx",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño minimalista y cómodo fabricado con espuma moldeada. Color onyx para un estilo moderno y relajado.",
                     "precio": 200,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -187,7 +187,7 @@
                 },
                 "slides-granite": {
                     "nombre": "Yeezy Slides Granite",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño minimalista y cómodo fabricado con espuma moldeada. Color granite para un estilo urbano y moderno.",
                     "precio": 160,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -196,7 +196,7 @@
                 },
                 "slides-bone": {
                     "nombre": "Yeezy Slides Bone",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño minimalista y cómodo fabricado con espuma moldeada. Color hueso para un estilo neutro y versátil.",
                     "precio": 230,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -205,7 +205,7 @@
                 },
                 "slides-resin": {
                     "nombre": "Yeezy Slides Resin",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño minimalista y cómodo fabricado con espuma moldeada. Color resina para un estilo moderno y natural.",
                     "precio": 200,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -214,7 +214,7 @@
                 },
                 "foam-runner-cinder": {
                     "nombre": "Yeezy Foam Runner Cinder",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño futurista y minimalista fabricado con espuma moldeada. Color cinder para un estilo urbano y moderno.",
                     "precio": 230,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -223,7 +223,7 @@
                 },
                 "350-core-black": {
                     "nombre": "Yeezy 350 V2 Core Black Red",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad excepcional. Color negro con detalles en rojo para un estilo llamativo.",
                     "precio": 380,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -232,7 +232,7 @@
                 },
                 "380-alien": {
                     "nombre": "Yeezy 380 Alien",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño futurista con tecnología Boost para una amortiguación superior. Estilo alienígena con detalles únicos para un look vanguardista.",
                     "precio": 400,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -241,7 +241,7 @@
                 },
                 "350-light": {
                     "nombre": "Yeezy 350 V2 Light",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño moderno con tecnología Boost y Primeknit para una comodidad superior. Color claro para un estilo fresco y veraniego.",
                     "precio": 400,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -250,7 +250,7 @@
                 },
                 "350-sesame": {
                     "nombre": "Yeezy 350 V2 Sesame",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad excepcional. Color sésamo para un estilo neutro y versátil.",
                     "precio": 350,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -259,7 +259,7 @@
                 },
                 "350-yeezreel": {
                     "nombre": "Yeezy 350 V2 Yeezreel",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño llamativo con tecnología Boost y Primeknit para una comodidad superior. Color yeezreel con detalles fluorescentes para un estilo audaz.",
                     "precio": 250,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -268,7 +268,7 @@
                 },
                 "700-wave-runner": {
                     "nombre": "Yeezy 700 Wave Runner",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño retro con tecnología Boost para una amortiguación superior. Estilo wave runner con colores vibrantes para un look llamativo.",
                     "precio": 700,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -277,7 +277,7 @@
                 },
                 "700-static": {
                     "nombre": "Yeezy 700 Static",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño moderno con tecnología Boost para una amortiguación superior. Color estático con detalles reflectantes para un estilo único.",
                     "precio": 450,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -286,7 +286,7 @@
                 },
                 "slides-ochre": {
                     "nombre": "Yeezy Slides Ochre",
-                    "descripcion": "Un diseño futurista y rompedor, con la calidad de Yeezy.",
+                    "descripcion": "Diseño minimalista y cómodo fabricado con espuma moldeada. Color ocre para un estilo terroso y natural.",
                     "precio": 200,
                     "marca": "Yeezy",
                     "categoria": "zapatillas",
@@ -299,7 +299,7 @@
             "jordan": {
                 "air-jordan-1": {
                     "nombre": "Air Jordan 1 x Cactus Jack",
-                    "descripcion": "Un clásico atemporal, ideal para cualquier ocasión.",
+                    "descripcion": "Colaboración icónica entre Jordan y Travis Scott, fusionando el diseño clásico de las Air Jordan 1 con el estilo único del rapero. Detalles distintivos y materiales premium para un look exclusivo.",
                     "precio": 2.500,
                     "marca": "Jordan",
                     "categoria": "zapatillas",
@@ -308,7 +308,7 @@
                 },
                 "retro-canyon": {
                     "nombre": "Jordan 4 Retro Canyon Purple",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "descripcion": "Diseño retro de las Jordan 4 en color canyon purple. Estilo clásico con detalles modernos para un look llamativo y actual.",
                     "precio": 400,
                     "marca": "Jordan",
                     "categoria": "zapatillas",
@@ -317,7 +317,7 @@
                 },
                 "retro-frozen-moments": {
                     "nombre": "Jordan 4 Retro Frozen Moments",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "descripcion": "Diseño retro de las Jordan 4 en color frozen moments. Estilo clásico con detalles únicos para un look moderno y sofisticado.",
                     "precio": 550,
                     "marca": "Jordan",
                     "categoria": "zapatillas",
@@ -326,7 +326,7 @@
                 },
                 "retro-seafoam": {
                     "nombre": "Jordan 4 Retro Seafoam",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "descripcion": "Diseño retro de las Jordan 4 en color seafoam. Estilo clásico con un toque de color para un look fresco y moderno.",
                     "precio": 370,
                     "marca": "Jordan",
                     "categoria": "zapatillas",
@@ -335,7 +335,7 @@
                 },
                 "air-low-fragment-travis": {
                     "nombre": "Air Jordan 1 Low OG SP x Fragment Design x Travis Scott",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "descripcion": "Colaboración exclusiva entre Jordan, Fragment Design y Travis Scott. Diseño único con detalles distintivos y materiales premium para un look de coleccionista.",
                     "precio": 2500,
                     "marca": "Jordan",
                     "categoria": "zapatillas",
@@ -344,7 +344,7 @@
                 },
                 "retro-low-og-travis": {
                     "nombre": "Jordan 1 Retro Low OG SP Travis Scott",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "descripcion": "Diseño retro de las Jordan 1 Low en colaboración con Travis Scott. Estilo único con detalles distintivos y materiales premium para un look exclusivo.",
                     "precio": 2500,
                     "marca": "Jordan",
                     "categoria": "zapatillas",
@@ -353,7 +353,7 @@
                 },
                 "low-reverse-mocha-travis": {
                     "nombre": "Air Jordan 1 Low Travis Scott Reverse Mocha",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "descripcion": "Diseño exclusivo de las Jordan 1 Low en colaboración con Travis Scott. Color mocha invertido para un estilo único y llamativo.",
                     "precio": 2000,
                     "marca": "Jordan",
                     "categoria": "zapatillas",
@@ -362,7 +362,7 @@
                 },
                 "jumpman-travis-scott": {
                     "nombre": "Jordan Jumpman Travis Scott",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "descripcion": "Diseño exclusivo de la línea Jumpman en colaboración con Travis Scott. Estilo único y detalles distintivos para un look moderno y urbano.",
                     "precio": 800,
                     "marca": "Jordan",
                     "categoria": "zapatillas",
@@ -371,7 +371,7 @@
                 },
                 "jumpman-travis-scott-dark-mocha": {
                     "nombre": "Jordan Jumpman Travis Scott Dark Mocha",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "descripcion": "Diseño exclusivo de la línea Jumpman en colaboración con Travis Scott. Color dark mocha para un estilo sofisticado y moderno.",
                     "precio": 550,
                     "marca": "Jordan",
                     "categoria": "zapatillas",
@@ -380,7 +380,7 @@
                 },
                 "jumpman-travis-scott-university-red": {
                     "nombre": "Jordan Jumpman Travis Scott University Red",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "descripcion": "Diseño exclusivo de la línea Jumpman en colaboración con Travis Scott. Color rojo universitario para un estilo llamativo y audaz.",
                     "precio": 650,
                     "marca": "Jordan",
                     "categoria": "zapatillas",
@@ -389,7 +389,7 @@
                 },
                 "low-og-travis-black-phantom": {
                     "nombre": "Jordan 1 Low OG SP Travis Scott Black Phantom",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "descripcion": "Diseño exclusivo de las Jordan 1 Low en colaboración con Travis Scott. Color negro phantom para un estilo misterioso y moderno.",
                     "precio": 1300,
                     "marca": "Jordan",
                     "categoria": "zapatillas",
@@ -398,7 +398,7 @@
                 },
                 "retro-fear": {
                     "nombre": "Jordan 4 Retro Fear",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "descripcion": "Diseño retro de las Jordan 4 en color fear. Estilo clásico con detalles únicos para un look moderno y atrevido.",
                     "precio": 280,
                     "marca": "Jordan",
                     "categoria": "zapatillas",
@@ -407,7 +407,7 @@
                 },
                 "retro-wet-cement": {
                     "nombre": "Jordan 4 Retro Wet Cement",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "descripcion": "Diseño retro de las Jordan 4 en color wet cement. Estilo clásico con un toque urbano para un look moderno y versátil.",
                     "precio": 250,
                     "marca": "Jordan",
                     "categoria": "zapatillas",
@@ -416,7 +416,7 @@
                 },
                 "retro-olive": {
                     "nombre": "Jordan 4 Retro Olive",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "descripcion": "Diseño retro de las Jordan 4 en color oliva. Estilo clásico con un toque natural para un look moderno y sofisticado.",
                     "precio": 250,
                     "marca": "Jordan",
                     "categoria": "zapatillas",
@@ -425,7 +425,7 @@
                 },
                 "retro-a-ma-maniere": {
                     "nombre": "Jordan 3 Retro A Ma Maniére",
-                    "descripcion": "Un diseño moderno y rompedor, con la calidad de Jordan.",
+                    "descripcion": "Colaboración exclusiva entre Jordan y A Ma Maniére. Diseño retro de las Jordan 3 con detalles únicos y materiales premium para un look de lujo.",
                     "precio": 350,
                     "marca": "Jordan",
                     "categoria": "zapatillas",
@@ -437,7 +437,7 @@
             "adidas": {
                 "campus": {
                     "nombre": "Adidas Campus x Bad Bunny",
-                    "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
+                    "descripcion": "Colaboración entre Adidas y Bad Bunny que fusiona el estilo clásico de las Campus con la creatividad del artista. Detalles únicos y colores vibrantes para un look moderno y llamativo.",
                     "precio": 240,
                     "marca": "Adidas",
                     "categoria": "zapatillas",
@@ -446,7 +446,7 @@
                 },
                 "campus-cream": {
                     "nombre": "Adidas Campus Cream x Bad Bunny",
-                    "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
+                    "descripcion": "Diseño exclusivo en color crema de la colaboración entre Adidas y Bad Bunny. Estilo clásico con un toque moderno y detalles distintivos para un look único.",
                     "precio": 420,
                     "marca": "Adidas",
                     "categoria": "zapatillas",
@@ -455,7 +455,7 @@
                 },
                 "forum-bad-bunny-white": {
                     "nombre": "Adidas Forum x Bad Bunny White",
-                    "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
+                    "descripcion": "Colaboración entre Adidas y Bad Bunny que reinventa el diseño clásico de las Forum. Color blanco con detalles únicos y materiales premium para un look moderno y exclusivo.",
                     "precio": 330,
                     "marca": "Adidas",
                     "categoria": "zapatillas",
@@ -464,7 +464,7 @@
                 },
                 "forum-bad-bunny-black": {
                     "nombre": "Adidas Forum x Bad Bunny Black",
-                    "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
+                    "descripcion": "Diseño exclusivo en color negro de la colaboración entre Adidas y Bad Bunny. Estilo moderno con detalles distintivos y materiales premium para un look sofisticado.",
                     "precio": 600,
                     "marca": "Adidas",
                     "categoria": "zapatillas",
@@ -473,7 +473,7 @@
                 },
                 "forum-bad-bunny-blue": {
                     "nombre": "Adidas Forum x Bad Bunny Blue",
-                    "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
+                    "descripcion": "Color azul vibrante para esta colaboración entre Adidas y Bad Bunny. Diseño moderno con detalles únicos y materiales premium para un look llamativo y exclusivo.",
                     "precio": 500,
                     "marca": "Adidas",
                     "categoria": "zapatillas",
@@ -482,7 +482,7 @@
                 },
                 "response-cl-bad-bunny": {
                     "nombre": "Adidas Response CL x Bad Bunny",
-                    "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
+                    "descripcion": "Colaboración entre Adidas y Bad Bunny que fusiona el estilo retro de las Response CL con la creatividad del artista. Detalles únicos y colores vibrantes para un look moderno y llamativo.",
                     "precio": 380,
                     "marca": "Adidas",
                     "categoria": "zapatillas",
@@ -491,7 +491,7 @@
                 },
                 "response-cl-white-bad-bunny": {
                     "nombre": "Adidas Response CL White x Bad Bunny",
-                    "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
+                    "descripcion": "Diseño exclusivo en color blanco de la colaboración entre Adidas y Bad Bunny. Estilo retro con detalles modernos y materiales premium para un look fresco y exclusivo.",
                     "precio": 350,
                     "marca": "Adidas",
                     "categoria": "zapatillas",
@@ -500,7 +500,7 @@
                 },
                 "response-cl-black-bad-bunny": {
                     "nombre": "Adidas Response CL Black x Bad Bunny",
-                    "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
+                    "descripcion": "Diseño exclusivo en color negro de la colaboración entre Adidas y Bad Bunny. Estilo retro con detalles modernos y materiales premium para un look sofisticado y exclusivo.",
                     "precio": 250,
                     "marca": "Adidas",
                     "categoria": "zapatillas",
@@ -509,7 +509,7 @@
                 },
                 "response-cl-blue-bad-bunny": {
                     "nombre": "Adidas Response CL Blue x Bad Bunny",
-                    "descripcion": "Un modelo clásico de Adidas, con un toque moderno.",
+                    "descripcion": "Color azul vibrante para esta colaboración entre Adidas y Bad Bunny. Diseño retro con detalles modernos y materiales premium para un look llamativo y exclusivo.",
                     "precio": 280,
                     "marca": "Adidas",
                     "categoria": "zapatillas",
@@ -525,7 +525,7 @@
             "off-white": {
                 "black-shirt": {
                     "nombre": "Off-White x Nike 005 T-Shirts Beige",
-                    "descripcion": "Camiseta de algodón con el logo de Off",
+                    "descripcion": "Camiseta de colaboración entre Off-White y Nike, parte de la colección 005. Diseño moderno con el logo icónico de Off-White y detalles de Nike. Perfecta para un look urbano y exclusivo.",
                     "precio": 250,
                     "marca": "Off-white",
                     "categoria": "camisetas",
@@ -534,7 +534,7 @@
                 },
                 "wave-outline-tee-white": {
                     "nombre": "Off-White Wave Outline Tee White",
-                    "descripcion": "Camiseta de algodón con el logo de Off",
+                    "descripcion": "Camiseta blanca de Off-White con el diseño de onda en el contorno. Estilo minimalista y moderno, perfecta para combinar con cualquier outfit casual.",
                     "precio": 320,
                     "marca": "Off-white",
                     "categoria": "camisetas",
@@ -543,7 +543,7 @@
                 },
                 "jumbo-arrow-tee-white": {
                     "nombre": "Off-White Jumbo Arrow Tee White",
-                    "descripcion": "Camiseta de algodón con el logo compartido de Supreme y MM6.",
+                    "descripcion": "Camiseta blanca de Off-White con el diseño de la flecha jumbo en la espalda. Estilo llamativo y moderno, perfecta para destacar en cualquier ocasión.",
                     "precio": 150,
                     "marca": "Off-white",
                     "categoria": "camisetas",
@@ -552,7 +552,7 @@
                 },
                 "jumbo-arrow-tee-purple": {
                     "nombre": "Off-White Jumbo Arrow Tee Purple",
-                    "descripcion": "Camiseta de algodón con el logo compartido de Supreme y MM6.",
+                    "descripcion": "Camiseta morada de Off-White con el diseño de la flecha jumbo en la espalda. Estilo llamativo y moderno, perfecta para destacar en cualquier ocasión.",
                     "precio": 320,
                     "marca": "Off-white",
                     "categoria": "camisetas",
@@ -564,7 +564,7 @@
             "supreme": {
                 "undercover-face": {
                     "nombre": "Supreme x Undercover face",
-                    "descripcion": "Camiseta de algodón con el logo compartido de Supreme y Undercover.",
+                    "descripcion": "Camiseta de colaboración entre Supreme y Undercover con un diseño de cara. Estilo urbano y moderno, perfecta para los amantes de la moda streetwear.",
                     "precio": 150,
                     "marca": "Supreme",
                     "categoria": "camisetas",
@@ -573,7 +573,7 @@
                 },
                 "mm6": {
                     "nombre": "Camiseta Supreme x MM6",
-                    "descripcion": "Camiseta de algodón con el logo compartido de Supreme y MM6.",
+                    "descripcion": "Camiseta de colaboración entre Supreme y MM6. Diseño exclusivo y moderno, perfecta para los amantes de la moda de vanguardia.",
                     "precio": 550,
                     "marca": "Supreme",
                     "categoria": "camisetas",
@@ -582,7 +582,7 @@
                 },
                 "4-life-tee-white": {
                     "nombre": "Supreme 4 Life Tee White",
-                    "descripcion": "Camiseta de algodón con el logo compartido de Supreme y MM6.",
+                    "descripcion": "Camiseta blanca de Supreme con el diseño 4 Life. Estilo urbano y moderno, perfecta para los seguidores de la marca.",
                     "precio": 150,
                     "marca": "Supreme",
                     "categoria": "camisetas",
@@ -591,7 +591,7 @@
                 },
                 "jordan-biggie-tee-black": {
                     "nombre": "Supreme Jordan Biggie Tee Black",
-                    "descripcion": "Camiseta de algodón con el logo compartido de Supreme y MM6.",
+                    "descripcion": "Camiseta negra de Supreme con un diseño de Jordan y Biggie. Estilo urbano y moderno, perfecta para los amantes del hip-hop y el baloncesto.",
                     "precio": 150,
                     "marca": "Supreme",
                     "categoria": "camisetas",
@@ -600,7 +600,7 @@
                 },
                 "tyler-the-creator-tee-white": {
                     "nombre": "Supreme Tyler The Creator Tee White",
-                    "descripcion": "Camiseta de algodón con el logo compartido de Supreme y MM6.",
+                    "descripcion": "Camiseta blanca de Supreme con un diseño de Tyler, The Creator. Estilo urbano y moderno, perfecta para los fans del artista.",
                     "precio": 150,
                     "marca": "Supreme",
                     "categoria": "camisetas",
@@ -609,7 +609,7 @@
                 },
                 "backwards-tee-white": {
                     "nombre": "Supreme Backwards Tee White",
-                    "descripcion": "Camiseta de algodón con el logo compartido de Supreme y MM6.",
+                    "descripcion": "Camiseta blanca de Supreme con el logo al revés. Estilo urbano y moderno, perfecta para los que buscan un toque diferente.",
                     "precio": 150,
                     "marca": "Supreme",
                     "categoria": "camisetas",
@@ -621,7 +621,7 @@
             "nike": {
                 "commes-des-garcons": {
                     "nombre": "Nike x Commes des Garcons",
-                    "descripcion": "Camiseta de algodón con el logo compartido de Nike y Commes des Garcons.",
+                    "descripcion": "Camiseta de colaboración entre Nike y Commes des Garcons. Diseño exclusivo y moderno, perfecta para los amantes de la moda de vanguardia.",
                     "precio": 150,
                     "marca": "Nike",
                     "categoria": "camisetas",
@@ -630,7 +630,7 @@
                 },
                 "nocta-nrg-tee-grey": {
                     "nombre": "Nike Nocta NRG Tee Grey",
-                    "descripcion": "Camiseta de algodón con el logo compartido de Nike y Commes des Garcons.",
+                    "descripcion": "Camiseta gris de la línea Nocta de Nike. Diseño moderno y minimalista, perfecta para un look urbano y casual.",
                     "precio": 130,
                     "marca": "Nike",
                     "categoria": "camisetas",
