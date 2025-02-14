@@ -29,6 +29,7 @@ import newbalancebanner from "../assets/newbalancebanner.jpg";
 import airjordanbanner from "../assets/airjordanbanner.jpg";
 import bannercj from "../assets/banner-cj.png";
 import bannercjmocha from "../assets/banner-cj-mocha.png";
+import bannerfigma from "../assets/bannerfigma.png";
 
 import original from "../assets/original.png";
 import envio from "../assets/envios.png";
@@ -209,8 +210,8 @@ const Home = () => {
                     <div className="swiper-wrapper">
                     {productos.filter(producto => producto.categoria === 'zapatillas' && producto.marca === 'Yeezy').slice(0, 10).map((producto, index) => (
                             <div key={index} className="swiper-slide text-start">
-                                                <Link to={`/undefined/${encodeURIComponent(producto.nombre)}`}>
-                            <img className='imagen-producto-home' width={350} src={imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />                            
+                            <Link to={`/${producto.categoria}/${producto.marca}/${encodeURIComponent(producto.nombre)}`}>
+                                <img className='imagen-producto-home' width={350} src={producto.imagen || imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />                            
                             </Link>
                     <h5 className="fw-bold">{producto.nombre}</h5>
                                 <p className="text-decoration-underline">Desde {producto.precio}€</p>
@@ -241,8 +242,8 @@ const Home = () => {
                     <div className="swiper-wrapper">
                     {productos.filter(producto => producto.categoria === 'zapatillas' && producto.marca === 'Jordan').slice(0, 10).map((producto, index) => (
                             <div key={index} className="swiper-slide text-start">
-                                                <Link to={`/undefined/${encodeURIComponent(producto.nombre)}`}>
-                            <img className='imagen-producto-home' width={350} src={imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />                            
+                            <Link to={`/${producto.categoria}/${producto.marca}/${encodeURIComponent(producto.nombre)}`}>
+                                <img className='imagen-producto-home' width={350} src={producto.imagen || imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />                            
                             </Link>
                     <h5 className="fw-bold">{producto.nombre}</h5>
                                 <p className="text-decoration-underline">Desde {producto.precio}€</p>

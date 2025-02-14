@@ -1,15 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { db } from '../utils/firebase.utils';
 import { ref, onValue } from 'firebase/database';
 
 import prohibido from '../assets/prohibido.png';
 import { imageMap } from '../utils/imageMap';
+import UserContext from '../context/userContext';
 
 
 const ProductDetails = () => {
     const { nombre } = useParams<{ nombre: string }>();
     const [product, setProduct] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string } | null>(null);
+    const userContext = useContext(UserContext);
+    const user = userContext ? userContext.user : null;
+    const setUser = userContext ? userContext.setUser : () => {};
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -91,17 +95,22 @@ const ProductDetails = () => {
                             <h6 className='fw-bold text-success'>{product.stock} en stock</h6>) :
                         <h5 className='text-danger'>Agotado</h5>}
                     <h3 className='fw-regular'>{product.marca}</h3>
-                    <h2 className='display-3 fw-bold'>{product.nombre}</h2>
-                    <h4 className=' fw-medium'>{product.descripcion}</h4>
+                    <h2 className='display-3 fw-medium'>{product.nombre}</h2>
+                    <h4 className=' fw-regular text-black-75'>{product.descripcion}</h4>
                     <p className='display-5 fw-bolder mt-3'>{product.precio}€</p>
-                    {product.stock <= 0 ?
 
-                        (<>
-                            <a className='btn rounded-0 btn-dark text-danger p-3 mb-3'><img src={prohibido} className='mx-1' width={20}></img>Añadir a la cesta</a></>)
-                        :
+                {user ? (
+                    product.stock <= 0 ? (
+                        <a className='btn rounded-0 btn-dark text-danger p-3 mb-3'>
+                            <img src={prohibido} className='mx-1' width={20} alt="prohibido" />
+                            Añadir a la cesta
+                        </a>
+                    ) : (
                         <a href="" className='btn rounded-0 text-white bg-dark p-3 mb-3'>Añadir a la cesta</a>
-                    }
-
+                    )
+                ) : (
+                    <a href="/register" className='btn rounded-0 text-white bg-dark p-3 mb-3'>Inicia sesión para comprar</a>
+                )}
 
                     <br />
                     <a className="mt-5" data-toggle="modal" data-target="#myModal">
@@ -183,6 +192,24 @@ const ProductDetails = () => {
                                             (
                                                 <>
                                                     <p>Para encontrar la talla correcta de camisetas, mide el contorno de tu pecho en su parte más ancha. Usa la tabla de tallas para encontrar la talla correspondiente.</p>
+                                                    <table className="table table-bordered table-striped">
+                                                        <thead className="thead-dark">
+                                                            <tr>
+                                                                <th>Talla</th>
+                                                                <th>Medidas (Pecho x Torso x Pierna)</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr><td>XS</td><td>3 x 10 x 12,5</td></tr>
+                                                            <tr><td>S</td><td>4 x 12 x 15</td></tr>
+                                                            <tr><td>M</td><td>5 x 15 x 17</td></tr>
+                                                            <tr><td>L</td><td>6 x 17 x 20</td></tr>
+                                                            <tr><td>XL</td><td>7 x 19 x 25</td></tr>
+                                                            <tr><td>XXL</td><td>8 x 21 x 29</td></tr>
+
+
+                                                        </tbody>
+                                                    </table>
                                                 </>
                                             )
 
