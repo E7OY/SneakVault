@@ -8,8 +8,22 @@ import '../index.css';
 
 import { imageMap } from '../utils/imageMap';
 
+interface Product {
+    categoria: string,
+    marca: string;
+    nombre: string;
+    imagen: string;
+    stock: number;
+    precio: number;
+    descripcion: string;
+}
 
-const Products = () => {
+interface ProductProps {
+    products: Product[];
+}
+
+
+const Products: React.FC<ProductProps> = ( ) => {
     const { categoria, marca } = useParams<{ categoria: string, marca: string }>();
     const [products, setProducts] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string }[]>([]);
 
@@ -35,7 +49,7 @@ const Products = () => {
                                     nombre: product.nombre || '',
                                     precio: product.precio || 0,
                                     descripcion: product.descripcion || '',
-                                    categoria: category || '',
+                                    categoria: product.categoria || '',
                                     stock: product.stock || 0,
                                     marca: product.marca || ''
                                 });
@@ -59,10 +73,11 @@ const Products = () => {
             <h1 className='fw-bold display-2 mt-4 w-5 mx-3'>{marca}</h1>
             <div className="productos">
                 {products.map(product => (
-                    <div className="m-0 p-0 " key={product.id}>
+                    <div className="m-0 p-0 " key={product.id}> 
                         <div className="producto">
-                            <Link to={`/${categoria}/${encodeURIComponent(product.nombre)}`}>
-                            <img className='img-fluid imagen-producto py-2' src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />                            
+                            {/* <Link to={`/${product.categoria}/${product.marca.toLowerCase()}/${ref(db, `productos/${product.categoria}/${product.marca}/${product.id}`).key}`}> */}
+                            <Link to={`/${product.categoria}/${product.marca}/${encodeURIComponent(product.nombre)}`}>
+                                <img className='img-fluid imagen-producto py-2' src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />                            
                             </Link>
                             <h6 className='mx-3 mt-3'>{product.categoria}</h6>
                             <h5 className='fw-semibold mx-3 '>{product.nombre}</h5>

@@ -9,6 +9,11 @@ import ErrorPage from './pages/ErrorPage';
 import Products from './routes/Products';
 import ProductDetails from './routes/ProductDetails';
 
+
+import { db } from './utils/firebase.utils';
+import { DataSnapshot, onValue, ref } from 'firebase/database';
+
+
 const App = () => {
   const [user, setUser] = useState<{ displayName?: string; email: string } | null>(null);
 
@@ -32,19 +37,19 @@ const App = () => {
         },
         {
           path: 'zapatillas',
-          element: <Products />,
+          element: <Products products={[]} />,
         },
         {
           path: 'zapatillas/:marca',
-          element: <Products />,
+          element: <Products products={[]} />,
         },
         {
           path: 'camisetas',
-          element: <Products />,
+          element: <Products products={[]} />,
         },
         {
           path: 'camisetas/:marca',
-          element: <Products />,
+          element: <Products products={[]} />,
         },
         /*detalle producto*/
         {
@@ -52,10 +57,10 @@ const App = () => {
           children: [
             {
               index: true,
-              element: <Products />,
+              element: <Products products={[]} />,
             },
-            {
-              path: ':nombre',
+            { 
+              path: ':marca/:nombre',
               element: <ProductDetails />,
             },
           ],

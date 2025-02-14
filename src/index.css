@@ -207,11 +207,17 @@ header {
   justify-content: start;
   font-family: "Big Shoulders Text", serif;
 }
-.imagen-producto  img {
+.imagen-producto-detail {
   width: 100%;
   height: auto;
+  padding: 50px;
   object-fit: contain;
-  max-height: 200px;
+  max-height: 500px;
+  outline: 2px solid black;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  cursor: pointer;
 }
 .swiper-hero .swiper-slide {
   display: flex;
@@ -225,6 +231,7 @@ header {
   height: auto;
   box-sizing: border-box;
 }
+
 .swiper-banner img {
   object-fit: cover;
   width: 100%;
@@ -367,9 +374,44 @@ header {
     left: -30px;
     bottom: 30px;
     transform: rotate(5deg);
-
 }
-
 .imagen-producto:hover {
     transform: rotateY(180deg);
+}
+
+
+
+
+
+
+details {
+  font-size: 1.3rem;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid #ffffffaf;
+}
+
+summary:hover {
+  color: #565656d5;
+}
+summary {
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+summary::after {
+  content: '\25B6';
+  font-size: 1rem;
+  margin-left: 10px;
+  transition: transform 0.5s ease;
+}
+
+details[open] summary::after {
+  transform: rotate(90deg);
+}
+summary {
+  font-weight: 600;
+  cursor: pointer;
 }

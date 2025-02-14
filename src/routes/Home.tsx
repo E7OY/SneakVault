@@ -12,8 +12,6 @@ import nikejordan from "../assets/nikejordan.jpg";
 import stussy90s from "../assets/stussy90s.jpg";
 import stussy90s1 from "../assets/stussy90s1.jpg";
 import travis1 from "../assets/travis1.png";
-import travis2 from "../assets/travis2.png";
-import travis3 from "../assets/travis3.png";
 
 import supremelogo from "../assets/supremelogo.png";
 import nikelogo from "../assets/nikelogo.png";
@@ -191,18 +189,16 @@ const Home = () => {
                 <div className="swiper-button-next text-black border border-1 border-black"></div>
             </div>
 
-
-
             <main className="mx-1 px-5">
                 {/* SLIDER ZAPATILLAS */}
                 <div className="d-flex flex-row justify-content-between align-items-end">
                     <div className="">
                         <h2 className="fw-bolder negro text-center display-6">
-                            ZAPATILLAS DESTACADAS
+                            YEEZY EN TENDENCIA
                         </h2>
                     </div>
                     <div className="">
-                        <Link to="/products" className="text-decoration-none">
+                        <Link to="/zapatillas/yeezy" className="text-decoration-none">
                             <button className="button text-start">
                                 VES MAS
                             </button>
@@ -224,6 +220,71 @@ const Home = () => {
                     <div className="swiper-button-prev text-black border border-1 border-black"></div>
                     <div className="swiper-button-next text-black border border-1 border-black"></div>
                 </div>
+
+        
+                {/* SLIDER ZAPATILLAS */}
+                <div className="d-flex flex-row justify-content-between align-items-end">
+                    <div className="">
+                        <h2 className="fw-bolder negro text-center display-6">
+                            JORDAN DESTACADAS
+                        </h2>
+                    </div>
+                    <div className="">
+                        <Link to="/zapatillas/jordan" className="text-decoration-none">
+                            <button className="button text-start">
+                                VES MAS
+                            </button>
+                        </Link>
+                    </div>
+                </div>
+                <div className="swiper swiper-hero mb-5">
+                    <div className="swiper-wrapper">
+                    {productos.filter(producto => producto.categoria === 'zapatillas' && producto.marca === 'Jordan').slice(0, 10).map((producto, index) => (
+                            <div key={index} className="swiper-slide text-start">
+                                                <Link to={`/undefined/${encodeURIComponent(producto.nombre)}`}>
+                            <img className='imagen-producto-home' width={350} src={imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />                            
+                            </Link>
+                    <h5 className="fw-bold">{producto.nombre}</h5>
+                                <p className="text-decoration-underline">Desde {producto.precio}€</p>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="swiper-button-prev text-black border border-1 border-black"></div>
+                    <div className="swiper-button-next text-black border border-1 border-black"></div>
+                </div>
+
+                    {/* SLIDER ROPA 
+                <div className="d-flex flex-row justify-content-between align-items-end">
+                    <div className="">
+                        <h2 className="fw-bolder negro text-center display-6">
+                            ROPA DESTACADAS
+                        </h2>
+                    </div>
+                    <div className="">
+                        <Link to="/products" className="text-decoration-none">
+                            <button className="button text-start">
+                                VES MAS
+                            </button>
+                        </Link>
+                    </div>
+                </div>
+                <div className="swiper swiper-hero mb-5">
+                    <div className="swiper-wrapper">
+                    {productos.filter(producto => producto.categoria === 'camisetas').slice(0, 10).map((producto, index) => (
+                            <div key={index} className="swiper-slide text-start">
+                                                <Link to={`/undefined/${encodeURIComponent(producto.nombre)}`}>
+                            <img className='imagen-ropa-home' width={ } src={imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />                            
+                            </Link>
+                    <h5 className="fw-bold">{producto.nombre}</h5>
+                                <p className="text-decoration-underline">Desde {producto.precio}€</p>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="swiper-button-prev text-black border border-1 border-black"></div>
+                    <div className="swiper-button-next text-black border border-1 border-black"></div>
+                </div>
+                */}
+
 
 
                 <div className="row d-flex justify-content-between align-items-center mt-5">
