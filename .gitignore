@@ -67,3 +67,11 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+
+# Ignore Firebase configuration files
+src/utils/firebase.utils.tsx
+.firebaserc
+firebase.json
+bd.json
+
