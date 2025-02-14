@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { db } from '../utils/firebase.utils';
 import { ref, onValue } from 'firebase/database';
 
@@ -7,13 +7,13 @@ import prohibido from '../assets/prohibido.png';
 import { imageMap } from '../utils/imageMap';
 import UserContext from '../context/userContext';
 
+import '../index.css';
 
 const ProductDetails = () => {
     const { nombre } = useParams<{ nombre: string }>();
     const [product, setProduct] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string } | null>(null);
     const userContext = useContext(UserContext);
     const user = userContext ? userContext.user : null;
-    const setUser = userContext ? userContext.setUser : () => {};
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -89,47 +89,77 @@ const ProductDetails = () => {
                         />                     
                     </div>
                 </div>
-                <div className="col-md-5 col-sm-12">
+                <div className="col-md-5 col-sm-12 negro">
                     {product.stock > 0 ?
-                        (product.stock <= 10 ? <h6 className='fw-bold text-danger'>Menos de {product.stock} unidades</h6> :
-                            <h6 className='fw-bold text-success'>{product.stock} en stock</h6>) :
-                        <h5 className='text-danger'>Agotado</h5>}
-                    <h3 className='fw-regular'>{product.marca}</h3>
-                    <h2 className='display-3 fw-medium'>{product.nombre}</h2>
-                    <h4 className=' fw-regular text-black-75'>{product.descripcion}</h4>
-                    <p className='display-5 fw-bolder mt-3'>{product.precio}€</p>
+                        (product.stock <= 10 ? <h6 className='fw-bold bg-danger text-white p-1 d-inline-block float-right'>Menos de {product.stock} unidades</h6> :
+                            <h6 className='fw-bold bg-success text-white p-1 d-inline-block float-right'>{product.stock} en stock</h6>) :
+                        <h5 className='bg-danger text-white d-inline-block fst-italic p-1 float-right'>Agotado</h5>}
+
+                    <Link to={`/${product.categoria}/${product.marca.toLowerCase()}`}>
+                        <h4 className='fw-regular text-decoration-none negro'>{product.marca}</h4>
+                    </Link>
+                    <h2 className='display-4 mt-3 fw-bold'>{product.nombre}</h2>
+                    <h5 className=' fw-regular'>{product.descripcion}</h5>
+                    <h3 className='fw-light mt-3 mb-5'>{product.precio}€</h3>
 
                 {user ? (
                     product.stock <= 0 ? (
-                        <a className='btn rounded-0 btn-dark text-danger p-3 mb-3'>
-                            <img src={prohibido} className='mx-1' width={20} alt="prohibido" />
+                        <a className='btn rounded-0 btn-dark text-danger p-3'>
+                            <img src={prohibido} className='mx-1 bg-negro' width={20} alt="prohibido" />
                             Añadir a la cesta
                         </a>
                     ) : (
-                        <a href="" className='btn rounded-0 text-white bg-dark p-3 mb-3'>Añadir a la cesta</a>
+                        <a href="" className='button'>Añadir a la cesta</a>
                     )
                 ) : (
-                    <a href="/register" className='btn rounded-0 text-white bg-dark p-3 mb-3'>Inicia sesión para comprar</a>
+                    <a href="/register" className='button'>Inicia sesión para comprar</a>
                 )}
 
-                    <br />
-                    <a className="mt-5" data-toggle="modal" data-target="#myModal">
-                        Guía de tallas
-                    </a>
 
-
-                    <details className="my-2">
-                        <summary style={{ fontWeight: 'bold', cursor: 'pointer', padding: '10px', borderBottom: '1px solid #ccc' }}>
-                            Envíos
+                    <details className="my-2 mt-5">
+                    <summary className='p-2 border-bottom fw-bolder'>
+                    Envíos
                         </summary>
-                        <p>Realizamos envíos a toda España, con un tiempo estimado de 24-48 horas.</p>
+                        <h5 className='m-3'>
+                        Una vez que realice su pedido, espere de 1 a 2 días hábiles para procesar sus pedidos. Después de eso, 
+                        tomará entre 1 y 2  días hábiles para la entrega en España, y entre 3 y 5 días hábiles para los pedidos 
+                        Unión Europea (según la ubicación).
+                        </h5>
                     </details>
 
                     <details className="my-2">
-                        <summary style={{ fontWeight: 'bold', cursor: 'pointer', padding: '10px', borderBottom: '1px solid #ccc' }}>
-                            Devoluciones
+                        <summary className='p-2 border-bottom fw-bolder'>
+                            Cambios Y Devoluciones
                         </summary>
-                        <p>Si no estás satisfecho con tu compra, puedes devolverla en un plazo de 15 días.</p>
+                        <h5 className='m-3'>
+                        En SneakVault nos esforzamos por asegurar la plena satisfacción de nuestros clientes. Si no está completamente 
+                        satisfecho con su compra, le ofrecemos la opción de devolver los artículos bajo las siguientes condiciones:
+                        <br/><li>Plazo para devoluciones:</li> Debe retornar los artículos dentro de los 14 días hábiles siguientes a la fecha de recepción.
+                        <br/><li>Condición del artículo:</li> Los productos devueltos deben estar sin usar, en su embalaje original y en estado completo.
+                        <br/><li>Coste de devolución:</li> No se reembolsarán los costos de envío iniciales. La devolución tiene un coste de etiqueta de envío 
+                        de 4,95€.
+                        Adicionalmente, para facilitar un proceso de cambio sin complicaciones, ofrecemos envío gratuito en todos los cambios 
+                        de productos dentro de nuestro marco de devoluciones. Esto asegura que pueda elegir el producto más adecuado sin 
+                        preocuparse por costos adicionales.
+                        Para más información o asistencia con su devolución, no dude en contactarnos. Estamos aquí para ayudarle.
+                        </h5>
+                    </details>
+                    <details className="my-2">
+                    <summary className='p-2 border-bottom fw-bolder'>
+                    Autenticidad
+                        </summary>
+                        <h5 className='m-3'>
+                        Cada producto disponible en SneakVault está respaldado por nuestra garantía de autenticidad. Antes de 
+                        ser entregados, nuestros especialistas verifican minuciosamente cada artículo para asegurarse de que sea genuino.
+                        Nuestra colección de productos proviene directamente de una red de distribuidores asociados que han sido elegidos 
+                        cuidadosamente debido a su experiencia en la industria. Cada artículo es seleccionado individualmente y se te enviará 
+                        en su caja original, completa con todos los accesorios necesarios. Además, lo recibirás con el sello distintivo de 
+                        SneakVault, que confirma que el producto ha sido inspeccionado y enviado por nuestro equipo.
+                        En SneakVault, nos esforzamos por garantizar la calidad y autenticidad de cada producto que ofrecemos. Queremos que 
+                        tengas la confianza de saber que estás adquiriendo productos genuinos y de alta calidad. Si tienes alguna pregunta 
+                        sobre la autenticidad de nuestros productos, no dudes en ponerte en contacto con nosotros. Estamos aquí para b
+                        rindarte la mejor experiencia de compra posible.
+                        </h5>
                     </details>
 
 
@@ -224,6 +254,12 @@ const ProductDetails = () => {
                             </div>
                         </div>
                     </div>
+
+                    <br />
+                    <a className="mt-5" data-toggle="modal" data-target="#myModal">
+                        Guía de tallas
+                    </a>
+
                 </div>
             </div>
         </div>

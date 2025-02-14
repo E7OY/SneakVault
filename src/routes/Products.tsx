@@ -69,7 +69,6 @@ const Products: React.FC<ProductProps> = ( ) => {
 
     return (
         <>
-            <h2 className='fw-bold display-1 mt-4 w-5 mx-3'>DESCUBRE PRODUCTOS ILIMITADOS SIN LIMITACION</h2>
             <h1 className='fw-bold display-2 mt-4 w-5 mx-3'>{marca}</h1>
             <div className="productos">
                 {products.map(product => (

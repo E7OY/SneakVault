@@ -106,15 +106,15 @@ const Register = () => {
                     <div className='container row  d-flex justify-content-between fw-regular mx-auto mt-1'>
                     {!user && (
                         <>
-                        <div onClick={logGoogleUser} className="col-4 button-google d-flex flex-row gap-2 w-auto justify-content-center align-items-center py-2 px-3">
-                            <img  src={ logogoogle } className=' ' width={20} alt="" /> Sign in with Google
+                        <div onClick={logGoogleUser} className="col-4 button-google d-flex flex-row gap-2 w-auto justify-content-center align-items-center py-2 px-2">
+                            <img  src={ logogoogle } className=' ' width={15} alt="" /> Login with Google
                         </div>
-                        <div onClick={logGoogleUser}  className="col-4 button-apple d-flex flex-row gap-2 w-auto justify-content-center align-items-center py-2 px-3">
-                            <img  src={ logoapple } className='' width={20} alt="" /> Sign in with Apple
+                        <div onClick={logGoogleUser}  className="col-4 button-apple d-flex flex-row gap-2 w-auto justify-content-center align-items-center py-2 px-2">
+                            <img  src={ logoapple } className='' width={15} alt="" /> Login with Apple
                         </div>
-                        <div className="col-4 button-google d-flex flex-row gap-2 w-auto justify-content-center align-items-center py-2 px-3">
+                        <div className="col-4 button-google d-flex flex-row w-auto justify-content-center align-items-center py-2 px-2">
                             <button className='button-google' onClick={() => setIsRegistering(!isRegistering)}>
-                                {isRegistering ? 'Ya tienes una cuenta? Inicia Sesión' : 'No tienes una cuenta? Regístrate'}
+                                {isRegistering ? 'Tienes cuenta? Inicia Sesión' : 'No tienes cuenta? Regístrate'}
                             </button>
                         </div>
                         </>
