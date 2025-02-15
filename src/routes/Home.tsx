@@ -208,7 +208,7 @@ const Home = () => {
                 </div>
                 <div className="swiper swiper-hero mb-5">
                     <div className="swiper-wrapper">
-                    {productos.filter(producto => producto.categoria === 'zapatillas' && producto.marca === 'Yeezy').slice(0, 10).map((producto, index) => (
+                    {productos.filter(producto => producto.categoria === 'zapatillas' && producto.marca === 'yeezy').slice(0, 10).map((producto, index) => (
                             <div key={index} className="swiper-slide text-start">
                             <Link to={`/${producto.categoria}/${producto.marca}/${encodeURIComponent(producto.nombre)}`}>
                                 <img className='imagen-producto-home' width={350} src={producto.imagen || imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />                            
@@ -240,7 +240,7 @@ const Home = () => {
                 </div>
                 <div className="swiper swiper-hero mb-5">
                     <div className="swiper-wrapper">
-                    {productos.filter(producto => producto.categoria === 'zapatillas' && producto.marca === 'Jordan').slice(0, 10).map((producto, index) => (
+                    {productos.filter(producto => producto.categoria === 'zapatillas' && producto.marca === 'jordan').slice(0, 10).map((producto, index) => (
                             <div key={index} className="swiper-slide text-start">
                             <Link to={`/${producto.categoria}/${producto.marca}/${encodeURIComponent(producto.nombre)}`}>
                                 <img className='imagen-producto-home' width={350} src={producto.imagen || imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />                            

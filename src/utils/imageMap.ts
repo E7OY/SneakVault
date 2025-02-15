@@ -80,10 +80,91 @@ import imagen88 from '../assets/nocta-nrg-tee-orange.png';
 import imagen89 from '../assets/nocta-nrg-tee-dark-grey.png';
 import imagen90 from '../assets/shells-black-tee.png';
 import imagen91 from '../assets/basic-stussy-tee-pigment-died-white.png';
+import iomagen92 from '../assets/yeezy-350-onyx.png';
+import imagen93 from '../assets/yeezy-350-static.png';
+import imagen94 from '../assets/yeezy-350-mx-rock.png';
+import imagen95 from '../assets/yeezy-350-mx-dark-sea-salt.png';
+import imagen96 from '../assets/yeezy-350-black-red.png';
+import imagen97 from '../assets/yeezy-350-desert-sage.png';
+import imagen98 from '../assets/yeezy-700-wash-orange.png';
+import imagen99 from '../assets/yeezy-350-hyperspace.png';
+import imagen100 from '../assets/yeezy-350-mx-oat.png';
+import imagen101 from '../assets/yeezy-350-cream-white.png';
+import imagen102 from '../assets/yeezy-350-carbon-beluga.png';
+import imagen103 from '../assets/yeezy-350-blue-tint.png';
+import imagen104 from '../assets/jordan-retro-low-travis-velvet-brown.png';
+import imagen105 from '../assets/jordan-retro-craft-photon-dust.png';
+import imagen106 from '../assets/jordan-retro-university-blue.png';
+import imagen107 from '../assets/jordan-retro-red-thunder.png';
+import imagen108 from '../assets/jordan-retro-cacao-wow.png';
+import imagen109 from '../assets/jordan-retro-red-cement.png';
+import imagen110 from '../assets/jordan-retro-midnight-navy.png';
+import imagen111 from '../assets/jordan-retro-military-black.png';
+import imagen112 from '../assets/jordan-retro-black-canvas.png';
+import imagen113 from '../assets/jordan-retro-thunder.png';
+import imagen114 from '../assets/jordan-retro-orchid.png';
+import imagen115 from '../assets/jordan-retro-pine-green.png';
+import imagen116 from '../assets/jordan-retro-black-cat.png';
+import imagen117 from '../assets/jordan-retro-white-cement-reimagined.png';
+import imagen118 from '../assets/jordan-retro-black-cement.png';
+import imagen119 from '../assets/jordan-retro-j-balvin-rio.png';
+import imagen120 from '../assets/campus-wild-moss.png';
+import imagen121 from '../assets/dunk-low-travis-scott.png';
+import imagen122 from '../assets/dunk-low-supreme-black.png';
+import imagen123 from '../assets/dunk-low-chicago.png';
+import imagen124 from '../assets/dunk-low-light-violet-venice.png';
+import imagen125 from '../assets/dunk-low-light-iron.png';
+import imagen126 from '../assets/dunk-low-court-purple.png';
+import imagen127 from '../assets/dunk-low-team-gold.png';
+import imagen128 from '../assets/dunk-low-cacao-wow.png';
+import imagen129 from '../assets/dunk-low-black-panda.png';
+
 
 
 export const imageMap: { [key: string]: string } = {
     'Air Jordan 1 x Cactus Jack': imagen1,   //meter nombres de los productos en la bbdd
+    
+    'Yeezy 350 V2 Onyx': iomagen92,
+    'Yeezy 350 V2 Static': imagen93,
+    'Yeezy 350 V2 MX Rock': imagen94,
+    'Yeezy 350 V2 MX Dark Sea Salt': imagen95,
+    'Yeezy 350 V2 Black Red': imagen96,
+    'Yeezy 350 V2 Desert Sage': imagen97,
+    'Yeezy 700 Wash Orange': imagen98,
+    'Yeezy 350 V2 Hyperspace': imagen99,
+    'Yeezy 350 V2 MX Oat': imagen100,
+    'Yeezy 350 V2 Cream White': imagen101,
+    'Yeezy 350 V2 Carbon Beluga': imagen102,
+    'Yeezy 350 V2 Blue Tint': imagen103,
+    'Jordan 1 Retro Low OG SP Travis Scott Velvet Brown': imagen104,
+    'Jordan 4 Retro High OG Craft Photon Dust': imagen105,
+    'Jordan 4 Retro University Blue': imagen106,   
+    'Jordan 4 Retro Red Thunder': imagen107, 
+    'Jordan 4 Retro Cacao Wow': imagen108,
+    'Jordan 4 Retro Red Cement': imagen109,
+    'Jordan 4 Retro Midnight Navy': imagen110,
+    'Jordan 4 Retro Military Black': imagen111,
+    'Jordan 4 Retro Black Canvas': imagen112,
+    'Jordan 4 Retro Thunder': imagen113,
+    'Jordan 4 Retro Orchid': imagen114,
+    'Jordan 4 Retro Pine Green': imagen115,
+    'Jordan 3 Retro Black Cat': imagen116,
+    'Jordan 3 Retro White Cement Reimagined': imagen117,
+    'Jordan 3 Retro Black Cement': imagen118,
+    'Jordan 3 Retro J Balvin Rio': imagen119,
+    'Adidas Campus Wild Moss x Bad Bunny': imagen120,
+    'Nike Dunk Low Travis Scott': imagen121,
+    'Nike Dunk Low Supreme Black': imagen122,
+    'Nike Dunk Low Chicago': imagen123,
+    'Nike Dunk Low Light Violet Venice': imagen124,
+    'Nike Dunk Low Light Iron': imagen125,
+    'Nike Dunk Low Court Purple': imagen126,
+    'Nike Dunk Low Team Gold': imagen127,
+    'Nike Dunk Low Cacao Wow': imagen128,
+    'Nike Dunk Low Black Panda': imagen129,
+
+
+
     'Air Force 1 Mid x Off-White': imagen6,
     'Yeezy Foam': imagen8,
     'Yeezy Boost 700 V3': imagen9,

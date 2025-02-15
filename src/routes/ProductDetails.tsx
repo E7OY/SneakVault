@@ -105,7 +105,7 @@ const ProductDetails = () => {
                 {user ? (
                     product.stock <= 0 ? (
                         <a className='btn rounded-0 btn-dark text-danger p-3'>
-                            <img src={prohibido} className='mx-1 bg-negro' width={20} alt="prohibido" />
+                            <img src={prohibido} className='mx-1' width={20} alt="prohibido" />
                             Añadir a la cesta
                         </a>
                     ) : (
@@ -175,7 +175,7 @@ const ProductDetails = () => {
                                 <div className="modal-body">
                                     <h5>{product.nombre}</h5>
                                     <img className='imagen-producto mx-auto m-0' width={400} src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />
-                                    {product.marca === 'Yeezy' && (
+                                    {product.marca === 'yeezy' && (
 
                                         <h5 className='my-4'>Para zapatillas yeezy se recomienda una talla más de la habitual.</h5>
                                     )}
