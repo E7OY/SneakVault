@@ -168,29 +168,53 @@ const Home = () => {
 
     return (
         <>
-            <div className="swiperBanners swiper-banner mb-5">
-                <div className="swiper-wrapper p-0">
-                    <div className="swiper-slide text-start">
-                        <img src={shoksnike} alt="" />
+        {/* 
+        <div className="swiperBanners swiper-banner mb-5">
+            <div className="swiper-wrapper p-0">
+                <div className="swiper-slide text-start">
+                    <img src={shoksnike} alt="" />
+                </div>
+                <div className="swiper-slide ">
+                    <img src={newbalancebanner} alt="" />
+                </div>
+                <div className="swiper-slide ">
+                    <img src={bannercjmocha} alt="" />
+                </div>
+                <div className="swiper-slide ">
+                    <img src={airjordanbanner} alt="" />
+                </div>
+                <div className="swiper-slide ">
+                    <img src={bannercj} alt="" />
+                </div>
+            </div>
+            <div className="swiper-button-prev text-black border border-1 border-black"></div>
+            <div className="swiper-button-next text-black border border-1 border-black"></div>
+        </div>
+        */}
+
+
+        
+            <div className="w-100 p-5 mb-5 bg-negro text-white text-center d-flex justify-content-evenly align-items-center">
+                    <div className="col-5">
+                        <h2>YEEZY</h2>
+                        <h3>La mejor zapatilla esta temporada...</h3>
+                        <p className="mb-5">
+                            Puedes combinar estas zapatillas Yeezy con cualquier estilo streetwear. 
+                            Su diseño atemporal y su silueta única las convierten en un elemento 
+                            esencial para tu colección. Gracias a su tecnología innovadora, 
+                            te proporcionan comodidad durante todo el día.
+                        </p>
+                        <a href="" className="border border-white p-3 text-decoration-none text-white">Comprar ahora</a>
                     </div>
-                    <div className="swiper-slide ">
-                        <img src={newbalancebanner} alt="" />
-                    </div>
-                    <div className="swiper-slide ">
-                        <img src={bannercjmocha} alt="" />
-                    </div>
-                    <div className="swiper-slide ">
-                        <img src={airjordanbanner} alt="" />
-                    </div>
-                    <div className="swiper-slide ">
-                        <img src={bannercj} alt="" />
+                    <div className="col-5">
+                        <img src={imageMap['Yeezy 350 V2 Carbon Beluga']} width={600}
+                        style={{ transform: 'rotate(350deg)' }}
+                        alt="" />
                     </div>
                 </div>
-                <div className="swiper-button-prev text-black border border-1 border-black"></div>
-                <div className="swiper-button-next text-black border border-1 border-black"></div>
-            </div>
 
-            <main className="mx-1 px-5">
+
+            <main className="mx-1 px-5 mt-5">
                 {/* SLIDER ZAPATILLAS */}
                 <div className="d-flex flex-row justify-content-between align-items-end">
                     <div className="">
@@ -221,6 +245,7 @@ const Home = () => {
                     <div className="swiper-button-prev text-black border border-1 border-black"></div>
                     <div className="swiper-button-next text-black border border-1 border-black"></div>
                 </div>
+
 
         
                 {/* SLIDER ZAPATILLAS */}
@@ -254,7 +279,26 @@ const Home = () => {
                     <div className="swiper-button-next text-black border border-1 border-black"></div>
                 </div>
 
-                    {/* SLIDER ROPA 
+                <div className="w-100 p-5 mb-5 border-2 border-dark border text-white text-center d-flex justify-content-evenly align-items-center">
+                    <div className="col-5">
+                        <img src={imageMap['Nike Nocta NRG RF Tee']} width={500}
+                        style={{ transform: 'rotate(350deg)' }}
+                        alt="" />
+                    </div>
+                    <div className="col-5 negro">
+                        <h2>Nike x Nocta</h2>
+                        <h3>La mejor camiseta esta temporada...</h3>
+                        <p className="mb-5">
+                            Puedes combinar estas camisetas Nocta con cualquier estilo streetwear. 
+                            Su diseño atemporal y su silueta única las convierten en un elemento 
+                            esencial para tu colección. Gracias a su tecnología innovadora, 
+                            te proporcionan comodidad durante todo el día.
+                        </p>
+                        <a href="" className="border border-black p-3 text-decoration-none negro">Comprar ahora</a>
+                    </div>
+                </div>
+
+            
                 <div className="d-flex flex-row justify-content-between align-items-end">
                     <div className="">
                         <h2 className="fw-bolder negro text-center display-6">
@@ -274,7 +318,7 @@ const Home = () => {
                     {productos.filter(producto => producto.categoria === 'camisetas').slice(0, 10).map((producto, index) => (
                             <div key={index} className="swiper-slide text-start">
                                                 <Link to={`/undefined/${encodeURIComponent(producto.nombre)}`}>
-                            <img className='imagen-ropa-home' width={ } src={imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />                            
+                            <img className='imagen-ropa-home' width={ 200} src={imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />                            
                             </Link>
                     <h5 className="fw-bold">{producto.nombre}</h5>
                                 <p className="text-decoration-underline">Desde {producto.precio}€</p>
@@ -284,7 +328,7 @@ const Home = () => {
                     <div className="swiper-button-prev text-black border border-1 border-black"></div>
                     <div className="swiper-button-next text-black border border-1 border-black"></div>
                 </div>
-                */}
+           
 
 
 

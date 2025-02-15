@@ -54,11 +54,12 @@ const Header = () => {
 
     return (
         <>
-            <div className="bg-black text-white w-100 text-center py-3 moving-container">
+            <div className="bg-black text-white w-100 text-center py-4 moving-container">
                 <span className="moving-text">
                     <h6>Últimas Rebajas de invierno hasta -60%</h6>
                     <h6>Off-White -45% en productos seleccionados</h6>
                     <h6>Envíos Gratis a partir de 50€</h6>
+                    <h6>Jordan x Cactus jack disponibles</h6>
                 </span>
             </div>
             <header className="w-100 bg-white p-4 border-bottom border-2 border-black">
