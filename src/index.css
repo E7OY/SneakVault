@@ -105,6 +105,8 @@ header {
 
 .button-yeezy {
   color: white;
+  box-shadow: 5px 5px 0px #fff;
+
 }
 .button-yeezy:hover {
   color: #010101;
@@ -113,40 +115,28 @@ header {
   transition: 1s;
 }
 
-
-
-.collage-item img {
-  opacity: 0.8;
+.button-nocta{
+  box-shadow: 5px 5px 0px #010101 ;
+  border: 2px solid white;
+  transition: 1s;
 }
 
-.collage-item img:hover {
-  cursor: crosshair;
-  opacity: 1;
-  transform: scale(1.1);
+
+.marcas::before {
+  content: " ";
+  padding: 60px 90px;
+  background: #eeecec;
+  position: absolute;
+  left: 20%;
+  top: 35%;
+  border-radius: 50px;
+  z-index: -123;
+}
+.marcas:hover {
+  transform: scale(1.05);
+  transition: 1s;
 }
 
-.collage-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 3px;
-}
-
-.collage-item {
-  overflow: hidden;
-}
-
-.collage-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(100%);
-}
-
-.collage-img:hover {
-  filter: grayscale(0);
-  cursor: pointer;
-  transform: scale(1.1);
-}
 
 .moving-container {
   width: 100%;
@@ -168,10 +158,6 @@ header {
   display: block;
 }
 
-.marcas img:hover {
-  cursor: pointer;
-  opacity: 0.8;
-}
 
 .message {
   position: absolute;
