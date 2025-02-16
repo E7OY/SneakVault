@@ -22,7 +22,7 @@ import offwhitelogo from "../assets/offwhitelogo.png";
 import mm6logo from "../assets/mm6logo.png";
 import adidaslogo from "../assets/adidaslogo.png";
 
-
+import noctashit from '../assets/nocta-nrg-rf-tee-home.png';
 
 import shoksnike from "../assets/shoksnike.jpg";
 import newbalancebanner from "../assets/newbalancebanner.jpg";
@@ -194,7 +194,7 @@ const Home = () => {
 
 
         
-            <div className="w-100 p-5 mb-5 bg-negro text-white text-center d-flex justify-content-evenly align-items-center">
+            <div className="banner-home mx-5 p-5 my-5 bg-negro text-white text-center d-flex justify-content-evenly align-items-center">
                     <div className="col-5">
                         <h2>YEEZY</h2>
                         <h3>La mejor zapatilla esta temporada...</h3>
@@ -204,7 +204,7 @@ const Home = () => {
                             esencial para tu colección. Gracias a su tecnología innovadora, 
                             te proporcionan comodidad durante todo el día.
                         </p>
-                        <a href="" className="border border-white p-3 text-decoration-none text-white">Comprar ahora</a>
+                        <a href="" className="border button-yeezy border-white p-3 text-decoration-none">Comprar ahora</a>
                     </div>
                     <div className="col-5">
                         <img src={imageMap['Yeezy 350 V2 Carbon Beluga']} width={600}
@@ -280,8 +280,8 @@ const Home = () => {
                 </div>
 
                 <div className="w-100 p-5 mb-5 border-2 border-dark border text-white text-center d-flex justify-content-evenly align-items-center">
-                    <div className="col-5">
-                        <img src={imageMap['Nike Nocta NRG RF Tee']} width={500}
+                    <div className="col-5 py-4">
+                        <img src={noctashit} width={400}
                         style={{ transform: 'rotate(350deg)' }}
                         alt="" />
                     </div>
@@ -420,14 +420,14 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="row d-flex justify-content-start gap-5 mt-5">
+                <div className="row d-flex justify-content-center gap-5 mt-5">
                     <div className="col-3 info border border-black border-2 p-4">
                         <img src={original} width={30} alt="" />
                         <div>
                             <h4>SneakVault Verified</h4>
                             <p>
-                                StockX Verified is our own designation and means that we inspect every item, every time.
-                                StockX Verified is our own designation and means that we inspect every item, every time.Learn More
+                            SneakVault Verified is our own designation and means that we inspect every item, every time.
+                            SneakVault Verified is our own designation and means that we inspect every item, every time.Learn More
                             </p>
                         </div>
                     </div>
@@ -437,8 +437,8 @@ const Home = () => {
                         <div>
                             <h4>SneakVault Verified</h4>
                             <p>
-                                StockX Verified is our own designation and means that we inspect every item, every time.
-                                StockX Verified is our own designation and means that we inspect every item, every time.Learn More
+                            SneakVault Verified is our own designation and means that we inspect every item, every time.
+                            SneakVault Verified is our own designation and means that we inspect every item, every time.Learn More
                             </p>
                         </div>
                     </div>
@@ -447,8 +447,8 @@ const Home = () => {
                         <div>
                             <h4>SneakVault Verified</h4>
                             <p>
-                                StockX Verified is our own designation and means that we inspect every item, every time.
-                                StockX Verified is our own designation and means that we inspect every item, every time.Learn More
+                            SneakVault Verified is our own designation and means that we inspect every item, every time.
+                            SneakVault Verified is our own designation and means that we inspect every item, every time.Learn More
                             </p>
                         </div>
                     </div>
