@@ -56,10 +56,10 @@ const Home = () => {
                 onValue(productsRef, (snapshot) => {
                     const productsData = snapshot.val();
                     const productosList = [];
-                    for (const category in productsData) {
-                        for (const brand in productsData[category]) {
-                            for (const productId in productsData[category][brand]) {
-                                const product = productsData[category][brand][productId];
+                    for (const categoria in productsData) {
+                        for (const marca in productsData[categoria]) {
+                            for (const productId in productsData[categoria][marca]) {
+                                const product = productsData[categoria][marca][productId];
                                 if (product.nombre === nombre) {
                                     setProduct({
                                         id: productId,

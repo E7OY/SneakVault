@@ -214,13 +214,12 @@ header {
 .imagen-producto-detail {
   width: 100%;
   height: auto;
-  padding: 50px;
+  padding: 30px;
   object-fit: contain;
   max-height: 500px;
   outline: 2px solid black;
   box-sizing: border-box;
   background-color: rgb(255, 255, 255);
-  box-sizing: border-box;
   cursor: pointer;
   transition: transform 0.3s;
 }
@@ -301,78 +300,28 @@ header {
 }
 
 /* ESTILOS PRODUCTOS */
-.productos {
-  font-family: "Big Shoulders Text", serif;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  padding: 20px;
-  justify-content: start;
-  align-items: center;
 
-}
-
-.producto:hover {
-  cursor: pointer;
-}
-
-.producto {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 10px;
+.producto-card {
   outline: 2px solid #010101;
-  background-color: white;
-  color: #010101;
-  width: 100%;
-  height: auto;
+  transition: all 0.3s ease;
+  font-family: "Big Shoulders Text", serif;
   box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 }
-
-.producto:hover {
+.producto-card:hover {
   box-shadow: 10px 10px 0px rgb(0, 0, 0);
   transform: scale(1.05);
+  cursor: pointer;
+  z-index: 200;
 }
-
-.producto h5 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
-}
-
-.producto img {
-  width: 100%;
-  height:auto;
-  object-fit: cover;
-}
-
-.producto img:hover {
+.producto-img:hover {
   transform: rotateY(180deg);
 }
 
-@media (max-width: 1200px) {
-  .productos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media (max-width: 992px) {
-  .productos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media (max-width: 768px) {
-  .productos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media (max-width: 576px) {
-  .productos {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
 
 .imagen-producto-home {
     height: auto;

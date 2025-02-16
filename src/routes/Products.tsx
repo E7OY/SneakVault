@@ -23,7 +23,7 @@ interface ProductProps {
 }
 
 
-const Products: React.FC<ProductProps> = ( ) => {
+const Products: React.FC<ProductProps> = () => {
     const { categoria, marca } = useParams<{ categoria: string, marca: string }>();
     const [products, setProducts] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string }[]>([]);
 
@@ -69,25 +69,37 @@ const Products: React.FC<ProductProps> = ( ) => {
 
     return (
         <>
-            <h1 className='fw-bold display-2 mt-4 w-5 mx-3'>{marca}</h1>
-            <div className="productos">
-                {products.map(product => (
-                    <div className="m-0 p-0 " key={product.id}> 
-                        <div className="producto">
-                            {/* <Link to={`/${product.categoria}/${product.marca.toLowerCase()}/${ref(db, `productos/${product.categoria}/${product.marca}/${product.id}`).key}`}> */}
-                            <Link to={`/${product.categoria}/${product.marca}/${encodeURIComponent(product.nombre)}`}>
-                                <img className='img-fluid imagen-producto py-2' src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />                            
-                            </Link>
-                            <h6 className='mx-3 mt-3'>{product.categoria}</h6>
-                            <h5 className='fw-semibold mx-3 '>{product.nombre}</h5>
-                            <p className='mx-3'>{product.precio}€</p>
-                            {product.stock > 0 ?
-                                (product.stock <= 10 ? <h6 className='mx-3 fw-light text-danger position-absolute '>Bajo stock</h6> :
-                                    <h6 className='mx-3 fw-light position-absolute'>{product.stock} en stock</h6>) :
-                                <h6 className='mx-3 text-white bg-black position-absolute'>Agotado</h6>}
+            <div className="container-fluid px-4">
+                <h1 className='fw-bold display-2 my-4'>{marca}</h1>
+                <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-0 z-0">
+                    {products.map(product => (
+                        <div className="col" key={product.id}>
+                            <div className="producto-card bg-white h-100 w-100 p-1">
+                                <Link to={`/${product.categoria}/${product.marca}/${encodeURIComponent(product.nombre)}`}
+                                    className="text-decoration-none text-dark">
+                                    {product.stock > 0 ? (
+                                        product.stock <= 10 ?
+                                            <span className='mx-3 fw-light text-danger position-absolute'>Bajo stock</span> :
+                                            <span className="text-dark mx-3 position-absolute">{product.stock} en stock</span>
+                                    ) : (
+                                        <span className="text-white rounded-0 bg-dark mx-3 position-absolute">Agotado</span>
+                                    )}
+                                    <img
+                                        className="producto-img img-fluid p-3"
+                                        src={product.imagen || imageMap[product.nombre]}
+                                        alt={product.nombre}
+                                        onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }}
+                                    />
+                                    <div className="producto-info p-3">
+                                        <h6 className="text-muted mb-2">{product.categoria}</h6>
+                                        <h5 className="text-truncate fw-semibold">{product.nombre}</h5>
+                                        <p className="m-0 p-0 text-muted">{product.precio}€</p>
+                                    </div>
+                                </Link>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </>
     );
