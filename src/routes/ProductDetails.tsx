@@ -12,34 +12,44 @@ import '../index.css';
 const ProductDetails = () => {
     const { nombre } = useParams<{ nombre: string }>();
     const [product, setProduct] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string } | null>(null);
+    const [relatedProducts, setRelatedProducts] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string }[]>([]);
     const userContext = useContext(UserContext);
     const user = userContext ? userContext.user : null;
 
     useEffect(() => {
         const fetchProduct = async () => {
             try {
+                /*creamos referencia a la base de datos*/
                 const productsRef = ref(db, 'productos');
+                /*leemos los datos en tiempo real*/
                 onValue(productsRef, (snapshot) => {
                     const productsData = snapshot.val();
-                    for (const category in productsData) {
-                        for (const brand in productsData[category]) {
-                            for (const productId in productsData[category][brand]) {
-                                const product = productsData[category][brand][productId];
-                                if (product.nombre === nombre) {
-                                    setProduct({
-                                        id: productId,
-                                        imagen: product.imagen || '',
-                                        nombre: product.nombre || '',
-                                        precio: product.precio || 0,
-                                        descripcion: product.descripcion || '',
-                                        categoria: product.categoria || '',
-                                        stock: product.stock || 0,
-                                        marca: product.marca || ''
-                                    });
-                                    return;
-                                }
+                    /*inicializamos array vacio para almacenar productos*/
+                    const productsArray: { id: string; stock: number; categoria: string; imagen: string; marca: string; nombre: string; precio: number; descripcion: string }[] = [];
+                    /*recorremos los datos de la base de datos y los almacenamos en el array*/
+                    for (const categoria in productsData) {
+                        for (const marca in productsData[categoria]) {
+                            for (const productId in productsData[categoria][marca]) {
+                                const product = productsData[categoria][marca][productId];
+                                productsArray.push({
+                                    id: productId,
+                                    ...product
+                                });
                             }
                         }
+                    }
+
+                    /*buscamos el producto actual por el nombre*/
+                    const currentProduct = productsArray.find(p => p.nombre === nombre);
+                    /*almacenamos el producto actual en el estado, sino se encuentra se establece nulo*/
+                    setProduct(currentProduct || null);
+                    /*buscamos productos relacionados por marca y categoria*/
+                    if (currentProduct) {
+                        /*si se encuentra el producto actual, filtramos productos relacionados con misma marca y categoria y excluimos el actual*/
+                        const related = productsArray.filter(p => p.marca === currentProduct.marca && p.categoria === currentProduct.categoria && p.nombre !== currentProduct.nombre);
+                        setRelatedProducts(related);
+                    } else {
+                        setProduct(null);
                     }
                 });
             } catch (error) {
@@ -56,10 +66,10 @@ const ProductDetails = () => {
 
     return (
         <div>
-            <div className="row d-flex flex-row mt-5 mx-auto justify-content-center align-items-start gap-5">
-                <div className="d-flex flex-column col-md-5 col-sm-12 p-0 m-0 ">
+            <div className="row d-flex flex-row mt-5 mx-auto justify-content-center align-items-center gap-5">
+                <div className="d-flex flex-row col-md-6 col-sm-12">
                     <img className='imagen-producto-detail' src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />
-                    <div className="imagenes d-flex flex-row  ">
+                    <div className="imagenes d-flex flex-column col-md-3 g-0 p-0 m-0">
                         <img
                             className="imagen-producto-detail"
                             src={product.imagen || imageMap[product.nombre]}
@@ -114,7 +124,6 @@ const ProductDetails = () => {
                 ) : (
                     <a href="/register" className='button'>Inicia sesión para comprar</a>
                 )}
-
 
                     <details className="my-2 mt-5">
                     <summary className='p-2 border-bottom fw-bolder'>
@@ -260,6 +269,34 @@ const ProductDetails = () => {
                         Guía de tallas
                     </a>
 
+                </div>
+            </div>
+
+            {/* Productos Relacionados */}
+            <div className="container-fluid mt-5 m-5">
+                <h2 className="fw-bold mb-4">Productos Relacionados</h2>
+                <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 mr-5 g-0">
+                    {relatedProducts.slice(0,8).map(relatedProduct => (
+                        <div className="col" key={relatedProduct.id}>
+                            <div className="producto-card bg-white h-100">
+                                <Link 
+                                    to={`/${relatedProduct.categoria}/${relatedProduct.marca}/${encodeURIComponent(relatedProduct.nombre)}`}
+                                    className="text-decoration-none text-dark"
+                                >
+                                    <img
+                                        className="producto-img img-fluid p-3"
+                                        src={relatedProduct.imagen || imageMap[relatedProduct.nombre]}
+                                        alt={relatedProduct.nombre}
+                                        onError={(e) => { e.currentTarget.src = imageMap[relatedProduct.nombre] }}
+                                    />
+                                    <div className="p-3">
+                                        <h5 className="text-truncate mb-2">{relatedProduct.nombre}</h5>
+                                        <p className="mb-0">{relatedProduct.precio}€</p>
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

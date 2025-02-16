@@ -118,7 +118,7 @@ import imagen126 from '../assets/dunk-low-court-purple.png';
 import imagen127 from '../assets/dunk-low-team-gold.png';
 import imagen128 from '../assets/dunk-low-cacao-wow.png';
 import imagen129 from '../assets/dunk-low-black-panda.png';
-
+import imagen130 from '../assets/yeezy-350-slate.png';
 
 
 export const imageMap: { [key: string]: string } = {
@@ -246,6 +246,8 @@ export const imageMap: { [key: string]: string } = {
     'Nike Nocta NRG Tee Orange': imagen88,
     'Nike Nocta NRG Tee Dark Grey': imagen89,
     'Stussy Shells Black Tee': imagen90,
-    'Stussy Basic Stussy Tee Pigment Died White': imagen91
+    'Stussy Basic Stussy Tee Pigment Died White': imagen91,
+    'Yeezy 350 V2 Slate': imagen130,
+
 
 };
