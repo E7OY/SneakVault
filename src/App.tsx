@@ -35,12 +35,6 @@ const App = () => {
           element: <Register setUser={setUser} />,
         },
         {
-<<<<<<< HEAD
-          path: ':categoria/:marca',
-          element: <Products products={[]} />,
-        },
-        /*detalle producto*/
-=======
           path: ':categoria',
           element: <Products products={[]} />,
         },
@@ -48,7 +42,6 @@ const App = () => {
           path: ':categoria/:marca',
           element: <Products products={[]} />,
         },
->>>>>>> 00ae723b7b24166bf9169b18f14ce759fa431831
         {
           path: ':categoria',
           children: [
