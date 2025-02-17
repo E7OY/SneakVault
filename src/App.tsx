@@ -11,7 +11,6 @@ import ProductDetails from './routes/ProductDetails';
 
 
 import { db } from './utils/firebase.utils';
-import { DataSnapshot, onValue, ref } from 'firebase/database';
 
 
 const App = () => {
@@ -36,22 +35,13 @@ const App = () => {
           element: <Register setUser={setUser} />,
         },
         {
-          path: 'zapatillas',
+          path: ':categoria',
           element: <Products products={[]} />,
         },
         {
-          path: 'zapatillas/:marca',
+          path: ':categoria/:marca',
           element: <Products products={[]} />,
         },
-        {
-          path: 'camisetas',
-          element: <Products products={[]} />,
-        },
-        {
-          path: 'camisetas/:marca',
-          element: <Products products={[]} />,
-        },
-        /*detalle producto*/
         {
           path: ':categoria',
           children: [
@@ -60,7 +50,7 @@ const App = () => {
               element: <Products products={[]} />,
             },
             { 
-              path: ':marca/:nombre',
+              path: ':marca/:id',
               element: <ProductDetails />,
             },
           ],

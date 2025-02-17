@@ -10,7 +10,7 @@ import UserContext from '../context/userContext';
 import '../index.css';
 
 const ProductDetails = () => {
-    const { nombre } = useParams<{ nombre: string }>();
+    const { id } = useParams<{ id: string }>();
     const [product, setProduct] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string } | null>(null);
     const [relatedProducts, setRelatedProducts] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string }[]>([]);
     const userContext = useContext(UserContext);
@@ -40,7 +40,7 @@ const ProductDetails = () => {
                     }
 
                     /*buscamos el producto actual por el nombre*/
-                    const currentProduct = productsArray.find(p => p.nombre === nombre);
+                    const currentProduct = productsArray.find(p => p.id === id);
                     /*almacenamos el producto actual en el estado, sino se encuentra se establece nulo*/
                     setProduct(currentProduct || null);
                     /*buscamos productos relacionados por marca y categoria*/
@@ -58,7 +58,7 @@ const ProductDetails = () => {
         };
 
         fetchProduct();
-    }, [nombre]);
+    }, [id]);
 
     if (!product) {
         return <div>Cargando producto...</div>;
@@ -129,18 +129,18 @@ const ProductDetails = () => {
                     <summary className='p-2 border-bottom fw-bolder'>
                     Envíos
                         </summary>
-                        <h5 className='m-3'>
+                        <h6 className='m-3'>
                         Una vez que realice su pedido, espere de 1 a 2 días hábiles para procesar sus pedidos. Después de eso, 
                         tomará entre 1 y 2  días hábiles para la entrega en España, y entre 3 y 5 días hábiles para los pedidos 
                         Unión Europea (según la ubicación).
-                        </h5>
+                        </h6>
                     </details>
 
                     <details className="my-2">
                         <summary className='p-2 border-bottom fw-bolder'>
                             Cambios Y Devoluciones
                         </summary>
-                        <h5 className='m-3'>
+                        <h6 className='m-3'>
                         En SneakVault nos esforzamos por asegurar la plena satisfacción de nuestros clientes. Si no está completamente 
                         satisfecho con su compra, le ofrecemos la opción de devolver los artículos bajo las siguientes condiciones:
                         <br/><li>Plazo para devoluciones:</li> Debe retornar los artículos dentro de los 14 días hábiles siguientes a la fecha de recepción.
@@ -151,13 +151,13 @@ const ProductDetails = () => {
                         de productos dentro de nuestro marco de devoluciones. Esto asegura que pueda elegir el producto más adecuado sin 
                         preocuparse por costos adicionales.
                         Para más información o asistencia con su devolución, no dude en contactarnos. Estamos aquí para ayudarle.
-                        </h5>
+                        </h6>
                     </details>
                     <details className="my-2">
                     <summary className='p-2 border-bottom fw-bolder'>
                     Autenticidad
                         </summary>
-                        <h5 className='m-3'>
+                        <h6 className='m-3'>
                         Cada producto disponible en SneakVault está respaldado por nuestra garantía de autenticidad. Antes de 
                         ser entregados, nuestros especialistas verifican minuciosamente cada artículo para asegurarse de que sea genuino.
                         Nuestra colección de productos proviene directamente de una red de distribuidores asociados que han sido elegidos 
@@ -168,7 +168,7 @@ const ProductDetails = () => {
                         tengas la confianza de saber que estás adquiriendo productos genuinos y de alta calidad. Si tienes alguna pregunta 
                         sobre la autenticidad de nuestros productos, no dudes en ponerte en contacto con nosotros. Estamos aquí para b
                         rindarte la mejor experiencia de compra posible.
-                        </h5>
+                        </h6>
                     </details>
 
 
@@ -280,7 +280,7 @@ const ProductDetails = () => {
                         <div className="col" key={relatedProduct.id}>
                             <div className="producto-card bg-white h-100">
                                 <Link 
-                                    to={`/${relatedProduct.categoria}/${relatedProduct.marca}/${encodeURIComponent(relatedProduct.nombre)}`}
+                                    to={`/${relatedProduct.categoria}/${relatedProduct.marca}/${encodeURIComponent(relatedProduct.id)}`}
                                     className="text-decoration-none text-dark"
                                 >
                                     <img

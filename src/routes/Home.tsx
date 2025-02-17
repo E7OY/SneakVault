@@ -31,8 +31,8 @@ import { imageMap } from "../utils/imageMap";
 
 const Home = () => {
     const { nombre } = useParams<{ nombre: string }>();
-    const [product, setProduct] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string } | null>(null);
-    const [productos, setProductos] = useState<{ imagen: string; nombre: string; precio: number, categoria: string, marca: string }[]>([]);
+    const [product, setProduct] = useState<{ id: string; stock: number; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string } | null>(null);
+    const [productos, setProductos] = useState<{ id: string; imagen: string; nombre: string; precio: number, categoria: string, marca: string }[]>([]);
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -58,6 +58,7 @@ const Home = () => {
                                     });
                                 }
                                 productosList.push({
+                                    id: productId,
                                     imagen: product.imagen || '',
                                     nombre: product.nombre || '',
                                     precio: product.precio || 0,
@@ -102,22 +103,7 @@ const Home = () => {
         });
     }, []);
 
-    useEffect(() => {
-        const swiperBanners = new Swiper(".swiper-banner", {
-            direction: "horizontal",
-            loop: true,
-            autoplay: {
-                delay: 4000,
-                pauseOnMouseEnter: true,
-                disableOnInteraction: false,
-            },
-            slidesPerView: 1,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    }, []);
+
 
     function cutMail(email: string | string[]): string | string[] {
         if (typeof email === 'string') {
@@ -210,7 +196,7 @@ const Home = () => {
     <div className="swiper-wrapper">
         {productos.filter(producto => producto.categoria === 'zapatillas' && producto.marca === 'yeezy').slice(0, 10).map((producto, index) => (
             <div key={index} className="swiper-slide text-start">
-                <Link to={`/${producto.categoria}/${producto.marca}/${encodeURIComponent(producto.nombre)}`}>
+                <Link to={`/${producto.categoria}/${producto.marca}/${encodeURIComponent(producto.id)}`}>
                     <img className='imagen-producto-home' width={350} src={producto.imagen || imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />
                 </Link>
                 <h5 className="fw-bold">{producto.nombre}</h5>
@@ -242,7 +228,7 @@ const Home = () => {
                     <div className="swiper-wrapper">
                         {productos.filter(producto => producto.categoria === 'zapatillas' && producto.marca === 'jordan').slice(0, 10).map((producto, index) => (
                             <div key={index} className="swiper-slide text-start">
-                                <Link to={`/${producto.categoria}/${producto.marca}/${encodeURIComponent(producto.nombre)}`}>
+                                <Link to={`/${producto.categoria}/${producto.marca}/${encodeURIComponent(producto.id)}`}>
                                     <img className='imagen-producto-home' width={350} src={producto.imagen || imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />
                                 </Link>
                                 <h5 className="fw-bold">{producto.nombre}</h5>
@@ -299,7 +285,7 @@ const Home = () => {
                             esencial para tu colección. Gracias a su tecnología innovadora,
                             te proporcionan comodidad durante todo el día.
                         </p>
-                        <a href="" className="border button-nocta border-black p-3 text-decoration-none negro">Comprar ahora</a>
+                        <a href="/camisetas/nike/nocta-nrg-rf-tee" className="border button-nocta border-black p-3 text-decoration-none negro">Comprar ahora</a>
                     </div>
                 </div>
 
@@ -322,7 +308,7 @@ const Home = () => {
                     <div className="swiper-wrapper">
                         {productos.filter(producto => producto.categoria === 'camisetas').slice(0, 10).map((producto, index) => (
                             <div key={index} className="swiper-slide text-start">
-                                <Link to={`/undefined/${encodeURIComponent(producto.nombre)}`}>
+                                <Link to={`/${producto.categoria}/${producto.marca}/${encodeURIComponent(producto.id)}`}>
                                     <img className='imagen-ropa-home' width={200} src={imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />
                                 </Link>
                                 <h5 className="fw-bold">{producto.nombre}</h5>
