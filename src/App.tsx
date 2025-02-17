@@ -36,19 +36,7 @@ const App = () => {
           element: <Register setUser={setUser} />,
         },
         {
-          path: 'zapatillas',
-          element: <Products products={[]} />,
-        },
-        {
-          path: 'zapatillas/:marca',
-          element: <Products products={[]} />,
-        },
-        {
-          path: 'camisetas',
-          element: <Products products={[]} />,
-        },
-        {
-          path: 'camisetas/:marca',
+          path: ':categoria/:marca',
           element: <Products products={[]} />,
         },
         /*detalle producto*/

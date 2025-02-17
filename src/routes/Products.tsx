@@ -5,7 +5,6 @@ import { Link, useParams } from 'react-router-dom';
 
 import '../index.css';
 
-
 import { imageMap } from '../utils/imageMap';
 
 interface Product {
@@ -22,10 +21,10 @@ interface ProductProps {
     products: Product[];
 }
 
-
 const Products: React.FC<ProductProps> = () => {
     const { categoria, marca } = useParams<{ categoria: string, marca: string }>();
     const [products, setProducts] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string }[]>([]);
+    const [orderBy, setOrderBy] = useState<'asc' | 'desc'>('desc');
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -67,12 +66,34 @@ const Products: React.FC<ProductProps> = () => {
         fetchProducts();
     }, [categoria, marca]);
 
+
+    const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setOrderBy(event.target.value as 'asc' | 'desc');
+    };
+
+    const sortedProducts = [...products].sort((a, b) => {
+        if (orderBy === 'desc') {
+            return a.precio - b.precio;
+        } else {
+            return b.precio - a.precio;
+        }
+    });
+
     return (
         <>
             <div className="container-fluid px-4">
                 <h1 className='fw-bold display-2 my-4'>{marca}</h1>
+                
+                <div className="d-flex justify-content-end mb-4">
+                    <label htmlFor="sortOrder" className="me-2">Ordenar por precio:</label>
+                    <select id="sortOrder" value={orderBy} onChange={handleSortChange} className="form-select w-auto">
+                        <option value="asc">Ascendente</option>
+                        <option value="desc">Descendente</option>
+                    </select>
+                </div>
+                
                 <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-0 z-0">
-                    {products.map(product => (
+                    {sortedProducts.map(product => (
                         <div className="col" key={product.id}>
                             <div className="producto-card bg-white h-100 w-100 p-1">
                                 <Link to={`/${product.categoria}/${product.marca}/${encodeURIComponent(product.nombre)}`}
