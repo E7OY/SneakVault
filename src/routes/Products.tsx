@@ -82,6 +82,7 @@ const Products: React.FC<ProductProps> = () => {
     return (
         <>
             <div className="container-fluid px-4">
+<<<<<<< HEAD
                 <h1 className='fw-bold display-2 my-4'>{marca}</h1>
                 
                 <div className="d-flex justify-content-end mb-4">
@@ -94,9 +95,18 @@ const Products: React.FC<ProductProps> = () => {
                 
                 <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-0 z-0">
                     {sortedProducts.map(product => (
+=======
+                <h1 className='fw-bold display-2 my-4 w-auto float-left d-inline'>{categoria} 
+                    
+                <h2 className='fw-bold display-2 my-4 w-auto d-inline'>.{marca}</h2>
+                    <span className='display-3 fw-bold'>({products.length})</span></h1>
+
+                <div className="row w-100 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-0 z-0">
+                    {products.map(product => (
+>>>>>>> 00ae723b7b24166bf9169b18f14ce759fa431831
                         <div className="col" key={product.id}>
                             <div className="producto-card bg-white h-100 w-100 p-1">
-                                <Link to={`/${product.categoria}/${product.marca}/${encodeURIComponent(product.nombre)}`}
+                                <Link to={`/${product.categoria}/${product.marca}/${encodeURIComponent(product.id)}`}
                                     className="text-decoration-none text-dark">
                                     {product.stock > 0 ? (
                                         product.stock <= 10 ?

@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Form, Navigate } from 'react-router-dom';
+import { Form, Navigate, useNavigate } from 'react-router-dom';
 import UserContext from '../context/userContext';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { signInWithGooglePopup } from '../utils/firebase.utils';
@@ -13,6 +13,7 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
     const [date, setDate] = useState('');
+    const navigate = useNavigate();
     const userContext = useContext(UserContext);
     const user = userContext ? userContext.user : null;
     const setUser = userContext ? userContext.setUser : () => {};
@@ -39,6 +40,7 @@ const Register = () => {
             const auth = getAuth();
             const { user } = await signInWithEmailAndPassword(auth, email, password);
             setUser(user);
+            navigate(-1);
         } catch (error) {
             Array.from(errorMessage).forEach((element) => {
                 element.textContent = 'Error al iniciar sesion: email y/o contraseña incorrectos.'; {/* + error */}
@@ -67,7 +69,7 @@ const Register = () => {
                 </div>
                 <div className="col-12 col-md-6 border border-2 border-black py-5 d-flex flex-column justify-content-center">
                     {user ? (
-                        <Navigate to="/home"/>
+                        <Navigate to='/home' replace />
                     ) : (
                         <Form method='post' onSubmit={isRegistering ? handleRegister : handleSignIn}>
                             <div className="container d-flex flex-column justify-content-center gap-4">
@@ -97,9 +99,8 @@ const Register = () => {
                                 </div>
                                 </>
                                 )}
-                                <div className="error"></div>
                                 <button type='submit' className='button fw-regular'>{isRegistering ? 'Registrar' : 'Iniciar Sesión'}</button>
-                            </div>
+                                </div>
                         </Form>
                     )}
 
