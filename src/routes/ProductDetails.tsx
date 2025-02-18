@@ -77,7 +77,7 @@ const ProductDetails = () => {
                             onError={(e) => {
                                 e.currentTarget.src = imageMap[product.nombre];
                             }}
-                        />                        
+                        />
                         <img
                             className="imagen-producto-detail"
                             src={product.imagen || imageMap[product.nombre]}
@@ -86,7 +86,7 @@ const ProductDetails = () => {
                                 e.currentTarget.src = imageMap[product.nombre];
                             }}
                             style={{ transform: 'rotateY(180deg)' }}
-                        />                         
+                        />
                         <img
                             className="imagen-producto-detail"
                             src={product.imagen || imageMap[product.nombre]}
@@ -96,7 +96,7 @@ const ProductDetails = () => {
                             }}
                             style={{ transform: 'rotateX(180deg)' }}
 
-                        />                     
+                        />
                     </div>
                 </div>
                 <div className="col-md-5 col-sm-12 negro">
@@ -112,27 +112,27 @@ const ProductDetails = () => {
                     <h5 className=' fw-regular'>{product.descripcion}</h5>
                     <h3 className='fw-light mt-3 mb-5'>{product.precio}€</h3>
 
-                {user ? (
-                    product.stock <= 0 ? (
-                        <a className='btn rounded-0 btn-dark text-danger p-3'>
-                            <img src={prohibido} className='mx-1' width={20} alt="prohibido" />
-                            Añadir a la cesta
-                        </a>
+                    {user ? (
+                        product.stock <= 0 ? (
+                            <a className='btn rounded-0 btn-dark text-danger p-3'>
+                                <img src={prohibido} className='mx-1' width={20} alt="prohibido" />
+                                Añadir a la cesta
+                            </a>
+                        ) : (
+                            <a href="" className='button'>Añadir a la cesta</a>
+                        )
                     ) : (
-                        <a href="" className='button'>Añadir a la cesta</a>
-                    )
-                ) : (
-                    <a href="/register" className='button'>Inicia sesión para comprar</a>
-                )}
+                        <a href="/register" className='button'>Inicia sesión para comprar</a>
+                    )}
 
                     <details className="my-2 mt-5">
-                    <summary className='p-2 border-bottom fw-bolder'>
-                    Envíos
+                        <summary className='p-2 border-bottom fw-bolder'>
+                            Envíos
                         </summary>
                         <h6 className='m-3'>
-                        Una vez que realice su pedido, espere de 1 a 2 días hábiles para procesar sus pedidos. Después de eso, 
-                        tomará entre 1 y 2  días hábiles para la entrega en España, y entre 3 y 5 días hábiles para los pedidos 
-                        Unión Europea (según la ubicación).
+                            Una vez que realice su pedido, espere de 1 a 2 días hábiles para procesar sus pedidos. Después de eso,
+                            tomará entre 1 y 2  días hábiles para la entrega en España, y entre 3 y 5 días hábiles para los pedidos
+                            Unión Europea (según la ubicación).
                         </h6>
                     </details>
 
@@ -141,33 +141,33 @@ const ProductDetails = () => {
                             Cambios Y Devoluciones
                         </summary>
                         <h6 className='m-3'>
-                        En SneakVault nos esforzamos por asegurar la plena satisfacción de nuestros clientes. Si no está completamente 
-                        satisfecho con su compra, le ofrecemos la opción de devolver los artículos bajo las siguientes condiciones:
-                        <br/><li>Plazo para devoluciones:</li> Debe retornar los artículos dentro de los 14 días hábiles siguientes a la fecha de recepción.
-                        <br/><li>Condición del artículo:</li> Los productos devueltos deben estar sin usar, en su embalaje original y en estado completo.
-                        <br/><li>Coste de devolución:</li> No se reembolsarán los costos de envío iniciales. La devolución tiene un coste de etiqueta de envío 
-                        de 4,95€.
-                        Adicionalmente, para facilitar un proceso de cambio sin complicaciones, ofrecemos envío gratuito en todos los cambios 
-                        de productos dentro de nuestro marco de devoluciones. Esto asegura que pueda elegir el producto más adecuado sin 
-                        preocuparse por costos adicionales.
-                        Para más información o asistencia con su devolución, no dude en contactarnos. Estamos aquí para ayudarle.
+                            En SneakVault nos esforzamos por asegurar la plena satisfacción de nuestros clientes. Si no está completamente
+                            satisfecho con su compra, le ofrecemos la opción de devolver los artículos bajo las siguientes condiciones:
+                            <br /><li>Plazo para devoluciones:</li> Debe retornar los artículos dentro de los 14 días hábiles siguientes a la fecha de recepción.
+                            <br /><li>Condición del artículo:</li> Los productos devueltos deben estar sin usar, en su embalaje original y en estado completo.
+                            <br /><li>Coste de devolución:</li> No se reembolsarán los costos de envío iniciales. La devolución tiene un coste de etiqueta de envío
+                            de 4,95€.
+                            Adicionalmente, para facilitar un proceso de cambio sin complicaciones, ofrecemos envío gratuito en todos los cambios
+                            de productos dentro de nuestro marco de devoluciones. Esto asegura que pueda elegir el producto más adecuado sin
+                            preocuparse por costos adicionales.
+                            Para más información o asistencia con su devolución, no dude en contactarnos. Estamos aquí para ayudarle.
                         </h6>
                     </details>
                     <details className="my-2">
-                    <summary className='p-2 border-bottom fw-bolder'>
-                    Autenticidad
+                        <summary className='p-2 border-bottom fw-bolder'>
+                            Autenticidad
                         </summary>
                         <h6 className='m-3'>
-                        Cada producto disponible en SneakVault está respaldado por nuestra garantía de autenticidad. Antes de 
-                        ser entregados, nuestros especialistas verifican minuciosamente cada artículo para asegurarse de que sea genuino.
-                        Nuestra colección de productos proviene directamente de una red de distribuidores asociados que han sido elegidos 
-                        cuidadosamente debido a su experiencia en la industria. Cada artículo es seleccionado individualmente y se te enviará 
-                        en su caja original, completa con todos los accesorios necesarios. Además, lo recibirás con el sello distintivo de 
-                        SneakVault, que confirma que el producto ha sido inspeccionado y enviado por nuestro equipo.
-                        En SneakVault, nos esforzamos por garantizar la calidad y autenticidad de cada producto que ofrecemos. Queremos que 
-                        tengas la confianza de saber que estás adquiriendo productos genuinos y de alta calidad. Si tienes alguna pregunta 
-                        sobre la autenticidad de nuestros productos, no dudes en ponerte en contacto con nosotros. Estamos aquí para b
-                        rindarte la mejor experiencia de compra posible.
+                            Cada producto disponible en SneakVault está respaldado por nuestra garantía de autenticidad. Antes de
+                            ser entregados, nuestros especialistas verifican minuciosamente cada artículo para asegurarse de que sea genuino.
+                            Nuestra colección de productos proviene directamente de una red de distribuidores asociados que han sido elegidos
+                            cuidadosamente debido a su experiencia en la industria. Cada artículo es seleccionado individualmente y se te enviará
+                            en su caja original, completa con todos los accesorios necesarios. Además, lo recibirás con el sello distintivo de
+                            SneakVault, que confirma que el producto ha sido inspeccionado y enviado por nuestro equipo.
+                            En SneakVault, nos esforzamos por garantizar la calidad y autenticidad de cada producto que ofrecemos. Queremos que
+                            tengas la confianza de saber que estás adquiriendo productos genuinos y de alta calidad. Si tienes alguna pregunta
+                            sobre la autenticidad de nuestros productos, no dudes en ponerte en contacto con nosotros. Estamos aquí para b
+                            rindarte la mejor experiencia de compra posible.
                         </h6>
                     </details>
 
@@ -276,10 +276,10 @@ const ProductDetails = () => {
             <div className="container-fluid mt-5 m-5">
                 <h2 className="fw-bold mb-4">Productos Relacionados</h2>
                 <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 mr-5 g-0">
-                    {relatedProducts.slice(0,8).map(relatedProduct => (
+                    {relatedProducts.slice(0, 8).map(relatedProduct => (
                         <div className="col" key={relatedProduct.id}>
                             <div className="producto-card bg-white h-100">
-                                <Link 
+                                <Link
                                     to={`/${relatedProduct.categoria}/${relatedProduct.marca}/${encodeURIComponent(relatedProduct.id)}`}
                                     className="text-decoration-none text-dark"
                                 >

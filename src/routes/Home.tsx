@@ -177,36 +177,36 @@ const Home = () => {
             </div>
 
             <main className="mx-1 px-5 mt-5">
-{/* SLIDER YEEZY */}
-<div className="d-flex flex-row justify-content-between align-items-end">
-    <div className="">
-        <h2 className="fw-bolder negro text-center display-6">
-            YEEZY EN TENDENCIA
-        </h2>
-    </div>
-    <div className="">
-        <Link to="/zapatillas/yeezy" className="text-decoration-none">
-            <button className="button text-start">
-                VES MAS
-            </button>
-        </Link>
-    </div>
-</div>
-<div className="swiper swiper-hero mb-5">
-    <div className="swiper-wrapper">
-        {productos.filter(producto => producto.categoria === 'zapatillas' && producto.marca === 'yeezy').slice(0, 10).map((producto, index) => (
-            <div key={index} className="swiper-slide text-start">
-                <Link to={`/${producto.categoria}/${producto.marca}/${encodeURIComponent(producto.id)}`}>
-                    <img className='imagen-producto-home' width={350} src={producto.imagen || imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />
-                </Link>
-                <h5 className="fw-bold">{producto.nombre}</h5>
-                <p className="text-decoration-underline">Desde {producto.precio}€</p>
-            </div>
-        ))}
-    </div>
-    <div className="swiper-button-prev text-black border border-1 border-black"></div>
-    <div className="swiper-button-next text-black border border-1 border-black"></div>
-</div>
+                {/* SLIDER YEEZY */}
+                <div className="d-flex flex-row justify-content-between align-items-end">
+                    <div className="">
+                        <h2 className="fw-bolder negro text-center display-6">
+                            YEEZY EN TENDENCIA
+                        </h2>
+                    </div>
+                    <div className="">
+                        <Link to="/zapatillas/yeezy" className="text-decoration-none">
+                            <button className="button text-start">
+                                VES MAS
+                            </button>
+                        </Link>
+                    </div>
+                </div>
+                <div className="swiper swiper-hero mb-5">
+                    <div className="swiper-wrapper">
+                        {productos.filter(producto => producto.categoria === 'zapatillas' && producto.marca === 'yeezy').slice(0, 10).map((producto, index) => (
+                            <div key={index} className="swiper-slide text-start">
+                                <Link to={`/${producto.categoria}/${producto.marca}/${encodeURIComponent(producto.id)}`}>
+                                    <img className='imagen-producto-home' width={350} src={producto.imagen || imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />
+                                </Link>
+                                <h5 className="fw-bold">{producto.nombre}</h5>
+                                <p className="text-decoration-underline">Desde {producto.precio}€</p>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="swiper-button-prev text-black border border-1 border-black"></div>
+                    <div className="swiper-button-next text-black border border-1 border-black"></div>
+                </div>
 
 
                 {/* SLIDER JORDAN */}
@@ -341,35 +341,35 @@ const Home = () => {
             </div>
             */}
 
-<div className="row bg-black mt-5 p-5 mx-auto m-0 d-flex gap-5 justify-content-evenly align-items-center">
-    <div className="col-12 col-md-4 py-5 mb-4 mb-md-0">
-        {user ? (
-            <>
-                <h4 className="text-start text-white">
-                    Tu cupón: BIENVENIDO30
-                </h4>
-                <span className="text-light">*Para compras superiores a 49€</span>
-            </>
-        ) : (
-            <h4 className="text-start text-white">
-                Regístrate ahora y obtén un descuento del -30% en tu próxima compra
-            </h4>
-        )}
-    </div>
-    <div className="col-12 col-md-2 p-3 text-center">
-        {user ? (
-            <>
-                <button className='fw-bold bg-white text-black p-3 px-5' onClick={handleSignOut}>Cerrar Sesión en {user.email ? cutMail(user.email) : ''}</button>
-            </>
-        ) : (
-            <>
-                <NavLink to="/register" className='nav-link fw-bold bg-white text-black p-3 px-5'>
-                    Regístrate Ahora
-                </NavLink>
-            </>
-        )}
-    </div>
-</div>
+                <div className="row bg-black mt-5 p-5 mx-auto m-0 d-flex gap-5 justify-content-evenly align-items-center">
+                    <div className="col-12 col-md-4 py-5 mb-4 mb-md-0">
+                        {user ? (
+                            <>
+                                <h4 className="text-start text-white">
+                                    Tu cupón: BIENVENIDO30
+                                </h4>
+                                <span className="text-light">*Para compras superiores a 49€</span>
+                            </>
+                        ) : (
+                            <h4 className="text-start text-white">
+                                Regístrate ahora y obtén un descuento del -30% en tu próxima compra
+                            </h4>
+                        )}
+                    </div>
+                    <div className="col-12 col-md-2 p-3 text-center">
+                        {user ? (
+                            <>
+                                <button className='fw-bold bg-white text-black p-3 px-5' onClick={handleSignOut}>Cerrar Sesión en {user.email ? cutMail(user.email) : ''}</button>
+                            </>
+                        ) : (
+                            <>
+                                <NavLink to="/register" className='nav-link fw-bold bg-white text-black p-3 px-5'>
+                                    Regístrate Ahora
+                                </NavLink>
+                            </>
+                        )}
+                    </div>
+                </div>
 
                 {/*
                 <div className="row mt-5 d-flex justify-content-start">

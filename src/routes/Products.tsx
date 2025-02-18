@@ -94,20 +94,20 @@ const Products: React.FC<ProductProps> = () => {
         <>
             <div className="container-fluid px-4">
                 <div className=" d-flex flex-row justify-content-between align-items-center">
-                <h1 className='fw-bold display-2 my-4 w-auto d-inline'>{categoria} 
-                <h2 className='fw-bold display-2 my-4 w-auto d-inline'>.{marca}</h2>
-                    <span className='display-3 fw-bold'>({products.length})</span>
-                </h1>
+                    <h1 className='fw-bold display-2 my-4 w-auto d-inline'>{categoria}
+                        <h2 className='fw-bold display-2 my-4 w-auto d-inline'>.{marca}</h2>
+                        <span className='display-3 fw-bold'>({products.length})</span>
+                    </h1>
 
                     <div className="d-flex align-items-center mt-4">
-                     <select id="sortOrder" value={orderBy} onChange={handleSortChange} className="form-select rounded-0 border border-2 border-dark w-auto">
-                        <option value="asc">Precio ascendente</option>
-                        <option value="desc">Precio descendente</option>
-                        <option value="stock-asc">Stock ascendente</option>
-                        <option value="stock-desc">Stock descendente</option>
+                        <select id="sortOrder" value={orderBy} onChange={handleSortChange} className="form-select rounded-0 border border-2 border-dark w-auto">
+                            <option value="asc">Precio ascendente</option>
+                            <option value="desc">Precio descendente</option>
+                            <option value="stock-asc">Stock ascendente</option>
+                            <option value="stock-desc">Stock descendente</option>
 
-                    </select>
-                </div>
+                        </select>
+                    </div>
                 </div>
 
                 <div className="row w-100 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-0 z-0">
