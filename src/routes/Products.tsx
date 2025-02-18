@@ -100,8 +100,7 @@ const Products: React.FC<ProductProps> = () => {
                 </h1>
 
                     <div className="d-flex align-items-center mt-4">
-                    <label htmlFor="sortOrder" className="me-2">Ordenar por precio:</label>
-                    <select id="sortOrder" value={orderBy} onChange={handleSortChange} className="form-select w-auto">
+                     <select id="sortOrder" value={orderBy} onChange={handleSortChange} className="form-select rounded-0 border border-2 border-dark w-auto">
                         <option value="asc">Precio ascendente</option>
                         <option value="desc">Precio descendente</option>
                         <option value="stock-asc">Stock ascendente</option>

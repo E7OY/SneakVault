@@ -108,14 +108,14 @@ const Header = () => {
                     
                     {user ? (
                         <>
-                            <button className='button' onClick={handleSignOut}>Cerrar Sesión</button>
+                            <button className='button text-nowrap' onClick={handleSignOut}>Cerrar Sesión</button>
                             <NavLink className="btn rounded-0 fw-semibold px-4 py-2 bg-white" to="/">
                                 <img src={carrito} width={25} alt="Logo" />
                             </NavLink>
                         </>
                     ) : (
                         <>
-                            <NavLink to="/register" className='nav-link fw-regular button'>
+                            <NavLink to="/register" className='nav-link fw-regular button text-nowrap'>
                                 Iniciar Sesión
                             </NavLink>
                         </>
