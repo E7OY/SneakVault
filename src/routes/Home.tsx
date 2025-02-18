@@ -169,7 +169,7 @@ const Home = () => {
                         esencial para tu colección. Gracias a su tecnología innovadora,
                         te proporcionan comodidad durante todo el día.
                     </p>
-                    <a href="" className="border button-yeezy border-white p-3 text-decoration-none">Comprar ahora</a>
+                    <a href="/zapatillas/yeezy" className="border button-yeezy border-white p-3 text-decoration-none">Comprar ahora</a>
                 </div>
                 <div className="col-12 col-md-5">
                     <img src={imageMap['Yeezy 350 V2 Carbon Beluga']} className="img-fluid" style={{ transform: 'rotate(350deg)' }} alt="" />
