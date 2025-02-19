@@ -17,10 +17,9 @@ Este proyecto consiste en una aplicación web de venta de zapatillas y camisetas
 
 ## Tecnologías Utilizadas
 
-- **Frontend:** React, [especificar framework de estilos CSS utilizado (ej: CSS Modules, Bootstrap, Tailwind)]
-- **Backend:** [especificar tecnología backend utilizada (ej: Node.js, Spring Boot)]
-- **Base de Datos:** [especificar base de datos utilizada (ej: MySQL, MongoDB)]
-- **Otras:** [especificar otras tecnologías utilizadas (ej: Axios para peticiones HTTP, React Router para navegación)]
+- **Frontend:** React, CSS y Bootstrap
+- **Base de Datos:** Google Firebase
+- **Otras:** React Router
 
 ## Instalación y Configuración
 
