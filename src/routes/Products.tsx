@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { db } from '../utils/firebase.utils';
 import { onValue, ref } from 'firebase/database';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams, useLocation } from 'react-router-dom';
 
 import '../index.css';
 
@@ -25,7 +25,9 @@ const Products: React.FC<ProductProps> = () => {
     const { categoria, marca } = useParams<{ categoria: string, marca: string }>();
     const [products, setProducts] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string }[]>([]);
     const [orderBy, setOrderBy] = useState<'asc' | 'desc' | 'stock-asc' | 'stock-desc'>('asc');
-
+    const [searchInput, setSearchInput] = useState('');
+    const navigate = useNavigate();
+    const location = useLocation();
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -67,15 +69,28 @@ const Products: React.FC<ProductProps> = () => {
         fetchProducts();
     }, [categoria, marca]);
 
+    useEffect(() => {
+        const query = new URLSearchParams(location.search).get('query');
+        if (query) {
+            setSearchInput(query);
+        }
+    }, [location.search]);
 
-    /* funcion con evento de cambio, cuando el user selecciona una opcion en el menu y 
-    actualiza el estado con el valor seleccionado por el user */
+    const handleSearchSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        navigate(`?query=${encodeURIComponent(searchInput)}`);
+    };
+
+    const filteredProducts = products.filter(product =>
+        product.nombre.toLowerCase().includes(searchInput.toLowerCase())
+    );
+    
+
     const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setOrderBy(event.target.value as 'asc' | 'desc' | 'stock-asc' | 'stock-desc');
     };
 
-    /*crea copia del array productos y los ordena tonmando dos productos (a y b)*/
-    const sortedProducts = [...products].sort((a, b) => {
+    const sortedProducts = [...filteredProducts].sort((a, b) => {
         switch (orderBy) {
             case 'asc':
                 return a.precio - b.precio;
@@ -92,20 +107,42 @@ const Products: React.FC<ProductProps> = () => {
 
     return (
         <>
+
             <div className="container-fluid px-4">
                 <div className=" d-flex flex-row justify-content-between align-items-center">
-                    <h1 className='fw-bold display-2 my-4 w-auto d-inline'>{categoria}
-                        <h2 className='fw-bold display-2 my-4 w-auto d-inline'>.{marca}</h2>
-                        <span className='display-3 fw-bold'>({products.length})</span>
+                    <h1 className='fw-bold display-3 my-4 w-auto d-inline'>{categoria}
+                        <h2 className='fw-bold display-3 my-4 w-auto d-inline'>.{marca}</h2>
+                        <>
+                    { searchInput != "" ?
+
+                    <h2 className='fw-bold display-3 my-4 w-auto d-inline'> {`("${searchInput}")`} </h2>
+                    
+                    :
+                    
+                    <h2 className='fw-bold display-3 my-4 w-auto d-inline'> {``} </h2>
+                    }
+                    </>
+
+                    <span className='display-3 fw-bold'>({products.length})</span>
                     </h1>
 
-                    <div className="d-flex align-items-center mt-4">
+                    <form className="w-50 d-flex justify-content-center" onSubmit={handleSearchSubmit}>
+                        <input
+                            className="searchInput rounded-0 border-2 w-75 border-black"
+                            type="search"
+                            placeholder="Buscar"
+                            aria-label="Search"
+                            value={searchInput}
+                            onChange={(e) => setSearchInput(e.target.value)}
+                        />
+                    </form>
+
+                    <div className="d-flex align-items-center">
                         <select id="sortOrder" value={orderBy} onChange={handleSortChange} className="form-select rounded-0 border border-2 border-dark w-auto">
                             <option value="asc">Precio ascendente</option>
                             <option value="desc">Precio descendente</option>
                             <option value="stock-asc">Stock ascendente</option>
                             <option value="stock-desc">Stock descendente</option>
-
                         </select>
                     </div>
                 </div>

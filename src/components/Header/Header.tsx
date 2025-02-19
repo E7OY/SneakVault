@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import carrito from '../../assets/carrito.png';
 import './Header.css';
@@ -16,7 +16,6 @@ const Header = () => {
     const user = userContext ? userContext.user : null;
     const setUser = userContext ? userContext.setUser : () => {};
     const errorMessage = document.querySelectorAll('.error-message');
-
 
     //cerrar sesion
     const handleSignOut = async () => {
@@ -50,7 +49,7 @@ const Header = () => {
 
         return () => clearInterval(interval);
     }, []);
-    
+
 
     return (
         <>
@@ -97,14 +96,7 @@ const Header = () => {
                         </Navbar.Collapse>
                     </Navbar>
 
-                    <form className="w-50 d-flex justify-content-center">
-                        <input
-                            className="form-control rounded-0 border-1 w-75 border-black"
-                            type="search"
-                            placeholder="Buscar..."
-                            aria-label="Search"
-                        />     
-                    </form>
+
                     
                     {user ? (
                         <>

@@ -16,54 +16,24 @@ const Footer = () => {
                     <h6 className="text-white-50">C/Liceo La Paz</h6>
                 </div>
 
-                {/* 
-                <div className="col-3 w-auto">
-                    <h5 className="fw-bold">Enlaces</h5>
-                    <Navbar expand="lg">
-                        <Navbar.Collapse id="navbar-footer">
-                            <Nav className="d-flex flex-column fw-medium m-0 p-0">
-                                <Nav.Link as={NavLink} to="/home" className="negro fw-regular">HOME</Nav.Link>
-                                <NavDropdown title="ZAPATILLAS" id="nav-dropdown" menuVariant="light" drop="end" className='text-black'>
-                                    <NavDropdown.Item as={NavLink} to="/zapatillas/nike">Nike</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/zapatillas/yeezy">Yeezy</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/zapatillas/jordan">Jordan</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/zapatillas/adidas">Adidas</NavDropdown.Item>
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item as={NavLink} to="/zapatillas">Ver todas</NavDropdown.Item>
-                                </NavDropdown>
-                                <NavDropdown title="CAMISETAS" id="nav-dropdown" menuVariant="light" drop="end" className='text-black'>
-                                    <NavDropdown.Item as={NavLink} to="/camisetas/off-white">Off-white</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/camisetas/supreme">Supreme</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/camisetas/nike">Nike</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/camisetas/palace">Palace</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/camisetas/stüssy">Stüssy</NavDropdown.Item>
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item as={NavLink} to="/camisetas">Ver todas</NavDropdown.Item>
-                                </NavDropdown>
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Navbar>
-                </div>
-                */}
-
 
                 <div className="col-3  ">
                     <details className=" my-2 mt-5">
                         <summary className='p-2 fw-medium text-white'>
                             Envíos
                         </summary>
-                        <h5 className='m-3 text-white-50'>
+                        <h6 className='m-3 text-white-50'>
                             Una vez que realice su pedido, espere de 1 a 2 días hábiles para procesar sus pedidos. Después de eso,
                             tomará entre 1 y 2  días hábiles para la entrega en España, y entre 3 y 5 días hábiles para los pedidos
                             Unión Europea (según la ubicación).
-                        </h5>
+                        </h6>
                     </details>
 
                     <details className="my-2">
                     <summary className='p-2 fw-medium text-white'>
                         Cambios Y Devoluciones
                         </summary>
-                        <h5 className='m-3 text-white-50'>
+                        <h6 className='m-3 text-white-50'>
                             En SneakVault nos esforzamos por asegurar la plena satisfacción de nuestros clientes. Si no está completamente
                             satisfecho con su compra, le ofrecemos la opción de devolver los artículos bajo las siguientes condiciones:
                             <br /><li>Plazo para devoluciones:</li> Debe retornar los artículos dentro de los 14 días hábiles siguientes a la fecha de recepción.
@@ -74,13 +44,13 @@ const Footer = () => {
                             de productos dentro de nuestro marco de devoluciones. Esto asegura que pueda elegir el producto más adecuado sin
                             preocuparse por costos adicionales.
                             Para más información o asistencia con su devolución, no dude en contactarnos. Estamos aquí para ayudarle.
-                        </h5>
+                        </h6>
                     </details>
                     <details className="my-2">
                     <summary className='p-2 fw-medium text-white'>
                         Autenticidad
                         </summary>
-                        <h5 className='m-3 text-white-50'>
+                        <h6 className='m-3 text-white-50'>
                             Cada producto disponible en SneakVault está respaldado por nuestra garantía de autenticidad. Antes de
                             ser entregados, nuestros especialistas verifican minuciosamente cada artículo para asegurarse de que sea genuino.
                             Nuestra colección de productos proviene directamente de una red de distribuidores asociados que han sido elegidos
@@ -91,7 +61,7 @@ const Footer = () => {
                             tengas la confianza de saber que estás adquiriendo productos genuinos y de alta calidad. Si tienes alguna pregunta
                             sobre la autenticidad de nuestros productos, no dudes en ponerte en contacto con nosotros. Estamos aquí para b
                             rindarte la mejor experiencia de compra posible.
-                        </h5>
+                        </h6>
                     </details>
                 </div>
 
