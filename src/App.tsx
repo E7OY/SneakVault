@@ -1,4 +1,3 @@
-// filepath: /C:/Users/soyel/Desktop/2ºDAW/2ºEVAL/DAWC/SneakVault/src/App.tsx
 import { useState } from 'react';
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import NotFoundPage from './pages/NotFoundPage';

@@ -1,8 +1,4 @@
-improve menu functionality
-implement search bar
 implement shopping cart
 make all the website responsive
-
-
-
+change images format to webp
 add 3d shoe home

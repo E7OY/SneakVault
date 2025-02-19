@@ -160,7 +160,7 @@ const Home = () => {
                     <a href="/zapatillas/yeezy" className="border button-yeezy border-white p-3 text-decoration-none">Comprar ahora</a>
                 </div>
                 <div className="col-12 col-md-5">
-                    <img src={imageMap['Yeezy 350 V2 Carbon Beluga']} className="img-fluid" style={{ transform: 'rotate(350deg)' }} alt="" />
+                    <img src={imageMap['Yeezy 350 V2 Onyx']} className="img-fluid" width={700} style={{ transform: 'rotate(10deg)'}} alt="" />
                 </div>
             </div>
 
