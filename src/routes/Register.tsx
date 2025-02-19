@@ -28,7 +28,7 @@ const Register = () => {
             setUser(user);
         } catch (error) {
             Array.from(errorMessage).forEach((element) => {
-                element.textContent = 'Error en el registro: ' + error;
+                element.textContent = 'Error en el registro';
             });
         }
     };
@@ -55,7 +55,7 @@ const Register = () => {
             setUser(response.user);
         } catch (error) {
             Array.from(errorMessage).forEach((element) => {
-                element.textContent = 'Error al iniciar sesion con Google: ' + error;
+                element.textContent = 'Error al iniciar sesion con Google.';
             });        }
     };
 

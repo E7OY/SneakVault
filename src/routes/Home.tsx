@@ -2,17 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-
-import supremelogo from "../assets/supremelogo.png";
-import nikelogo from "../assets/nikelogo.png";
-import stussylogo from "../assets/stussylogo.png";
-import palacelogo from "../assets/palacelogo.png";
-import yeezylogo from "../assets/yeezylogo.png";
-import offwhitelogo from "../assets/offwhitelogo.png";
-import mm6logo from "../assets/mm6logo.png";
-import adidaslogo from "../assets/adidaslogo.png";
+import '../index.css';
 
 import noctashit from '../assets/nocta-nrg-rf-tee-home.png';
 
@@ -20,13 +10,11 @@ import original from "../assets/original.png";
 import envio from "../assets/envios.png";
 import devolucion from "../assets/devolucion.png";
 
-import '../index.css';
 import { Link, NavLink, useParams } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
 import UserContext from '../context/userContext';
 import { onValue, ref } from "firebase/database";
 import { db } from "../utils/firebase.utils";
-
 import { imageMap } from "../utils/imageMap";
 
 const Home = () => {
