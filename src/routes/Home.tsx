@@ -147,7 +147,7 @@ const Home = () => {
         </div>
         */}
 
-            <div className="banner-home mx-5 p-5 my-5 bg-negro text-white text-center d-flex flex-column flex-md-row justify-content-evenly align-items-center">
+            <div className="banner-home mx-5 p-5 my-3 bg-negro text-white text-center d-flex flex-column flex-md-row justify-content-evenly align-items-center">
                 <div className="col-12 col-md-5 mb-4 mb-md-0">
                     <h2>YEEZY</h2>
                     <h3>La mejor zapatilla esta temporada...</h3>
@@ -281,7 +281,7 @@ const Home = () => {
                 <div className="d-flex flex-row justify-content-between align-items-end">
                     <div className="">
                         <h2 className="fw-bolder negro text-center display-6">
-                            ROPA DESTACADAS
+                            CAMISETAS DESTACADA
                         </h2>
                     </div>
                     <div className="">

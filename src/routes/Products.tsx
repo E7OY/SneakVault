@@ -81,8 +81,10 @@ const Products: React.FC<ProductProps> = () => {
         navigate(`?query=${encodeURIComponent(searchInput)}`);
     };
 
+    /*filtrar productos por nombre o descripcion*/
     const filteredProducts = products.filter(product =>
-        product.nombre.toLowerCase().includes(searchInput.toLowerCase())
+        product.nombre.toLowerCase().includes(searchInput.toLowerCase()) ||
+        product.descripcion.toLowerCase().includes(searchInput.toLowerCase())
     );
     
 
@@ -110,23 +112,26 @@ const Products: React.FC<ProductProps> = () => {
 
             <div className="container-fluid px-4">
                 <div className=" d-flex flex-row justify-content-between align-items-center">
-                    <h1 className='fw-bold display-3 my-4 w-auto d-inline'>{categoria}
-                        <h2 className='fw-bold display-3 my-4 w-auto d-inline'>.{marca}</h2>
-                        <>
+                    <h1 className='fw-bold display-5 my-2 w-auto d-inline text-nowrap'>{categoria}
+
+
+                        <h2 className='fw-bold display-5 my-4 w-auto d-inline'>.{marca}
+                    
+                    <>
+
                     { searchInput != "" ?
 
-                    <h2 className='fw-bold display-3 my-4 w-auto d-inline'> {`("${searchInput}")`} </h2>
+                    <h2 className='fw-bold display-5 my-4 w-auto d-inline'>{`.("${searchInput}")`}</h2>
                     
                     :
                     
-                    <h2 className='fw-bold display-3 my-4 w-auto d-inline'> {``} </h2>
+                    <h2 className='fw-bold display-5 my-4 w-auto d-inline'>{``}</h2>
                     }
                     </>
+                    <h6 className='display-6 fw-regular'>{`${filteredProducts.length} resultados`}</h6>
+                    </h2> </h1>
 
-                    <span className='display-3 fw-bold'>({products.length})</span>
-                    </h1>
-
-                    <form className="w-50 d-flex justify-content-center" onSubmit={handleSearchSubmit}>
+                    <form className="w-50 d-flex justify-content-center align-items-stretch flex-row" onSubmit={handleSearchSubmit}>
                         <input
                             className="searchInput rounded-0 border-2 w-75 border-black"
                             type="search"
@@ -135,6 +140,7 @@ const Products: React.FC<ProductProps> = () => {
                             value={searchInput}
                             onChange={(e) => setSearchInput(e.target.value)}
                         />
+
                     </form>
 
                     <div className="d-flex align-items-center">
@@ -145,7 +151,10 @@ const Products: React.FC<ProductProps> = () => {
                             <option value="stock-desc">Stock descendente</option>
                         </select>
                     </div>
+
+                
                 </div>
+                    
 
                 <div className="row w-100 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-0 z-0">
                     {sortedProducts.map(product => (

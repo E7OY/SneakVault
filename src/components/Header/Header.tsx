@@ -61,12 +61,13 @@ const Header = () => {
                     <h6>Jordan x Cactus jack disponibles</h6>
                 </span>
             </div>
+
             <header className="w-100 bg-white p-4 border-bottom border-2 border-black">
-                <nav className="navbar navbar-expand-lg d-flex justify-content-between w-100 gap-5">
+                <nav className="navbar navbar-expand-lg d-flex justify-content-around w-100 gap-5">
                     <a className="navbar-brand" href="#">
                         <h1 className='fw-bold negro'>
                             <NavLink className="nav-link negro" to="/home">
-                            <h3 className='fw-semibold logo'>SneakVault</h3>
+                            <h2 className='fw-semibold logo'>SneakVault</h2>
                             </NavLink>
                         </h1>
                     </a>
