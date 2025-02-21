@@ -2,7 +2,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import carrito from '../../assets/carrito.png';
 import './Header.css';
-import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { useContext, useEffect, useState } from 'react';
 import '../../index.css';
 import './Header.css';
@@ -14,7 +14,7 @@ import UserContext from '../../context/userContext';
 const Header = () => {
     const userContext = useContext(UserContext);
     const user = userContext ? userContext.user : null;
-    const setUser = userContext ? userContext.setUser : () => {};
+    const setUser = userContext ? userContext.setUser : () => { };
     const errorMessage = document.querySelectorAll('.error-message');
 
     //cerrar sesion
@@ -62,60 +62,68 @@ const Header = () => {
                 </span>
             </div>
 
-            <header className="w-100 bg-white p-4 border-bottom border-2 border-black">
-                <nav className="navbar navbar-expand-lg d-flex justify-content-around w-100 gap-5">
-                    <a className="navbar-brand" href="#">
-                        <h1 className='fw-bold negro'>
-                            <NavLink className="nav-link negro" to="/home">
-                            <h2 className='fw-semibold logo'>SneakVault</h2>
-                            </NavLink>
-                        </h1>
-                    </a>
+            <Navbar expand="lg" className="bg-white py-3 px-5 border-bottom border-dark">
+                <Container fluid>
+                    <NavLink className="navbar-brand me-0" to="/home">
+                        <h2 className="mb-0 fw-bold">SneakVault</h2>
+                    </NavLink>
 
-                    <Navbar expand="lg">
-                        <Navbar.Collapse id="navbar-footer">
-                            <Nav className="d-flex flex-row fw-medium m-0 p-0">
-                                <Nav.Link as={NavLink} to="/home" className="negro fw-regular">HOME</Nav.Link>
-                                <NavDropdown title="ZAPATILLAS" id="nav-dropdown" menuVariant="light" className='text-black'>
-                                    <NavDropdown.Item as={NavLink} to="/zapatillas/nike">Nike</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/zapatillas/yeezy">Yeezy</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/zapatillas/jordan">Jordan</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/zapatillas/adidas">Adidas</NavDropdown.Item>
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item as={NavLink} to="/zapatillas">Ver todas</NavDropdown.Item>
-                                </NavDropdown>
-                                <NavDropdown title="CAMISETAS" id="nav-dropdown" menuVariant="light" className='text-black'>
-                                    <NavDropdown.Item as={NavLink} to="/camisetas/off-white">Off-white</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/camisetas/supreme">Supreme</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/camisetas/nike">Nike</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/camisetas/palace">Palace</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/camisetas/stüssy">Stüssy</NavDropdown.Item>
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item as={NavLink} to="/camisetas">Ver todas</NavDropdown.Item>
-                                </NavDropdown>
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Navbar>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-dark" />
 
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="mx-auto gap-3 py-3 py-lg-0">
+                            <Nav.Link as={NavLink} to="/home" className="fw-medium">
+                                HOME
+                            </Nav.Link>
 
-                    
-                    {user ? (
-                        <>
-                            <button className='button text-nowrap' onClick={handleSignOut}>Cerrar Sesión</button>
-                            <NavLink className="btn rounded-0 fw-semibold px-4 py-2 bg-white" to="/">
-                                <img src={carrito} width={25} alt="Logo" />
-                            </NavLink>
-                        </>
-                    ) : (
-                        <>
-                            <NavLink to="/register" className='nav-link fw-regular button text-nowrap'>
-                                Iniciar Sesión
-                            </NavLink>
-                        </>
-                    )}
+                            <NavDropdown title="ZAPATILLAS" id="shoes-dropdown" className="fw-medium">
+                                <NavDropdown.Item as={NavLink} to="/zapatillas/nike">Nike</NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/zapatillas/yeezy">Yeezy</NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/zapatillas/jordan">Jordan</NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/zapatillas/adidas">Adidas</NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item as={NavLink} to="/zapatillas">Ver todas</NavDropdown.Item>
+                            </NavDropdown>
 
-                </nav>
-            </header>
+                            <NavDropdown title="CAMISETAS" id="shirts-dropdown" className="fw-medium">
+                                <NavDropdown.Item as={NavLink} to="/camisetas/off-white">Off-white</NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/camisetas/supreme">Supreme</NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/camisetas/nike">Nike</NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/camisetas/palace">Palace</NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/camisetas/stüssy">Stüssy</NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item as={NavLink} to="/camisetas">Ver todas</NavDropdown.Item>
+                            </NavDropdown>
+                        </Nav>
+
+                        <div className="d-flex gap-2">
+                            {user ? (
+                                <>
+                                    <button
+                                        className="button rounded-0"
+                                        onClick={handleSignOut}
+                                    >
+                                        Cerrar Sesión
+                                    </button>
+                                    <NavLink
+                                        className="button-white rounded-0"
+                                        to="/"
+                                    >
+                                        <img src={carrito} width={20} alt="Carrito" />
+                                    </NavLink>
+                                </>
+                            ) : (
+                                <NavLink
+                                    to="/register"
+                                    className="button"
+                                >
+                                    Iniciar Sesión
+                                </NavLink>
+                            )}
+                        </div>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
         </>
     );
 };

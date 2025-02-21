@@ -108,10 +108,10 @@ const Register = () => {
                     {!user && (
                         <>
                         <div onClick={logGoogleUser} className="col-4 button-google d-flex flex-row gap-2 w-auto justify-content-center align-items-center py-2 px-2">
-                            <img  src={ logogoogle } className=' ' width={15} alt="" /> Login with Google
+                            <img  src={ logogoogle } className=' ' width={15} alt="" /> Entrar con Google
                         </div>
                         <div onClick={logGoogleUser}  className="col-4 button-apple d-flex flex-row gap-2 w-auto justify-content-center align-items-center py-2 px-2">
-                            <img  src={ logoapple } className='' width={15} alt="" /> Login with Apple
+                            <img  src={ logoapple } className='' width={15} alt="" /> Entrar con Apple
                         </div>
                         <div className="col-4 button-google d-flex flex-row w-auto justify-content-center align-items-center py-2 px-2">
                             <button className='button-google' onClick={() => setIsRegistering(!isRegistering)}>
