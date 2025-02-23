@@ -8,20 +8,25 @@ import { imageMap } from '../utils/imageMap';
 import UserContext from '../context/userContext';
 
 import '../index.css';
+import { useCart } from '../context/cartContext';
 
-const ProductDetails = () => {
+
+
+const ProductDetails= () => {
     const { id } = useParams<{ id: string }>();
     const [product, setProduct] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string; color: string } | null>(null);
     const [relatedProducts, setRelatedProducts] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string }[]>([]);
     const userContext = useContext(UserContext);
     const user = userContext ? userContext.user : null;
 
+    const { addToCart } = useCart();
+
     useEffect(() => {
         const fetchProduct = async () => {
             try {
                 /*creamos referencia a la base de datos*/
                 const productsRef = ref(db, 'productos');
-                /*leemos los datos en tiempo real*/
+                /*leemos los datos en tiempo real, con onValue que escucha los cambios*/
                 onValue(productsRef, (snapshot) => {
                     const productsData = snapshot.val();
                     /*inicializamos array vacio para almacenar productos*/
@@ -63,6 +68,15 @@ const ProductDetails = () => {
     if (!product) {
         return <div>Cargando producto...</div>;
     }
+
+    const handleAddToCart = () => {
+        addToCart({
+            id: product.id,
+            name: product.nombre,
+            price: product.precio,
+            image: product.imagen
+        });
+    };
 
     return (
         <div>
@@ -111,7 +125,7 @@ const ProductDetails = () => {
                     <h2 className='display-4 mt-3 fw-bold'>{product.nombre}</h2>
                     <h5 className=' fw-regular'>{product.descripcion}</h5>
                     <div className={`${product.color}-color mt-3`} data-toggle="tooltip" data-placement="top" title={`${product.color}`} >{}</div>
-                    
+
                     <h3 className='fw-light my-4'>{product.precio}€</h3>
 
                     {user ? (
@@ -121,7 +135,7 @@ const ProductDetails = () => {
                                 Añadir a la cesta
                             </a>
                         ) : (
-                            <a href="" className='button'>Añadir a la cesta</a>
+                            <a onClick={handleAddToCart} className='button' style={{ cursor: "pointer" }}>Añadir a la cesta</a>
                         )
                     ) : (
                         <a href="/register" className='button'>Inicia sesión para comprar</a>

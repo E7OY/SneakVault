@@ -1,23 +1,22 @@
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import carrito from '../../assets/carrito.png';
 import './Header.css';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { useContext, useEffect, useState } from 'react';
 import '../../index.css';
 import './Header.css';
-
 import { getAuth, signOut } from 'firebase/auth';
 import UserContext from '../../context/userContext';
-
+import { Cart } from '../../routes/Cart';
+import carrito from '../../assets/carrito.png';
 
 const Header = () => {
     const userContext = useContext(UserContext);
     const user = userContext ? userContext.user : null;
     const setUser = userContext ? userContext.setUser : () => { };
     const errorMessage = document.querySelectorAll('.error-message');
+    const [isCartOpen, setIsCartOpen] = useState(false); // State for cart visibility
 
-    //cerrar sesion
     const handleSignOut = async () => {
         try {
             await signOut(getAuth());
@@ -29,7 +28,10 @@ const Header = () => {
         }
     };
 
-    //barra de texto en movimiento
+    const toggleCart = () => {
+        setIsCartOpen(!isCartOpen); // Function to toggle cart visibility
+    };
+
     useEffect(() => {
         const texts = document.querySelectorAll('.moving-text h6');
         let index = 0;
@@ -49,7 +51,6 @@ const Header = () => {
 
         return () => clearInterval(interval);
     }, []);
-
 
     return (
         <>
@@ -105,12 +106,10 @@ const Header = () => {
                                     >
                                         Cerrar Sesión
                                     </button>
-                                    <NavLink
-                                        className="button-white rounded-0"
-                                        to="/"
-                                    >
-                                        <img src={carrito} width={20} alt="Carrito" />
-                                    </NavLink>
+                                    <button onClick={toggleCart} className='bg-transparent border-2 px-3 border-dark '>
+                                        <img src={carrito} width={25} alt="Carrito" />
+                                    </button>
+                                    {isCartOpen && <Cart toggleCart={toggleCart} />}
                                 </>
                             ) : (
                                 <NavLink

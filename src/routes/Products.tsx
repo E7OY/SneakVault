@@ -2,10 +2,8 @@ import { useState, useEffect } from 'react';
 import { db } from '../utils/firebase.utils';
 import { onValue, ref } from 'firebase/database';
 import { Link, useNavigate, useParams, useLocation } from 'react-router-dom';
-
-import '../index.css';
-
 import { imageMap } from '../utils/imageMap';
+import '../index.css';
 
 interface Product {
     categoria: string,
@@ -16,7 +14,6 @@ interface Product {
     precio: number;
     descripcion: string;
 }
-
 interface ProductProps {
     products: Product[];
 }

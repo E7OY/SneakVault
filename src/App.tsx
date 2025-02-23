@@ -8,9 +8,7 @@ import ErrorPage from './pages/ErrorPage';
 import Products from './routes/Products';
 import ProductDetails from './routes/ProductDetails';
 
-
-import { db } from './utils/firebase.utils';
-
+import {CartProvider} from './context/cartContext';
 
 const App = () => {
   const [user, setUser] = useState<{ displayName?: string; email: string } | null>(null);
@@ -64,7 +62,9 @@ const App = () => {
 
   return (
     <>
+    <CartProvider>
       <RouterProvider router={router} />
+      </CartProvider>
     </>
   );
 };

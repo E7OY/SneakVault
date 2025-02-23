@@ -8,14 +8,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Inter", serif;
-  width: 100%; 
+  width: 100%;
   overflow-x: hidden;
- }
+}
 
- 
+
 h1 {
   font-size: 2.5rem;
- }
+}
 
 .text-black {
   color: #010101 !important;
@@ -35,10 +35,11 @@ h1 {
   text-align: center;
   border: 2px solid #010101;
 }
+
 .button-white {
   position: relative;
   background-color: white;
-  color:  #010101;
+  color: #010101;
   padding: 15px 20px;
   text-decoration: none;
   width: auto;
@@ -52,23 +53,26 @@ h1 {
   color: #010101;
   text-decoration: none;
 }
-.button-password {
-    position: relative;
-    background-color: #010101;
-    color: white;
-    padding: 15px 20px;
-    text-decoration: none;
-    width: auto;
-    text-align: center;
-    border: 2px solid #010101;
-  }
-  .button-password:hover {
-    border: 2px solid #ffffff;
-    filter: invert(1);
-  }
-  
 
-.button-google, .button-apple {
+.button-password {
+  position: relative;
+  background-color: #010101;
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  width: auto;
+  text-align: center;
+  border: 2px solid #010101;
+}
+
+.button-password:hover {
+  border: 2px solid #ffffff;
+  filter: invert(1);
+}
+
+
+.button-google,
+.button-apple {
   position: relative;
   background-color: #010101;
   color: white;
@@ -88,6 +92,7 @@ header {
   top: 0;
   z-index: 1000;
 }
+
 .texto-footer {
   text-align: center;
   font-size: 15rem;
@@ -108,9 +113,11 @@ header {
 .negro {
   color: #010101;
 }
+
 .bg-negro {
   background: #010101;
 }
+
 .menu-desplegable {
   color: #010101 !important;
 }
@@ -120,6 +127,7 @@ header {
   background-color: #010101;
   color: white;
 }
+
 .info img:hover {
   filter: brightness(0) invert(1);
 }
@@ -129,6 +137,7 @@ header {
   box-shadow: 5px 5px 0px #fff;
 
 }
+
 .button-yeezy:hover {
   color: #010101;
   background: white;
@@ -136,8 +145,8 @@ header {
   transition: 1s;
 }
 
-.button-nocta{
-  box-shadow: 5px 5px 0px #010101 ;
+.button-nocta {
+  box-shadow: 5px 5px 0px #010101;
   border: 2px solid white;
   transition: 1s;
 }
@@ -153,6 +162,7 @@ header {
   border-radius: 50px;
   z-index: -123;
 }
+
 .marcas:hover {
   transform: scale(1.05);
   transition: 1s;
@@ -201,11 +211,13 @@ header {
     display: block;
     z-index: 45;
   }
+
   50% {
     opacity: 1;
     display: block;
     z-index: 45;
   }
+
   100% {
     opacity: 0;
     display: none;
@@ -213,11 +225,12 @@ header {
 }
 
 .swiper-wrapper {
-    display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   padding: 20px;
   justify-content: start;
 }
+
 .imagen-producto-detail {
   width: 100%;
   height: auto;
@@ -253,8 +266,10 @@ header {
 }
 
 
-.swiper-hero .swiper-button-prev, .swiper-hero .swiper-button-next,
-.swiper-banner .swiper-button-prev, .swiper-banner .swiper-button-next {
+.swiper-hero .swiper-button-prev,
+.swiper-hero .swiper-button-next,
+.swiper-banner .swiper-button-prev,
+.swiper-banner .swiper-button-next {
   --swiper-navigation-size: 20px;
   background-color: white;
   height: 70px;
@@ -264,12 +279,15 @@ header {
   transition: opacity 0.3s;
 }
 
-.swiper-hero:hover .swiper-button-prev, .swiper-hero:hover .swiper-button-next,
-.swiper-banner:hover .swiper-button-prev, .swiper-banner:hover .swiper-button-next {
+.swiper-hero:hover .swiper-button-prev,
+.swiper-hero:hover .swiper-button-next,
+.swiper-banner:hover .swiper-button-prev,
+.swiper-banner:hover .swiper-button-next {
   opacity: 1;
 }
 
-.swiper-hero .swiper-pagination, .swiper-banner .swiper-pagination {
+.swiper-hero .swiper-pagination,
+.swiper-banner .swiper-pagination {
   --swiper-pagination-color: white;
   --swiper-pagination-bullet-size: 6px;
   --swiper-pagination-bullet-inactive-color: #010101;
@@ -278,11 +296,13 @@ header {
   --swiper-pagination-bullet-horizontal-gap: 2px;
 }
 
-.swiper-hero .swiper-pagination-bullet, .swiper-banner .swiper-pagination-bullet {
+.swiper-hero .swiper-pagination-bullet,
+.swiper-banner .swiper-pagination-bullet {
   box-shadow: inset 0 0 0 1px #fff;
 }
 
-.swiper-hero .swiper-pagination-bullet-active, .swiper-banner .swiper-pagination-bullet-active {
+.swiper-hero .swiper-pagination-bullet-active,
+.swiper-banner .swiper-pagination-bullet-active {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
 }
 
@@ -315,12 +335,14 @@ header {
   position: relative;
   z-index: 1;
 }
+
 .producto-card:hover {
   box-shadow: 10px 10px 0px rgb(0, 0, 0);
   transform: scale(1.05);
   cursor: pointer;
   z-index: 200;
 }
+
 .producto-img:hover {
   transform: rotateY(180deg);
 }
@@ -330,8 +352,10 @@ header {
   outline: none;
   padding: 5px;
 }
-.searchInput:focus, .form-select:focus {
-  box-shadow: -5px 5px 0px   #010101;
+
+.searchInput:focus,
+.form-select:focus {
+  box-shadow: -5px 5px 0px #010101;
   transition: 1s;
 }
 
@@ -339,15 +363,16 @@ header {
 
 
 .imagen-producto-home {
-    height: auto;
-    object-fit: contain;
-    position: relative;
-    left: -30px;
-    bottom: 30px;
-    transform: rotate(5deg);
+  height: auto;
+  object-fit: contain;
+  position: relative;
+  left: -30px;
+  bottom: 30px;
+  transform: rotate(5deg);
 }
+
 .imagen-producto:hover {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 
@@ -365,6 +390,7 @@ details {
 summary:hover {
   color: #565656d5;
 }
+
 summary {
   font-weight: 600;
   cursor: pointer;
@@ -372,6 +398,7 @@ summary {
   justify-content: space-between;
   align-items: center;
 }
+
 summary::after {
   content: '\25B6';
   font-size: 1rem;
@@ -382,6 +409,7 @@ summary::after {
 details[open] summary::after {
   transform: rotate(90deg);
 }
+
 summary {
   font-weight: 600;
   cursor: pointer;
@@ -493,6 +521,7 @@ summary {
   border-radius: 50%;
   border: 1px solid #afafaf;
 }
+
 .amarillo-color {
   background-color: #D4A600;
   width: 30px;
@@ -606,3 +635,45 @@ summary {
   border-radius: 50%;
   border: 1px solid #afafaf;
 }
+
+
+
+
+
+
+
+
+
+
+
+.cart-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: end;
+  align-items: top;
+}
+
+.cart {
+  background: #fff;
+  padding: 35px;
+  margin: 10px;
+  width: 550px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  border: 1px solid #000;
+  overflow: scroll;
+}
+
+
+
+
+.cart footer button:hover {
+  background-color: #ddd; /* Changed hover color */
+}
+
