@@ -119,7 +119,7 @@ import imagen127 from '../assets/dunk-low-team-gold.png';
 import imagen128 from '../assets/dunk-low-cacao-wow.png';
 import imagen129 from '../assets/dunk-low-black-panda.png';
 import imagen130 from '../assets/yeezy-350-slate.png';
-
+import imagen131 from '../assets/spray-dot-black.png';
 
 export const imageMap: { [key: string]: string } = {
     'Air Jordan 1 x Cactus Jack': imagen1,   //meter nombres de los productos en la bbdd
@@ -248,6 +248,7 @@ export const imageMap: { [key: string]: string } = {
     'Stussy Shells Black Tee': imagen90,
     'Stussy Basic Stussy Tee Pigment Died White': imagen91,
     'Yeezy 350 V2 Slate': imagen130,
+    "Off-White x Nike Spray Dot Black": imagen131
 
 
 };

@@ -11,7 +11,7 @@ import '../index.css';
 
 const ProductDetails = () => {
     const { id } = useParams<{ id: string }>();
-    const [product, setProduct] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string } | null>(null);
+    const [product, setProduct] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string; color: string } | null>(null);
     const [relatedProducts, setRelatedProducts] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string }[]>([]);
     const userContext = useContext(UserContext);
     const user = userContext ? userContext.user : null;
@@ -25,7 +25,7 @@ const ProductDetails = () => {
                 onValue(productsRef, (snapshot) => {
                     const productsData = snapshot.val();
                     /*inicializamos array vacio para almacenar productos*/
-                    const productsArray: { id: string; stock: number; categoria: string; imagen: string; marca: string; nombre: string; precio: number; descripcion: string }[] = [];
+                    const productsArray: { id: string; stock: number; categoria: string; imagen: string; marca: string; nombre: string; precio: number; descripcion: string, color: string }[] = [];
                     /*recorremos los datos de la base de datos y los almacenamos en el array*/
                     for (const categoria in productsData) {
                         for (const marca in productsData[categoria]) {
@@ -110,7 +110,9 @@ const ProductDetails = () => {
                     </Link>
                     <h2 className='display-4 mt-3 fw-bold'>{product.nombre}</h2>
                     <h5 className=' fw-regular'>{product.descripcion}</h5>
-                    <h3 className='fw-light mt-3 mb-5'>{product.precio}€</h3>
+                    <div className={`${product.color}-color mt-3`} data-toggle="tooltip" data-placement="top" title={`${product.color}`} >{}</div>
+                    
+                    <h3 className='fw-light my-4'>{product.precio}€</h3>
 
                     {user ? (
                         product.stock <= 0 ? (
@@ -290,8 +292,9 @@ const ProductDetails = () => {
                                         onError={(e) => { e.currentTarget.src = imageMap[relatedProduct.nombre] }}
                                     />
                                     <div className="p-3">
+                                        <h6 className="mb-2 text-black-50">{relatedProduct.marca}</h6>
                                         <h5 className="text-truncate mb-2">{relatedProduct.nombre}</h5>
-                                        <p className="mb-0">{relatedProduct.precio}€</p>
+                                        <h6 className="mb-0 text-black-50">Desde {relatedProduct.precio}€</h6>
                                     </div>
                                 </Link>
                             </div>

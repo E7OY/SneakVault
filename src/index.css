@@ -217,7 +217,6 @@ header {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   padding: 20px;
   justify-content: start;
-  font-family: "Big Shoulders Text", serif;
 }
 .imagen-producto-detail {
   width: 100%;
@@ -312,7 +311,6 @@ header {
 .producto-card {
   outline: 2px solid #010101;
   transition: all 0.3s ease;
-  font-family: "Big Shoulders Text", serif;
   box-sizing: border-box;
   position: relative;
   z-index: 1;
@@ -332,11 +330,6 @@ header {
   outline: none;
   padding: 5px;
 }
-.searchInput, .form-select {
-  box-shadow: 5px 5px 0px   #010101;
-  transition: 1s;
-}
-
 .searchInput:focus, .form-select:focus {
   box-shadow: -5px 5px 0px   #010101;
   transition: 1s;
@@ -392,4 +385,224 @@ details[open] summary::after {
 summary {
   font-weight: 600;
   cursor: pointer;
+}
+
+
+/* COLORES PRODUCTOS */
+.blanco-color {
+  background-color: rgb(255, 255, 255);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.negro-color {
+  background-color: rgb(0, 0, 0);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.gris-color {
+  background-color: #BCBBB2;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.morado-color {
+  background-color: #614A82;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+
+.beige-color {
+  background-color: #83725E;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.naranja-color {
+  background-color: #D55820;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.marrón-color {
+  background-color: #41352E;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.rojo-color {
+  background-color: #900C20;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.violeta-color {
+  background-color: #3C2358;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.dorado-color {
+  background-color: #BEAD7C;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.verde-color {
+  background-color: #8BA28C;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.azul-color {
+  background-color: #223595;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.amarillo-yeezy-color {
+  background-color: #BDD56A;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+.amarillo-color {
+  background-color: #D4A600;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.ocre-color {
+  background-color: #AD8253;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.sulfur-color {
+  background-color: #D3C18A;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.wave-color {
+  background-color: #8F8D89;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+
+}
+
+.granite-color {
+  background-color: #454545;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.resin-color {
+  background-color: #9FB15D;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+
+.bone-color {
+  background-color: #E3DDC3;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.dark-color {
+  background-color: #3B3B39;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.mocha-color {
+  background-color: #5F4C3E;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.slate-color {
+  background-color: #A7A296;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.oil-green-color {
+  background-color: #9A9B77;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.navy-color {
+  background-color: #293554;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.khaki-color {
+  background-color: #CBBEA2;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
+}
+
+.olive-color {
+  background-color: #5F592B;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #afafaf;
 }
