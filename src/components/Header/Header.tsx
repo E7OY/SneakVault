@@ -15,7 +15,7 @@ const Header = () => {
     const user = userContext ? userContext.user : null;
     const setUser = userContext ? userContext.setUser : () => { };
     const errorMessage = document.querySelectorAll('.error-message');
-    const [isCartOpen, setIsCartOpen] = useState(false); // State for cart visibility
+    const [isCartOpen, setIsCartOpen] = useState(false);
 
     const handleSignOut = async () => {
         try {
@@ -29,7 +29,7 @@ const Header = () => {
     };
 
     const toggleCart = () => {
-        setIsCartOpen(!isCartOpen); // Function to toggle cart visibility
+        setIsCartOpen(!isCartOpen);
     };
 
     useEffect(() => {
