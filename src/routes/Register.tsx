@@ -30,6 +30,7 @@ const Register = () => {
             const auth = getAuth();
             const { user } = await createUserWithEmailAndPassword(auth, email, password);
             setUser(user);
+            navigate(-1);
         } catch (error) {
             Array.from(errorMessage).forEach((element) => {
                 element.textContent = 'Error en el registro.';
@@ -57,6 +58,7 @@ const Register = () => {
         try {
             const response = await signInWithGooglePopup();
             setUser(response.user);
+            navigate(-1);
         } catch (error) {
             Array.from(errorMessage).forEach((element) => {
                 element.textContent = 'Error al iniciar sesion con Google.';

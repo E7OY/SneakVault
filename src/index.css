@@ -672,8 +672,14 @@ summary {
 
 
 
-
-.cart footer button:hover {
-  background-color: #ddd; /* Changed hover color */
+.message-cart {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  color: #010101;
+  border: 1px solid #010101;
+  padding: 50px 70px;
+  z-index: 10000;
 }
-

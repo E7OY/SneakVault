@@ -1,6 +1,10 @@
 import '../index.css';
 import { useCart } from '../context/cartContext';
 import { imageMap } from '../utils/imageMap';
+import mastercad from '../assets/mastercard_icon.jpg';
+import visa from '../assets/visa_icon.png';
+import paypal from '../assets/paypal_icon.png';
+
 
 interface CartProps {
     toggleCart: () => void;
@@ -26,7 +30,7 @@ export function Cart({ toggleCart }: CartProps) {
                                 </div>
                                 <div className='d-flex w-100 flex-row justify-content-end gap-1 align-items-center'>
                                     <button onClick={() => decreaseQuantity(product.id)} className='p-2 px-3 fw-regular border border-1 fw-light border-black bg-transparent'>-</button>
-                                    <button onClick={() => increaseQuantity(product.id)} className='p-2 px-3 fw-regular border border-1 fw-light border-black bg-transparent'>+</button>
+                                    <button onClick={() =>  increaseQuantity(product.id)} className='p-2 px-3 fw-regular border border-1 fw-light border-black bg-transparent'>+</button>
                                 <button onClick={() => removeFromCart(product.id)} className='p-2 px-3 fw-regular border border-1 fw-light border-black bg-negro text-white'>Eliminar</button>
                                 </div>
                             </div>
@@ -40,6 +44,11 @@ export function Cart({ toggleCart }: CartProps) {
 
                 </h4>
                 <button className='p-3 px-5 my-3 fw-regular border border-1 fw-light border-black bg-negro text-white'>Comprar</button>
+                <div className='d-flex flex-row gap-1'>
+                    <img src={mastercad} className='p-1 border-1 border border-black-50' width={50} alt="" />
+                    <img src={visa} className='p-1 border-1 border border-black-50' width={50} alt="" />
+                    <img src={paypal} className='p-1 border-1 border border-black-50' width={50} alt="" />
+                </div>
             </aside>
         </div>
     );

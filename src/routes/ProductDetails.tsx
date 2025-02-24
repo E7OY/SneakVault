@@ -76,6 +76,14 @@ const ProductDetails= () => {
         });
     };
 
+    const messageCart = () => {
+        const message = document.querySelector('.message-cart') as HTMLElement;
+        message.style.display = 'block';
+        setTimeout(() => {
+            message.style.display = 'none';
+        }, 2000);
+    };
+
     return (
         <div>
             <div className="row d-flex flex-row mt-5 mx-auto justify-content-center align-items-center gap-5">
@@ -129,12 +137,22 @@ const ProductDetails= () => {
 
                     {user ? (
                         product.stock <= 0 ? (
-                            <a className='btn rounded-0 btn-dark text-danger p-3'>
+                            <>
+                            <a onClick={() => messageCart()} className='btn rounded-0 btn-dark text-danger p-3'>
                                 <img src={prohibido} className='mx-1' width={20} alt="prohibido" />
                                 Añadir a la cesta
                             </a>
+                            <div className="message-cart bg-danger text-white">
+                                Producto agotado.
+                            </div>
+                            </>
                         ) : (
-                            <a onClick={handleAddToCart} className='button' style={{ cursor: "pointer" }}>Añadir a la cesta</a>
+                            <>
+                            <a onClick={() => { handleAddToCart(); messageCart(); }} className='button' style={{ cursor: "pointer" }}>Añadir a la cesta</a>
+                            <div className="message-cart">
+                                Producto añadido al carrito
+                            </div>
+                            </>
                         )
                     ) : (
                         <a href="/register" className='button'>Inicia sesión para comprar</a>
@@ -319,7 +337,3 @@ const ProductDetails= () => {
     );
 };
 export default ProductDetails;
-
-function flyToElement(arg0: JQuery<HTMLImageElement>, arg1: JQuery<HTMLElement>) {
-    throw new Error('Function not implemented.');
-}

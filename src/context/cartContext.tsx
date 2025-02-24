@@ -12,7 +12,7 @@ interface CartItem {
 
 interface CartContextProps {
     cart: CartItem[];
-    addToCart: (product: { id: string; name: string; price: number; image: string }) => void;
+    addToCart: (product: { id: string; name: string; price: number; image: string; stock: number }) => void;
     removeFromCart: (productId: string) => void;
     increaseQuantity: (productId: string) => void;
     decreaseQuantity: (productId: string) => void;
@@ -25,7 +25,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const [cart, setCart] = useState<CartItem[]>([]);
 
     //añadir producto
-    const addToCart = (product: { id: string; name: string; price: number; image: string }) => {
+    const addToCart = (product: { id: string; name: string; price: number; image: string; stock: number }) => {
         const existingProductIndex = cart.findIndex((item) => item.id === product.id);
         //si el producto ya existe en el carrito, aumentar la cantidad
         if (existingProductIndex !== -1) {
