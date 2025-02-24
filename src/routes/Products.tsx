@@ -111,23 +111,23 @@ const Products: React.FC<ProductProps> = () => {
 
             <div className="container-fluid px-4">
                 <div className=" d-flex flex-row justify-content-between align-items-center">
-                    <h1 className='fw-bold display-5 my-2 w-auto d-inline text-nowrap'>{categoria}
+                    <h1 className='fw-light display-5 my-2 w-auto d-inline text-nowrap'>{categoria}
 
 
-                        <h2 className='fw-bold display-5 my-4 w-auto d-inline'>.{marca}
+                        <h2 className='fw-light display-5 my-4 w-auto d-inline'>.{marca}
                     
                     <>
 
                     { searchInput != "" ?
 
-                    <h2 className='fw-bold display-5 my-4 w-auto d-inline'>{`.("${searchInput}")`}</h2>
+                    <h2 className='fw-ligt text-black-50 display-5 my-4 w-auto d-inline'>{`.("${searchInput}")`}</h2>
                     
                     :
                     
                     <h2 className='fw-bold display-5 my-4 w-auto d-inline'>{``}</h2>
                     }
                     </>
-                    <h6 className='display-6 fw-regular'>{`${filteredProducts.length} resultados`}</h6>
+                    <h6 className='display-6 fw-light text-black-50'>{`${filteredProducts.length} resultados`}</h6>
                     </h2> </h1>
 
                     <form className="w-50 d-flex justify-content-center align-items-stretch flex-row" onSubmit={handleSearchSubmit}>

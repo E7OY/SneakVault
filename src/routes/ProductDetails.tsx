@@ -155,7 +155,7 @@ const ProductDetails= () => {
                             </>
                         )
                     ) : (
-                        <a href="/register" className='button'>Inicia sesión para comprar</a>
+                        <a href="/register" className='button fw-light'>Inicia sesión para comprar</a>
                     )}
 
                     <details open className="my-2 mt-5">
