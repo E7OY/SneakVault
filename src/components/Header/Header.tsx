@@ -63,6 +63,7 @@ const Header = () => {
                 </span>
             </div>
 
+        <header>
             <Navbar expand="lg" className="bg-white py-3 px-5 border-bottom border-dark">
                 <Container fluid>
                     <NavLink className="navbar-brand me-0" to="/home">
@@ -123,6 +124,7 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+            </header>
         </>
     );
 };

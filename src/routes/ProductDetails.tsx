@@ -10,8 +10,6 @@ import UserContext from '../context/userContext';
 import '../index.css';
 import { useCart } from '../context/cartContext';
 
-
-
 const ProductDetails= () => {
     const { id } = useParams<{ id: string }>();
     const [product, setProduct] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string; color: string } | null>(null);
@@ -92,6 +90,7 @@ const ProductDetails= () => {
                                 e.currentTarget.src = imageMap[product.nombre];
                             }}
                         />
+
                         <img
                             className="imagen-producto-detail"
                             src={product.imagen || imageMap[product.nombre]}
@@ -320,3 +319,7 @@ const ProductDetails= () => {
     );
 };
 export default ProductDetails;
+
+function flyToElement(arg0: JQuery<HTMLImageElement>, arg1: JQuery<HTMLElement>) {
+    throw new Error('Function not implemented.');
+}

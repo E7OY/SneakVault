@@ -74,4 +74,3 @@ src/utils/firebase.utils.tsx
 .firebaserc
 firebase.json
 bd.json
-
