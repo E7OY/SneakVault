@@ -263,7 +263,7 @@ const Home = () => {
                 </div>
 
 
-                <div className="w-100 banner-home p-5 mb-5 border-2 border border-dark text-center d-flex flex-column flex-md-row justify-content-evenly align-items-center">
+                <div className="w-100 banner-home p-5 mb-5 border-1 border border-dark text-center d-flex flex-column flex-md-row justify-content-evenly align-items-center">
                     <div className="col-12 col-md-5 py-4 mb-4 mb-md-0">
                         <img src={noctashit} className="img-fluid" width={400} style={{ transform: 'rotate(350deg)' }} alt="" />
                     </div>
@@ -384,7 +384,7 @@ const Home = () => {
                  */}
 
                 <div className="row d-flex justify-content-center gap-5 mt-5">
-                    <div className="col-12 col-md-3 info border border-black border-2 p-4 mb-md-0">
+                    <div className="col-12 col-md-3 info border border-black border-1 p-4 mb-md-0">
                         <img src={original} width={30} alt="" />
                         <div>
                             <h4 className="my-3">SneakVault Verified</h4>
@@ -395,7 +395,7 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div className="col-12 col-md-3 info border border-black border-2 p-4 mb-md-0">
+                    <div className="col-12 col-md-3 info border border-black border-1 p-4 mb-md-0">
                         <img src={envio} width={30} alt="" />
                         <div>
                             <h4 className="my-3">SneakVault Verified</h4>
@@ -406,7 +406,7 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div className="col-12 col-md-3 info border border-black border-2 p-4  mb-md-0">
+                    <div className="col-12 col-md-3 info border border-black border-1 p-4  mb-md-0">
                         <img src={devolucion} width={30} alt="" />
                         <div>
                             <h4 className="my-3">SneakVault Verified</h4>
