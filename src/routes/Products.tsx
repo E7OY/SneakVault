@@ -21,7 +21,7 @@ interface ProductProps {
 const Products: React.FC<ProductProps> = () => {
     const { categoria, marca } = useParams<{ categoria: string, marca: string }>();
     const [products, setProducts] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string }[]>([]);
-    const [orderBy, setOrderBy] = useState<'alfabetic' |'asc' | 'desc' | 'stock-asc' | 'stock-desc'>('alfabetic');
+    const [orderBy, setOrderBy] = useState<'alphabetical' |'price-asc' | 'price-desc' | 'stock-asc' | 'stock-desc'>('alphabetical');
     const [searchInput, setSearchInput] = useState('');
     const navigate = useNavigate();
     const location = useLocation();
@@ -86,16 +86,16 @@ const Products: React.FC<ProductProps> = () => {
     
 
     const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        setOrderBy(event.target.value as 'alfabetic' | 'asc' | 'desc' | 'stock-asc' | 'stock-desc');
+        setOrderBy(event.target.value as 'alphabetical' | 'price-asc' | 'price-desc' | 'stock-asc' | 'stock-desc');
     };
 
     const sortedProducts = [...filteredProducts].sort((a, b) => {
         switch (orderBy) {
-            case 'alfabetic':
+            case 'alphabetical':
                 return 0;
-            case 'asc':
+            case 'price-asc':
                 return a.precio - b.precio;
-            case 'desc':
+            case 'price-desc':
                 return b.precio - a.precio;
             case 'stock-asc':
                 return a.stock - b.stock;
@@ -144,9 +144,9 @@ const Products: React.FC<ProductProps> = () => {
 
                     <div className="d-flex align-items-center">
                         <select id="sortOrder" value={orderBy} onChange={handleSortChange} className="py-2 form-select rounded-0 border border-2 border-dark w-auto">
-                            <option value="predeter">Alfabéticamente A - Z</option>
-                            <option value="asc">Precio ascendente</option>
-                            <option value="desc">Precio descendente</option>
+                            <option value="alphabetical">Alfabéticamente A - Z</option>
+                            <option value="price-asc">Precio ascendente</option>
+                            <option value="price-desc">Precio descendente</option>
                             <option value="stock-asc">Stock ascendente</option>
                             <option value="stock-desc">Stock descendente</option>
                         </select>
