@@ -40,7 +40,7 @@ export function Cart({ toggleCart }: CartProps) {
                     ))}
                 </ul>
 
-                <h4 className='fw-regular'>Total<h4 className='d-inline float-end'> €{totalCart()} EUR</h4>
+                <h4 className='fw-light'>Total<h4 className='d-inline float-end'> €{totalCart()} EUR</h4>
 
                 </h4>
                 <button className='p-3 px-5 my-3 fw-regular border border-1 fw-light border-black bg-negro text-white'>Comprar</button>

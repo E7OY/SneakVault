@@ -10,11 +10,11 @@ interface RootLayoutProps {
   user: string;
 }
 
-const RootLayout: React.FC<RootLayoutProps> = ({ user }) => {
+const RootLayout: React.FC<RootLayoutProps> = () => {
   return (
     <>
     <UserProvider>
-      <Header user={user} />
+      <Header/>
       <main>
         <Outlet />
       </main>

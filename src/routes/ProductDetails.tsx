@@ -162,7 +162,7 @@ const ProductDetails= () => {
                         <summary className='p-2 border-bottom fw-light'>
                             Envíos
                         </summary>
-                        <h6 className='m-3 text-black-50'>
+                        <h6 className='m-3 fw-light text-black-50'>
                             Una vez que realice su pedido, espere de 1 a 2 días hábiles para procesar sus pedidos. Después de eso,
                             tomará entre 1 y 2  días hábiles para la entrega en España, y entre 3 y 5 días hábiles para los pedidos
                             Unión Europea (según la ubicación).
@@ -173,7 +173,7 @@ const ProductDetails= () => {
                     <summary className='p-2 border-bottom fw-light'>
                     Cambios Y Devoluciones
                         </summary>
-                        <h6 className='m-3 text-black-50'>
+                        <h6 className='m-3 fw-light text-black-50'>
                             En SneakVault nos esforzamos por asegurar la plena satisfacción de nuestros clientes. Si no está completamente
                             satisfecho con su compra, le ofrecemos la opción de devolver los artículos bajo las siguientes condiciones:
                             <br /><li>Plazo para devoluciones:</li> Debe retornar los artículos dentro de los 14 días hábiles siguientes a la fecha de recepción.
@@ -190,7 +190,7 @@ const ProductDetails= () => {
                     <summary className='p-2 border-bottom fw-light'>
                     Autenticidad
                         </summary>
-                        <h6 className='m-3 text-black-50'>
+                        <h6 className='m-3 fw-light text-black-50'>
                             Cada producto disponible en SneakVault está respaldado por nuestra garantía de autenticidad. Antes de
                             ser entregados, nuestros especialistas verifican minuciosamente cada artículo para asegurarse de que sea genuino.
                             Nuestra colección de productos proviene directamente de una red de distribuidores asociados que han sido elegidos
@@ -298,7 +298,7 @@ const ProductDetails= () => {
                     </div>
 
                     <br />
-                    <a className="mt-5" data-toggle="modal" data-target="#myModal">
+                    <a className="mt-5 fw-light text-decoration-none" data-toggle="modal" data-target="#myModal">
                         Guía de tallas
                     </a>
 
