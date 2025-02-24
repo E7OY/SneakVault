@@ -164,9 +164,9 @@ const Products: React.FC<ProductProps> = () => {
                                     {product.stock > 0 ? (
                                         product.stock <= 10 ?
                                             <span className='mx-3 fw-light text-danger position-absolute'>Bajo stock</span> :
-                                            <span className="text-dark mx-3 position-absolute">{product.stock} en stock</span>
+                                            <span className="text-dark mx-3 fw-light position-absolute">{product.stock} en stock</span>
                                     ) : (
-                                        <span className="text-white rounded-0 bg-dark mx-3 position-absolute">Agotado</span>
+                                        <span className="text-white fw-light rounded-0 bg-dark mx-3 position-absolute">Agotado</span>
                                     )}
                                     <img
                                         className="producto-img img-fluid p-3"
@@ -175,9 +175,9 @@ const Products: React.FC<ProductProps> = () => {
                                         onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }}
                                     />
                                     <div className="producto-info p-3">
-                                        <h6 className="text-muted mb-2">{product.categoria}</h6>
-                                        <h5 className="text-truncate fw-semibold">{product.nombre}</h5>
-                                        <p className="m-0 p-0 text-muted">{product.precio}€</p>
+                                        <h6 className="text-muted mb-2 fw-light text-black-50">{product.categoria}</h6>
+                                        <h5 className="text-truncate fw-light">{product.nombre}</h5>
+                                        <p className="m-0 p-0 text-muted fw-light text-black-50">{product.precio}€</p>
                                     </div>
                                 </Link>
                             </div>

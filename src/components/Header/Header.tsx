@@ -74,27 +74,27 @@ const Header = () => {
 
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mx-auto gap-3 py-3 py-lg-0">
-                            <Nav.Link as={NavLink} to="/home" className="fw-medium">
+                            <Nav.Link as={NavLink} to="/home" className="fw-light">
                                 HOME
                             </Nav.Link>
 
-                            <NavDropdown title="ZAPATILLAS" id="shoes-dropdown" className="fw-medium">
-                                <NavDropdown.Item as={NavLink} to="/zapatillas/nike">Nike</NavDropdown.Item>
-                                <NavDropdown.Item as={NavLink} to="/zapatillas/yeezy">Yeezy</NavDropdown.Item>
-                                <NavDropdown.Item as={NavLink} to="/zapatillas/jordan">Jordan</NavDropdown.Item>
-                                <NavDropdown.Item as={NavLink} to="/zapatillas/adidas">Adidas</NavDropdown.Item>
+                            <NavDropdown title="ZAPATILLAS" id="shoes-dropdown" className="fw-light">
+                                <NavDropdown.Item as={NavLink} to="/zapatillas/nike" className="fw-light">Nike</NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/zapatillas/yeezy" className="fw-light">Yeezy</NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/zapatillas/jordan" className="fw-light">Jordan</NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/zapatillas/adidas" className="fw-light">Adidas</NavDropdown.Item>
                                 <NavDropdown.Divider />
-                                <NavDropdown.Item as={NavLink} to="/zapatillas">Ver todas</NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/zapatillas" className="fw-light">Ver todas</NavDropdown.Item>
                             </NavDropdown>
 
-                            <NavDropdown title="CAMISETAS" id="shirts-dropdown" className="fw-medium">
-                                <NavDropdown.Item as={NavLink} to="/camisetas/off-white">Off-white</NavDropdown.Item>
-                                <NavDropdown.Item as={NavLink} to="/camisetas/supreme">Supreme</NavDropdown.Item>
-                                <NavDropdown.Item as={NavLink} to="/camisetas/nike">Nike</NavDropdown.Item>
-                                <NavDropdown.Item as={NavLink} to="/camisetas/palace">Palace</NavDropdown.Item>
-                                <NavDropdown.Item as={NavLink} to="/camisetas/stüssy">Stüssy</NavDropdown.Item>
+                            <NavDropdown title="CAMISETAS" id="shirts-dropdown" className="fw-ligh">
+                                <NavDropdown.Item as={NavLink} to="/camisetas/off-white" className="fw-light">Off-white</NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/camisetas/supreme" className="fw-light">Supreme</NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/camisetas/nike" className="fw-light">Nike</NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/camisetas/palace" className="fw-light">Palace</NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/camisetas/stüssy" className="fw-light">Stüssy</NavDropdown.Item>
                                 <NavDropdown.Divider />
-                                <NavDropdown.Item as={NavLink} to="/camisetas">Ver todas</NavDropdown.Item>
+                                <NavDropdown.Item as={NavLink} to="/camisetas" className="fw-light">Ver todas</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
 

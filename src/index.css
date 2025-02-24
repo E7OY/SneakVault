@@ -362,16 +362,8 @@ header {
 
 
 
-.imagen-producto-home {
-  height: auto;
-  object-fit: contain;
-  position: relative;
-  left: -30px;
-  bottom: 30px;
-  transform: rotate(5deg);
-}
 
-.imagen-producto:hover {
+.imagen-producto-home:hover {
   transform: rotateY(180deg);
 }
 
@@ -682,4 +674,5 @@ summary {
   border: 1px solid #010101;
   padding: 50px 70px;
   z-index: 10000;
+  margin: 10px;
 }

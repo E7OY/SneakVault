@@ -75,7 +75,7 @@ const Footer = () => {
             </div>
 
             <div className="mt-5">
-                <p className="texto-footer">SNEAKVAULT</p>
+                <p className="texto-footer fw-bolder">SNEAKVAULT</p>
             </div>
         </footer>
     );

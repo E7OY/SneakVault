@@ -127,10 +127,10 @@ const ProductDetails= () => {
                         <h5 className='bg-danger text-white d-inline-block fst-italic p-1 float-right'>Agotado</h5>}
 
                     <Link to={`/${product.categoria}/${product.marca.toLowerCase()}`}>
-                        <h4 className='fw-regular text-decoration-none negro'>{product.marca}</h4>
+                        <h4 className='fw-light text-black-50 text-decoration-none negro'>{product.marca}</h4>
                     </Link>
-                    <h2 className='display-4 mt-3 fw-bold'>{product.nombre}</h2>
-                    <h5 className=' fw-regular'>{product.descripcion}</h5>
+                    <h2 className='display-4 mt-3 fw-light'>{product.nombre}</h2>
+                    <h5 className=' fw-light text-black-50'>{product.descripcion}</h5>
                     <div className={`${product.color}-color mt-3`} data-toggle="tooltip" data-placement="top" title={`${product.color}`} >{}</div>
 
                     <h3 className='fw-light my-4'>{product.precio}€</h3>
@@ -138,7 +138,7 @@ const ProductDetails= () => {
                     {user ? (
                         product.stock <= 0 ? (
                             <>
-                            <a onClick={() => messageCart()} className='btn rounded-0 btn-dark text-danger p-3'>
+                            <a onClick={() => messageCart()} className='btn rounded-0 btn-dark fw-light text-danger p-3'>
                                 <img src={prohibido} className='mx-1' width={20} alt="prohibido" />
                                 Añadir a la cesta
                             </a>
@@ -148,7 +148,7 @@ const ProductDetails= () => {
                             </>
                         ) : (
                             <>
-                            <a onClick={() => { handleAddToCart(); messageCart(); }} className='button' style={{ cursor: "pointer" }}>Añadir a la cesta</a>
+                            <a onClick={() => { handleAddToCart(); messageCart(); }} className='button fw-light' style={{ cursor: "pointer" }}>Añadir a la cesta</a>
                             <div className="message-cart">
                                 Producto añadido al carrito
                             </div>
@@ -158,11 +158,11 @@ const ProductDetails= () => {
                         <a href="/register" className='button'>Inicia sesión para comprar</a>
                     )}
 
-                    <details className="my-2 mt-5">
-                        <summary className='p-2 border-bottom fw-bolder'>
+                    <details open className="my-2 mt-5">
+                        <summary className='p-2 border-bottom fw-light'>
                             Envíos
                         </summary>
-                        <h6 className='m-3'>
+                        <h6 className='m-3 text-black-50'>
                             Una vez que realice su pedido, espere de 1 a 2 días hábiles para procesar sus pedidos. Después de eso,
                             tomará entre 1 y 2  días hábiles para la entrega en España, y entre 3 y 5 días hábiles para los pedidos
                             Unión Europea (según la ubicación).
@@ -170,10 +170,10 @@ const ProductDetails= () => {
                     </details>
 
                     <details className="my-2">
-                        <summary className='p-2 border-bottom fw-bolder'>
-                            Cambios Y Devoluciones
+                    <summary className='p-2 border-bottom fw-light'>
+                    Cambios Y Devoluciones
                         </summary>
-                        <h6 className='m-3'>
+                        <h6 className='m-3 text-black-50'>
                             En SneakVault nos esforzamos por asegurar la plena satisfacción de nuestros clientes. Si no está completamente
                             satisfecho con su compra, le ofrecemos la opción de devolver los artículos bajo las siguientes condiciones:
                             <br /><li>Plazo para devoluciones:</li> Debe retornar los artículos dentro de los 14 días hábiles siguientes a la fecha de recepción.
@@ -187,10 +187,10 @@ const ProductDetails= () => {
                         </h6>
                     </details>
                     <details className="my-2">
-                        <summary className='p-2 border-bottom fw-bolder'>
-                            Autenticidad
+                    <summary className='p-2 border-bottom fw-light'>
+                    Autenticidad
                         </summary>
-                        <h6 className='m-3'>
+                        <h6 className='m-3 text-black-50'>
                             Cada producto disponible en SneakVault está respaldado por nuestra garantía de autenticidad. Antes de
                             ser entregados, nuestros especialistas verifican minuciosamente cada artículo para asegurarse de que sea genuino.
                             Nuestra colección de productos proviene directamente de una red de distribuidores asociados que han sido elegidos
@@ -209,7 +209,7 @@ const ProductDetails= () => {
                         <div className="modal-dialog">
                             <div className="modal-content p-3 rounded-0">
                                 <div className="modal-header">
-                                    <h4 className="text-start modal-title">Guía de Tallas {product.categoria}</h4>
+                                    <h4 className="text-start modal-title fw-medium">Guía de Tallas {product.categoria}</h4>
                                     <button type="button" className="close" data-dismiss="modal">
                                         &times;
                                     </button>
@@ -219,7 +219,7 @@ const ProductDetails= () => {
                                     <img className='imagen-producto mx-auto m-0' width={400} src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />
                                     {product.marca === 'yeezy' && (
 
-                                        <h5 className='my-4'>Para zapatillas yeezy se recomienda una talla más de la habitual.</h5>
+                                        <h5 className='my-4 text-black-50 fw-light'>Para zapatillas yeezy se recomienda una talla más de la habitual.</h5>
                                     )}
                                     <>
                                         {product.categoria === 'zapatillas' ?
@@ -323,9 +323,9 @@ const ProductDetails= () => {
                                         onError={(e) => { e.currentTarget.src = imageMap[relatedProduct.nombre] }}
                                     />
                                     <div className="p-3">
-                                        <h6 className="mb-2 text-black-50">{relatedProduct.marca}</h6>
-                                        <h5 className="text-truncate mb-2">{relatedProduct.nombre}</h5>
-                                        <h6 className="mb-0 text-black-50">Desde {relatedProduct.precio}€</h6>
+                                        <h6 className="mb-2 fw-light text-black-50">{relatedProduct.marca}</h6>
+                                        <h5 className="text-black fw-light  mb-2">{relatedProduct.nombre}</h5>
+                                        <h6 className="mb-0 fw-light text-black-50">Desde {relatedProduct.precio}€</h6>
                                     </div>
                                 </Link>
                             </div>

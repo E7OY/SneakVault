@@ -24,8 +24,8 @@ export function Cart({ toggleCart }: CartProps) {
                             <div>
                                 <div className="w-100 product-details d-flex flex-row justify-content-around align-items-center float-start">
                                     <img src={imageMap[product.name]} width={150} alt={product.name} />
-                                    <h6 className='w-50'>{product.name}
-                                    <h6 className='fw-light'>{product.price}€</h6></h6>
+                                    <h6 className='w-50 fw-light text-black'>{product.name}
+                                    <h6 className='fw-light text-black-50'>{product.price}€</h6></h6>
                                     <h6 className='p-3 border border-1 fw-light border-black float-end'>{product.quantity}</h6>
                                 </div>
                                 <div className='d-flex w-100 flex-row justify-content-end gap-1 align-items-center'>

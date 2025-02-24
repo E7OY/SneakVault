@@ -168,7 +168,7 @@ const Home = () => {
                 {/* SLIDER YEEZY */}
                 <div className="d-flex flex-row justify-content-between align-items-end">
                     <div className="">
-                        <h2 className="fw-bolder negro text-center display-6">
+                        <h2 className="fw-light negro text-center display-6">
                             YEEZY EN TENDENCIA
                         </h2>
                     </div>
@@ -183,12 +183,12 @@ const Home = () => {
                 <div className="swiper swiper-hero mb-5">
                     <div className="swiper-wrapper">
                         {productos.filter(producto => producto.categoria === 'zapatillas' && producto.marca === 'yeezy').slice(0, 10).map((producto, index) => (
-                            <div key={index} className="swiper-slide text-start">
+                            <div key={index} className="swiper-slide text-start d-flex flex-column text-left justify-content-center">
                                 <Link to={`/${producto.categoria}/${producto.marca}/${encodeURIComponent(producto.id)}`}>
-                                    <img className='imagen-producto-home' width={350} src={producto.imagen || imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />
+                                    <img className='imagen-producto-home mx-auto m-0 align-items-center w-100 h-100' src={producto.imagen || imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />
                                 </Link>
-                                <h5 className="fw-bold">{producto.nombre}</h5>
-                                <p className="text-decoration-underline">Desde {producto.precio}€</p>
+                                <h5 className="fw-light text-start mt-3">{producto.nombre}</h5>
+                                <p className="fw-light text-black-50 m-0 p-0">Desde {producto.precio}€</p>
                             </div>
                         ))}
                     </div>
@@ -200,8 +200,8 @@ const Home = () => {
                 {/* SLIDER JORDAN */}
                 <div className="d-flex flex-row justify-content-between align-items-end">
                     <div className="">
-                        <h2 className="fw-bolder negro text-center display-6">
-                            JORDAN DESTACADAS
+                    <h2 className="fw-light negro text-center display-6">
+                    JORDAN DESTACADAS
                         </h2>
                     </div>
                     <div className="">
@@ -215,12 +215,12 @@ const Home = () => {
                 <div className="swiper swiper-hero mb-5">
                     <div className="swiper-wrapper">
                         {productos.filter(producto => producto.categoria === 'zapatillas' && producto.marca === 'jordan').slice(0, 10).map((producto, index) => (
-                            <div key={index} className="swiper-slide text-start">
+                            <div key={index} className="swiper-slide text-start d-flex flex-column text-left justify-content-center">
                                 <Link to={`/${producto.categoria}/${producto.marca}/${encodeURIComponent(producto.id)}`}>
-                                    <img className='imagen-producto-home' width={350} src={producto.imagen || imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />
+                                    <img className='imagen-producto-home mx-auto m-0 align-items-center w-100 h-100' src={producto.imagen || imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />
                                 </Link>
-                                <h5 className="fw-bold">{producto.nombre}</h5>
-                                <p className="text-decoration-underline">Desde {producto.precio}€</p>
+                                <h5 className="fw-light text-start mt-3">{producto.nombre}</h5>
+                                <p className="fw-light text-black-50 m-0 p-0">Desde {producto.precio}€</p>
                             </div>
                         ))}
                     </div>
@@ -231,7 +231,7 @@ const Home = () => {
 
                 <div className="row d-flex flex-row justify-content-around align-items-center my-5">
                     <div className="col-3 w-auto marcas">
-                        <h3 className="text-center">
+                        <h3 className="text-center fw-light">
                             Yeezy
                         </h3>
                         <Link to={`/zapatillas/yeezy`}>
@@ -239,20 +239,23 @@ const Home = () => {
                         </Link>
                     </div>
                     <div className="col-3 w-auto marcas">
-                        <h3 className="text-center">Jordan</h3>
+                    <h3 className="text-center fw-light">
+                    Jordan</h3>
                         <Link to={`/zapatillas/jordan`}>
                             <img src={imageMap['Air Jordan 1 x Cactus Jack']} width={250} alt="" />
                         </Link>
                     </div>
                     <div className="col-3 w-auto marcas">
-                        <h3 className="text-center">Nike</h3>
+                    <h3 className="text-center fw-light">
+                    Nike</h3>
                         <Link to={`/zapatillas/nike`}>
                             <img src={imageMap['Nike Dunk Low Black Panda']} width={250} alt="" />
                         </Link>
 
                     </div>
                     <div className="col-3 w-auto marcas">
-                        <h3 className="text-center">Adidas</h3>
+                    <h3 className="text-center fw-light">
+                    Adidas</h3>
                         <Link to={`/zapatillas/adidas`}>
                             <img src={imageMap['Adidas Forum x Bad Bunny White']} width={250} alt="" />
                         </Link>
@@ -280,7 +283,7 @@ const Home = () => {
 
                 <div className="d-flex flex-row justify-content-between align-items-end">
                     <div className="">
-                        <h2 className="fw-bolder negro text-center display-6">
+                        <h2 className="fw-light negro text-center display-6">
                             CAMISETAS DESTACADA
                         </h2>
                     </div>
