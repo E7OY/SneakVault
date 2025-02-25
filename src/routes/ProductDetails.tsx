@@ -87,9 +87,9 @@ const ProductDetails= () => {
     return (
         <div>
             <div className="row d-flex flex-row mt-5 mx-auto justify-content-center align-items-center gap-5">
-                <div className="d-flex flex-row col-md-6 col-sm-12">
-                    <img className='imagen-producto-detail' src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />
-                    <div className="imagenes d-flex flex-column col-md-3 g-0 p-0 m-0">
+                <div className="d-flex flex-column col-md-6 col-sm-12">
+                    <img className='imagen-producto-detail col-sm-12 col-12 col-md-12' src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />
+                    <div className="imagenes d-flex flex-row col-md-12 g-0 p-0 m-0">
                         <img
                             className="imagen-producto-detail"
                             src={product.imagen || imageMap[product.nombre]}
@@ -149,7 +149,7 @@ const ProductDetails= () => {
                         ) : (
                             <>
                             <a onClick={() => { handleAddToCart(); messageCart(); }} className='button fw-light' style={{ cursor: "pointer" }}>Añadir a la cesta</a>
-                            <div className="message-cart">
+                            <div className="message-cart fw-light">
                                 Producto añadido al carrito
                             </div>
                             </>
@@ -158,7 +158,7 @@ const ProductDetails= () => {
                         <a href="/register" className='button fw-light'>Inicia sesión para comprar</a>
                     )}
 
-                    <details open className="my-2 mt-5">
+                    <details className="my-2 mt-5">
                         <summary className='p-2 border-bottom fw-light'>
                             Envíos
                         </summary>
@@ -307,7 +307,7 @@ const ProductDetails= () => {
 
             {/* Productos Relacionados */}
             <div className="container-fluid mt-5 m-5">
-                <h2 className="fw-bold mb-4">Productos Relacionados</h2>
+                <h2 className="fw-light mb-4">Productos Relacionados</h2>
                 <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 mr-5 g-0">
                     {relatedProducts.slice(0, 8).map(relatedProduct => (
                         <div className="col" key={relatedProduct.id}>

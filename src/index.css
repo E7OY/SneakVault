@@ -12,11 +12,6 @@ body {
   overflow-x: hidden;
 }
 
-
-h1 {
-  font-size: 2.5rem;
-}
-
 .text-black {
   color: #010101 !important;
 }
@@ -134,7 +129,7 @@ header {
 
 .button-yeezy {
   color: white;
-  box-shadow: 5px 5px 0px #fff;
+  box-shadow: 3px 3px 0px #fff;
 
 }
 
@@ -146,7 +141,7 @@ header {
 }
 
 .button-nocta {
-  box-shadow: 5px 5px 0px #010101;
+  box-shadow: 3px 3px 0px #010101;
   border: 2px solid white;
   transition: 1s;
 }

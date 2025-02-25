@@ -17,7 +17,7 @@ export function Cart({ toggleCart }: CartProps) {
     return (
         <div className="cart-backdrop" onClick={toggleCart}>
             <aside className='cart' onClick={(e) => e.stopPropagation()}>
-                <h4 className='fw-bold'>Cesta  ({cart.length})</h4>
+                <h4 className='fw-light'>Cesta  ({cart.length})</h4>
                 <ul className='list-unstyled p-0'>
                     {cart.map((product) => (
                         <li key={product.id} className='my-5'>
@@ -40,7 +40,7 @@ export function Cart({ toggleCart }: CartProps) {
                     ))}
                 </ul>
 
-                <h4 className='fw-light'>Total<h4 className='d-inline float-end'> €{totalCart()} EUR</h4>
+                <h4 className='fw-light'>Total<h4 className='d-inline float-end text-black-50 fw-light'> €{totalCart()} EUR</h4>
 
                 </h4>
                 <button className='p-3 px-5 my-3 fw-regular border border-1 fw-light border-black bg-negro text-white'>Comprar</button>

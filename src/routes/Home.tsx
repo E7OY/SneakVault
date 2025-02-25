@@ -8,7 +8,6 @@ import noctashit from '../assets/nocta-nrg-rf-tee-home.png';
 import original from "../assets/original.png";
 import envio from "../assets/envios.png";
 import devolucion from "../assets/devolucion.png";
-import bannerfigma from "../assets/bannerfigma.png";
 
 import { Link, NavLink, useParams } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
@@ -75,7 +74,7 @@ const Home = () => {
                 pauseOnMouseEnter: true,
                 disableOnInteraction: false,
             },
-            slidesPerView: 7,
+            slidesPerView: 1,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
@@ -124,20 +123,20 @@ const Home = () => {
     return (
         <>
 
-            <div className="banner-home mx-5 p-5 my-3 bg-negro text-white text-center d-flex flex-column flex-md-row justify-content-evenly align-items-center">
+            <div className="banner-home mx-5 p-5 py-3 my-3 border border-1 border-black text-white text-center d-flex flex-column flex-md-row justify-content-evenly align-items-center">
                 <div className="col-12 col-md-5 mb-4 mb-md-0">
-                    <h2>YEEZY</h2>
-                    <h3>La mejor zapatilla esta temporada...</h3>
-                    <p className="mb-5">
+                    <h2 className="fw-light text-black">YEEZY</h2>
+                    <h3 className="fw-light text-black">La mejor zapatilla esta temporada...</h3>
+                    <p className="mb-5 text-black-50 fw-light">
                         Puedes combinar estas zapatillas Yeezy con cualquier estilo streetwear.
                         Su diseño atemporal y su silueta única las convierten en un elemento
                         esencial para tu colección. Gracias a su tecnología innovadora,
                         te proporcionan comodidad durante todo el día.
                     </p>
-                    <a href="/zapatillas/yeezy" className="border button-yeezy border-white p-3 text-decoration-none">Comprar ahora</a>
-                </div>
+                    <a href="/camisetas/yeezy" className="border button-nocta border-black p-3 text-decoration-none negro fw-light">Comprar ahora</a>
+                    </div>
                 <div className="col-12 col-md-5">
-                    <img src={imageMap['Yeezy 350 V2 Carbon Beluga']} className="img-fluid" width={700} style={{ transform: 'rotate(10deg)'}} alt="" />
+                    <img src={imageMap['Yeezy 350 V2 Carbon Beluga']} className="" width={650} style={{ transform: 'rotate(10deg)'}} alt="" />
                 </div>
             </div>
 
@@ -161,7 +160,7 @@ const Home = () => {
                     <div className="swiper-wrapper">
                         {productos.filter(producto => producto.categoria === 'zapatillas' && producto.marca === 'yeezy').slice(0, 10).map((producto, index) => (
                             <div key={index} className="swiper-slide text-start d-flex flex-column text-left justify-content-center">
-                                <Link to={`/${producto.categoria}/${producto.marca}/${encodeURIComponent(producto.id)}`}>
+                                <Link to={`/${producto.categoria}/${producto.marca}/${producto.id}`}>
                                     <img className='imagen-producto-home mx-auto m-0 align-items-center w-100 h-100' src={producto.imagen || imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />
                                 </Link>
                                 <h5 className="fw-light text-start mt-3">{producto.nombre}</h5>
@@ -193,7 +192,7 @@ const Home = () => {
                     <div className="swiper-wrapper">
                         {productos.filter(producto => producto.categoria === 'zapatillas' && producto.marca === 'jordan').slice(0, 10).map((producto, index) => (
                             <div key={index} className="swiper-slide text-start d-flex flex-column text-left justify-content-center">
-                                <Link to={`/${producto.categoria}/${producto.marca}/${encodeURIComponent(producto.id)}`}>
+                                <Link to={`/${producto.categoria}/${producto.marca}/${producto.id}`}>
                                     <img className='imagen-producto-home mx-auto m-0 align-items-center w-100 h-100' src={producto.imagen || imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />
                                 </Link>
                                 <h5 className="fw-light text-start mt-3">{producto.nombre}</h5>
@@ -245,15 +244,15 @@ const Home = () => {
                         <img src={noctashit} className="img-fluid" width={400} style={{ transform: 'rotate(350deg)' }} alt="" />
                     </div>
                     <div className="col-12 col-md-5 negro">
-                        <h2>Nike x Nocta</h2>
-                        <h3>La mejor camiseta esta temporada...</h3>
-                        <p className="mb-5">
+                        <h2 className="fw-light">Nike x Nocta</h2>
+                        <h3 className="fw-light">La mejor camiseta esta temporada...</h3>
+                        <p className="mb-5 fw-light text-black-50">
                             Puedes combinar estas camisetas Nocta con cualquier estilo streetwear.
                             Su diseño atemporal y su silueta única las convierten en un elemento
                             esencial para tu colección. Gracias a su tecnología innovadora,
                             te proporcionan comodidad durante todo el día.
                         </p>
-                        <a href="/camisetas/nike/nocta-nrg-rf-tee" className="border button-nocta border-black p-3 text-decoration-none negro">Comprar ahora</a>
+                        <a href="/camisetas/nike/nocta-nrg-rf-tee" className="border button-nocta border-black p-3 text-decoration-none negro fw-light">Comprar ahora</a>
                     </div>
                 </div>
 
@@ -275,12 +274,12 @@ const Home = () => {
                 <div className="swiper swiper-hero mb-5">
                     <div className="swiper-wrapper">
                         {productos.filter(producto => producto.categoria === 'camisetas').slice(0, 10).map((producto, index) => (
-                            <div key={index} className="swiper-slide text-start">
-                                <Link to={`/${producto.categoria}/${producto.marca}/${encodeURIComponent(producto.id)}`}>
-                                    <img className='imagen-ropa-home' width={200} src={imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />
+                            <div key={index} className="swiper-slide text-start d-flex flex-column text-left justify-content-center">
+                                <Link to={`/${producto.categoria}/${producto.marca}/${producto.id}`}>
+                                    <img className='imagen-producto-home' width={200} src={imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />
                                 </Link>
-                                <h5 className="fw-bold">{producto.nombre}</h5>
-                                <p className="text-decoration-underline">Desde {producto.precio}€</p>
+                                <h5 className="fw-light text-start mt-3">{producto.nombre}</h5>
+                                <p className="fw-light text-black-50 m-0 p-0">Desde {producto.precio}€</p>
                             </div>
                         ))}
                     </div>
@@ -289,105 +288,65 @@ const Home = () => {
                 </div>
 
                 {/*
-                <div className="row d-flex flex-row justify-content-around align-items-center my-5">
-                <div className="col-3 w-auto marcas">
-                    <h3 className="text-center">Nike</h3>
-                    <img src={imageMap['Nike Nocta NRG Tee Oil Green']} width={250} alt="" />
-                </div>
-                <div className="col-3 w-auto marcas">
-                    <h3 className="text-center">Palace</h3>
-                    <img src={imageMap['Palace Heat Sensi Tee Navy']} width={250} alt="" />
-                </div>
-                <div className="col-3 w-auto marcas">
-                    <h3 className="text-center">Supreme</h3>
-                    <img src={imageMap['Supreme Tyler The Creator Tee White']} width={250} alt="" />
-                </div>
-                <div className="col-3 w-auto marcas">
-                    <h3 className="text-center">Off-White</h3>
-                    <img src={imageMap['Off-White x Nike 005 T-Shirts Beige']} width={250} alt="" />
-                </div>
-            </div>
-            */}
-
                 <div className="row bg-black mt-5 p-5 mx-auto m-0 d-flex gap-5 justify-content-evenly align-items-center">
                     <div className="col-12 col-md-4 py-5 mb-4 mb-md-0">
                         {user ? (
                             <>
-                                <h4 className="text-start text-white">
+                                <h4 className="text-start text-white fw-light">
                                     Tu cupón: BIENVENIDO30
                                 </h4>
-                                <span className="text-light">*Para compras superiores a 49€</span>
+                                <span className="fw-light">*Para compras superiores a 49€</span>
                             </>
                         ) : (
-                            <h4 className="text-start text-white">
+                            <h4 className="text-start fw-light text-white">
                                 Regístrate ahora y obtén un descuento del -30% en tu próxima compra
                             </h4>
                         )}
                     </div>
-                    <div className="col-12 col-md-2 p-3 text-center">
+                    <div className="col-12 w-auto col-md-2 p-3 text-center">
                         {user ? (
                             <>
-                                <button className='fw-bold bg-white text-black p-3 px-5' onClick={handleSignOut}>Cerrar Sesión en {user.email ? cutMail(user.email) : ''}</button>
+                                <button className='fw-light bg-white border-0 text-black p-3 px-5' onClick={handleSignOut}>Cerrar Sesión en {user.email ? cutMail(user.email) : ''}</button>
                             </>
                         ) : (
                             <>
-                                <NavLink to="/register" className='nav-link fw-bold bg-white text-black p-3 px-5'>
+                                <NavLink to="/register" className='nav-link fw-light bg-white text-black p-3 px-5'>
                                     Regístrate Ahora
                                 </NavLink>
                             </>
                         )}
                     </div>
                 </div>
+                */}
 
-                {/*
-                <div className="row mt-5 d-flex justify-content-start">
-                    <div className="col-12">
-                        <h2 className="fw-bold display-5 pasion negro text-start">
-                            PASIÓN POR EL HYPEBEAST
-                        </h2>
-                    </div>
-                    <div className="collage-grid">
-                        {images.map((image, index) => (
-                            <div key={index} className="collage-item">
-                                <img
-                                    src={image}
-                                    className="collage-img"
-                                    alt={`image-${index}`}
-                                />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                 */}
-
-                <div className="row d-flex justify-content-center gap-5 mt-5">
-                    <div className="col-12 col-md-3 info border border-black border-1 p-4 mb-md-0">
-                        <img src={original} width={30} alt="" />
+                <div className="row d-flex justify-content-around mt-5 m-0 p-0">
+                <div className="col-12 col-md-4 info p-4  mb-md-0" style={{ outline: "1px solid #010101", boxSizing: "border-box", backgroundColor: "#fff" }}>
+                <img src={original} width={30} alt="" />
                         <div>
-                            <h4 className="my-3">SneakVault Verified</h4>
-                            <p>
+                            <h4 className="my-3 fw-light">SneakVault Verified</h4>
+                            <p className="fw-light text-black-50">
                                 SneakVault Verified es nuestra propia designación y significa que inspeccionamos cada artículo, cada vez.
                                 SneakVault Verified es nuestra propia designación y significa que inspeccionamos cada artículo, cada vez. Aprende más
                             </p>
                         </div>
                     </div>
 
-                    <div className="col-12 col-md-3 info border border-black border-1 p-4 mb-md-0">
-                        <img src={envio} width={30} alt="" />
+                    <div className="col-12 col-md-4 info p-4  mb-md-0" style={{ outline: "1px solid #010101", boxSizing: "border-box", backgroundColor: "#fff" }}>
+                    <img src={envio} width={30} alt="" />
                         <div>
-                            <h4 className="my-3">SneakVault Verified</h4>
-                            <p>
+                        <h4 className="my-3 fw-light">SneakVault Verified</h4>
+                        <p className="fw-light text-black-50">
                                 Ofrecemos envíos rápidos y seguros para que recibas tus productos lo antes posible.
                                 Ofrecemos envíos rápidos y seguros para que recibas tus productos lo antes posible. Aprende más
                             </p>
                         </div>
                     </div>
 
-                    <div className="col-12 col-md-3 info border border-black border-1 p-4  mb-md-0">
-                        <img src={devolucion} width={30} alt="" />
+                    <div className="col-12 col-md-4 info p-4  mb-md-0" style={{ outline: "1px solid #010101", boxSizing: "border-box", backgroundColor: "#fff" }}>
+                    <img src={devolucion} width={30} alt="" />
                         <div>
-                            <h4 className="my-3">SneakVault Verified</h4>
-                            <p>
+                        <h4 className="my-3 fw-light">SneakVault Verified</h4>
+                        <p className="fw-light text-black-50">
                                 Facilitamos las devoluciones para que puedas comprar con confianza.
                                 Facilitamos las devoluciones para que puedas comprar con confianza. Aprende más
                             </p>

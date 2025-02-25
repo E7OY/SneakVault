@@ -4,7 +4,6 @@ import UserContext from '../context/userContext';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { signInWithGooglePopup } from '../utils/firebase.utils';
 import logogoogle from '../assets/logogoogle.png';
-
 import show from '../assets/show.png';
 import hide from '../assets/hide.png';
 
@@ -73,8 +72,8 @@ const Register = () => {
     return (
         <div className="register my-5 p-5">
             <div className="row mx-auto">
-                <div className="mx-auto col-12 col-md-6 border border-2 border-black py-5 d-flex text-center flex-column justify-content-center">
-                    <h3 className='fw-bold mt-4'>{isSignUpMode ? 'INICIA SESIÓN CON TU CUENTA' : 'CREAR UNA CUENTA'}</h3>
+                <div className="mx-auto col-12 col-md-6 border border-1 border-black py-5 d-flex text-center flex-column justify-content-center">
+                    <h3 className='fw-light mt-4'>{isSignUpMode ? 'INICIA SESIÓN CON TU CUENTA' : 'CREAR UNA CUENTA'}</h3>
                     <h6 className='my-3 fw-light'>{isSignUpMode ? 'Accede con tu usuario (e-mail) y contraseña' : 'Registrate y consigue un 10% de descuento'}</h6>
                     {user ? (
                         <Navigate to='/home' replace />
@@ -189,7 +188,7 @@ const Register = () => {
                                     :
                                     null
                                 }
-                                <div className="col-4 d-flex flex-row w-auto mx-auto justify-content-center align-items-center py-2 px-2">
+                                <div className="col-12 d-flex flex-row w-auto mx-auto justify-content-center align-items-center py-2 px-2">
                                     <a className='text-black-50 fw-light' onClick={() => setIsSignUpMode(!isSignUpMode)}>
                                         {isSignUpMode ? '¿No tienes cuenta? Cree una aquí' : 'Ya tienes cuenta? Inicia Sesión'}
                                     </a>

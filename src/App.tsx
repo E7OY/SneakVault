@@ -16,7 +16,7 @@ const App = () => {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <RootLayout user={user} />,
+      element: <RootLayout user={''}/>,
       errorElement: <ErrorPage />,
       children: [
         {
@@ -29,7 +29,7 @@ const App = () => {
         },
         {
           path: 'register',
-          element: <Register setUser={setUser} />,
+          element: <Register/>,
         },
         {
           path: ':categoria',

@@ -67,7 +67,7 @@ const Header = () => {
             <Navbar expand="lg" className="bg-white py-3 px-5 border-bottom border-dark">
                 <Container fluid>
                     <NavLink className="navbar-brand me-0" to="/home">
-                        <h2 className="mb-0 fw-light">SneakVault</h2>
+                        <h1 className="mb-0 fw-light">SneakVault</h1>
                     </NavLink>
 
                     <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-dark" />
@@ -107,8 +107,8 @@ const Header = () => {
                                     >
                                         Cerrar Sesión
                                     </button>
-                                    <button onClick={toggleCart} className='bg-transparent border-2 px-3 border-dark '>
-                                        <img src={carrito} width={25} alt="Carrito" />
+                                    <button onClick={toggleCart} className='bg-transparent border-1 px-3 border-dark '>
+                                        <img src={carrito} width={35} alt="Carrito" />
                                     </button>
                                     {isCartOpen && <Cart toggleCart={toggleCart} />}
                                 </>

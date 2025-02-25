@@ -111,26 +111,21 @@ const Products: React.FC<ProductProps> = () => {
 
             <div className="container-fluid px-4">
                 <div className=" d-flex flex-row justify-content-between align-items-center">
-                    <h1 className='fw-light display-5 my-2 w-auto d-inline text-nowrap'>{categoria}
 
-
+                    <h1 className='col-4 col-sm-12 fw-light display-5 my-2 w-auto d-inline text-nowrap'>{categoria}
                         <h2 className='fw-light display-5 my-4 w-auto d-inline'>.{marca}
                     
-                    <>
-
-                    { searchInput != "" ?
-
-                    <h2 className='fw-ligt text-black-50 display-5 my-4 w-auto d-inline'>{`.("${searchInput}")`}</h2>
-                    
+                     { searchInput != "" ?
+                        <h2 className='fw-ligt text-black-50 display-5 my-4 w-auto d-inline'>{`.("${searchInput}")`}</h2>
                     :
-                    
-                    <h2 className='fw-bold display-5 my-4 w-auto d-inline'>{``}</h2>
+                        <h2 className='fw-bold display-5 my-4 w-auto d-inline'>{``}</h2>
                     }
-                    </>
-                    <h6 className='display-6 fw-light text-black-50'>{`${filteredProducts.length} resultados`}</h6>
-                    </h2> </h1>
 
-                    <form className="w-50 d-flex justify-content-center align-items-stretch flex-row" onSubmit={handleSearchSubmit}>
+                        <h6 className='display-6 fw-light text-black-50'>{`${filteredProducts.length} resultados`}</h6>
+                        </h2> 
+                    </h1>
+
+                    <form className="col-4 col-sm-12 w-50 d-flex justify-content-center align-items-stretch flex-row" onSubmit={handleSearchSubmit}>
                         <input
                             className="searchInput rounded-0 p-2 border-1 w-75 fw-light text-black-50 border-black"
                             type="search"
@@ -139,10 +134,9 @@ const Products: React.FC<ProductProps> = () => {
                             value={searchInput}
                             onChange={(e) => setSearchInput(e.target.value)}
                         />
-
                     </form>
 
-                    <div className="d-flex align-items-center">
+                    <div className="col-4 col-sm-12 d-flex align-items-center">
                         <select id="sortOrder" value={orderBy} onChange={handleSortChange} className="py-2 form-select fw-light rounded-0 border border-1 border-dark w-auto">
                             <option value="alphabetical">Alfabéticamente A - Z</option>
                             <option value="price-asc">Precio ascendente</option>
