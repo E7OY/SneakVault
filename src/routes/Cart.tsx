@@ -4,6 +4,7 @@ import { imageMap } from '../utils/imageMap';
 import mastercad from '../assets/mastercard_icon.jpg';
 import visa from '../assets/visa_icon.png';
 import paypal from '../assets/paypal_icon.png';
+import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 'react';
 
 
 interface CartProps {
@@ -16,14 +17,14 @@ export function Cart({ toggleCart }: CartProps) {
 
     return (
         <div className="d-flex justify-content-center" onClick={toggleCart}>
-            <div className='cart border border-1 border-black' onClick={(e) => e.stopPropagation()}>
+            <div className='cart border border-1 border-black m-5'>
                 <h4 className='fw-light'>Cesta  ({cart.length})</h4>
                 <ul className='list-unstyled p-0'>
                     {cart.map((product) => (
                         <li key={product.id} className='my-5'>
                             <div>
                                 <div className="w-100 product-details d-flex flex-row justify-content-around align-items-center float-start">
-                                    <img src={imageMap[product.name]} width={150} alt={product.name} />
+                                    <img src={imageMap[product.name]} width={200} alt={product.name} />
                                     <h6 className='w-50 fw-light text-black'>{product.name}
                                     <h6 className='fw-light text-black-50'>{product.price}€</h6></h6>
                                     <h6 className='p-3 border border-1 fw-light border-black float-end'>{product.quantity}</h6>

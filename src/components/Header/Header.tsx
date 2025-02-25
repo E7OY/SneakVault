@@ -7,7 +7,6 @@ import '../../index.css';
 import './Header.css';
 import { getAuth, signOut } from 'firebase/auth';
 import UserContext from '../../context/userContext';
-import { Cart } from '../../routes/Cart';
 import carrito from '../../assets/carrito.png';
 
 const Header = () => {
