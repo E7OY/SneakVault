@@ -39,6 +39,10 @@ const App = () => {
           element: <Register/>,
         },
         {
+          path: 'search',
+          element: <Products products={[]} />,
+        },
+        {
           path: ':categoria',
           element: <Products products={[]} />,
         },

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { db } from '../utils/firebase.utils';
 import { onValue, ref } from 'firebase/database';
-import { Link, useNavigate, useParams, useLocation } from 'react-router-dom';
+import { Link, useParams, useLocation } from 'react-router-dom';
 import { imageMap } from '../utils/imageMap';
 import '../index.css';
 
@@ -21,9 +21,8 @@ interface ProductProps {
 const Products: React.FC<ProductProps> = () => {
     const { categoria, marca } = useParams<{ categoria: string, marca: string }>();
     const [products, setProducts] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string }[]>([]);
-    const [orderBy, setOrderBy] = useState<'alphabetical' |'price-asc' | 'price-desc' | 'stock-asc' | 'stock-desc'>('alphabetical');
+    const [orderBy, setOrderBy] = useState<'alphabetical' | 'price-asc' | 'price-desc' | 'stock-asc' | 'stock-desc'>('alphabetical');
     const [searchInput, setSearchInput] = useState('');
-    const navigate = useNavigate();
     const location = useLocation();
 
     useEffect(() => {
@@ -73,17 +72,12 @@ const Products: React.FC<ProductProps> = () => {
         }
     }, [location.search]);
 
-    const handleSearchSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        navigate(`?query=${encodeURIComponent(searchInput)}`);
-    };
-
     /*filtrar productos por nombre o descripcion*/
     const filteredProducts = products.filter(product =>
         product.nombre.toLowerCase().includes(searchInput.toLowerCase()) ||
         product.descripcion.toLowerCase().includes(searchInput.toLowerCase())
     );
-    
+
 
     const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setOrderBy(event.target.value as 'alphabetical' | 'price-asc' | 'price-desc' | 'stock-asc' | 'stock-desc');
@@ -112,32 +106,14 @@ const Products: React.FC<ProductProps> = () => {
             <div className="container-fluid px-4">
                 <div className="row m-0 p-0 w-auto  d-flex flex-row justify-content-between align-items-center">
 
-                <div className="col-4 w-auto">
-                    <h2 className='fw-light display-6 my-2 w-auto d-inline text-nowrap'>{categoria}
-                        <h3 className='fw-light display-6 my-4 w-auto d-inline'>.{marca}
-                    
-                     { searchInput != "" ?
-                        <h3 className='fw-ligt text-black-50 display-6 my-4 w-auto d-inline'>{`.("${searchInput}")`}</h3>
-                    :
-                        <h3 className='fw-bold display-6 my-4 w-auto d-inline'>{``}</h3>
-                    }
-
-                        <p className='display-6 fw-light text-black-50'>{`${filteredProducts.length} resultados`}</p>
-                        </h3> 
-                    </h2>
-                    </div>
-
                     <div className="col-4 w-auto">
-                    <form className="d-flex justify-content-center align-items-stretch flex-row" onSubmit={handleSearchSubmit}>
-                        <input
-                            className="searchInput rounded-0 p-2 border-1 w-auto fw-light text-black-50 border-black"
-                            type="search"
-                            placeholder="Buscar"
-                            aria-label="Search"
-                            value={searchInput}
-                            onChange={(e) => setSearchInput(e.target.value)}
-                        />
-                    </form>
+                        <h2 className='fw-light display-6 my-2 w-auto d-inline text-nowrap'>{categoria}</h2>
+                        {searchInput !== '' ? (
+                            <p className='display-6 fw-light text-black-50'>{`"${searchInput}" ${filteredProducts.length} resultados`}</p>
+                        ) : (
+                            <p className='display-6 fw-light text-black-50'>{`${filteredProducts.length} resultados`}</p>
+                        )
+                        }
                     </div>
 
                     <div className="col-4 w-auto col-sm-12 d-flex align-items-center">
@@ -151,13 +127,12 @@ const Products: React.FC<ProductProps> = () => {
                     </div>
 
                 </div>
-                    
 
                 <div className="row w-100 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-0 z-0">
                     {sortedProducts.map(product => (
                         <div className="col" key={product.id}>
                             <div className="producto-card bg-white h-100 w-100 p-1">
-                                <Link to={`/${product.categoria}/${product.marca}/${encodeURIComponent(product.id)}`}
+                                <Link to={`/${product.categoria}/${product.marca}/${product.id}`}
                                     className="text-decoration-none text-dark">
                                     {product.stock > 0 ? (
                                         product.stock <= 10 ?

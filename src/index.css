@@ -652,3 +652,15 @@ summary {
   z-index: 10000;
   margin: 10px;
 }
+
+
+
+
+
+
+
+.searchInput {
+  border-radius: 4px;
+  width: 500px;
+}
+
