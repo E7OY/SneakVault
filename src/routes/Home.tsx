@@ -90,34 +90,10 @@ const Home = () => {
         });
     }, []);
 
-
-
-    function cutMail(email: string | string[]): string | string[] {
-        if (typeof email === 'string') {
-            for (let i = 0; i < email.length; i++) {
-                if (email[i] === '@') {
-                    return email.slice(0, i);
-                }
-            }
-        }
-        return email;
-    }
-
     const userContext = useContext(UserContext);
     const user = userContext?.user || null;
     const setUser = userContext?.setUser || (() => { });
-    const errorMessage = document.querySelectorAll('.error-message');
 
-    const handleSignOut = async () => {
-        try {
-            await signOut(getAuth());
-            setUser(null);
-        } catch (error) {
-            Array.from(errorMessage).forEach((element) => {
-                element.textContent = 'Error al cerrar sesión: ' + error;
-            });
-        }
-    };
 
 
     return (

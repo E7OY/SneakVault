@@ -4,8 +4,6 @@ import { imageMap } from '../utils/imageMap';
 import mastercad from '../assets/mastercard_icon.jpg';
 import visa from '../assets/visa_icon.png';
 import paypal from '../assets/paypal_icon.png';
-import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 'react';
-
 
 interface CartProps {
     toggleCart: () => void;
