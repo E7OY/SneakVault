@@ -99,7 +99,7 @@ const Home = () => {
     return (
         <>
 
-            <div className="banner-home mx-5 p-5 py-3 my-3 border border-1 border-black text-white text-center d-flex flex-column flex-md-row justify-content-evenly align-items-center">
+            <div className="banner-home m-5 p-5 py-3 border border-1 border-black text-white text-center d-flex flex-column flex-md-row justify-content-evenly align-items-center">
                 <div className="col-12 col-md-5 mb-4 mb-md-0">
                     <h2 className="fw-light text-black">YEEZY</h2>
                     <h3 className="fw-light text-black">La mejor zapatilla esta temporada...</h3>
@@ -109,7 +109,7 @@ const Home = () => {
                         esencial para tu colección. Gracias a su tecnología innovadora,
                         te proporcionan comodidad durante todo el día.
                     </p>
-                    <a href="/camisetas/yeezy" className="border button-nocta border-black p-3 text-decoration-none negro fw-light">Comprar ahora</a>
+                    <a href="/zapatillas/yeezy" className="border button-nocta border-black p-3 text-decoration-none negro fw-light">Comprar ahora</a>
                     </div>
                 <div className="col-12 col-md-5">
                     <img src={imageMap['Yeezy 350 V2 Carbon Beluga']} className="" width={650} style={{ transform: 'rotate(10deg)'}} alt="" />
