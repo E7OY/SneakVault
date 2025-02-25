@@ -4,7 +4,6 @@ import UserContext from '../context/userContext';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { signInWithGooglePopup } from '../utils/firebase.utils';
 import logogoogle from '../assets/logogoogle.png';
-import logoapple from '../assets/logoapple.png';
 
 import show from '../assets/show.png';
 import hide from '../assets/hide.png';
@@ -76,7 +75,7 @@ const Register = () => {
             <div className="row mx-auto">
                 <div className="mx-auto col-12 col-md-6 border border-2 border-black py-5 d-flex text-center flex-column justify-content-center">
                     <h3 className='fw-bold mt-4'>{isSignUpMode ? 'INICIA SESIÓN CON TU CUENTA' : 'CREAR UNA CUENTA'}</h3>
-                    <h6 className='my-3'>{isSignUpMode ? 'Accede con tu usuario (e-mail) y contraseña' : 'Registrate y consigue un 10% de descuento'}</h6>
+                    <h6 className='my-3 fw-light'>{isSignUpMode ? 'Accede con tu usuario (e-mail) y contraseña' : 'Registrate y consigue un 10% de descuento'}</h6>
                     {user ? (
                         <Navigate to='/home' replace />
                     ) : (
@@ -85,11 +84,11 @@ const Register = () => {
                                 {isSignUpMode ? (
                                     <>
                                         <div className='form-field w-75 d-flex gap-0 mx-auto'>
-                                            <label htmlFor='email' id='email'><h6>Dirección de correo electrónico *</h6></label>
-                                            <input type='text' className='p-1' name='email' id='email' required value={email} onChange={(e) => setEmail(e.target.value)} />
+                                            <label htmlFor='email' id='email'><h6 className='fw-light text-black-50'>Dirección de correo electrónico *</h6></label>
+                                            <input type='text' className='p-1 fw-light' name='email' id='email' required value={email} onChange={(e) => setEmail(e.target.value)} />
                                         </div>
                                         <div className='form-field w-75 d-flex gap-0 mx-auto'>
-                                        <label htmlFor='password' id='password'><h6>Contraseña *</h6></label>
+                                        <label htmlFor='password' id='password'><h6 className='fw-light text-black-50'>Contraseña *</h6></label>
                                         <div>
                                             <input
                                                 type={showPassword ? 'text' : 'password'}
@@ -111,34 +110,34 @@ const Register = () => {
                                     <>
                                     
                                     <div className='form-field'>
-                                        <label htmlFor='gender'><h6>Género </h6></label>
+                                        <label htmlFor='gender'><h6 className='fw-light text-black-50'>Género </h6></label>
                                         <div className='form-field w-75 d-flex justify-content-start flex-row gap-4 mx-auto'>
                                             <div>
                                                 <input type='radio' name='gender' id='hombre' value='Hombre'/>
-                                                <label htmlFor='hombre'><h6 className='text-black-50 mx-1 fw-light'>Hombre</h6></label>
+                                                <label htmlFor='hombre'><h6 className='text-black-50 mx-1 fw-lighter'>Hombre</h6></label>
                                             </div>
                                             <div>
                                                 <input type='radio' name='gender' id='mujer' value='Mujer'/>
-                                                <label htmlFor='mujer'><h6 className='text-black-50 mx-1 fw-light'>Mujer</h6></label>
+                                                <label htmlFor='mujer'><h6 className='text-black-50 mx-1 fw-lighter'>Mujer</h6></label>
                                             </div>
                                             <div>
                                                 <input type='radio' name='gender' id='otro' value='Otro'/>
-                                                <label htmlFor='otro'><h6 className='text-black-50 mx-1 fw-light'>Otro</h6></label>
+                                                <label htmlFor='otro'><h6 className='text-black-50 mx-1 fw-lighter'>Otro</h6></label>
                                             </div>
                                         </div>
                                         </div>
 
                                         <div className='form-field  w-75 d-flex gap-0 mx-auto'>
-                                            <label htmlFor='email' id='email'><h6>Email *</h6></label>
-                                            <input type='text' className='p-1'  name='email' id='email' required value={email} onChange={(e) => setEmail(e.target.value)} />
+                                            <label htmlFor='email' id='email'><h6 className='fw-light text-black-50'>Email *</h6></label>
+                                            <input type='text' className='p-1 fw-light'  name='email' id='email' required value={email} onChange={(e) => setEmail(e.target.value)} />
                                         </div>
 
                                         <div className='form-field w-75 d-flex gap-0 mx-auto'>
-                                        <label htmlFor='password' id='password'><h6>Contraseña *</h6></label>
+                                        <label htmlFor='password' id='password'><h6 className='fw-light text-black-50'>Contraseña *</h6></label>
                                         <div>
                                             <input
                                                 type={showPassword ? 'text' : 'password'}
-                                                className='p-1 w-75'
+                                                className='p-1 w-75 fw-light'
                                                 name='password'
                                                 id='password'
                                                 required
@@ -152,16 +151,16 @@ const Register = () => {
                                     </div>
 
                                         <div className='form-field  w-75 d-flex gap-0 mx-auto'>
-                                            <label htmlFor='username' id='username'><h6>Nombre de Usuario *</h6></label>
-                                            <input type='text' className='p-1'  name='username' id='username' required value={username} onChange={(e) => setUsername(e.target.value)} />
+                                            <label htmlFor='username' id='username'><h6 className='fw-light text-black-50'>Nombre de Usuario *</h6></label>
+                                            <input type='text' className='p-1 fw-light'  name='username' id='username' required value={username} onChange={(e) => setUsername(e.target.value)} />
                                         </div>
                                         <div className='form-field  w-75 d-flex gap-0 mx-auto'>
-                                            <label htmlFor='name' id='name'><h6>Nombre y apellidos *</h6></label>
-                                            <input type='text' className='p-1'  name='name' id='name' required value={name} onChange={(e) => setName(e.target.value)} />
+                                            <label htmlFor='name' id='name'><h6 className='fw-light text-black-50'>Nombre y apellidos *</h6></label>
+                                            <input type='text' className='p-1 fw-light'  name='name' id='name' required value={name} onChange={(e) => setName(e.target.value)} />
                                         </div>
                                         <div className='form-field  w-75 d-flex gap-0 mx-auto'>
-                                            <label htmlFor='date' id='date'><h6>Fecha de Nacimiento *</h6></label>
-                                            <input type='date' className='p-1'  name='date' id='date' required value={date} onChange={(e) => setDate(e.target.value)} />
+                                            <label htmlFor='date' id='date'><h6 className='fw-light text-black-50'>Fecha de Nacimiento *</h6></label>
+                                            <input type='date' className='p-1 fw-light'  name='date' id='date' required value={date} onChange={(e) => setDate(e.target.value)} />
                                         </div>
 
                                         <div className='form-field w-75 d-flex justify-content-start align-items-start flex-row gap-1 mx-auto mt-3'>
@@ -173,7 +172,7 @@ const Register = () => {
                                     </>
                                 }
                                 <div className="error"></div>
-                                <button type='submit' className='button fw-regular w-75 mx-auto'>{isSignUpMode ? 'Iniciar Sesión' : 'Registrarse'}</button>
+                                <button type='submit' className='button fw-light w-75 mx-auto'>{isSignUpMode ? 'Iniciar Sesión' : 'Registrarse'}</button>
                             </div>
                         </Form>
                     )}
@@ -184,14 +183,14 @@ const Register = () => {
                                 {isSignUpMode ?
                                     <div className="row mx-auto w-75">
                                         <div onClick={loginGoogle} className="col-12 button-google d-flex flex-row justify-content-center align-items-center py-3 gap-4 px-3">
-                                            <img src={logogoogle} className=' ' width={20} alt="" /> Entrar con Google
+                                            <img src={logogoogle} className='fw-light' width={20} alt="" /> <h6 className='p-0 m-0 fw-light'>Entrar con Google</h6> 
                                         </div>
                                     </div> 
                                     :
                                     null
                                 }
                                 <div className="col-4 d-flex flex-row w-auto mx-auto justify-content-center align-items-center py-2 px-2">
-                                    <a className='text-black-50' onClick={() => setIsSignUpMode(!isSignUpMode)}>
+                                    <a className='text-black-50 fw-light' onClick={() => setIsSignUpMode(!isSignUpMode)}>
                                         {isSignUpMode ? '¿No tienes cuenta? Cree una aquí' : 'Ya tienes cuenta? Inicia Sesión'}
                                     </a>
                                 </div>

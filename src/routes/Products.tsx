@@ -132,7 +132,7 @@ const Products: React.FC<ProductProps> = () => {
 
                     <form className="w-50 d-flex justify-content-center align-items-stretch flex-row" onSubmit={handleSearchSubmit}>
                         <input
-                            className="searchInput rounded-0 p-2 border-1 w-75 border-black"
+                            className="searchInput rounded-0 p-2 border-1 w-75 fw-light text-black-50 border-black"
                             type="search"
                             placeholder="Buscar"
                             aria-label="Search"
@@ -143,7 +143,7 @@ const Products: React.FC<ProductProps> = () => {
                     </form>
 
                     <div className="d-flex align-items-center">
-                        <select id="sortOrder" value={orderBy} onChange={handleSortChange} className="py-2 form-select rounded-0 border border-1 border-dark w-auto">
+                        <select id="sortOrder" value={orderBy} onChange={handleSortChange} className="py-2 form-select fw-light rounded-0 border border-1 border-dark w-auto">
                             <option value="alphabetical">Alfabéticamente A - Z</option>
                             <option value="price-asc">Precio ascendente</option>
                             <option value="price-desc">Precio descendente</option>

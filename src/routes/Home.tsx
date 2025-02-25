@@ -5,10 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 
 import noctashit from '../assets/nocta-nrg-rf-tee-home.png';
-
 import original from "../assets/original.png";
 import envio from "../assets/envios.png";
 import devolucion from "../assets/devolucion.png";
+import bannerfigma from "../assets/bannerfigma.png";
 
 import { Link, NavLink, useParams } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
@@ -123,29 +123,6 @@ const Home = () => {
 
     return (
         <>
-            {/* 
-        <div className="swiperBanners swiper-banner mb-5">
-            <div className="swiper-wrapper p-0">
-                <div className="swiper-slide text-start">
-                    <img src={shoksnike} alt="" />
-                </div>
-                <div className="swiper-slide ">
-                    <img src={newbalancebanner} alt="" />
-                </div>
-                <div className="swiper-slide ">
-                    <img src={bannercjmocha} alt="" />
-                </div>
-                <div className="swiper-slide ">
-                    <img src={airjordanbanner} alt="" />
-                </div>
-                <div className="swiper-slide ">
-                    <img src={bannercj} alt="" />
-                </div>
-            </div>
-            <div className="swiper-button-prev text-black border border-1 border-black"></div>
-            <div className="swiper-button-next text-black border border-1 border-black"></div>
-        </div>
-        */}
 
             <div className="banner-home mx-5 p-5 my-3 bg-negro text-white text-center d-flex flex-column flex-md-row justify-content-evenly align-items-center">
                 <div className="col-12 col-md-5 mb-4 mb-md-0">

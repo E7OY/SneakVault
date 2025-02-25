@@ -56,10 +56,10 @@ const Header = () => {
         <>
             <div className="bg-black text-white w-100 text-center py-4 moving-container">
                 <span className="moving-text">
-                    <h6>Últimas Rebajas de invierno hasta -60%</h6>
-                    <h6>Off-White -45% en productos seleccionados</h6>
-                    <h6>Envíos Gratis a partir de 50€</h6>
-                    <h6>Jordan x Cactus jack disponibles</h6>
+                    <h6 className='fw-light'>Últimas Rebajas de invierno hasta -60%</h6>
+                    <h6 className='fw-light'>Off-White -45% en productos seleccionados</h6>
+                    <h6 className='fw-light'>Envíos Gratis a partir de 50€</h6>
+                    <h6 className='fw-light'>Jordan x Cactus jack disponibles</h6>
                 </span>
             </div>
 
@@ -67,7 +67,7 @@ const Header = () => {
             <Navbar expand="lg" className="bg-white py-3 px-5 border-bottom border-dark">
                 <Container fluid>
                     <NavLink className="navbar-brand me-0" to="/home">
-                        <h2 className="mb-0 fw-bold">SneakVault</h2>
+                        <h2 className="mb-0 fw-light">SneakVault</h2>
                     </NavLink>
 
                     <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-dark" />
@@ -102,7 +102,7 @@ const Header = () => {
                             {user ? (
                                 <>
                                     <button
-                                        className="button rounded-0"
+                                        className="button fw-light rounded-0"
                                         onClick={handleSignOut}
                                     >
                                         Cerrar Sesión
@@ -115,7 +115,7 @@ const Header = () => {
                             ) : (
                                 <NavLink
                                     to="/register"
-                                    className="button"
+                                    className="button fw-light"
                                 >
                                     Iniciar Sesión
                                 </NavLink>
