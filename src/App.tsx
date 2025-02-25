@@ -9,6 +9,7 @@ import Products from './routes/Products';
 import ProductDetails from './routes/ProductDetails';
 
 import {CartProvider} from './context/cartContext';
+import { Cart } from './routes/Cart';
 
 const App = () => {
   const [user, setUser] = useState<{ displayName?: string; email: string } | null>(null);
@@ -26,6 +27,12 @@ const App = () => {
         {
           path: 'home',
           element: <Home />,
+        },
+        {
+          path: 'cart',
+          element: <Cart toggleCart={function (): void {
+            throw new Error('Function not implemented.');
+          } } />,
         },
         {
           path: 'register',

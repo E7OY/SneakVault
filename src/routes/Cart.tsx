@@ -15,8 +15,8 @@ export function Cart({ toggleCart }: CartProps) {
     const { cart, removeFromCart, increaseQuantity, decreaseQuantity, totalCart } = useCart();
 
     return (
-        <div className="cart-backdrop" onClick={toggleCart}>
-            <aside className='cart' onClick={(e) => e.stopPropagation()}>
+        <div className="d-flex justify-content-center" onClick={toggleCart}>
+            <div className='cart border border-1 border-black' onClick={(e) => e.stopPropagation()}>
                 <h4 className='fw-light'>Cesta  ({cart.length})</h4>
                 <ul className='list-unstyled p-0'>
                     {cart.map((product) => (
@@ -49,7 +49,7 @@ export function Cart({ toggleCart }: CartProps) {
                     <img src={visa} className='p-1 border-1 border border-black-50' width={50} alt="" />
                     <img src={paypal} className='p-1 border-1 border border-black-50' width={50} alt="" />
                 </div>
-            </aside>
+            </div>
         </div>
     );
 }

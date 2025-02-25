@@ -107,10 +107,11 @@ const Header = () => {
                                     >
                                         Cerrar Sesión
                                     </button>
-                                    <button onClick={toggleCart} className='bg-transparent border-1 px-3 border-dark '>
+                                    <NavLink to="/cart">
+                                    <button onClick={toggleCart} className='bg-transparent border-1 p-3 border-dark '>
                                         <img src={carrito} width={35} alt="Carrito" />
                                     </button>
-                                    {isCartOpen && <Cart toggleCart={toggleCart} />}
+                                    </NavLink>
                                 </>
                             ) : (
                                 <NavLink
