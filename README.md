@@ -24,3 +24,7 @@ Este proyecto consiste en una aplicación web de venta de zapatillas y camisetas
 ## Instalación y Configuración
 
 1. **Clonar el Repositorio:**
+
+![FireShot Capture 050 - SneakVault - localhost](https://github.com/user-attachments/assets/edf41732-55fe-456d-b252-bd9511f3af8f)
+
+![FireShot Capture 051 - SneakVault - localhost](https://github.com/user-attachments/assets/27ae6f2e-ad19-469d-b319-b8b175c80c1d)
