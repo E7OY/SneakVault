@@ -1,2 +1,1 @@
 make all the website responsive
-change images format to webp
