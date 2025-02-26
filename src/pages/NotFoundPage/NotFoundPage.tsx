@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import './NotFoundPage.css';
-import error from '../../assets/404.png';
+import error from '../../assets/404.webp';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

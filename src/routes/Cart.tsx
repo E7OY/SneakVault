@@ -1,9 +1,9 @@
 import '../index.css';
 import { useCart } from '../context/cartContext';
 import { imageMap } from '../utils/imageMap';
-import mastercad from '../assets/mastercard_icon.jpg';
-import visa from '../assets/visa_icon.png';
-import paypal from '../assets/paypal_icon.png';
+import mastercad from '../assets/mastercard_icon.webp';
+import visa from '../assets/visa_icon.webp';
+import paypal from '../assets/paypal_icon.webp';
 
 interface CartProps {
     toggleCart: () => void;

@@ -7,7 +7,7 @@ import '../../index.css';
 import './Header.css';
 import { getAuth, signOut } from 'firebase/auth';
 import UserContext from '../../context/userContext';
-import carrito from '../../assets/carrito.png';
+import carrito from '../../assets/carrito.webp';
 
 const Header: React.FC = () => {
     const [searchInput, setSearchInput] = useState('');

@@ -3,9 +3,9 @@ import { Form, Navigate, useNavigate } from 'react-router-dom';
 import UserContext from '../context/userContext';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { signInWithGooglePopup } from '../utils/firebase.utils';
-import logogoogle from '../assets/logogoogle.png';
-import show from '../assets/show.png';
-import hide from '../assets/hide.png';
+import logogoogle from '../assets/logogoogle.webp';
+import show from '../assets/show.webp';
+import hide from '../assets/hide.webp';
 
 const Register = () => {
     const [isSignUpMode, setIsSignUpMode] = useState(true);

@@ -4,10 +4,10 @@ import "swiper/css/bundle";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 
-import noctashit from '../assets/nocta-nrg-rf-tee-home.png';
-import original from "../assets/original.png";
-import envio from "../assets/envios.png";
-import devolucion from "../assets/devolucion.png";
+import noctashit from '../assets/nocta-nrg-rf-tee-home.webp';
+import original from "../assets/original.webp";
+import envio from "../assets/envios.webp";
+import devolucion from "../assets/devolucion.webp";
 
 import { Link, NavLink, useParams } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";

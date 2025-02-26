@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { db } from '../utils/firebase.utils';
 import { ref, onValue } from 'firebase/database';
 
-import prohibido from '../assets/prohibido.png';
+import prohibido from '../assets/prohibido.webp';
 import { imageMap } from '../utils/imageMap';
 import UserContext from '../context/userContext';
 
