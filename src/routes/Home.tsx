@@ -9,9 +9,7 @@ import original from "../assets/original.webp";
 import envio from "../assets/envios.webp";
 import devolucion from "../assets/devolucion.webp";
 
-import { Link, NavLink, useParams } from "react-router-dom";
-import { getAuth, signOut } from "firebase/auth";
-import UserContext from '../context/userContext';
+import { Link, useParams } from "react-router-dom";
 import { onValue, ref } from "firebase/database";
 import { db } from "../utils/firebase.utils";
 import { imageMap } from "../utils/imageMap";
@@ -89,12 +87,6 @@ const Home = () => {
             },
         });
     }, []);
-
-    const userContext = useContext(UserContext);
-    const user = userContext?.user || null;
-    const setUser = userContext?.setUser || (() => { });
-
-
 
     return (
         <>
