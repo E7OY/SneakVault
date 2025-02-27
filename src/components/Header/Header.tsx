@@ -142,7 +142,7 @@ const Header: React.FC = () => {
                                     </button>
                                     <NavLink to="/cart">
                                         <button onClick={toggleCart} className='bg-transparent border-1 p-3 border-dark '>
-                                            <img src={carrito} width={35} alt="Carrito" />
+                                            <img src={carrito} width={35} alt="imagen carrito" />
                                         </button>
                                     </NavLink>
                                 </>

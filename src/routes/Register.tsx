@@ -99,7 +99,7 @@ const Register = () => {
                                                 onChange={(e) => setPassword(e.target.value)}
                                             />
                                             <button type='button' className='w-25 button-password py-1' onClick={showPassWord}>
-                                                <img width={20} src={showPassword ? hide : show}/>
+                                                <img width={20} src={showPassword ? hide : show} alt='hide / show password'/>
                                             </button>
                                         </div>
                                     </div>
@@ -144,7 +144,7 @@ const Register = () => {
                                                 onChange={(e) => setPassword(e.target.value)}
                                             />
                                             <button type='button' className='w-25 button-password py-1' onClick={showPassWord}>
-                                                <img width={20} src={showPassword ? hide : show}/>
+                                                <img width={20} src={showPassword ? hide : show} alt='hide / show password'/>
                                             </button>
                                         </div>
                                     </div>
@@ -182,7 +182,7 @@ const Register = () => {
                                 {isSignUpMode ?
                                     <div className="row mx-auto w-75">
                                         <div onClick={loginGoogle} className="col-12 button-google d-flex flex-row justify-content-center align-items-center py-3 gap-4 px-3">
-                                            <img src={logogoogle} className='fw-light' width={20} alt="" /> <h6 className='p-0 m-0 fw-light'>Entrar con Google</h6> 
+                                            <img src={logogoogle} className='fw-light' width={20} alt="logo google" /> <h6 className='p-0 m-0 fw-light'>Entrar con Google</h6> 
                                         </div>
                                     </div> 
                                     :

@@ -44,9 +44,9 @@ export function Cart({ toggleCart }: CartProps) {
                 </h4>
                 <button className='p-3 px-5 my-3 fw-regular border border-1 fw-light border-black bg-negro text-white'>Comprar</button>
                 <div className='d-flex flex-row gap-1'>
-                    <img src={mastercad} className='p-1 border-1 border border-black-50' width={50} alt="" />
-                    <img src={visa} className='p-1 border-1 border border-black-50' width={50} alt="" />
-                    <img src={paypal} className='p-1 border-1 border border-black-50' width={50} alt="" />
+                    <img src={mastercad} className='p-1 border-1 border border-black-50' width={50} alt="imagen logo mastercard"/>
+                    <img src={visa} className='p-1 border-1 border border-black-50' width={50} alt="imagen logo visa"/>
+                    <img src={paypal} className='p-1 border-1 border border-black-50' width={50} alt="imagen logo paypal"/>
                 </div>
             </div>
         </div>

@@ -112,7 +112,7 @@ const Home = () => {
                     <a href="/zapatillas/yeezy" className="border button-nocta border-black p-3 text-decoration-none negro fw-light">Comprar ahora</a>
                     </div>
                 <div className="col-12 col-md-5">
-                    <img src={imageMap['Yeezy 350 V2 Carbon Beluga']} className="" width={650} style={{ transform: 'rotate(10deg)'}} alt="" />
+                    <img src={imageMap['Yeezy 350 V2 Carbon Beluga']} className="" width={650} style={{ transform: 'rotate(10deg)'}} alt="Yeezy 350 V2 Carbon Beluga" />
                 </div>
             </div>
 
@@ -187,21 +187,21 @@ const Home = () => {
                             Yeezy
                         </h3>
                         <Link to={`/zapatillas/yeezy`}>
-                            <img src={imageMap['Yeezy 350 V2 Beluga']} width={250} alt="" />
+                            <img src={imageMap['Yeezy 350 V2 Beluga']} width={250} alt="Yeezy 350 V2 Beluga"/>
                         </Link>
                     </div>
                     <div className="col-3 w-auto marcas">
                     <h3 className="text-center fw-light">
                     Jordan</h3>
                         <Link to={`/zapatillas/jordan`}>
-                            <img src={imageMap['Air Jordan 1 x Cactus Jack']} width={250} alt="" />
+                            <img src={imageMap['Air Jordan 1 x Cactus Jack']} width={250} alt="Air Jordan 1 x Cactus Jack" />
                         </Link>
                     </div>
                     <div className="col-3 w-auto marcas">
                     <h3 className="text-center fw-light">
                     Nike</h3>
                         <Link to={`/zapatillas/nike`}>
-                            <img src={imageMap['Nike Dunk Low Black Panda']} width={250} alt="" />
+                            <img src={imageMap['Nike Dunk Low Black Panda']} width={250} alt="Nike Dunk Low Black Panda" />
                         </Link>
 
                     </div>
@@ -209,7 +209,7 @@ const Home = () => {
                     <h3 className="text-center fw-light">
                     Adidas</h3>
                         <Link to={`/zapatillas/adidas`}>
-                            <img src={imageMap['Adidas Forum x Bad Bunny White']} width={250} alt="" />
+                            <img src={imageMap['Adidas Forum x Bad Bunny White']} width={250} alt="Adidas Forum x Bad Bunny White" />
                         </Link>
                     </div>
                 </div>
@@ -217,7 +217,7 @@ const Home = () => {
 
                 <div className="w-100 banner-home p-5 mb-5 border-1 border border-dark text-center d-flex flex-column flex-md-row justify-content-evenly align-items-center">
                     <div className="col-12 col-md-5 py-4 mb-4 mb-md-0">
-                        <img src={noctashit} className="img-fluid" width={400} style={{ transform: 'rotate(350deg)' }} alt="" />
+                        <img src={noctashit} className="img-fluid" width={400} style={{ transform: 'rotate(350deg)' }} alt="camiseta nocta x nike" />
                     </div>
                     <div className="col-12 col-md-5 negro">
                         <h2 className="fw-light">Nike x Nocta</h2>
@@ -297,7 +297,7 @@ const Home = () => {
 
                 <div className="row d-flex justify-content-around mt-5 m-0 p-0">
                 <div className="col-12 col-md-4 info p-4  mb-md-0" style={{ outline: "1px solid #010101", boxSizing: "border-box", backgroundColor: "#fff" }}>
-                <img src={original} width={30} alt="" />
+                <img src={original} width={30} alt="icono original" />
                         <div>
                             <h4 className="my-3 fw-light">SneakVault Verified</h4>
                             <p className="fw-light text-black-50">
@@ -308,7 +308,7 @@ const Home = () => {
                     </div>
 
                     <div className="col-12 col-md-4 info p-4  mb-md-0" style={{ outline: "1px solid #010101", boxSizing: "border-box", backgroundColor: "#fff" }}>
-                    <img src={envio} width={30} alt="" />
+                    <img src={envio} width={30} alt="icono envio" />
                         <div>
                         <h4 className="my-3 fw-light">SneakVault Verified</h4>
                         <p className="fw-light text-black-50">
@@ -319,7 +319,7 @@ const Home = () => {
                     </div>
 
                     <div className="col-12 col-md-4 info p-4  mb-md-0" style={{ outline: "1px solid #010101", boxSizing: "border-box", backgroundColor: "#fff" }}>
-                    <img src={devolucion} width={30} alt="" />
+                    <img src={devolucion} width={30} alt="icono devolucion" />
                         <div>
                         <h4 className="my-3 fw-light">SneakVault Verified</h4>
                         <p className="fw-light text-black-50">
