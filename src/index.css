@@ -331,9 +331,8 @@ header {
   z-index: 1;
 }
 
-.producto-card:hover {
-  box-shadow: 5px 5px 0px #010101;
-  transform: scale(1.05);
+.producto-card img:hover {
+  transform: scale(1.1);
   cursor: pointer;
   z-index: 200;
 }
@@ -652,15 +651,3 @@ summary {
   z-index: 10000;
   margin: 10px;
 }
-
-
-
-
-
-
-
-.searchInput {
-  border-radius: 4px;
-  width: 500px;
-}
-
