@@ -75,7 +75,7 @@ const App = () => {
     <>
     <CartProvider>
       <RouterProvider router={router} />
-      </CartProvider>
+    </CartProvider>
     </>
   );
 };

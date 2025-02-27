@@ -13,7 +13,7 @@ interface CartItem {
 interface CartContextProps {
     cart: CartItem[];
     addToCart: (product: { id: string; name: string; price: number; image: string; stock: number }) => void;
-    removeFromCart: (productId: string) => void;
+    removeFromCart: (productId: string) => boolean;
     increaseQuantity: (productId: string) => void;
     decreaseQuantity: (productId: string) => void;
     totalCart: () => number;
@@ -24,47 +24,70 @@ const CartContext = createContext<CartContextProps | undefined>(undefined);
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [cart, setCart] = useState<CartItem[]>([]);
 
-    //añadir producto
+    //AÑADIR PRODUCTO
     const addToCart = (product: { id: string; name: string; price: number; image: string; stock: number }) => {
-        const existingProductIndex = cart.findIndex((item) => item.id === product.id);
-        //si el producto ya existe en el carrito, aumentar la cantidad
-        if (existingProductIndex !== -1) {
-            const newCart = [...cart];
-            newCart[existingProductIndex].quantity += 1;
-            setCart(newCart);
+        //crear una copia del carrito
+        const updatedCart = [...cart];
+        //comprobar si el producto existe en el carro
+        const productExists = updatedCart.find(item => item.id === product.id);
+        
+        if (productExists) {
+            //si existe aumenta cantidad
+            productExists.quantity += 1;
         } else {
-            setCart([...cart, { ...product, quantity: 1 }]);
+            //si no, añadimos como nuevo 
+            updatedCart.push({ ...product, quantity: 1 });
+        }
+        
+        setCart(updatedCart);
+    };
+
+    //ELIMINAR PRODUCTO
+    const removeFromCart = (productId: string) => {
+        if (window.confirm("¿Seguro que quieres eliminar este producto del carrito?")) {
+            //filtramos el carrito para que no incluya el producto que queremos eliminar
+            setCart(cart.filter(item => item.id !== productId));
+            return true;
+        }
+        return false;
+    };
+
+    //AUMENTAR CANTIDAD DE PRODUCTO
+    const increaseQuantity = (productId: string) => {
+        //crear una copia del carrito
+        const updatedCart = [...cart];
+        //encontrar el producto que queremos modificar
+        const productToUpdate = updatedCart.find(item => item.id === productId);
+        //if encontramos el producto, aumentamos su cantidad
+        if (productToUpdate) {
+            productToUpdate.quantity += 1;
+            setCart(updatedCart);
         }
     };
 
-    //elimiar producto
-    const removeFromCart = (productId: string) => {
-        //filtrar el producto a eliminar del carrito por su id y actualizar el carrito
-        const newCart = cart.filter((item) => item.id !== productId);
-        setCart(newCart);
-    };
-
-    //aimentar cantidad de producto
-    const increaseQuantity = (productId: string) => {
-        const newCart = cart.map((item) =>
-            item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
-        );
-        setCart(newCart);
-    };
-
-    //disminuir cantidad de producto
+    //DISMINUIR CANTIDAD DE PRODUCTO
     const decreaseQuantity = (productId: string) => {
-        //mapeamos el carrito y disminuimos la cantidad del producto si es mayor a 1
-        const newCart = cart.map((item) =>
-            item.id === productId ? { ...item, quantity: Math.max(1, item.quantity - 1) } : item
-        );
-        setCart(newCart);
+        //crear una copia del carrito
+        const updatedCart = [...cart];
+        //encontrar el producto que queremos modificar
+        const productToUpdate = updatedCart.find(item => item.id === productId);
+        //if encontramos el producto, reducimos cantidad, comprbando si es mayor a 1
+        if (productToUpdate && productToUpdate.quantity > 1) {
+            productToUpdate.quantity -= 1;
+            setCart(updatedCart);
+        }
     };
 
-    //calculo total producto
+    //TOTAL DEL CARRITO
     const totalCart = () => {
-        //.reduce funciona como un iterador que recorre el carrito y va sumando el precio de cada producto
-        return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+        let total = 0;
+        for (const item of cart) {
+            const productTotal = item.price * item.quantity;
+            total += productTotal;
+        }
+        //se puede hacer con .reduce que equivale a un for
+        //return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+        return total;
     };
 
     //provider que nos permite usar el contexto global con las funciones y el estado
@@ -76,7 +99,4 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
 };
 
 //el hook para poder user el contexto global
-export const useCart = () => {
-    const context = useContext(CartContext);
-    return context;
-};
+export const useCart = () =>  useContext(CartContext);

@@ -4,6 +4,8 @@ import { imageMap } from '../utils/imageMap';
 import mastercad from '../assets/mastercard_icon.jpg';
 import visa from '../assets/visa_icon.png';
 import paypal from '../assets/paypal_icon.png';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface CartProps {
     toggleCart: () => void;
@@ -12,6 +14,13 @@ interface CartProps {
 export function Cart({ toggleCart }: CartProps) {
 
     const { cart, removeFromCart, increaseQuantity, decreaseQuantity, totalCart } = useCart();
+
+    const handleRemove = (productId: string) => {
+        const removed = removeFromCart(productId);
+        if (removed) {
+            toast.success("Producto eliminado del carrito");
+        }
+    };
 
     return (
         <div className="d-flex justify-content-center" onClick={toggleCart}>
@@ -30,7 +39,7 @@ export function Cart({ toggleCart }: CartProps) {
                                 <div className='d-flex w-100 flex-row justify-content-end gap-1 align-items-center'>
                                     <button onClick={() => decreaseQuantity(product.id)} className='p-2 px-3 fw-regular border border-1 fw-light border-black bg-transparent'>-</button>
                                     <button onClick={() =>  increaseQuantity(product.id)} className='p-2 px-3 fw-regular border border-1 fw-light border-black bg-transparent'>+</button>
-                                <button onClick={() => removeFromCart(product.id)} className='p-2 px-3 fw-regular border border-1 fw-light border-black bg-negro text-white'>Eliminar</button>
+                                    <button onClick={() => removeFromCart(product.id)} className='p-2 px-3 fw-regular border border-1 fw-light border-black bg-negro text-white'>Eliminar</button>
                                 </div>
                             </div>
                             <hr />
