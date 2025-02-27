@@ -7,7 +7,7 @@ import '../../index.css';
 import './Header.css';
 import { getAuth, signOut } from 'firebase/auth';
 import UserContext from '../../context/userContext';
-import carrito from '../../assets/carrito.png';
+import carrito from '../../assets/carrito.webp';
 
 const Header: React.FC = () => {
     const [searchInput, setSearchInput] = useState('');
@@ -142,7 +142,7 @@ const Header: React.FC = () => {
                                     </button>
                                     <NavLink to="/cart">
                                         <button onClick={toggleCart} className='bg-transparent border-1 p-3 border-dark '>
-                                            <img src={carrito} width={35} alt="Carrito" />
+                                            <img src={carrito} width={35} alt="imagen carrito" />
                                         </button>
                                     </NavLink>
                                 </>

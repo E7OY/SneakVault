@@ -1,11 +1,9 @@
 import '../index.css';
 import { useCart } from '../context/cartContext';
 import { imageMap } from '../utils/imageMap';
-import mastercad from '../assets/mastercard_icon.jpg';
-import visa from '../assets/visa_icon.png';
-import paypal from '../assets/paypal_icon.png';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import mastercad from '../assets/mastercard_icon.webp';
+import visa from '../assets/visa_icon.webp';
+import paypal from '../assets/paypal_icon.webp';
 
 interface CartProps {
     toggleCart: () => void;
@@ -14,13 +12,6 @@ interface CartProps {
 export function Cart({ toggleCart }: CartProps) {
 
     const { cart, removeFromCart, increaseQuantity, decreaseQuantity, totalCart } = useCart();
-
-    const handleRemove = (productId: string) => {
-        const removed = removeFromCart(productId);
-        if (removed) {
-            toast.success("Producto eliminado del carrito");
-        }
-    };
 
     return (
         <div className="d-flex justify-content-center" onClick={toggleCart}>
@@ -53,9 +44,9 @@ export function Cart({ toggleCart }: CartProps) {
                 </h4>
                 <button className='p-3 px-5 my-3 fw-regular border border-1 fw-light border-black bg-negro text-white'>Comprar</button>
                 <div className='d-flex flex-row gap-1'>
-                    <img src={mastercad} className='p-1 border-1 border border-black-50' width={50} alt="" />
-                    <img src={visa} className='p-1 border-1 border border-black-50' width={50} alt="" />
-                    <img src={paypal} className='p-1 border-1 border border-black-50' width={50} alt="" />
+                    <img src={mastercad} className='p-1 border-1 border border-black-50' width={50} alt="imagen logo mastercard"/>
+                    <img src={visa} className='p-1 border-1 border border-black-50' width={50} alt="imagen logo visa"/>
+                    <img src={paypal} className='p-1 border-1 border border-black-50' width={50} alt="imagen logo paypal"/>
                 </div>
             </div>
         </div>

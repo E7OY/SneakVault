@@ -70,6 +70,7 @@ const Products: React.FC<ProductProps> = () => {
         if (query) {
             setSearchInput(query);
         }
+        
     }, [location.search]);
 
     /*filtrar productos por nombre o descripcion*/
@@ -104,9 +105,9 @@ const Products: React.FC<ProductProps> = () => {
         <>
 
             <div className="container-fluid px-4">
-                <div className="row m-0 p-0 w-auto  d-flex flex-row justify-content-between align-items-center">
+                <div className="row m-0 p-0 my-3 w-auto  d-flex flex-row justify-content-between align-items-center">
 
-                    <div className="col-4 w-auto">
+                    <div className="col-4 w-auto m-0 p-0">
                         <h2 className='fw-light display-6 my-2 w-auto d-inline text-nowrap'>{categoria}</h2>
                         {searchInput !== '' ? (
                             <p className='display-6 fw-light text-black-50'>{`"${searchInput}" ${filteredProducts.length} resultados`}</p>
@@ -116,7 +117,7 @@ const Products: React.FC<ProductProps> = () => {
                         }
                     </div>
 
-                    <div className="col-4 w-auto col-sm-12 d-flex align-items-center">
+                    <div className="col-4 w-auto col-sm-12 d-flex align-items-center m-0 p-0">
                         <select id="sortOrder" value={orderBy} onChange={handleSortChange} className="py-2 form-select fw-light rounded-0 border border-1 border-dark w-auto">
                             <option value="alphabetical">Alfabéticamente A - Z</option>
                             <option value="price-asc">Precio ascendente</option>

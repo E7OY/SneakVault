@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import NotFoundPage from './pages/NotFoundPage';
 import RootLayout from './routes/Root';
@@ -12,7 +11,6 @@ import {CartProvider} from './context/cartContext';
 import { Cart } from './routes/Cart';
 
 const App = () => {
-  const [user, setUser] = useState<{ displayName?: string; email: string } | null>(null);
 
   const router = createBrowserRouter([
     {

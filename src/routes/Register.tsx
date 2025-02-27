@@ -3,9 +3,9 @@ import { Form, Navigate, useNavigate } from 'react-router-dom';
 import UserContext from '../context/userContext';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { signInWithGooglePopup } from '../utils/firebase.utils';
-import logogoogle from '../assets/logogoogle.png';
-import show from '../assets/show.png';
-import hide from '../assets/hide.png';
+import logogoogle from '../assets/logogoogle.webp';
+import show from '../assets/show.webp';
+import hide from '../assets/hide.webp';
 
 const Register = () => {
     const [isSignUpMode, setIsSignUpMode] = useState(true);
@@ -99,7 +99,7 @@ const Register = () => {
                                                 onChange={(e) => setPassword(e.target.value)}
                                             />
                                             <button type='button' className='w-25 button-password py-1' onClick={showPassWord}>
-                                                <img width={20} src={showPassword ? hide : show}/>
+                                                <img width={20} src={showPassword ? hide : show} alt='hide / show password'/>
                                             </button>
                                         </div>
                                     </div>
@@ -144,7 +144,7 @@ const Register = () => {
                                                 onChange={(e) => setPassword(e.target.value)}
                                             />
                                             <button type='button' className='w-25 button-password py-1' onClick={showPassWord}>
-                                                <img width={20} src={showPassword ? hide : show}/>
+                                                <img width={20} src={showPassword ? hide : show} alt='hide / show password'/>
                                             </button>
                                         </div>
                                     </div>
@@ -182,7 +182,7 @@ const Register = () => {
                                 {isSignUpMode ?
                                     <div className="row mx-auto w-75">
                                         <div onClick={loginGoogle} className="col-12 button-google d-flex flex-row justify-content-center align-items-center py-3 gap-4 px-3">
-                                            <img src={logogoogle} className='fw-light' width={20} alt="" /> <h6 className='p-0 m-0 fw-light'>Entrar con Google</h6> 
+                                            <img src={logogoogle} className='fw-light' width={20} alt="logo google" /> <h6 className='p-0 m-0 fw-light'>Entrar con Google</h6> 
                                         </div>
                                     </div> 
                                     :
