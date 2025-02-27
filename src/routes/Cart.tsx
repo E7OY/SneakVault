@@ -4,6 +4,9 @@ import { imageMap } from '../utils/imageMap';
 import mastercad from '../assets/mastercard_icon.webp';
 import visa from '../assets/visa_icon.webp';
 import paypal from '../assets/paypal_icon.webp';
+import { useContext, useState } from 'react';
+import { Navigate } from 'react-router-dom';
+import UserContext from '../context/userContext';
 
 interface CartProps {
     toggleCart: () => void;
@@ -12,8 +15,14 @@ interface CartProps {
 export function Cart({ toggleCart }: CartProps) {
 
     const { cart, removeFromCart, increaseQuantity, decreaseQuantity, totalCart } = useCart();
+    const userContext = useContext(UserContext);
+    const user = userContext?.user;
 
     return (
+        <>
+            {user ?
+
+
         <div className="d-flex justify-content-center" onClick={toggleCart}>
             <div className='cart border border-1 border-black m-5'>
                 <h4 className='fw-light'>Cesta  ({cart.length})</h4>
@@ -50,5 +59,11 @@ export function Cart({ toggleCart }: CartProps) {
                 </div>
             </div>
         </div>
+
+
+    :
+    <Navigate to="/register" />
+    }
+        </>
     );
 }
