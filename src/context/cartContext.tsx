@@ -9,7 +9,6 @@ interface CartItem {
     image: string;
     quantity: number;
 }
-
 interface CartContextProps {
     cart: CartItem[];
     addToCart: (product: { id: string; name: string; price: number; image: string; stock: number }) => void;
@@ -99,4 +98,5 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
 };
 
 //el hook para poder user el contexto global
-export const useCart = () =>  useContext(CartContext);
+export const useCart = () => useContext(CartContext);
+export default CartContext;
