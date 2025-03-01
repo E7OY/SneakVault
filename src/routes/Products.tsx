@@ -15,6 +15,7 @@ interface Product {
     precio: number;
     descripcion: string;
 }
+
 interface ProductProps {
     products: Product[];
 }
@@ -25,6 +26,11 @@ const Products: React.FC<ProductProps> = () => {
     const [orderBy, setOrderBy] = useState<'alphabetical' | 'price-asc' | 'price-desc' | 'stock-asc' | 'stock-desc'>('alphabetical');
     const [searchInput, setSearchInput] = useState('');
     const location = useLocation();
+    const [visibleProducts, setVisibleProducts] = useState(16);
+    
+    const loadMore = () => {
+        setVisibleProducts(prevVisibleProducts => prevVisibleProducts + 16);
+    };
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -71,15 +77,12 @@ const Products: React.FC<ProductProps> = () => {
         if (query) {
             setSearchInput(query);
         }
-        
     }, [location.search]);
 
-    /*filtrar productos por nombre o descripcion*/
     const filteredProducts = products.filter(product =>
         product.nombre.toLowerCase().includes(searchInput.toLowerCase()) ||
         product.descripcion.toLowerCase().includes(searchInput.toLowerCase())
     );
-
 
     const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setOrderBy(event.target.value as 'alphabetical' | 'price-asc' | 'price-desc' | 'stock-asc' | 'stock-desc');
@@ -104,18 +107,15 @@ const Products: React.FC<ProductProps> = () => {
 
     return (
         <>
-
             <div className="container-fluid px-4">
-                <div className="row m-0 p-0 my-3 w-auto  d-flex flex-row justify-content-between align-items-center">
-
+                <div className="row m-0 p-0 my-3 w-auto d-flex flex-row justify-content-between align-items-center">
                     <div className="col-4 w-auto m-0 p-0">
                         <h2 className='fw-light display-6 my-2 w-auto d-inline text-nowrap'>{categoria}</h2>
                         {searchInput !== '' ? (
                             <p className='display-6 fw-light text-black-50'>{`"${searchInput}" ${filteredProducts.length} resultados`}</p>
                         ) : (
                             <p className='display-6 fw-light text-black-50'>{`${filteredProducts.length} resultados`}</p>
-                        )
-                        }
+                        )}
                     </div>
 
                     <div className="col-4 w-auto col-sm-12 d-flex align-items-center m-0 p-0">
@@ -127,29 +127,23 @@ const Products: React.FC<ProductProps> = () => {
                             <option value="stock-desc">Stock descendente</option>
                         </select>
                     </div>
-
                 </div>
 
                 <div className="row w-100 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-0 z-0">
-                    {sortedProducts.map(product => (
+                    {sortedProducts.slice(0, visibleProducts).map(product => (
                         <div className="col" key={product.id}>
                             <div className="producto-card h-100 w-100 p-3">
                                 <Link to={`/${product.categoria}/${product.marca}/${product.id}`}
                                     className="text-decoration-none text-dark">
-                                        {
-                                            product.stock <= 5 ? (
-                                                    <img src={productTendencia} className='producto-card-tendencia position-absolute' alt="" width={100}/>
-                                            ) : null
-                                        }
-
+                                    {product.stock <= 5 && (
+                                        <img src={productTendencia} className='producto-card-tendencia position-absolute' alt="" width={100}/>
+                                    )}
                                     <img
                                         className="producto-img img-fluid p-3"
                                         src={product.imagen || imageMap[product.nombre]}
                                         alt={product.nombre}
                                         onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }}
                                     />
-
-
                                     <h6 className="mb-2 fw-light text-black-50">{product.categoria}</h6>
                                     <h5 className="text-truncate fw-light">{product.nombre}</h5>
                                     <p className="m-0 p-0 fw-light text-black-50">{product.precio}€</p>
@@ -158,6 +152,17 @@ const Products: React.FC<ProductProps> = () => {
                         </div>
                     ))}
                 </div>
+
+                {visibleProducts < sortedProducts.length && (
+                    <div className="text-center my-5">
+                        <button 
+                            onClick={loadMore}
+                            className="button fw-light"
+                        >
+                            Ver más productos
+                        </button>
+                    </div>
+                )}
             </div>
         </>
     );

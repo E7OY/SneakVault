@@ -2,10 +2,7 @@ import React, { useContext, useEffect, useState, useRef } from "react";
 import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../index.css';
-
-import noctashit from '../assets/nocta-nrg-rf-tee-home.webp';
-import original from "../assets/original.webp";
+import '../index.css';import original from "../assets/original.webp";
 import envio from "../assets/envios.webp";
 import devolucion from "../assets/devolucion.webp";
 
@@ -16,7 +13,7 @@ import { imageMap } from "../utils/imageMap";
 
 const Home = () => {
     const { nombre } = useParams<{ nombre: string }>();
-    const [product, setProduct] = useState<{ id: string; stock: number; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string } | null>(null);
+    const [, setProduct] = useState<{ id: string; stock: number; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string } | null>(null);
     const [productos, setProductos] = useState<{ id: string; imagen: string; nombre: string; precio: number, categoria: string, marca: string }[]>([]);
     const imageRef = useRef<HTMLImageElement>(null);
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -163,7 +160,18 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <div className="banner-home text-white text-end d-flex flex-column flex-md-row justify-content-center align-items-center">
+                        <div className="banner-home text-white text-start d-flex flex-column flex-md-row justify-content-center align-items-center">
+                            <div className="col-12 col-md-4 mb-md-0 m-0 p-0">
+                                <h2 className="fw-light text-black">Yeezy 350 V2 Onyx</h2>
+                                <h3 className="fw-light text-black">La mejor zapatilla esta temporada...</h3>
+                                <p className="mb-5 text-black-50 fw-light text-start" style={{ maxWidth: '50ch' }}>
+                                    Puedes combinar estas zapatillas Yeezy con cualquier estilo streetwear.
+                                    Su diseño atemporal y su silueta única las convierten en un elemento
+                                    esencial para tu colección. Gracias a su tecnología innovadora,
+                                    te proporcionan comodidad durante todo el día.
+                                </p>
+                                <a href="/zapatillas/yeezy" className="border button-nocta border-black p-3 text-decoration-none negro fw-light w-auto">Comprar ahora</a>
+                            </div>
                             <div className="col-12 col-md-4 m-0 p-0">
                                 <img
                                     ref={imageRef}
@@ -175,21 +183,10 @@ const Home = () => {
                                         transition: 'transform 0.5s ease-out',
                                         position: 'absolute',
                                         top: '-150px',
-                                        left: '-0px',
+                                        left: '-80px',
                                     }}
                                     alt="Yeezy 350 V2 Onyx"
                                 />
-                            </div>
-                            <div className="col-12 col-md-4 mb-md-0 m-0 p-0">
-                                <h2 className="fw-light text-black">Yeezy 350 V2 Onyx</h2>
-                                <h3 className="fw-light text-black">La mejor zapatilla esta temporada...</h3>
-                                <p className="mb-5 text-black-50 fw-light text-end">
-                                    Puedes combinar estas zapatillas Yeezy con cualquier estilo streetwear.
-                                    Su diseño atemporal y su silueta única las convierten en un elemento
-                                    esencial para tu colección. Gracias a su tecnología innovadora,
-                                    te proporcionan comodidad durante todo el día.
-                                </p>
-                                <a href="/zapatillas/yeezy" className="border button-nocta border-black p-3 text-decoration-none negro fw-light w-auto">Comprar ahora</a>
                             </div>
                         </div>
                     </div>

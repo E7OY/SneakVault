@@ -4,7 +4,7 @@ import { imageMap } from '../utils/imageMap';
 import mastercad from '../assets/mastercard_icon.webp';
 import visa from '../assets/visa_icon.webp';
 import paypal from '../assets/paypal_icon.webp';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { Navigate } from 'react-router-dom';
 import UserContext from '../context/userContext';
 
