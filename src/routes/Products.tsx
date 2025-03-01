@@ -4,6 +4,7 @@ import { onValue, ref } from 'firebase/database';
 import { Link, useParams, useLocation } from 'react-router-dom';
 import { imageMap } from '../utils/imageMap';
 import '../index.css';
+import productTendencia from '../assets/hot-ptoduct.png';
 
 interface Product {
     categoria: string,
@@ -129,30 +130,29 @@ const Products: React.FC<ProductProps> = () => {
 
                 </div>
 
-                <div className="row w-100 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-0 z-0">
+                <div className="row w-100 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-0 z-0">
                     {sortedProducts.map(product => (
                         <div className="col" key={product.id}>
-                            <div className="producto-card bg-white h-100 w-100 p-1">
+                            <div className="producto-card h-100 w-100 p-3">
                                 <Link to={`/${product.categoria}/${product.marca}/${product.id}`}
                                     className="text-decoration-none text-dark">
-                                    {product.stock > 0 ? (
-                                        product.stock <= 10 ?
-                                            <span className='mx-3 fw-light text-danger position-absolute'>Bajo stock</span> :
-                                            <span className="text-dark mx-3 fw-light position-absolute">{product.stock} en stock</span>
-                                    ) : (
-                                        <span className="text-white fw-light rounded-0 bg-dark mx-3 position-absolute">Agotado</span>
-                                    )}
+                                        {
+                                            product.stock <= 5 ? (
+                                                    <img src={productTendencia} className='producto-card-tendencia position-absolute' alt="" width={100}/>
+                                            ) : null
+                                        }
+
                                     <img
                                         className="producto-img img-fluid p-3"
                                         src={product.imagen || imageMap[product.nombre]}
                                         alt={product.nombre}
                                         onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }}
                                     />
-                                    <div className="producto-info p-3">
-                                        <h6 className="text-muted mb-2 fw-light text-black-50">{product.categoria}</h6>
-                                        <h5 className="text-truncate fw-light">{product.nombre}</h5>
-                                        <p className="m-0 p-0 text-muted fw-light text-black-50">{product.precio}€</p>
-                                    </div>
+
+
+                                    <h6 className="mb-2 fw-light text-black-50">{product.categoria}</h6>
+                                    <h5 className="text-truncate fw-light">{product.nombre}</h5>
+                                    <p className="m-0 p-0 fw-light text-black-50">{product.precio}€</p>
                                 </Link>
                             </div>
                         </div>

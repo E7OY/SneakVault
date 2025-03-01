@@ -102,6 +102,11 @@ const Register = () => {
                                                 <img width={20} src={showPassword ? hide : show} alt='hide / show password'/>
                                             </button>
                                         </div>
+                                        <div className='d-flex flex-row align-items-center mt-5'>
+                                            <hr className='w-50'/>
+                                            <h6 className="mx-2 fw-light text-black-50">O continua con</h6>
+                                            <hr className='w-50'/>
+                                        </div>
                                     </div>
                                     </>
                                 )

@@ -105,6 +105,16 @@ header {
 
 /* ESTILOS HOME */
 
+.banner-home {
+  height: 80vh;
+}
+.carousel-indicators button {
+  background-color: black !important;
+  height: 10px !important;
+  width: 10px !important;
+  border-radius: 50% !important;
+}
+
 .negro {
   color: #010101;
 }
@@ -131,19 +141,6 @@ header {
   color: white;
   box-shadow: 3px 3px 0px #fff;
 
-}
-
-.button-yeezy:hover {
-  color: #010101;
-  background: white;
-  box-shadow: 5px 5px 0px #51423B, 10px 10px 0px #EE5538;
-  transition: 1s;
-}
-
-.button-nocta {
-  box-shadow: 3px 3px 0px #010101;
-  border: 2px solid white;
-  transition: 1s;
 }
 
 
@@ -225,20 +222,6 @@ header {
   padding: 20px;
   justify-content: start;
 }
-
-.imagen-producto-detail {
-  width: 100%;
-  height: auto;
-  padding: 30px;
-  object-fit: contain;
-  max-height: 500px;
-  outline: 1px solid #010101;
-  box-sizing: border-box;
-  background-color: rgb(255, 255, 255);
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
 
 .swiper-hero .swiper-slide {
   display: flex;
@@ -324,17 +307,30 @@ header {
 /* ESTILOS PRODUCTOS */
 
 .producto-card {
-  outline: 1px solid #010101;
   transition: all 0.3s ease;
   box-sizing: border-box;
   position: relative;
   z-index: 1;
+  outline: 1px solid #010101;
+  background-color: white;
 }
 
-.producto-card img:hover {
+
+.producto-img img:hover {
   transform: scale(1.1);
   cursor: pointer;
   z-index: 200;
+}
+
+.producto-img img {
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  object-fit: contain;
+  max-height: 500px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
 .producto-img:hover {
@@ -355,11 +351,28 @@ header {
 
 
 
+/* ESTILOS DETALLE PRODUCTO */
 
-
-.imagen-producto-home:hover {
-  transform: rotateY(180deg);
+.imagen-producto-detail {
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  object-fit: contain;
+  max-height: 500px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.3s;
+  outline: 1px solid #010101;
+  background-color: white;
 }
+
+.productos-related-info {
+  background-color: #010101;
+  color: white;
+}
+
+
+
 
 
 
@@ -651,3 +664,8 @@ summary {
   z-index: 10000;
   margin: 10px;
 }
+
+
+
+
+

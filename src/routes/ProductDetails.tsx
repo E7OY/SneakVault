@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { db } from '../utils/firebase.utils';
 import { ref, onValue } from 'firebase/database';
+import productTendencia from '../assets/hot-ptoduct.png';
 
 import prohibido from '../assets/prohibido.webp';
 import { imageMap } from '../utils/imageMap';
@@ -85,11 +86,12 @@ const ProductDetails= () => {
     };
 
     return (
+        <main>
         <div>
             <div className="row d-flex flex-row mt-5 mx-auto justify-content-center align-items-center gap-5">
-                <div className="d-flex flex-column col-md-6 col-sm-12">
+                <div className="d-flex flex-column col-md-6 col-sm-12 g-0">
                     <img className='imagen-producto-detail col-sm-12 col-12 col-md-12' src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />
-                    <div className="imagenes d-flex flex-row col-md-12 g-0 p-0 m-0">
+                    <div className="imagenes d-flex flex-row col-md-12 p-0 m-0">
                         <img
                             className="imagen-producto-detail"
                             src={product.imagen || imageMap[product.nombre]}
@@ -120,7 +122,7 @@ const ProductDetails= () => {
                         />
                     </div>
                 </div>
-                <div className="col-md-5 col-sm-12 negro">
+                <div className="col-md-5 col-sm-12 negro product-detail-info">
                     {product.stock > 0 ?
                         (product.stock <= 10 ? <h6 className='fw-bold bg-danger text-white p-1 d-inline-block float-right'>Menos de {product.stock} unidades</h6> :
                             <h6 className='fw-bold bg-success text-white p-1 d-inline-block float-right'>{product.stock} en stock</h6>) :
@@ -149,6 +151,12 @@ const ProductDetails= () => {
                         ) : (
                             <>
                             <a onClick={() => { handleAddToCart(); messageCart(); }} className='button fw-light' style={{ cursor: "pointer" }}>Añadir a la cesta</a>
+                            {
+                                            product.stock <= 5 ? (
+                                                <>
+                                                   <br/> <img src={productTendencia} className='producto-card-tendencia mt-4' alt="" width={100}/>
+                                            </>) : null
+                                        }
                             <div className="message-cart fw-light">
                                 Producto añadido al carrito
                             </div>
@@ -308,7 +316,7 @@ const ProductDetails= () => {
             {/* Productos Relacionados */}
             <div className="container-fluid mt-5 m-5">
                 <h2 className="fw-light mb-4">Productos Relacionados</h2>
-                <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 mr-5 g-0">
+                <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 mr-5 g-2">
                     {relatedProducts.slice(0, 8).map(relatedProduct => (
                         <div className="col" key={relatedProduct.id}>
                             <div className="producto-card bg-white h-100">
@@ -322,10 +330,10 @@ const ProductDetails= () => {
                                         alt={relatedProduct.nombre}
                                         onError={(e) => { e.currentTarget.src = imageMap[relatedProduct.nombre] }}
                                     />
-                                    <div className="p-3">
-                                        <h6 className="mb-2 fw-light text-black-50">{relatedProduct.marca}</h6>
-                                        <h5 className="text-black fw-light  mb-2">{relatedProduct.nombre}</h5>
-                                        <h6 className="mb-0 fw-light text-black-50">Desde {relatedProduct.precio}€</h6>
+                                    <div className="p-3 productos-related-info">
+                                        <h6 className="mb-2 fw-light text-white-50">{relatedProduct.marca}</h6>
+                                        <h5 className="text-white fw-light  mb-2">{relatedProduct.nombre}</h5>
+                                        <h6 className="mb-0 fw-light text-white-50">Desde {relatedProduct.precio}€</h6>
                                     </div>
                                 </Link>
                             </div>
@@ -334,6 +342,7 @@ const ProductDetails= () => {
                 </div>
             </div>
         </div>
+        </main>
     );
 };
 export default ProductDetails;
