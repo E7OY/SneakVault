@@ -154,7 +154,7 @@ const ProductDetails= () => {
                             {
                                             product.stock <= 5 ? (
                                                 <>
-                                                   <br/> <img src={productTendencia} className='producto-card-tendencia mt-4' alt="" width={100}/>
+                                                <br/> <img src={productTendencia} className='producto-card-tendencia mt-4' alt="" width={100}/>
                                             </>) : null
                                         }
                             <div className="message-cart fw-light">

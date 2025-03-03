@@ -3,7 +3,6 @@ import { useState, useEffect, useContext } from "react";
 import { Nav, Navbar, NavDropdown, NavLink } from "react-bootstrap";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import UserContext from "../../context/userContext";
-import './NavBar.css';
 import '../../index.css';
 import carrito from '../../assets/carrito.webp';
 

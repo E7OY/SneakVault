@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { db } from '../utils/firebase.utils';
 import { onValue, ref } from 'firebase/database';
-import { Link, useParams, useLocation } from 'react-router-dom';
-import { imageMap } from '../utils/imageMap';
+import { useParams, useLocation } from 'react-router-dom';
 import '../index.css';
-import productTendencia from '../assets/hot-ptoduct.png';
+import ProductCard from '../components/ProductCard';
+import ProductSort from '../components/ProductSort';
 
 interface Product {
     categoria: string,
@@ -119,46 +119,21 @@ const Products: React.FC<ProductProps> = () => {
                     </div>
 
                     <div className="col-4 w-auto col-sm-12 d-flex align-items-center m-0 p-0">
-                        <select id="sortOrder" value={orderBy} onChange={handleSortChange} className="py-2 form-select fw-light rounded-0 border border-1 border-dark w-auto">
-                            <option value="alphabetical">Alfabéticamente A - Z</option>
-                            <option value="price-asc">Precio ascendente</option>
-                            <option value="price-desc">Precio descendente</option>
-                            <option value="stock-asc">Stock ascendente</option>
-                            <option value="stock-desc">Stock descendente</option>
-                        </select>
+                        <ProductSort orderBy={orderBy} handleSortChange={handleSortChange} />
                     </div>
                 </div>
 
                 <div className="row w-100 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-0 z-0">
-                    {sortedProducts.slice(0, visibleProducts).map(product => (
-                        <div className="col" key={product.id}>
-                            <div className="producto-card h-100 w-100 p-3">
-                                <Link to={`/${product.categoria}/${product.marca}/${product.id}`}
-                                    className="text-decoration-none text-dark">
-                                    {product.stock <= 5 && (
-                                        <img src={productTendencia} className='producto-card-tendencia position-absolute' alt="" width={100}/>
-                                    )}
-                                    <img
-                                        className="producto-img img-fluid p-3"
-                                        src={product.imagen || imageMap[product.nombre]}
-                                        alt={product.nombre}
-                                        onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }}
-                                    />
-                                    <h6 className="mb-2 fw-light text-black-50">{product.categoria}</h6>
-                                    <h5 className="text-truncate fw-light">{product.nombre}</h5>
-                                    <p className="m-0 p-0 fw-light text-black-50">{product.precio}€</p>
-                                </Link>
-                            </div>
-                        </div>
-                    ))}
+                {sortedProducts.slice(0, visibleProducts).map(product => (
+                    <div className="col" key={product.id}>
+                        <ProductCard product={product} />
+                    </div>
+                ))}
                 </div>
 
                 {visibleProducts < sortedProducts.length && (
                     <div className="text-center my-5">
-                        <button 
-                            onClick={loadMore}
-                            className="button fw-light"
-                        >
+                        <button onClick={loadMore} className="button fw-light">
                             Ver más productos
                         </button>
                     </div>

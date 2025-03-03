@@ -1,8 +1,6 @@
 import React from "react";
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importa Bootstrap CSS
-import '../../index.css'; // Importa el archivo CSS personalizado
-import { NavLink } from "react-router-dom";
-import { Nav, Navbar, NavDropdown } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../index.css';
 
 const Footer = () => {
     return (
