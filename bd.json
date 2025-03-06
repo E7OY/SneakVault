@@ -1,0 +1,1246 @@
+{
+  "productos": {
+    "camisetas": {
+      "nike": {
+        "nocta-nrg-rf-tee": {
+          "categoria": "camisetas",
+          "color": "negro",
+          "descripcion": "Camiseta negra de la línea Nocta de Nike. Diseño moderno y minimalista, perfecta para un look urbano y casual.",
+          "imagen": "../assets/nocta-nrg-rf-tee.png",
+          "marca": "nike",
+          "nombre": "Nike Nocta NRG RF Tee",
+          "precio": 130,
+          "stock": 20
+        },
+        "nocta-nrg-tee-dark-grey": {
+          "categoria": "camisetas",
+          "color": "gris",
+          "descripcion": "Camiseta gris oscuro de la línea Nocta de Nike. Diseño moderno y minimalista, perfecta para un look urbano y casual.",
+          "imagen": "../assets/nocta-nrg-tee-dark-grey.png",
+          "marca": "nike",
+          "nombre": "Nike Nocta NRG Tee Dark Grey",
+          "precio": 150,
+          "stock": 19
+        },
+        "nocta-nrg-tee-grey": {
+          "categoria": "camisetas",
+          "color": "negro",
+          "descripcion": "Camiseta gris de la línea Nocta de Nike. Diseño moderno y minimalista, perfecta para un look urbano y casual.",
+          "imagen": "../assets/nocta-nrg-tee-grey.png",
+          "marca": "nike",
+          "nombre": "Nike Nocta NRG Tee Grey",
+          "precio": 130,
+          "stock": 120
+        },
+        "nocta-nrg-tee-mineral-slate": {
+          "categoria": "camisetas",
+          "color": "slate",
+          "descripcion": "Camiseta gris de la línea Nocta de Nike. Diseño moderno y minimalista, perfecta para un look urbano y casual.",
+          "imagen": "../assets/nocta-nrg-tee-mineral-slate.png",
+          "marca": "nike",
+          "nombre": "Nike Nocta NRG Tee Mineral Slate",
+          "precio": 130,
+          "stock": 19
+        },
+        "nocta-nrg-tee-oil-green": {
+          "categoria": "camisetas",
+          "color": "oil-green",
+          "descripcion": "Camiseta verde oliva de la línea Nocta de Nike. Diseño moderno y minimalista, perfecta para un look urbano y casual.",
+          "imagen": "../assets/nocta-nrg-tee-oil-green.png",
+          "marca": "nike",
+          "nombre": "Nike Nocta NRG Tee Oil Green",
+          "precio": 130,
+          "stock": 3
+        },
+        "nocta-nrg-tee-orange": {
+          "categoria": "camisetas",
+          "color": "naranja",
+          "descripcion": "Camiseta naranja de la línea Nocta de Nike. Diseño moderno y minimalista, perfecta para un look urbano y casual.",
+          "imagen": "../assets/nocta-nrg-tee-orane.png",
+          "marca": "nike",
+          "nombre": "Nike Nocta NRG Tee Orange",
+          "precio": 130,
+          "stock": 32
+        },
+        "nocta-souvenir-cactus": {
+          "categoria": "camisetas",
+          "color": "marrón",
+          "descripcion": "Camiseta marrón de la línea Nocta de Nike. Diseño moderno y minimalista, perfecta para un look urbano y casual.",
+          "imagen": "../assets/nocta-souvenir-cactus.png",
+          "marca": "nike",
+          "nombre": "Nike Nocta Souvenir Cactus",
+          "precio": 150,
+          "stock": 1
+        }
+      },
+      "off-white": {
+        "black-shirt": {
+          "categoria": "camisetas",
+          "color": "beige",
+          "descripcion": "Camiseta de colaboración entre Off-White y Nike, parte de la colección 005. Diseño moderno con el logo icónico de Off-White y detalles de Nike. Perfecta para un look urbano y exclusivo.",
+          "imagen": "../assets/offwhiteshirtblack.png",
+          "marca": "off-white",
+          "nombre": "Off-White x Nike 005 T-Shirts Beige",
+          "precio": 250,
+          "stock": 9
+        },
+        "jumbo-arrow-tee-purple": {
+          "categoria": "camisetas",
+          "color": "morado",
+          "descripcion": "Camiseta morada de Off-White con el diseño de la flecha jumbo en la espalda. Estilo llamativo y moderno, perfecta para destacar en cualquier ocasión.",
+          "imagen": "../assets/jumbo-arrow-tee-purple.png",
+          "marca": "off-white",
+          "nombre": "Off-White Jumbo Arrow Tee Purple",
+          "precio": 320,
+          "stock": 94
+        },
+        "jumbo-arrow-tee-white": {
+          "categoria": "camisetas",
+          "color": "gris",
+          "descripcion": "Camiseta blanca de Off-White con el diseño de la flecha jumbo en la espalda. Estilo llamativo y moderno, perfecta para destacar en cualquier ocasión.",
+          "imagen": "../assets/jumbo-arrow-tee-white.png",
+          "marca": "off-white",
+          "nombre": "Off-White Jumbo Arrow Tee White",
+          "precio": 150,
+          "stock": 94
+        },
+        "spray-dot-black": {
+          "categoria": "camisetas",
+          "color": "negro",
+          "descripcion": "Camiseta de colaboración entre Off-White y Nike, parte de la colección Spray Dot. Diseño moderno con el logo icónico de Off-White y detalles de Nike. Perfecta para un look urbano y exclusivo.",
+          "imagen": "../assets/spray-dot-black.png",
+          "marca": "off-white",
+          "nombre": "Off-White x Nike Spray Dot Black",
+          "precio": 180,
+          "stock": 19
+        },
+        "wave-outline-tee-white": {
+          "categoria": "camisetas",
+          "color": "blanco",
+          "descripcion": "Camiseta blanca de Off-White con el diseño de onda en el contorno. Estilo minimalista y moderno, perfecta para combinar con cualquier outfit casual.",
+          "imagen": "../assets/wave-outline-tee-white.png",
+          "marca": "off-white",
+          "nombre": "Off-White Wave Outline Tee White",
+          "precio": 320,
+          "stock": 67
+        }
+      },
+      "palace": {
+        "heat-sensi-tee-navy": {
+          "categoria": "camisetas",
+          "color": "navy",
+          "descripcion": "Camiseta azul marino de algodón con el logo de Palace. Cambia de color con el calor.",
+          "imagen": "../assets/heat-sensi-tee-navy.png",
+          "marca": "palace",
+          "nombre": "Palace Heat Sensi Tee Navy",
+          "precio": 150,
+          "stock": 24
+        },
+        "long-sleeve-carhartt": {
+          "categoria": "camisetas",
+          "color": "blanco",
+          "descripcion": "Camiseta de manga larga de algodón con el logo compartido de Palace y Carhartt WIP.",
+          "imagen": "../assets/palacelongsleeve.png",
+          "marca": "palace",
+          "nombre": "Palace x Carhartt WIP",
+          "precio": 150,
+          "stock": 10
+        },
+        "oackley-shirt": {
+          "categoria": "camisetas",
+          "color": "negro",
+          "descripcion": "Camiseta de algodón con el logo compartido de Palace y Oakley.",
+          "imagen": "../assets/palaceshirt.png",
+          "marca": "palace",
+          "nombre": "Palace x Oakley T-Shirt",
+          "precio": 130,
+          "stock": 10
+        },
+        "save-thyself-tee-white": {
+          "categoria": "camisetas",
+          "color": "blanco",
+          "descripcion": "Camiseta blanca de algodón con el logo de Palace.",
+          "imagen": "../assets/save-thyself-tee-white.png",
+          "marca": "palace",
+          "nombre": "Palace Save Thyself Tee White",
+          "precio": 150,
+          "stock": 54
+        }
+      },
+      "stüssy": {
+        "8-ball-tee-black": {
+          "categoria": "camisetas",
+          "color": "negro",
+          "descripcion": "Camiseta negra de Stussy con el diseño de la bola 8.",
+          "imagen": "../assets/8-ball-tee-black.png",
+          "marca": "stüssy",
+          "nombre": "Stussy 8 Ball Tee Black",
+          "precio": 130,
+          "stock": 15
+        },
+        "8-ball-tee-khaki": {
+          "categoria": "camisetas",
+          "color": "khaki",
+          "descripcion": "Camiseta color caqui de Stussy con el diseño de la bola 8.",
+          "imagen": "../assets/8-ball-tee-khaki.png",
+          "marca": "stüssy",
+          "nombre": "Stussy 8 Ball Tee Khaki",
+          "precio": 100,
+          "stock": 15
+        },
+        "8-ball-tee-natural": {
+          "categoria": "camisetas",
+          "color": "blanco",
+          "descripcion": "Camiseta color natural de Stussy con el diseño de la bola 8.",
+          "imagen": "../assets/8-ball-tee-nartural.png",
+          "marca": "stüssy",
+          "nombre": "Stussy 8 Ball Tee Natural",
+          "precio": 150,
+          "stock": 5
+        },
+        "basic-stussy-tee-pigment-died-white": {
+          "categoria": "camisetas",
+          "color": "blanco",
+          "descripcion": "Camiseta blanca de Stussy con el logo básico de la marca.",
+          "imagen": "../assets/basic-stussy-tee-pigment-died-white.png",
+          "marca": "stüssy",
+          "nombre": "Stussy Basic Stussy Tee Pigment Died White",
+          "precio": 150,
+          "stock": 2
+        },
+        "shells-black-tee": {
+          "categoria": "camisetas",
+          "color": "negro",
+          "descripcion": "Camiseta negra de Stussy con un diseño de conchas.",
+          "imagen": "../assets/shells-black-tee.png",
+          "marca": "stüssy",
+          "nombre": "Stussy Shells Black Tee",
+          "precio": 130,
+          "stock": 29
+        },
+        "surfwalk-tee-black": {
+          "categoria": "camisetas",
+          "color": "negro",
+          "descripcion": "Camiseta negra de Stussy con un diseño de surf.",
+          "imagen": "../assets/surfwalk-tee-black.png",
+          "marca": "stüssy",
+          "nombre": "Stussy Surfwalk Tee Black",
+          "precio": 130,
+          "stock": 24
+        },
+        "surfwalk-tee-navy": {
+          "categoria": "camisetas",
+          "color": "navy",
+          "descripcion": "Camiseta azul marino de Stussy con un diseño de surf.",
+          "imagen": "../assets/surfwalk-tee-navy.png",
+          "marca": "stüssy",
+          "nombre": "Stussy Surfwalk Tee Navy",
+          "precio": 130,
+          "stock": 17
+        },
+        "surfwalk-tee-white": {
+          "categoria": "camisetas",
+          "color": "blanco",
+          "descripcion": "Camiseta blanca de Stussy con un diseño de surf.",
+          "imagen": "../assets/surfwalk-tee-white.png",
+          "marca": "stüssy",
+          "nombre": "Stussy Surfwalk Tee White",
+          "precio": 130,
+          "stock": 1
+        },
+        "thermal-stock-tee": {
+          "categoria": "camisetas",
+          "color": "blanco",
+          "descripcion": "Camiseta térmica de Stussy con el logo de la marca.",
+          "imagen": "../assets/thermal-stock-tee.png",
+          "marca": "stüssy",
+          "nombre": "Stussy Thermal Stock Tee",
+          "precio": 130,
+          "stock": 62
+        }
+      },
+      "supreme": {
+        "4-life-tee-white": {
+          "categoria": "camisetas",
+          "color": "blanco",
+          "descripcion": "Camiseta blanca de Supreme con el diseño 4 Life. Estilo urbano y moderno, perfecta para los seguidores de la marca.",
+          "imagen": "../assets/supreme-4-life.png",
+          "marca": "supreme",
+          "nombre": "Supreme 4 Life Tee White",
+          "precio": 150,
+          "stock": 14
+        },
+        "backwards-tee-white": {
+          "categoria": "camisetas",
+          "color": "blanco",
+          "descripcion": "Camiseta blanca de Supreme con el logo al revés. Estilo urbano y moderno, perfecta para los que buscan un toque diferente.",
+          "imagen": "../assets/backwards-tee-white.png",
+          "marca": "supreme",
+          "nombre": "Supreme Backwards Tee White",
+          "precio": 150,
+          "stock": 94
+        },
+        "jordan-biggie-tee-black": {
+          "categoria": "camisetas",
+          "color": "negro",
+          "descripcion": "Camiseta negra de Supreme con un diseño de Jordan y Biggie. Estilo urbano y moderno, perfecta para los amantes del hip-hop y el baloncesto.",
+          "imagen": "../assets/jordan-biggie-tee.png",
+          "marca": "supreme",
+          "nombre": "Supreme Jordan Biggie Tee Black",
+          "precio": 150,
+          "stock": 4
+        },
+        "tyler-the-creator-tee-white": {
+          "categoria": "camisetas",
+          "color": "blanco",
+          "descripcion": "Camiseta blanca de Supreme con un diseño de Tyler, The Creator. Estilo urbano y moderno, perfecta para los fans del artista.",
+          "imagen": "../assets/tyler-the-creator-tee-white.png",
+          "marca": "supreme",
+          "nombre": "Supreme Tyler The Creator Tee White",
+          "precio": 150,
+          "stock": 44
+        }
+      }
+    },
+    "zapatillas": {
+      "adidas": {
+        "campus": {
+          "categoria": "zapatillas",
+          "color": "marrón",
+          "descripcion": "Colaboración entre Adidas y Bad Bunny que fusiona el estilo clásico de las Campus con la creatividad del artista. Detalles únicos y colores vibrantes para un look moderno y llamativo.",
+          "imagen": "../assets/campus.png",
+          "marca": "adidas",
+          "nombre": "Adidas Campus x Bad Bunny",
+          "precio": 240,
+          "stock": 5
+        },
+        "campus-cream": {
+          "categoria": "zapatillas",
+          "color": "beige",
+          "descripcion": "Diseño exclusivo en color crema de la colaboración entre Adidas y Bad Bunny. Estilo clásico con un toque moderno y detalles distintivos para un look único.",
+          "imagen": "../assets/campus-cream.png",
+          "marca": "adidas",
+          "nombre": "Adidas Campus Cream x Bad Bunny",
+          "precio": 420,
+          "stock": 15
+        },
+        "campus-wild-moss": {
+          "categoria": "zapatillas",
+          "color": "verde",
+          "descripcion": "Diseño exclusivo en color musgo de la colaboración entre Adidas y Bad Bunny. Estilo clásico con un toque moderno y detalles distintivos para un look único.",
+          "imagen": "../assets/campus-wild-moss.png",
+          "marca": "adidas",
+          "nombre": "Adidas Campus Wild Moss x Bad Bunny",
+          "precio": 340,
+          "stock": 4
+        },
+        "forum-bad-bunny-black": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Diseño exclusivo en color negro de la colaboración entre Adidas y Bad Bunny. Estilo moderno con detalles distintivos y materiales premium para un look sofisticado.",
+          "imagen": "../assets/forum-badd-bunny-black.png",
+          "marca": "adidas",
+          "nombre": "Adidas Forum x Bad Bunny Black",
+          "precio": 600,
+          "stock": 3
+        },
+        "forum-bad-bunny-blue": {
+          "categoria": "zapatillas",
+          "color": "azul",
+          "descripcion": "Color azul vibrante para esta colaboración entre Adidas y Bad Bunny. Diseño moderno con detalles únicos y materiales premium para un look llamativo y exclusivo.",
+          "imagen": "../assets/forum-badd-bunny-blue.png",
+          "marca": "adidas",
+          "nombre": "Adidas Forum x Bad Bunny Blue",
+          "precio": 500,
+          "stock": 46
+        },
+        "forum-bad-bunny-white": {
+          "categoria": "zapatillas",
+          "color": "blanco",
+          "descripcion": "Colaboración entre Adidas y Bad Bunny que reinventa el diseño clásico de las Forum. Color blanco con detalles únicos y materiales premium para un look moderno y exclusivo.",
+          "imagen": "../assets/forum-badd-bunny-white.png",
+          "marca": "adidas",
+          "nombre": "Adidas Forum x Bad Bunny White",
+          "precio": 330,
+          "stock": 15
+        },
+        "response-cl-bad-bunny": {
+          "categoria": "zapatillas",
+          "color": "beige",
+          "descripcion": "Colaboración entre Adidas y Bad Bunny que fusiona el estilo retro de las Response CL con la creatividad del artista. Detalles únicos y colores vibrantes para un look moderno y llamativo.",
+          "imagen": "../assets/response-cl-badd-bunny.png",
+          "marca": "adidas",
+          "nombre": "Adidas Response CL x Bad Bunny",
+          "precio": 380,
+          "stock": 15
+        },
+        "response-cl-black-bad-bunny": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Diseño exclusivo en color negro de la colaboración entre Adidas y Bad Bunny. Estilo retro con detalles modernos y materiales premium para un look sofisticado y exclusivo.",
+          "imagen": "../assets/response-cl-black-badd-bunny.png",
+          "marca": "adidas",
+          "nombre": "Adidas Response CL Black x Bad Bunny",
+          "precio": 250,
+          "stock": 12
+        },
+        "response-cl-blue-bad-bunny": {
+          "categoria": "zapatillas",
+          "color": "azul",
+          "descripcion": "Color azul vibrante para esta colaboración entre Adidas y Bad Bunny. Diseño retro con detalles modernos y materiales premium para un look llamativo y exclusivo.",
+          "imagen": "../assets/response-cl-blue-badd-bunny.png",
+          "marca": "adidas",
+          "nombre": "Adidas Response CL Blue x Bad Bunny",
+          "precio": 280,
+          "stock": 19
+        },
+        "response-cl-white-bad-bunny": {
+          "categoria": "zapatillas",
+          "color": "blanco",
+          "descripcion": "Diseño exclusivo en color blanco de la colaboración entre Adidas y Bad Bunny. Estilo retro con detalles modernos y materiales premium para un look fresco y exclusivo.",
+          "imagen": "../assets/response-cl-white-badd-bunny.png",
+          "marca": "adidas",
+          "nombre": "Adidas Response CL White x Bad Bunny",
+          "precio": 350,
+          "stock": 2
+        }
+      },
+      "jordan": {
+        "air-jordan-1": {
+          "categoria": "zapatillas",
+          "color": "marrón",
+          "descripcion": "Colaboración icónica entre Jordan y Travis Scott, fusionando el diseño clásico de las Air Jordan 1 con el estilo único del rapero. Detalles distintivos y materiales premium para un look exclusivo.",
+          "imagen": "../assets/jordan1.png",
+          "marca": "jordan",
+          "nombre": "Air Jordan 1 x Cactus Jack",
+          "precio": 2500,
+          "stock": 40
+        },
+        "air-low-fragment-travis": {
+          "categoria": "zapatillas",
+          "color": "azul",
+          "descripcion": "Colaboración exclusiva entre Jordan, Fragment Design y Travis Scott. Diseño único con detalles distintivos y materiales premium para un look de coleccionista.",
+          "imagen": "../assets/jordan-retro-low-fragment-travis.png",
+          "marca": "jordan",
+          "nombre": "Air Jordan 1 Low OG SP x Fragment Design x Travis Scott",
+          "precio": 2500,
+          "stock": 3
+        },
+        "jumpman-travis-scott": {
+          "categoria": "zapatillas",
+          "color": "marrón",
+          "descripcion": "Diseño exclusivo de la línea Jumpman en colaboración con Travis Scott. Estilo único y detalles distintivos para un look moderno y urbano.",
+          "imagen": "../assets/jordan-jumpman-travis.png",
+          "marca": "jordan",
+          "nombre": "Jordan Jumpman Travis Scott",
+          "precio": 800,
+          "stock": 49
+        },
+        "jumpman-travis-scott-dark-mocha": {
+          "categoria": "zapatillas",
+          "color": "mocha",
+          "descripcion": "Diseño exclusivo de la línea Jumpman en colaboración con Travis Scott. Color dark mocha para un estilo sofisticado y moderno.",
+          "imagen": "../assets/jordan-jumpman-travis-dark-mocha.png",
+          "marca": "jordan",
+          "nombre": "Jordan Jumpman Travis Scott Dark Mocha",
+          "precio": 550,
+          "stock": 12
+        },
+        "jumpman-travis-scott-university-red": {
+          "categoria": "zapatillas",
+          "color": "rojo",
+          "descripcion": "Diseño exclusivo de la línea Jumpman en colaboración con Travis Scott. Color rojo universitario para un estilo llamativo y audaz.",
+          "imagen": "../assets/jordan-jumpman-travis-university-red.png",
+          "marca": "jordan",
+          "nombre": "Jordan Jumpman Travis Scott University Red",
+          "precio": 650,
+          "stock": 3
+        },
+        "low-og-travis-black-phantom": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Diseño exclusivo de las Jordan 1 Low en colaboración con Travis Scott. Color negro phantom para un estilo misterioso y moderno.",
+          "imagen": "../assets/jordan-low-travis-black-phantom.png",
+          "marca": "jordan",
+          "nombre": "Jordan 1 Low OG SP Travis Scott Black Phantom",
+          "precio": 1300,
+          "stock": 0
+        },
+        "low-reverse-mocha-travis": {
+          "categoria": "zapatillas",
+          "color": "marrón",
+          "descripcion": "Diseño exclusivo de las Jordan 1 Low en colaboración con Travis Scott. Color mocha invertido para un estilo único y llamativo.",
+          "imagen": "../assets/jordan-retro-low-travis-mocha.png",
+          "marca": "jordan",
+          "nombre": "Air Jordan 1 Low Travis Scott Reverse Mocha",
+          "precio": 2000,
+          "stock": 29
+        },
+        "retro-a-ma-maniere": {
+          "categoria": "zapatillas",
+          "color": "beige",
+          "descripcion": "Colaboración exclusiva entre Jordan y A Ma Maniére. Diseño retro de las Jordan 3 con detalles únicos y materiales premium para un look de lujo.",
+          "imagen": "../assets/jordan-retro-A-Ma-Maniére.png",
+          "marca": "jordan",
+          "nombre": "Jordan 3 Retro A Ma Maniére",
+          "precio": 350,
+          "stock": 20
+        },
+        "retro-black-canvas": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Diseño retro de las Jordan 4 en color black canvas. Estilo clásico con detalles modernos para un look urbano.",
+          "imagen": "../assets/jordan-retro-black-canvas.png",
+          "marca": "jordan",
+          "nombre": "Jordan 4 Retro Black Canvas",
+          "precio": 480,
+          "stock": 29
+        },
+        "retro-black-cat": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Diseño retro de las Jordan 3 en color black cat. Estilo clásico con detalles modernos para un look elegante.",
+          "imagen": "../assets/jordan-retro-black-cat.png",
+          "marca": "jordan",
+          "nombre": "Jordan 3 Retro Black Cat",
+          "precio": 300,
+          "stock": 34
+        },
+        "retro-black-cement": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Diseño retro de las Jordan 3 en color black cement. Estilo clásico con detalles modernos para un look icónico.",
+          "imagen": "../assets/jordan-retro-black-cement.png",
+          "marca": "jordan",
+          "nombre": "Jordan 3 Retro Black Cement",
+          "precio": 300,
+          "stock": 3
+        },
+        "retro-cacao-wow": {
+          "categoria": "zapatillas",
+          "color": "marrón",
+          "descripcion": "Diseño retro de las Jordan 4 en color cacao wow. Estilo clásico con detalles modernos para un look distintivo.",
+          "imagen": "../assets/jordan-retro-cacao-wow.png",
+          "marca": "jordan",
+          "nombre": "Jordan 4 Retro Cacao Wow",
+          "precio": 260,
+          "stock": 19
+        },
+        "retro-canyon": {
+          "categoria": "zapatillas",
+          "color": "morado",
+          "descripcion": "Diseño retro de las Jordan 4 en color canyon purple. Estilo clásico con detalles modernos para un look llamativo y actual.",
+          "imagen": "../assets/jordanretro.png",
+          "marca": "jordan",
+          "nombre": "Jordan 4 Retro Canyon Purple",
+          "precio": 400,
+          "stock": 5
+        },
+        "retro-craft-photon-dust": {
+          "categoria": "zapatillas",
+          "color": "gris",
+          "descripcion": "Diseño retro de las Jordan 4 en color photon dust. Estilo clásico con detalles modernos para un look renovado.",
+          "imagen": "../assets/jordan-retro-craft-photon-dust.png",
+          "marca": "jordan",
+          "nombre": "Jordan 4 Retro High OG Craft Photon Dust",
+          "precio": 280,
+          "stock": 28
+        },
+        "retro-fear": {
+          "categoria": "zapatillas",
+          "color": "gris",
+          "descripcion": "Diseño retro de las Jordan 4 en color fear. Estilo clásico con detalles únicos para un look moderno y atrevido.",
+          "imagen": "../assets/jordan-retro-fear.png",
+          "marca": "jordan",
+          "nombre": "Jordan 4 Retro Fear",
+          "precio": 280,
+          "stock": 60
+        },
+        "retro-frozen-moments": {
+          "categoria": "zapatillas",
+          "color": "gris",
+          "descripcion": "Diseño retro de las Jordan 4 en color frozen moments. Estilo clásico con detalles únicos para un look moderno y sofisticado.",
+          "imagen": "../assets/jordanfrozen.png",
+          "marca": "jordan",
+          "nombre": "Jordan 4 Retro Frozen Moments",
+          "precio": 550,
+          "stock": 56
+        },
+        "retro-j-balvin-rio": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Diseño exclusivo de la colaboración entre Jordan y J Balvin, inspirado en los colores vibrantes de Río de Janeiro. Detalles únicos y materiales premium para un look de coleccionista.",
+          "imagen": "../assets/jordan-retro-j-balvin-rio.png",
+          "marca": "jordan",
+          "nombre": "Jordan 3 Retro J Balvin Rio",
+          "precio": 320,
+          "stock": 0
+        },
+        "retro-low-og-travis": {
+          "categoria": "zapatillas",
+          "color": "marrón",
+          "descripcion": "Diseño retro de las Jordan 1 Low en colaboración con Travis Scott. Estilo único con detalles distintivos y materiales premium para un look exclusivo.",
+          "imagen": "../assets/jordan-retro-low-travis.png",
+          "marca": "jordan",
+          "nombre": "Jordan 1 Retro Low OG SP Travis Scott",
+          "precio": 2500,
+          "stock": 15
+        },
+        "retro-low-og-travis-velvet-brown": {
+          "categoria": "zapatillas",
+          "color": "marrón",
+          "descripcion": "Diseño retro de las Jordan 1 Low en colaboración con Travis Scott. Color marrón velvet para un estilo único y llamativo.",
+          "imagen": "../assets/jordan-retro-low-travis-velvet-brown.png",
+          "marca": "jordan",
+          "nombre": "Jordan 1 Retro Low OG SP Travis Scott Velvet Brown",
+          "precio": 550,
+          "stock": 13
+        },
+        "retro-midnight-navy": {
+          "categoria": "zapatillas",
+          "color": "azul",
+          "descripcion": "Diseño retro de las Jordan 4 en color midnight navy. Estilo clásico con detalles modernos para un look sofisticado.",
+          "imagen": "../assets/jordan-retro-midnight-navy.png",
+          "marca": "jordan",
+          "nombre": "Jordan 4 Retro Midnight Navy",
+          "precio": 320,
+          "stock": 0
+        },
+        "retro-military-black": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Diseño retro de las Jordan 4 en color military black. Estilo clásico con detalles modernos para un look audaz.",
+          "imagen": "../assets/jordan-retro-military-black.png",
+          "marca": "jordan",
+          "nombre": "Jordan 4 Retro Military Black",
+          "precio": 400,
+          "stock": 11
+        },
+        "retro-olive": {
+          "categoria": "zapatillas",
+          "color": "olive",
+          "descripcion": "Diseño retro de las Jordan 4 en color oliva. Estilo clásico con un toque natural para un look moderno y sofisticado.",
+          "imagen": "../assets/jordan-retro-olive.png",
+          "marca": "jordan",
+          "nombre": "Jordan 4 Retro Olive",
+          "precio": 250,
+          "stock": 20
+        },
+        "retro-orchid": {
+          "categoria": "zapatillas",
+          "color": "morado",
+          "descripcion": "Diseño retro de las Jordan 4 en color orquídea. Estilo clásico con detalles únicos para un look moderno y sofisticado.",
+          "imagen": "../assets/jordan-retro-orchid.png",
+          "marca": "jordan",
+          "nombre": "Jordan 4 Retro Orchid",
+          "precio": 450,
+          "stock": 0
+        },
+        "retro-pine-green": {
+          "categoria": "zapatillas",
+          "color": "verde",
+          "descripcion": "Diseño retro de las Jordan 4 en color verde pino. Estilo clásico con detalles modernos para un look llamativo y actual.",
+          "imagen": "../assets/jordan-retro-pine-green.png",
+          "marca": "jordan",
+          "nombre": "Jordan 4 Retro Pine Green",
+          "precio": 500,
+          "stock": 19
+        },
+        "retro-red-cement": {
+          "categoria": "zapatillas",
+          "color": "rojo",
+          "descripcion": "Diseño retro de las Jordan 4 con el icónico estampado cemento en color rojo. Estilo clásico con un toque audaz y moderno.",
+          "imagen": "../assets/jordan-retro-red-cement.png",
+          "marca": "jordan",
+          "nombre": "Jordan 4 Retro Red Cement",
+          "precio": 270,
+          "stock": 29
+        },
+        "retro-red-thunder": {
+          "categoria": "zapatillas",
+          "color": "rojo",
+          "descripcion": "Diseño retro de las Jordan 4 en color red thunder. Estilo clásico con detalles modernos para un look audaz y llamativo.",
+          "imagen": "../assets/jordan-retro-red-thunder.png",
+          "marca": "jordan",
+          "nombre": "Jordan 4 Retro Red Thunder",
+          "precio": 500,
+          "stock": 7
+        },
+        "retro-seafoam": {
+          "categoria": "zapatillas",
+          "color": "verde",
+          "descripcion": "Diseño retro de las Jordan 4 en color seafoam. Estilo clásico con un toque de color para un look fresco y moderno.",
+          "imagen": "../assets/jordan-retro-seafoam.png",
+          "marca": "jordan",
+          "nombre": "Jordan 4 Retro Seafoam",
+          "precio": 370,
+          "stock": 24
+        },
+        "retro-thunder": {
+          "categoria": "zapatillas",
+          "color": "amarillo",
+          "descripcion": "Diseño retro de las Jordan 4 en color thunder. Estilo clásico con detalles modernos para un look audaz.",
+          "imagen": "../assets/jordan-retro-thunder.png",
+          "marca": "jordan",
+          "nombre": "Jordan 4 Retro Thunder",
+          "precio": 300,
+          "stock": 26
+        },
+        "retro-university-blue": {
+          "categoria": "zapatillas",
+          "color": "azul",
+          "descripcion": "Diseño retro de las Jordan 4 en color azul universitario. Estilo clásico con un toque de color para un look fresco y moderno.",
+          "imagen": "../assets/jordan-retro-university-blue.png",
+          "marca": "jordan",
+          "nombre": "Jordan 4 Retro University Blue",
+          "precio": 450,
+          "stock": 0
+        },
+        "retro-wet-cement": {
+          "categoria": "zapatillas",
+          "color": "gris",
+          "descripcion": "Diseño retro de las Jordan 4 en color wet cement. Estilo clásico con un toque urbano para un look moderno y versátil.",
+          "imagen": "../assets/jordan-retro-wet-cement.png",
+          "marca": "jordan",
+          "nombre": "Jordan 4 Retro Wet Cement",
+          "precio": 250,
+          "stock": 20
+        },
+        "retro-white-cement-reimagined": {
+          "categoria": "zapatillas",
+          "color": "blanco",
+          "descripcion": "Diseño retro de las Jordan 3 en color white cement reimagined. Estilo clásico con detalles modernos para un look renovado.",
+          "imagen": "../assets/jordan-retro-white-cement-reimagined.png",
+          "marca": "jordan",
+          "nombre": "Jordan 3 Retro White Cement Reimagined",
+          "precio": 270,
+          "stock": 30
+        }
+      },
+      "nike": {
+        "dunk-low-black-panda": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Color vibrante en naranja para esta colaboración entre Nike y Nocta. Diseño llamativo y detalles exclusivos para un estilo audaz y moderno.",
+          "imagen": "../assets/dunk-low-black-panda.png",
+          "marca": "nike",
+          "nombre": "Nike Dunk Low Black Panda",
+          "precio": 150,
+          "stock": 15
+        },
+        "dunk-low-cacao-wow": {
+          "categoria": "zapatillas",
+          "color": "marrón",
+          "descripcion": "Color vibrante en naranja para esta colaboración entre Nike y Nocta. Diseño llamativo y detalles exclusivos para un estilo audaz y moderno.",
+          "imagen": "../assets/dunk-low-cacao-wow.png",
+          "marca": "nike",
+          "nombre": "Nike Dunk Low Cacao Wow",
+          "precio": 170,
+          "stock": 84
+        },
+        "dunk-low-chicago": {
+          "categoria": "zapatillas",
+          "color": "rojo",
+          "descripcion": "Color vibrante en naranja para esta colaboración entre Nike y Nocta. Diseño llamativo y detalles exclusivos para un estilo audaz y moderno.",
+          "imagen": "../assets/dunk-low-chicago.png",
+          "marca": "nike",
+          "nombre": "Nike Dunk Low Chicago",
+          "precio": 230,
+          "stock": 53
+        },
+        "dunk-low-court-purple": {
+          "categoria": "zapatillas",
+          "color": "morado",
+          "descripcion": "Color vibrante en naranja para esta colaboración entre Nike y Nocta. Diseño llamativo y detalles exclusivos para un estilo audaz y moderno.",
+          "imagen": "../assets/dunk-low-court-purple.png",
+          "marca": "nike",
+          "nombre": "Nike Dunk Low Court Purple",
+          "precio": 200,
+          "stock": 28
+        },
+        "dunk-low-light-iron": {
+          "categoria": "zapatillas",
+          "color": "gris",
+          "descripcion": "Color vibrante en naranja para esta colaboración entre Nike y Nocta. Diseño llamativo y detalles exclusivos para un estilo audaz y moderno.",
+          "imagen": "../assets/dunk-low-light-iron.png",
+          "marca": "nike",
+          "nombre": "Nike Dunk Low Light Iron",
+          "precio": 220,
+          "stock": 17
+        },
+        "dunk-low-light-violet-venice": {
+          "categoria": "zapatillas",
+          "color": "violeta",
+          "descripcion": "Color vibrante en naranja para esta colaboración entre Nike y Nocta. Diseño llamativo y detalles exclusivos para un estilo audaz y moderno.",
+          "imagen": "../assets/dunk-low-light-violet-venice.png",
+          "marca": "nike",
+          "nombre": "Nike Dunk Low Light Violet Venice",
+          "precio": 220,
+          "stock": 21
+        },
+        "dunk-low-supreme-black": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Color vibrante en naranja para esta colaboración entre Nike y Nocta. Diseño llamativo y detalles exclusivos para un estilo audaz y moderno.",
+          "imagen": "../assets/dunk-low-supreme-black.png",
+          "marca": "nike",
+          "nombre": "Nike Dunk Low Supreme Black",
+          "precio": 850,
+          "stock": 29
+        },
+        "dunk-low-team-gold": {
+          "categoria": "zapatillas",
+          "color": "dorado",
+          "descripcion": "Color vibrante en naranja para esta colaboración entre Nike y Nocta. Diseño llamativo y detalles exclusivos para un estilo audaz y moderno.",
+          "imagen": "../assets/dunk-low-team-gold.png",
+          "marca": "nike",
+          "nombre": "Nike Dunk Low Team Gold",
+          "precio": 180,
+          "stock": 14
+        },
+        "dunk-low-travis-scott": {
+          "categoria": "zapatillas",
+          "color": "marrón",
+          "descripcion": "Color vibrante en naranja para esta colaboración entre Nike y Nocta. Diseño llamativo y detalles exclusivos para un estilo audaz y moderno.",
+          "imagen": "../assets/dunk-low-travis-scott.png",
+          "marca": "nike",
+          "nombre": "Nike Dunk Low Travis Scott",
+          "precio": 2300,
+          "stock": 5
+        },
+        "hot-step-nocta-black": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Diseño innovador de Nike en colaboración con Nocta, la marca de Drake. Estilo urbano y detalles técnicos para un look moderno y funcional en color negro.",
+          "imagen": "../assets/nocta-black.png",
+          "marca": "nike",
+          "nombre": "Nike Hot Step Nocta Black",
+          "precio": 320,
+          "stock": 8
+        },
+        "hot-step-nocta-drake-white": {
+          "categoria": "zapatillas",
+          "color": "blanco",
+          "descripcion": "La segunda versión de la colaboración entre Nike y Nocta de Drake. Diseño elegante en color blanco con detalles distintivos y tecnología de vanguardia para un estilo único.",
+          "imagen": "../assets/nocta-white.png",
+          "marca": "nike",
+          "nombre": "Nike Hot Step 2 Nocta Drake White",
+          "precio": 420,
+          "stock": 8
+        },
+        "hot-step-nocta-eggplant": {
+          "categoria": "zapatillas",
+          "color": "morado",
+          "descripcion": "Atrevido diseño en color berenjena de la colaboración Nike x Nocta. Detalles exclusivos y materiales premium para un estilo llamativo y sofisticado.",
+          "imagen": "../assets/nocta-eggplant.png",
+          "marca": "nike",
+          "nombre": "Nike Hot Step 2 Nocta Eggplant",
+          "precio": 400,
+          "stock": 12
+        },
+        "hot-step-nocta-orange": {
+          "categoria": "zapatillas",
+          "color": "naranja",
+          "descripcion": "Color vibrante en naranja para esta colaboración entre Nike y Nocta. Diseño llamativo y detalles exclusivos para un estilo audaz y moderno.",
+          "imagen": "../assets/nocta-orange.png",
+          "marca": "nike",
+          "nombre": "Nike Hot Step 2 Nocta Orange",
+          "precio": 350,
+          "stock": 2
+        },
+        "hot-step-nocta-rattan": {
+          "categoria": "zapatillas",
+          "color": "beige",
+          "descripcion": "Diseño exclusivo en color rattan de la colaboración Nike x Nocta. Detalles únicos y materiales de alta calidad para un estilo distintivo y moderno.",
+          "imagen": "../assets/nocta-rattan.png",
+          "marca": "nike",
+          "nombre": "Nike Hot Step 2 Nocta Rattan",
+          "precio": 350,
+          "stock": 27
+        },
+        "nocta-glide-drake-white": {
+          "categoria": "zapatillas",
+          "color": "blanco",
+          "descripcion": "Zapatillas de estilo running diseñadas en colaboración con Drake y su marca Nocta. Diseño aerodinámico en color blanco con detalles reflectantes y tecnología de amortiguación para un rendimiento superior.",
+          "imagen": "../assets/nocta-glide-white.png",
+          "marca": "nike",
+          "nombre": "Nike Nocta Glide Drake White",
+          "precio": 350,
+          "stock": 0
+        },
+        "off-white-mid": {
+          "categoria": "zapatillas",
+          "color": "amarillo",
+          "descripcion": "Diseño vanguardista que combina la silueta clásica de Nike con la estética deconstruida de Off-White. Detalles únicos y materiales premium para un look audaz y moderno.",
+          "imagen": "../assets/offwhitenike.png",
+          "marca": "nike",
+          "nombre": "Air Force 1 Mid x Off-White",
+          "precio": 179,
+          "stock": 60
+        },
+        "zoom-vomero-5": {
+          "categoria": "zapatillas",
+          "color": "gris",
+          "descripcion": "Zapatillas de running retro con tecnología Zoom Air para una amortiguación superior. Diseño clásico y materiales de alta calidad para un rendimiento óptimo y un estilo único.",
+          "imagen": "../assets/zoom-vomero-5.png",
+          "marca": "nike",
+          "nombre": "Nike Zoom Vomero 5",
+          "precio": 200,
+          "stock": 25
+        }
+      },
+      "yeezy": {
+        "350-beluga": {
+          "categoria": "zapatillas",
+          "color": "gris",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad excepcional. Color beluga con detalles distintivos para un estilo único.",
+          "imagen": "../assets/yeezy-350-beluga.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Beluga",
+          "precio": 400,
+          "stock": 0
+        },
+        "350-black-red": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad y ajuste excepcionales. Color blanco nube para un estilo limpio y moderno.",
+          "imagen": "../assets/yeezy-350-black-red.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Black Red",
+          "precio": 500,
+          "stock": 0
+        },
+        "350-blue-tint": {
+          "categoria": "zapatillas",
+          "color": "azul",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad y ajuste excepcionales. Color blanco nube para un estilo limpio y moderno.",
+          "imagen": "../assets/yeezy-350-blue-tint.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Blue Tint",
+          "precio": 370,
+          "stock": 0
+        },
+        "350-carbon-beluga": {
+          "categoria": "zapatillas",
+          "color": "marrón",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad y ajuste excepcionales. Color blanco nube para un estilo limpio y moderno.",
+          "imagen": "../assets/yeezy-350-carbon-beluga.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Carbon Beluga",
+          "precio": 350,
+          "stock": 20
+        },
+        "350-cloud-white": {
+          "categoria": "zapatillas",
+          "color": "blanco",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad y ajuste excepcionales. Color blanco nube para un estilo limpio y moderno.",
+          "imagen": "../assets/yeezy-350-cloud.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Cloud White",
+          "precio": 450,
+          "stock": 4
+        },
+        "350-core-black": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad excepcional. Color negro con detalles en rojo para un estilo llamativo.",
+          "imagen": "../assets/yeezy-350-black.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Core Black Red",
+          "precio": 380,
+          "stock": 14
+        },
+        "350-cream-white": {
+          "categoria": "zapatillas",
+          "color": "blanco",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad y ajuste excepcionales. Color blanco nube para un estilo limpio y moderno.",
+          "imagen": "../assets/yeezy-350-cream-white.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Cream White",
+          "precio": 800,
+          "stock": 8
+        },
+        "350-dazzling-blue": {
+          "categoria": "zapatillas",
+          "color": "azul",
+          "descripcion": "Diseño moderno con tecnología Boost y Primeknit para una comodidad superior. Color azul deslumbrante para un estilo llamativo y único.",
+          "imagen": "../assets/yeezy-350-dazzling-blue.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Dazzling Blue",
+          "precio": 350,
+          "stock": 52
+        },
+        "350-desert-sage": {
+          "categoria": "zapatillas",
+          "color": "verde",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad y ajuste excepcionales. Color blanco nube para un estilo limpio y moderno.",
+          "imagen": "../assets/yeezy-350-desert-sage.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Desert Sage",
+          "precio": 350,
+          "stock": 74
+        },
+        "350-frozen-yellow": {
+          "categoria": "zapatillas",
+          "color": "amarillo-yeezy",
+          "descripcion": "Diseño llamativo con tecnología Boost y Primeknit para una comodidad superior. Color amarillo frozen para un estilo audaz y moderno.",
+          "imagen": "../assets/yeezy-350-frozen-yellow.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Frozen Yellow",
+          "precio": 800,
+          "stock": 2
+        },
+        "350-granite": {
+          "categoria": "zapatillas",
+          "color": "granite",
+          "descripcion": "Diseño moderno con tecnología Boost y Primeknit para una comodidad superior. Color granite para un estilo urbano y sofisticado.",
+          "imagen": "../assets/yeezy-350-granite.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Granite",
+          "precio": 380,
+          "stock": 27
+        },
+        "350-hyperspace": {
+          "categoria": "zapatillas",
+          "color": "gris",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad y ajuste excepcionales. Color blanco nube para un estilo limpio y moderno.",
+          "imagen": "../assets/yeezy-350-hyperspace.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Hyperspace",
+          "precio": 370,
+          "stock": 24
+        },
+        "350-light": {
+          "categoria": "zapatillas",
+          "color": "blanco",
+          "descripcion": "Diseño moderno con tecnología Boost y Primeknit para una comodidad superior. Color claro para un estilo fresco y veraniego.",
+          "imagen": "../assets/yeezy-350-light.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Light",
+          "precio": 400,
+          "stock": 9
+        },
+        "350-mx-dark-sea-salt": {
+          "categoria": "zapatillas",
+          "color": "dark",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad y ajuste excepcionales. Color blanco nube para un estilo limpio y moderno.",
+          "imagen": "../assets/yeezy-350-mx-dark-sea-salt.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 MX Dark Sea Salt",
+          "precio": 350,
+          "stock": 4
+        },
+        "350-mx-oat": {
+          "categoria": "zapatillas",
+          "color": "beige",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad y ajuste excepcionales. Color blanco nube para un estilo limpio y moderno.",
+          "imagen": "../assets/yeezy-350-mx-oat.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 MX Oat",
+          "precio": 380,
+          "stock": 19
+        },
+        "350-mx-rock": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad excepcional. Patrón de cebra para un estilo llamativo y moderno.",
+          "imagen": "../assets/yeezy-350-mx-rock.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 MX Rock",
+          "precio": 380,
+          "stock": 89
+        },
+        "350-onyx": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad excepcional. Color sésamo para un estilo neutro y versátil.",
+          "imagen": "../assets/yeezy-350-onyx.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Onyx",
+          "precio": 380,
+          "stock": 3
+        },
+        "350-sesame": {
+          "categoria": "zapatillas",
+          "color": "beige",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad excepcional. Color sésamo para un estilo neutro y versátil.",
+          "imagen": "../assets/yeezy-350-sesame.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Sesame",
+          "precio": 350,
+          "stock": 59
+        },
+        "350-slate": {
+          "categoria": "zapatillas",
+          "color": "slate",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad excepcional. Patrón de cebra para un estilo llamativo y moderno.",
+          "imagen": "../assets/yeezy-350-slate.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Slate",
+          "precio": 350,
+          "stock": 3
+        },
+        "350-static": {
+          "categoria": "zapatillas",
+          "color": "blanco",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad excepcional. Patrón de cebra para un estilo llamativo y moderno.",
+          "imagen": "../assets/yeezy-350-static.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Static",
+          "precio": 350,
+          "stock": 14
+        },
+        "350-yeezreel": {
+          "categoria": "zapatillas",
+          "color": "amarillo-yeezy",
+          "descripcion": "Diseño llamativo con tecnología Boost y Primeknit para una comodidad superior. Color yeezreel con detalles fluorescentes para un estilo audaz.",
+          "imagen": "../assets/yeezy-350-yeezreel.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Yeezreel",
+          "precio": 250,
+          "stock": 3
+        },
+        "350-zebra": {
+          "categoria": "zapatillas",
+          "color": "blanco",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad excepcional. Patrón de cebra para un estilo llamativo y moderno.",
+          "imagen": "../assets/yeezy-350-zebra.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Zebra",
+          "precio": 400,
+          "stock": 52
+        },
+        "380-alien": {
+          "categoria": "zapatillas",
+          "color": "gris",
+          "descripcion": "Diseño futurista con tecnología Boost para una amortiguación superior. Estilo alienígena con detalles únicos para un look vanguardista.",
+          "imagen": "../assets/yeezy-380-alien.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 380 Alien",
+          "precio": 400,
+          "stock": 14
+        },
+        "700-static": {
+          "categoria": "zapatillas",
+          "color": "gris",
+          "descripcion": "Diseño moderno con tecnología Boost para una amortiguación superior. Color estático con detalles reflectantes para un estilo único.",
+          "imagen": "../assets/yeezy-700-static.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 700 Static",
+          "precio": 450,
+          "stock": 218
+        },
+        "700-wash-orange": {
+          "categoria": "zapatillas",
+          "color": "naranja",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad y ajuste excepcionales. Color blanco nube para un estilo limpio y moderno.",
+          "imagen": "../assets/yeezy-700-wash-orange.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 700 Wash Orange",
+          "precio": 350,
+          "stock": 11
+        },
+        "700-wave-runner": {
+          "categoria": "zapatillas",
+          "color": "wave",
+          "descripcion": "Diseño retro con tecnología Boost para una amortiguación superior. Estilo wave runner con colores vibrantes para un look llamativo.",
+          "imagen": "../assets/yeezy-700-wave.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy 700 Wave Runner",
+          "precio": 700,
+          "stock": 138
+        },
+        "boost-700": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Diseño innovador con tecnología Boost para una amortiguación superior. Estilo futurista y materiales de alta calidad para un look moderno y cómodo.",
+          "imagen": "../assets/yeezyblack.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy Boost 700 V3",
+          "precio": 400,
+          "stock": 100
+        },
+        "foam": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Diseño futurista y minimalista fabricado con espuma moldeada. Comodidad y estilo vanguardista para un look único y moderno.",
+          "imagen": "../assets/yeezy.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy Foam",
+          "precio": 200,
+          "stock": 59
+        },
+        "foam-runner-cinder": {
+          "categoria": "zapatillas",
+          "color": "gris",
+          "descripcion": "Diseño futurista y minimalista fabricado con espuma moldeada. Color cinder para un estilo urbano y moderno.",
+          "imagen": "../assets/yeezy-foam-cinder.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy Foam Runner Cinder",
+          "precio": 230,
+          "stock": 22
+        },
+        "foam-runner-sulfur": {
+          "categoria": "zapatillas",
+          "color": "sulfur",
+          "descripcion": "Diseño futurista y minimalista fabricado con espuma moldeada. Color sulfur para un estilo moderno y vanguardista.",
+          "imagen": "../assets/yeezy-foam-sulfur.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy Foam Runner Sulfur",
+          "precio": 180,
+          "stock": 2
+        },
+        "slides-bone": {
+          "categoria": "zapatillas",
+          "color": "bone",
+          "descripcion": "Diseño minimalista y cómodo fabricado con espuma moldeada. Color hueso para un estilo neutro y versátil.",
+          "imagen": "../assets/yeezy-slides-bone.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy Slides Bone",
+          "precio": 230,
+          "stock": 53
+        },
+        "slides-granite": {
+          "categoria": "zapatillas",
+          "color": "granite",
+          "descripcion": "Diseño minimalista y cómodo fabricado con espuma moldeada. Color granite para un estilo urbano y moderno.",
+          "imagen": "../assets/yeezy-slides-granite.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy Slides Granite",
+          "precio": 160,
+          "stock": 4
+        },
+        "slides-ochre": {
+          "categoria": "zapatillas",
+          "color": "ocre",
+          "descripcion": "Diseño minimalista y cómodo fabricado con espuma moldeada. Color ocre para un estilo terroso y natural.",
+          "imagen": "../assets/yeezy-slides-ochre.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy Slides Ochre",
+          "precio": 200,
+          "stock": 58
+        },
+        "slides-onyx": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Diseño minimalista y cómodo fabricado con espuma moldeada. Color onyx para un estilo moderno y relajado.",
+          "imagen": "../assets/yeezy-slides-onyx.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy Slides Onyx",
+          "precio": 200,
+          "stock": 22
+        },
+        "slides-resin": {
+          "categoria": "zapatillas",
+          "color": "resin",
+          "descripcion": "Diseño minimalista y cómodo fabricado con espuma moldeada. Color resina para un estilo moderno y natural.",
+          "imagen": "../assets/yeezy-slides-resin.png",
+          "marca": "yeezy",
+          "nombre": "Yeezy Slides Resin",
+          "precio": 200,
+          "stock": 59
+        }
+      }
+    }
+  }
+}
