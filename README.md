@@ -9,7 +9,7 @@ Este proyecto consiste en una aplicación web de venta de zapatillas y camisetas
 ## Funcionalidades Principales
 
 - **Página Principal:** Muestra una descripción de SneakVault, productos destacados y información de contacto.
-- **Página de Productos:** Permite visualizar todos los productos, con opciones de paginación, búsqueda y filtros por categoría y rango de precios.
+- **Página de Productos:** Permite visualizar todos los productos, con opciones de paginación, búsqueda y ordenación por precio, stock o alfabético.
 - **Página de Detalle de Producto:** Muestra información detallada de cada producto y permite agregarlo al carrito (para usuarios logueados) o iniciar sesión (para usuarios no logueados).
 - **Página de Carrito:** Permite visualizar los productos seleccionados, modificar cantidades, eliminar productos y calcular el precio total.
 - **Página de Login:** Formulario para iniciar sesión en la aplicación.
