@@ -5,11 +5,47 @@ import { useNavigate, useLocation, Link } from "react-router-dom";
 import UserContext from "../../context/userContext";
 import '../../index.css';
 import carrito from '../../assets/carrito.webp';
+import { onValue, ref } from "firebase/database";
+import { db } from "../../utils/firebase.utils";
+
+interface Category {
+    name: string;
+    brands: string[];
+}
 
 const NavBar = () => {
     const [searchInput, setSearchInput] = useState('');
     const navigate = useNavigate();
     const location = useLocation();
+    // creamos un estado para guardar las categorias que obtendremos de la base de datos
+    const[categories, setCategories] = useState<Category[]>([]);
+
+    useEffect(() => {
+        //obtener categorias de la base de datos de forma dinamica
+        const fetchCategories = async () => {
+            try {
+                const productosRef = ref(db, 'productos');
+                onValue(productosRef, (snapshot) => {
+                    const productosData = snapshot.val();
+                    if (productosData) {
+                        //mapeamos el objeto de categorias a un array de categorias con sus respectivas marcas para poder mostrarlo en el navbar
+                        const categoriesArray: Category[] = Object.entries(productosData).map(([categoryName, categoryData]) => {
+                            const brands = Object.keys(categoryData as object);
+                            return {
+                                name: categoryName,
+                                brands: brands,
+                            };
+                        });
+                        setCategories(categoriesArray);
+                    }
+                });
+            } catch (error) {
+                console.error("Error fetching categories:", error);
+            }
+        };
+
+        fetchCategories();
+    }, []);
 
     useEffect(() => {
         const query = new URLSearchParams(location.search).get('query');
@@ -83,24 +119,31 @@ const NavBar = () => {
                                     HOME
                                 </Nav.Link>
 
-                                <NavDropdown title="ZAPATILLAS" id="shoes-dropdown" className="fw-light">
-                                    <NavDropdown.Item as={NavLink} to="/zapatillas/nike" className="fw-light" onClick={() => handleNavLinkClick('/zapatillas/nike')}>Nike</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/zapatillas/yeezy" className="fw-light" onClick={() => handleNavLinkClick('/zapatillas/yeezy')}>Yeezy</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/zapatillas/jordan" className="fw-light" onClick={() => handleNavLinkClick('/zapatillas/jordan')}>Jordan</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/zapatillas/adidas" className="fw-light" onClick={() => handleNavLinkClick('/zapatillas/adidas')}>Adidas</NavDropdown.Item>
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item as={NavLink} to="/zapatillas" className="fw-light" onClick={() => handleNavLinkClick('/zapatillas')}>Ver todas</NavDropdown.Item>
-                                </NavDropdown>
-
-                                <NavDropdown title="CAMISETAS" id="shirts-dropdown" className="fw-light">
-                                    <NavDropdown.Item as={NavLink} to="/camisetas/off-white" className="fw-light" onClick={() => handleNavLinkClick('/camisetas/off-white')}>Off-white</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/camisetas/supreme" className="fw-light" onClick={() => handleNavLinkClick('/camisetas/supreme')}>Supreme</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/camisetas/nike" className="fw-light" onClick={() => handleNavLinkClick('/camisetas/nike')}>Nike</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/camisetas/palace" className="fw-light" onClick={() => handleNavLinkClick('/camisetas/palace')}>Palace</NavDropdown.Item>
-                                    <NavDropdown.Item as={NavLink} to="/camisetas/stüssy" className="fw-light" onClick={() => handleNavLinkClick('/camisetas/stüssy')}>Stüssy</NavDropdown.Item>
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item as={NavLink} to="/camisetas" className="fw-light" onClick={() => handleNavLinkClick('/camisetas')}>Ver todas</NavDropdown.Item>
-                                </NavDropdown>
+                                {categories.map((category) => (
+                                    <NavDropdown title={category.name.toUpperCase()} id={`${category.name}-dropdown`} key={category.name} className="fw-light">
+                                        {category.brands.map((brand) => (
+                                            <NavDropdown.Item
+                                                as={NavLink}
+                                                to={`/${category.name}/${brand}`}
+                                                className="fw-light"
+                                                onClick={() => handleNavLinkClick(`/${category.name}/${brand}`)}
+                                                //key es necesario para que react pueda identificar cada elemento de la lista
+                                                key={brand}
+                                            >
+                                                {brand}
+                                            </NavDropdown.Item>
+                                        ))}
+                                        <NavDropdown.Divider />
+                                        <NavDropdown.Item
+                                            as={NavLink}
+                                            to={`/${category.name}`}
+                                            className="fw-light"
+                                            onClick={() => handleNavLinkClick(`/${category.name}`)}
+                                        >
+                                            Ver todas
+                                        </NavDropdown.Item>
+                                    </NavDropdown>
+                                ))}
                             </Nav>
                         </div>
 

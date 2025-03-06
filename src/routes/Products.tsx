@@ -21,13 +21,17 @@ interface ProductProps {
 }
 
 const Products: React.FC<ProductProps> = () => {
+    // useParams hook que permite acceder a los parámetros de la URL por ejemplo: /productos/:categoria/:marca
     const { categoria, marca } = useParams<{ categoria: string, marca: string }>();
+    // useState hook que permite manejar el estado de los productos
     const [products, setProducts] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string }[]>([]);
     const [orderBy, setOrderBy] = useState<'alphabetical' | 'price-asc' | 'price-desc' | 'stock-asc' | 'stock-desc'>('alphabetical');
     const [searchInput, setSearchInput] = useState('');
+    // useLocation hook que permite acceder a la ubicación actual de la URL
     const location = useLocation();
     const [visibleProducts, setVisibleProducts] = useState(16);
     
+
     const loadMore = () => {
         setVisibleProducts(prevVisibleProducts => prevVisibleProducts + 16);
     };

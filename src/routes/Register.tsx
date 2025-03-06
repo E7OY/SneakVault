@@ -22,6 +22,7 @@ const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
 
     //registro
+    //funcion asincrona con evento de formulario
     const register = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();  //para evitar el comportamiento default del evento, del form, (enviarlo y recargar pag)
         try {

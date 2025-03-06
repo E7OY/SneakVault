@@ -2,7 +2,7 @@
 
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import NotFoundPage from './pages/NotFoundPage';
-import RootLayout from './routes/Root';
+import RootLayout from './routes/RootLayout';
 import Home from './routes/Home';
 import Register from './routes/Register';
 import ErrorPage from './pages/ErrorPage';
@@ -22,8 +22,8 @@ const App = () => {
       errorElement: <ErrorPage />,
       children: [
         {    //redirige / a /home
-          index: true,
-          element: <Navigate to="/home" replace />,
+          index: true,  //index true indica que es la ruta por defecto
+          element: <Navigate to="/home" replace />,  //Navigate es un componente de react-router-dom que redirige a otra ruta
         },
         {  //ruta home
           path: 'home',
@@ -43,7 +43,7 @@ const App = () => {
           path: 'search',
           element: <Products products={[]} />,
         },
-        {  //filtra por categorias 
+        {  //filtra por categorias, es una ruta dinamica que se puede cambiar por cualquier categoria que se quiera buscar en la base de datos de productos 
           path: ':categoria',
           element: <Products products={[]} />,
         },
@@ -65,7 +65,11 @@ const App = () => {
 
   return (
     <UserProvider>
+      {/*Porporciona el eastado del carrito y del user a toda la app */}
       <CartProvider>
+        {/*este componente conecta la config de enrutamiento (creada en createBrowserRouter) con la interfaz de la app,
+        este componente toma un objeto router con el prop router que es la configuración de enrutamiento que hemos creado
+        En pocas palabras activa el enrutamiento en la app*/}
         <RouterProvider router={router} />
       </CartProvider>
     </UserProvider>

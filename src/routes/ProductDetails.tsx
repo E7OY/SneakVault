@@ -12,22 +12,24 @@ import '../index.css';
 import { useCart } from '../context/cartContext';
 
 const ProductDetails= () => {
+    // este hook se usa para que el componente pueda acceder a los parametros de la URL
     const { id } = useParams<{ id: string }>();
     const [product, setProduct] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string; color: string } | null>(null);
     const [relatedProducts, setRelatedProducts] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string }[]>([]);
     const userContext = useContext(UserContext);
-    const user = userContext ? userContext.user : null;
+    const user = userContext?.user;
 
     const { addToCart } = useCart();
-
+    //hook de react que maneja efectos secundarios en componentes funcionales, en este cadso obtiene productos de la bd
     useEffect(() => {
         const fetchProduct = async () => {
             try {
                 /*creamos referencia a la base de datos*/
                 const productsRef = ref(db, 'productos');
-                /*leemos los datos en tiempo real, con onValue que escucha los cambios*/
+                /*leemos los datos en tiempo real, con onValue que escucha los cambios, el snapshot contiene los datos de la base de datos 
+                */
                 onValue(productsRef, (snapshot) => {
-                    const productsData = snapshot.val();
+                    const productsData = snapshot.val();  //almacenamos los datos de la base de datos en productsData, .val es un metodo que devuelve los datos de la base de datos
                     /*inicializamos array vacio para almacenar productos*/
                     const productsArray: { id: string; stock: number; categoria: string; imagen: string; marca: string; nombre: string; precio: number; descripcion: string, color: string }[] = [];
                     /*recorremos los datos de la base de datos y los almacenamos en el array*/
@@ -60,7 +62,7 @@ const ProductDetails= () => {
                 console.error(error);
             }
         };
-
+        //llamamos a la funcion fetchProduct y le pasamos el id del producto actual
         fetchProduct();
     }, [id]);
 
@@ -94,7 +96,7 @@ const ProductDetails= () => {
                     <div className="imagenes d-flex flex-row col-md-12 p-0 m-0">
                         <img
                             className="imagen-producto-detail"
-                            src={product.imagen || imageMap[product.nombre]}
+                            src={imageMap[product.nombre]}
                             alt={product.nombre}
                             onError={(e) => {
                                 e.currentTarget.src = imageMap[product.nombre];

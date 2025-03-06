@@ -121,9 +121,9 @@ import imagen129 from '../assets/dunk-low-black-panda.webp';
 import imagen130 from '../assets/yeezy-350-slate.webp';
 import imagen131 from '../assets/spray-dot-black.webp';
 
+// el imageMap contiene es un objeto que contiene las imagenes de los productos, la clave es el nombre del producto y el valor es la url de la imagen
 export const imageMap: { [key: string]: string } = {
     'Air Jordan 1 x Cactus Jack': imagen1,   //meter nombres de los productos en la bbdd
-    
     'Yeezy 350 V2 Onyx': iomagen92,
     'Yeezy 350 V2 Static': imagen93,
     'Yeezy 350 V2 MX Rock': imagen94,
@@ -162,9 +162,6 @@ export const imageMap: { [key: string]: string } = {
     'Nike Dunk Low Team Gold': imagen127,
     'Nike Dunk Low Cacao Wow': imagen128,
     'Nike Dunk Low Black Panda': imagen129,
-
-
-
     'Air Force 1 Mid x Off-White': imagen6,
     'Yeezy Foam': imagen8,
     'Yeezy Boost 700 V3': imagen9,
@@ -174,7 +171,6 @@ export const imageMap: { [key: string]: string } = {
     'Off-White x Nike 005 T-Shirts Beige': imagen14,
     'Palace x Oakley T-Shirt': imagen18,
     'Palace x Carhartt WIP': imagen19,
-
     'Yeezy 350 V2 Cloud White': imagen20,
     'Yeezy 350 V2 Granite': imagen21,
     'Yeezy 350 V2 Beluga': imagen22,
@@ -249,6 +245,4 @@ export const imageMap: { [key: string]: string } = {
     'Stussy Basic Stussy Tee Pigment Died White': imagen91,
     'Yeezy 350 V2 Slate': imagen130,
     "Off-White x Nike Spray Dot Black": imagen131
-
-
 };

@@ -399,7 +399,6 @@ summary {
 }
 
 summary::after {
-  content: '\25B6';
   font-size: 1rem;
   margin-left: 10px;
   transition: transform 0.5s ease;
