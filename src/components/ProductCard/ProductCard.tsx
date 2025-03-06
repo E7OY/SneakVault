@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from "react-router-dom";
 import { imageMap } from "../../utils/imageMap";
 import productTendencia from '../../assets/hot-ptoduct.png';
@@ -24,10 +23,10 @@ const ProductCard = ({ product }: ProductCardProps) => {
             <Link to={`/${product.categoria}/${product.marca}/${product.id}`}
                 className="text-decoration-none text-dark">
                 {product.stock <= 5 && (
-                    <img src={productTendencia} className='producto-card-tendencia position-absolute' alt="" width={100} />
+                    <img src={productTendencia} className='col-6 col-md-5 producto-card-tendencia position-absolute' alt="" width={100} />
                 )}
                 <img
-                    className="producto-img img-fluid p-3"
+                    className="producto-img img-fluid p-3 col-12"
                     src={product.imagen || imageMap[product.nombre]}
                     alt={product.nombre}
                     onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }}
