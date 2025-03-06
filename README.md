@@ -57,12 +57,12 @@ Este proyecto consiste en una aplicación web de venta de zapatillas y camisetas
     *   **Configurar la Autenticación:**
         *   En la sección "Autenticación", habilita el método de inicio de sesión por correo electrónico/contraseña y Google.
     *   **Crear una Base de Datos:**
-        *   En la sección "Realtime Database", crea una nueva base de datos e importa el archivo bg.json que se encuentra en la raiz del proyecto.
+        *   En la sección "Realtime Database", crea una nueva base de datos e importa el archivo bd.json que se encuentra en la raiz del proyecto.
     *   **Obtener las Credenciales:**
         *   Ve a la configuración del proyecto (icono de engranaje) y selecciona "Configuración del proyecto".
         *   En la sección "Tus aplicaciones", selecciona "Web" para obtener el código de inicialización de Firebase.
 
-4.  **Configurar las Variables de Entorno:**
+4.  **Creación archivo de Firebase:**
 
     Crea un archivo `firebase.utils.tsx` en la raíz del proyecto y añade las credenciales de Firebase que obtuviste en el paso anterior.
 
