@@ -8,10 +8,13 @@ interface CartItem {
     price: number;
     image: string;
     quantity: number;
+    stock: number;
+    categoria: string;
+    marca: string;
 }
 interface CartContextProps {
     cart: CartItem[];
-    addToCart: (product: { id: string; name: string; price: number; image: string; stock: number }) => void;
+    addToCart: (product: { id: string; name: string; price: number; image: string; stock: number; categoria: string; marca:string }) => void;
     removeFromCart: (productId: string) => boolean;
     increaseQuantity: (productId: string) => void;
     decreaseQuantity: (productId: string) => void;
@@ -24,7 +27,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const [cart, setCart] = useState<CartItem[]>([]);
 
     //AÑADIR PRODUCTO
-    const addToCart = (product: { id: string; name: string; price: number; image: string; stock: number }) => {
+    const addToCart = (product: { id: string; name: string; price: number; image: string; stock: number; categoria:string; marca:string }) => {
         //crear una copia del carrito
         const updatedCart = [...cart];
         //comprobar si el producto existe en el carro

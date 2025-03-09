@@ -112,7 +112,10 @@ const Products: React.FC<ProductProps> = () => {
             <div className="container-fluid w-75 px-4">
                 <div className="row m-0 p-0 my-3 w-auto d-flex flex-row justify-content-between align-items-center">
                     <div className="col-4 w-auto m-0 p-0">
-                        <h2 className='fw-light display-6 my-2 w-auto d-inline text-nowrap'>{categoria}</h2>
+                        <h2 className='fw-light display-6 my-2 w-auto d-inline text-nowrap'>{categoria}
+                        <h2 className='fw-light display-6 my-2 w-auto d-inline  text-nowrap'> {marca}</h2>
+
+                        </h2>
                         {searchInput !== '' ? (
                             <p className='display-6 fw-light text-black-50'>{`"${searchInput}" ${filteredProducts.length} resultados`}</p>
                         ) : (

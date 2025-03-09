@@ -2,7 +2,6 @@ import { useState, useEffect, useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { db } from '../utils/firebase.utils';
 import { ref, onValue } from 'firebase/database';
-import productTendencia from '../assets/hot-ptoduct.png';
 
 import prohibido from '../assets/prohibido.webp';
 import { imageMap } from '../utils/imageMap';
@@ -100,7 +99,7 @@ const ProductDetails= () => {
             <div className="row d-flex flex-row mt-5 mx-auto justify-content-center align-items-center">
 
             <div className="d-flex flex-column col-md-8 col-sm-12">
-                        <div className="imagenes d-flex flex-wrap col-md-12 p-0 m-0">
+                        <div className="imagenes d-flex flex-wrap col-md-12 p-0 m-0 image-container">
                             <img className="imagen-producto-detail col-6 p-1" src={imageMap[product.nombre]} alt={product.nombre}
                                 onError={(e) => { e.currentTarget.src = imageMap[product.nombre]; }} />
                             <img className="imagen-producto-detail col-6 p-1" src={imageMap[product.nombre]} alt={product.nombre}
@@ -119,7 +118,7 @@ const ProductDetails= () => {
                         (product.stock <= 10 ? <h6 className='fw-light bg-white text-danger border-1 border border-black p-1 d-inline-block float-right'>Menos de {product.stock} unidades</h6> :
                             <h6 className='fw-light bg-white text-black p-1 d-inline-block float-right border-1 border border-black'>{product.stock} en stock</h6>) 
                             :
-                            <h5 className='bg-danger text-white d-inline-block fst-italic p-1 float-right'>Agotado</h5>}
+                            <h5 className='bg-white text-danger d-inline-block border border-1 border-black fst-italic p-1 float-right'>Agotado</h5>}
 
                     <Link to={`/${product.categoria}/${product.marca.toLowerCase()}`}>
                         <h4 className='fw-semibold text-black text-decoration-none negro'>{product.marca}</h4>

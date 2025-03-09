@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 import { imageMap } from "../../utils/imageMap";
-import productTendencia from '../../assets/hot-ptoduct.png';
 import '../../index.css';
-
 interface ProductCardProps {
     product: {
         id: string;
@@ -28,6 +26,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
                     src={product.imagen || imageMap[product.nombre]}
                     alt={product.nombre}
                     onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }}
+                    style={{ objectFit: 'cover', maxHeight: '400px', maxWidth: '400px' }}
                 />
                 <h6 className="mb-2 fw-light text-black-50">{product.marca} · {product.categoria}</h6>
                 <h5 className="text-truncate fw-light">{product.nombre}</h5>

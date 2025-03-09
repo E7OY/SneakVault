@@ -120,10 +120,29 @@ import imagen128 from '../assets/dunk-low-cacao-wow.webp';
 import imagen129 from '../assets/dunk-low-black-panda.webp';
 import imagen130 from '../assets/yeezy-350-slate.webp';
 import imagen131 from '../assets/spray-dot-black.webp';
+import imagen133 from '../assets/air-force-1-low-sp-tiffany-and-co.webp'
+import imagen134 from '../assets/dunk-low-off-white-pine-green.webp'
+import imagen135 from '../assets/dunk-low-off-white-lot-32.webp' 
+import imagen136 from '../assets/dunk-low-off-white-university-red.webp'
+import imagen137 from '../assets/dunk-low-off-white-university-gold-midnight-navy.webp'
+import imagen138 from '../assets/jordan-1-retro-high-shattered-backboard.webp'
+import imagen139 from '../assets/jordan-1-retro-black-royal-blue.webp'
+import imagen140 from '../assets/air-jordan-1-retro-high-satin-black-toe.webp'
+import imagen141 from '../assets/yeezy-350-steel-grey.webp'
 
 // el imageMap contiene es un objeto que contiene las imagenes de los productos, la clave es el nombre del producto y el valor es la url de la imagen
 export const imageMap: { [key: string]: string } = {
     'Air Jordan 1 x Cactus Jack': imagen1,   //meter nombres de los productos en la bbdd
+    'Air Force 1 Low SP Tiffany & Co': imagen133,
+    'Nike Dunk Low Off-White Pine Green': imagen134,
+    'Nike Dunk Low Off-White Lot 32': imagen135,
+    'Nike Dunk Low Off-White University Red': imagen136,
+    'Nike Dunk Low Off-White University Gold Midnight Navy': imagen137,
+    'Air Jordan 1 Retro High Shattered Backboard': imagen138,
+    'Air Jordan 1 Retro Black Royal Blue': imagen139,
+    'Air Jordan 1 Retro High Satin Black Toe': imagen140,
+    'Yeezy 350 V2 Steel Grey': imagen141,
+
     'Yeezy 350 V2 Onyx': iomagen92,
     'Yeezy 350 V2 Static': imagen93,
     'Yeezy 350 V2 MX Rock': imagen94,

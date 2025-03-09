@@ -130,7 +130,7 @@ const Home = () => {
                     <div className="carousel-item active">
                         <div className="banner-home text-white text-start d-flex flex-column flex-md-row justify-content-center align-items-center">
                             <div className="col-12 col-md-4 mb-md-0 text-center">
-                                <h2 className="fw-regular text-black">yeezy</h2>
+                                <h2 className="fw-light text-black">Jordan</h2>
                                 <h3 className="fw-light text-black">La mejor zapatilla esta temporada...</h3>
                                 <p className="mb-5 text-black-50 fw-light text-center">
                                     Puedes combinar estas zapatillas Yeezy con cualquier estilo streetwear.
@@ -143,14 +143,14 @@ const Home = () => {
                             <div className="col-12 col-md-3">
                                 <img
                                     ref={imageRef}
-                                    src={imageMap['Yeezy Foam Runner Cinder']}
+                                    src={imageMap['Air Jordan 1 Retro Black Royal Blue']}
                                     className="img-fluid"
                                     width={400}
                                     style={{
-                                                                                transform: ` scale(${calculateScale()}) rotate(10deg)`,
+                                                                                transform: ` scale(${calculateScale()}) rotate(-10deg)`,
                                                                                 transition: 'transform 0.5s ease-out',
                                                                                 position: 'absolute',
-                                                                                top: '-150px',
+                                                                                top: '-120px',
                                                                                 left: '-5px',
                                                                             }}
                                     alt="Yeezy 350 V2 Onyx"
@@ -161,28 +161,28 @@ const Home = () => {
                     <div className="carousel-item">
                     <div className="banner-home text-white text-start d-flex flex-column flex-md-row justify-content-center align-items-center">
                             <div className="col-12 col-md-4 mb-md-0 text-center">
-                                <h2 className="fw-regular text-black">nocta</h2>
-                                <h3 className="fw-light text-black">La mejor zapatilla esta temporada...</h3>
+                                <h2 className="fw-medium text-black">nocta</h2>
+                                <h3 className="fw-light text-black">las mejores camisetas para este verano</h3>
                                 <p className="mb-5 text-black-50 fw-light text-center">
-                                    Puedes combinar estas zapatillas Yeezy con cualquier estilo streetwear.
-                                    Su diseño atemporal y su silueta única las convierten en un elemento
-                                    esencial para tu colección. Gracias a su tecnología innovadora,
+                                    Las camisetas Nocta son perfectas para cualquier ocasión. Su diseño
+                                    minimalista y su tejido de alta calidad las convierten en una prenda
+                                    imprescindible para tu armario. Gracias a su tecnología innovadora,
                                     te proporcionan comodidad durante todo el día.
                                 </p>
-                                <a href="/zapatillas/yeezy" className="border button-nocta border-black p-3 text-decoration-none negro fw-light">Comprar ahora</a>
+                                <a href="/camisetas/nike" className="border button-nocta border-black p-3 text-decoration-none negro fw-light">Comprar ahora</a>
                             </div>
                             <div className="col-12 col-md-3">
                                 <img
                                     ref={imageRef}
                                     src={imageMap['Nike Nocta NRG RF Tee']}
                                     className="img-fluid"
-                                    width={450}
+                                    width={400}
                                     style={{
                                                                                 transform: ` scale(${calculateScale()})`,
                                                                                 transition: 'transform 0.5s ease-out',
                                                                                 position: 'absolute',
                                                                                 top: '-240px',
-                                                                                left: '-5px',
+                                                                                left: '',
                                                                             }}
                                     alt="Yeezy 350 V2 Onyx"
                                 />

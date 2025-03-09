@@ -414,7 +414,37 @@
           "marca": "jordan",
           "nombre": "Air Jordan 1 x Cactus Jack",
           "precio": 2500,
-          "stock": 40
+          "stock": 40  
+        },
+        "jordan-1-retro-black-royal-blue": {
+          "categoria": "zapatillas",
+          "color": "azul",
+          "descripcion": "Colaboración icónica entre Jordan y Travis Scott, fusionando el diseño clásico de las Air Jordan 1 con el estilo único del rapero. Detalles distintivos y materiales premium para un look exclusivo.",
+          "imagen": "../assets/jordan-1-retro-black-royal-blue.webp",	
+          "marca": "jordan",
+          "nombre": "Air Jordan 1 Retro Black Royal Blue",
+          "precio": 550,
+          "stock": 20  
+        },
+        "jordan-1-retro-high-shattered-backboard": {
+          "categoria": "zapatillas",
+          "color": "naranja",
+          "descripcion": "Colaboración exclusiva entre Jordan, Fragment Design y Travis Scott. Diseño único con detalles distintivos y materiales premium para un look de coleccionista.",
+          "imagen": "../assets/jordan-1-retro-high-shattered-backboard.webp",
+          "marca": "jordan",
+          "nombre": "Air Jordan 1 Retro High Shattered Backboard",
+          "precio": 550,
+          "stock": 1    
+        },
+        "air-jordan-1-retro-high-satin-black-toe": {
+          "categoria": "zapatillas",
+          "color": "rojo",
+          "descripcion": "Colaboración icónica entre Jordan y Travis Scott, fusionando el diseño clásico de las Air Jordan 1 con el estilo único del rapero. Detalles distintivos y materiales premium para un look exclusivo.",
+          "imagen": "../assets/air-jordan-1-retro-high-satin-black-toe.webp",	
+          "marca": "jordan",
+          "nombre": "Air Jordan 1 Retro High Satin Black Toe",
+          "precio": 550,
+          "stock": 3  
         },
         "air-low-fragment-travis": {
           "categoria": "zapatillas",
@@ -718,6 +748,56 @@
         }
       },
       "nike": {
+        "air-force-1-low-sp-tiffany-and-co": {
+          "categoria": "zapatillas",
+          "color": "negro",
+          "descripcion": "Color vibrante en naranja para esta colaboración entre Nike y Nocta. Diseño llamativo y detalles exclusivos para un estilo audaz y moderno.",
+          "imagen": "../assets/air-force-1-low-sp-tiffany-and-co.web",
+          "marca": "nike",
+          "nombre": "Air Force 1 Low SP Tiffany & Co",
+          "precio": 2000,
+          "stock": 11
+        },
+        "dunk-low-off-white-pine-green": {
+          "categoria": "zapatillas",
+          "color": "verde",
+          "descripcion": "Color vibrante en naranja para esta colaboración entre Nike y Nocta. Diseño llamativo y detalles exclusivos para un estilo audaz y moderno.",
+          "imagen": "../assets/dunk-low-off-white-pine-green",
+          "marca": "nike",
+          "nombre": "Nike Dunk Low Off-White Pine Green",
+          "precio": 1200,
+          "stock": 5
+        },
+        "dunk-low-off-white-lot-32": {
+          "categoria": "zapatillas",
+          "color": "blanco",
+          "descripcion": "Color vibrante en naranja para esta colaboración entre Nike y Nocta. Diseño llamativo y detalles exclusivos para un estilo audaz y moderno.",
+          "imagen": "../assets/dunk-low-off-white-lot-32",
+          "marca": "nike",
+          "nombre": "Nike Dunk Low Off-White Lot 32",
+          "precio": 750,
+          "stock": 15
+        },
+        "dunk-low-off-white-university-red": {
+          "categoria": "zapatillas",
+          "color": "rojo",
+          "descripcion": "Color vibrante en naranja para esta colaboración entre Nike y Nocta. Diseño llamativo y detalles exclusivos para un estilo audaz y moderno.",
+          "imagen": "../assets/dunk-low-off-white-university-red",
+          "marca": "nike",
+          "nombre": "Nike Dunk Low Off-White University Red",
+          "precio": 750,
+          "stock": 2  
+        },
+        "dunk-low-off-white-university-gold-midnight-navy": {
+          "categoria": "zapatillas",
+          "color": "navy",
+          "descripcion": "Color vibrante en naranja para esta colaboración entre Nike y Nocta. Diseño llamativo y detalles exclusivos para un estilo audaz y moderno.",
+          "imagen": "../assets/dunk-low-off-white-university-gold-midnight-navy",
+          "marca": "nike",
+          "nombre": "Nike Dunk Low Off-White University Gold Midnight Navy",
+          "precio": 650,
+          "stock": 93
+        },
         "dunk-low-black-panda": {
           "categoria": "zapatillas",
           "color": "negro",
@@ -948,7 +1028,17 @@
           "marca": "yeezy",
           "nombre": "Yeezy 350 V2 Core Black Red",
           "precio": 380,
-          "stock": 14
+          "stock": 14  
+        },
+        "350-steel-grey": {
+          "categoria": "zapatillas",
+          "color": "gris",
+          "descripcion": "Diseño icónico con tecnología Boost y Primeknit para una comodidad y ajuste excepcionales. Color blanco nube para un estilo limpio y moderno.",
+          "imagen": "../assets/yeezy-350-steel-grey.webp",
+          "marca": "yeezy",
+          "nombre": "Yeezy 350 V2 Steel Grey",
+          "precio": 350,
+          "stock": 19
         },
         "350-cream-white": {
           "categoria": "zapatillas",
