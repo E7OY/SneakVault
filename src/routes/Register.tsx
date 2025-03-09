@@ -16,6 +16,7 @@ const Register = () => {
     const [date, setDate] = useState('');
     const navigate = useNavigate();
     const userContext = useContext(UserContext);
+    // user es el usuario actual, si no hay usuario es null
     const user = userContext ? userContext.user : null;
     const setUser = userContext ? userContext.setUser : () => { };
     const errorMessage = document.getElementsByClassName('error');
@@ -88,7 +89,7 @@ const Register = () => {
                                             <input type='text' className='p-1 fw-light' name='email' id='email' required value={email} onChange={(e) => setEmail(e.target.value)} />
                                         </div>
                                         <div className='form-field w-75 d-flex gap-0 mx-auto'>
-                                        <label htmlFor='password' id='password'><h6 className='fw-light text-black-50'>Contraseña *</h6></label>
+                                        <label htmlFor='password' id='passw '><h6 className='fw-light text-black-50'>Contraseña *</h6></label>
                                         <div>
                                             <input
                                                 type={showPassword ? 'text' : 'password'}

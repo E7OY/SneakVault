@@ -1,6 +1,6 @@
 import { signOut, getAuth } from "firebase/auth";
 import { useState, useEffect, useContext } from "react";
-import { Nav, Navbar, NavDropdown, NavLink } from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown, NavLink, Form, FormControl } from "react-bootstrap";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import UserContext from "../../context/userContext";
 import '../../index.css';
@@ -18,7 +18,7 @@ const NavBar = () => {
     const navigate = useNavigate();
     const location = useLocation();
     // creamos un estado para guardar las categorias que obtendremos de la base de datos
-    const[categories, setCategories] = useState<Category[]>([]);
+    const [categories, setCategories] = useState<Category[]>([]);
 
     useEffect(() => {
         //obtener categorias de la base de datos de forma dinamica
@@ -104,91 +104,87 @@ const NavBar = () => {
 
         return () => clearInterval(interval);
     }, []);
-    
-    return(
+
+    return (
+
         <Navbar expand="lg" className="bg-white py-3 px-5 border-bottom border-dark">
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-dark" />
+            <Link to="/home" className="h1  text-decoration-none negro mb-0 fw-light">SneakVault</Link>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-dark" />
 
-                    <Navbar.Collapse id="basic-navbar-nav" className='d-flex flex-row align-items-center justify-content-between'>
-                        <div className="col-4 w-auto">
-                            <Nav className="d-flex align-items-center gap-3 w-auto">
-                                <Link className="navbar-brand" to="/home" onClick={() => handleNavLinkClick('/home')}>
-                                    <h1 className="mb-0 fw-light">SneakVault</h1>
-                                </Link>
-                                <Nav.Link as={NavLink} to="/home" className="fw-light" onClick={() => handleNavLinkClick('/home')}>
-                                    HOME
-                                </Nav.Link>
+            <Navbar.Collapse id="basic-navbar-nav">
 
-                                {categories.map((category) => (
-                                    <NavDropdown title={category.name.toUpperCase()} id={`${category.name}-dropdown`} key={category.name} className="fw-light">
-                                        {category.brands.map((brand) => (
-                                            <NavDropdown.Item
-                                                as={NavLink}
-                                                to={`/${category.name}/${brand}`}
-                                                className="fw-light"
-                                                onClick={() => handleNavLinkClick(`/${category.name}/${brand}`)}
-                                                //key es necesario para que react pueda identificar cada elemento de la lista
-                                                key={brand}
-                                            >
-                                                {brand}
-                                            </NavDropdown.Item>
-                                        ))}
-                                        <NavDropdown.Divider />
-                                        <NavDropdown.Item
-                                            as={NavLink}
-                                            to={`/${category.name}`}
-                                            className="fw-light"
-                                            onClick={() => handleNavLinkClick(`/${category.name}`)}
-                                        >
-                                            Ver todas
-                                        </NavDropdown.Item>
-                                    </NavDropdown>
+                <Container className="navbar d-flex justify-content-around w-100">
+
+                    <Nav className="d-flex flex-column flex-lg-row align-items-lg-left gap-3 w-auto">
+                        <Link className="navbar-brand" to="/home" onClick={() => handleNavLinkClick('/home')}></Link>
+                        <Nav.Link as={NavLink} to="/home" className="fw-light" onClick={() => handleNavLinkClick('/home')}>HOME</Nav.Link>
+
+                        {categories.map((category) => (
+                            <NavDropdown title={category.name.toUpperCase()} id={`${category.name}-dropdown`} key={category.name} className="fw-light">
+                                {category.brands.map((brand) => (
+                                    <NavDropdown.Item
+                                        as={NavLink}
+                                        to={`/${category.name}/${brand}`}
+                                        className="fw-light"
+                                        onClick={() => handleNavLinkClick(`/${category.name}/${brand}`)}
+                                        key={brand}>
+                                            {brand}
+                                    </NavDropdown.Item>
                                 ))}
-                            </Nav>
-                        </div>
 
-                        <div className="col-4 w-auto">
-                            <form onSubmit={handleSearchSubmit}>
-                                <input
-                                    className="searchInput rounded-0 p-2 border-1 fw-light text-black-50 border-black"
-                                    type="search"
-                                    placeholder="Buscar"
-                                    aria-label="Search"
-                                    value={searchInput}
-                                    onChange={(e) => setSearchInput(e.target.value)}
-                                />
-                            </form>
-                        </div>
+                                <NavDropdown.Divider />
 
-                        <div className="col-4 d-flex gap-2 w-auto">
-                            {user ? (
-                                <>
-                                    <button
-                                        className="button fw-light rounded-0"
-                                        onClick={handleSignOut}
-                                    >
-                                        Cerrar Sesión
+                                <NavDropdown.Item
+                                    as={NavLink}
+                                    to={`/${category.name}`}
+                                    className="fw-light"
+                                    onClick={() => handleNavLinkClick(`/${category.name}`)}>
+                                        Ver todas
+                                </NavDropdown.Item>
+                            </NavDropdown>
+                        ))}
+                    </Nav>
+
+                    <Form onSubmit={handleSearchSubmit} className="d-flex my-lg-0">
+                        <FormControl
+                            type="search"
+                            placeholder="Buscar"
+                            className="mr-2 rounded-0 px-5 py-4 border-1 fw-light text-black-50 border-black"
+                            aria-label="Search"
+                            value={searchInput}
+                            onChange={(e) => setSearchInput(e.target.value)}
+                        />
+                    </Form>
+
+                    <div className="w-auto d-flex gap-2 align-items-center w mt-3 mt-lg-0">
+                        {user ? (
+                            <>
+                                <button className="button fw-light rounded-0" onClick={handleSignOut}>
+                                    Cerrar Sesión
+                                </button>
+                                <Link to="/cart">
+                                    <button onClick={toggleCart} className="bg-transparent border-1 p-3 border-dark">
+                                        <img src={carrito} width={35} alt="imagen carrito" />
                                     </button>
-                                    <Link to="/cart">
-                                        <button onClick={toggleCart} className='bg-transparent border-1 p-3 border-dark '>
-                                            <img src={carrito} width={35} alt="imagen carrito" />
-                                        </button>
-                                    </Link>
-                                </>
-                            ) : (
-                                <Link
-                                    to="/register"
-                                    className="button fw-light"
-                                    onClick={() => handleNavLinkClick('/register')}
-                                >
-                                    Iniciar Sesión
                                 </Link>
-                            )}
-                        </div>
-                    </Navbar.Collapse>
-                </Navbar>
+                            </>
+                        ) : (
+                            <Link
+                                to="/register"
+                                className="button fw-light"
+                                onClick={() => handleNavLinkClick('/register')}
+                            >
+                                Iniciar Sesión
+                            </Link>
+                        )}
+                    </div>
+
+                </Container>
+            </Navbar.Collapse>
+        </Navbar>
+
     );
 
 }
 
-export default NavBar; 
+export default NavBar;

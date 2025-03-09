@@ -10,6 +10,8 @@ interface UserContextType {
     register: (event: React.FormEvent<HTMLFormElement>, email: string, password: string) => Promise<void>;
     login: (event: React.FormEvent<HTMLFormElement>, email: string, password: string) => Promise<void>;
 }
+
+// children es el contenido que se va a renderizar dentro del provider y es de tipo React.ReactNode
 interface UserProviderProps {
     children: React.ReactNode;
 }
@@ -17,6 +19,7 @@ interface UserProviderProps {
 const UserContext = createContext<UserContextType | null>(null);
 
 //provider que nos permite usar el contexto global con las funciones y el estado
+//react.FC es un tipo generico que recibe las props que recibe el componente Y CHILDREN es el contenido que se va a renderizar dentro del provider
 export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     const [user, setUser] = useState<User | null>(null);
 

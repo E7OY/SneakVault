@@ -6,8 +6,7 @@ import NavBar from '../components/NavBar';
 import '../index.css';
 
 interface RootLayoutProps {
-  user: string;
-}
+  children: React.ReactNode;}
 
 const RootLayout: React.FC<RootLayoutProps> = () => {
   return (
