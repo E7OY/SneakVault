@@ -57,6 +57,26 @@ export function Cart({ toggleCart }: CartProps) {
                     <img src={visa} className='p-1 border-1 border border-black-50' width={50} alt="imagen logo visa"/>
                     <img src={paypal} className='p-1 border-1 border border-black-50' width={50} alt="imagen logo paypal"/>
                 </div>
+<<<<<<< HEAD
+=======
+
+                <div className="col-4 cart-payment ">
+                    <h4 className='fw-light'>Resumen</h4>
+                    <h5 className='fw-light'>Subtotal<h5 className='d-inline float-end text-black-50 fw-light'> €{totalCart()} EUR</h5></h5>
+                    <h5 className='fw-light'>Entrega<h5 className='d-inline float-end text-black-50 fw-light'>Gratis</h5></h5>
+                    <hr />
+                    <h4 className='fw-semibold'>Total<h4 className='d-inline float-end text-black-50 fw-light'>€{totalCart()} EUR</h4></h4>
+
+
+                    <button className='p-3 px-5 my-3 w-100 fw-regular border border-1 fw-light border-black bg-negro text-white'>Comprar</button>
+                    <div className='d-flex flex-row justify-content-start gap-1'>
+                        <img src={mastercad} className='p-1 border-1 border border-black-50' width={50} alt="imagen logo mastercard"/>
+                        <img src={visa} className='p-1 border-1 border border-black-50' width={50} alt="imagen logo visa"/>
+                        <img src={paypal} className='p-1 border-1 border border-black-50' width={50} alt="imagen logo paypal"/>
+                    </div>
+                </div>
+
+>>>>>>> 98e0d5158eb67b493cd5be49705a3cd7cb959e89
             </div>
         </div>
 
