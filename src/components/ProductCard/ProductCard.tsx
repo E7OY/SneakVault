@@ -29,7 +29,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
                     alt={product.nombre}
                     onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }}
                 />
-                <h6 className="mb-2 fw-light text-black-50">{product.categoria}</h6>
+                <h6 className="mb-2 fw-light text-black-50">{product.marca} · {product.categoria}</h6>
                 <h5 className="text-truncate fw-light">{product.nombre}</h5>
                 <p className="m-0 p-0 fw-light text-black-50">{product.precio}€</p>
             </Link>

@@ -98,7 +98,7 @@ const Home = () => {
             direction: "horizontal",
             loop: true,
             autoplay: {
-                delay: 2000,
+                delay: 4000,
                 pauseOnMouseEnter: true,
                 disableOnInteraction: false,
             },
@@ -112,7 +112,7 @@ const Home = () => {
                     slidesPerView: 1,
                 },
                 1024: {
-                    slidesPerView: 7,
+                    slidesPerView: 4,
                 },
             },
         });
@@ -120,8 +120,7 @@ const Home = () => {
 
 
     return (
-        <>
-
+        <>  
             <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -130,10 +129,10 @@ const Home = () => {
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <div className="banner-home text-white text-start d-flex flex-column flex-md-row justify-content-center align-items-center">
-                            <div className="col-12 col-md-4 mb-md-0">
-                                <h2 className="fw-light text-black">YEEZY FOAM</h2>
+                            <div className="col-12 col-md-4 mb-md-0 text-center">
+                                <h2 className="fw-regular text-black">yeezy</h2>
                                 <h3 className="fw-light text-black">La mejor zapatilla esta temporada...</h3>
-                                <p className="mb-5 text-black-50 fw-light text-start" style={{ maxWidth: '50ch' }}>
+                                <p className="mb-5 text-black-50 fw-light text-center">
                                     Puedes combinar estas zapatillas Yeezy con cualquier estilo streetwear.
                                     Su diseño atemporal y su silueta única las convierten en un elemento
                                     esencial para tu colección. Gracias a su tecnología innovadora,
@@ -141,18 +140,18 @@ const Home = () => {
                                 </p>
                                 <a href="/zapatillas/yeezy" className="border button-nocta border-black p-3 text-decoration-none negro fw-light">Comprar ahora</a>
                             </div>
-                            <div className="col-12 col-md-4">
+                            <div className="col-12 col-md-3">
                                 <img
                                     ref={imageRef}
                                     src={imageMap['Yeezy Foam Runner Cinder']}
                                     className="img-fluid"
-                                    width={650}
+                                    width={400}
                                     style={{
-                                                                                transform: `rotate(15deg) scale(${calculateScale()})`,
+                                                                                transform: ` scale(${calculateScale()}) rotate(10deg)`,
                                                                                 transition: 'transform 0.5s ease-out',
                                                                                 position: 'absolute',
                                                                                 top: '-150px',
-                                                                                left: '-50px',
+                                                                                left: '-5px',
                                                                             }}
                                     alt="Yeezy 350 V2 Onyx"
                                 />
@@ -160,31 +159,31 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <div className="banner-home text-white text-start d-flex flex-column flex-md-row justify-content-center align-items-center">
-                            <div className="col-12 col-md-4 mb-md-0 m-0 p-0">
-                                <h2 className="fw-light text-black">Yeezy 350 V2 Onyx</h2>
+                    <div className="banner-home text-white text-start d-flex flex-column flex-md-row justify-content-center align-items-center">
+                            <div className="col-12 col-md-4 mb-md-0 text-center">
+                                <h2 className="fw-regular text-black">nocta</h2>
                                 <h3 className="fw-light text-black">La mejor zapatilla esta temporada...</h3>
-                                <p className="mb-5 text-black-50 fw-light text-start" style={{ maxWidth: '50ch' }}>
+                                <p className="mb-5 text-black-50 fw-light text-center">
                                     Puedes combinar estas zapatillas Yeezy con cualquier estilo streetwear.
                                     Su diseño atemporal y su silueta única las convierten en un elemento
                                     esencial para tu colección. Gracias a su tecnología innovadora,
                                     te proporcionan comodidad durante todo el día.
                                 </p>
-                                <a href="/zapatillas/yeezy" className="border button-nocta border-black p-3 text-decoration-none negro fw-light w-auto">Comprar ahora</a>
+                                <a href="/zapatillas/yeezy" className="border button-nocta border-black p-3 text-decoration-none negro fw-light">Comprar ahora</a>
                             </div>
-                            <div className="col-12 col-md-4 m-0 p-0">
+                            <div className="col-12 col-md-3">
                                 <img
                                     ref={imageRef}
-                                    src={imageMap['Yeezy 350 V2 Onyx']}
+                                    src={imageMap['Nike Nocta NRG RF Tee']}
                                     className="img-fluid"
-                                    width={800}
+                                    width={450}
                                     style={{
-                                        transform: `rotate(-10deg) scale(${calculateScale()})`,
-                                        transition: 'transform 0.5s ease-out',
-                                        position: 'absolute',
-                                        top: '-150px',
-                                        left: '-80px',
-                                    }}
+                                                                                transform: ` scale(${calculateScale()})`,
+                                                                                transition: 'transform 0.5s ease-out',
+                                                                                position: 'absolute',
+                                                                                top: '-240px',
+                                                                                left: '-5px',
+                                                                            }}
                                     alt="Yeezy 350 V2 Onyx"
                                 />
                             </div>
@@ -202,7 +201,7 @@ const Home = () => {
             </div>
 
 
-                <main className="mx-1 px-5 mt-5">
+                <main className="mx-1 px-5 mt-5 w-75 mx-auto">
                     {/* SLIDER YEEZY */}
                     <div className="d-flex flex-row justify-content-between align-items-end">
                         <div className="">
@@ -363,7 +362,7 @@ const Home = () => {
                 */}
 
                     <div className="row d-flex justify-content-around mt-5 m-0 p-0">
-                        <div className="col-12 col-md-4 info p-4  mb-md-0" style={{ outline: "1px solid #010101", boxSizing: "border-box", backgroundColor: "#fff" }}>
+                        <div className="col-12 col-md-4 info p-4 mb-md-0">
                             <img src={original} width={30} alt="icono original" />
                             <div>
                                 <h4 className="my-3 fw-light">SneakVault Verified</h4>
@@ -374,7 +373,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="col-12 col-md-4 info p-4  mb-md-0" style={{ outline: "1px solid #010101", boxSizing: "border-box", backgroundColor: "#fff" }}>
+                        <div className="col-12 col-md-4 info p-4  mb-md-0" >
                             <img src={envio} width={30} alt="icono envio" />
                             <div>
                                 <h4 className="my-3 fw-light">SneakVault Verified</h4>
@@ -385,7 +384,7 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <div className="col-12 col-md-4 info p-4  mb-md-0" style={{ outline: "1px solid #010101", boxSizing: "border-box", backgroundColor: "#fff" }}>
+                        <div className="col-12 col-md-4 info p-4  mb-md-0">
                             <img src={devolucion} width={30} alt="icono devolucion" />
                             <div>
                                 <h4 className="my-3 fw-light">SneakVault Verified</h4>

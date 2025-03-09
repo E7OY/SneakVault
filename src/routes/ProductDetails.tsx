@@ -19,6 +19,11 @@ const ProductDetails= () => {
     const [relatedProducts, setRelatedProducts] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string }[]>([]);
     const userContext = useContext(UserContext);
     const user = userContext?.user;
+    const day = new Date().getDate() + 4;
+    const day2 = new Date().getDate() + 7;
+    const month = new Date().toLocaleString('default', { month: 'long' });
+    
+
 
     const { addToCart } = useCart();
     //hook de react que maneja efectos secundarios en componentes funcionales, en este cadso obtiene productos de la bd
@@ -90,39 +95,40 @@ const ProductDetails= () => {
 
 
     return (
-        <main>
+        <main className='w-75 mx-auto'>
         <div>
-            <div className="row d-flex flex-row mt-5 mx-auto justify-content-center align-items-center gap-5">
+            <div className="row d-flex flex-row mt-5 mx-auto justify-content-center align-items-center">
 
-                <div className="d-flex flex-column col-md-6 col-sm-12 g-0">
-                    <img className='imagen-producto-detail col-sm-12 col-12 col-md-12' src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />
-                    <div className="imagenes d-flex flex-row col-md-12 p-0 m-0">
-                        <img className="imagen-producto-detail" src={imageMap[product.nombre]} alt={product.nombre}
-                            onError={(e) => { e.currentTarget.src = imageMap[product.nombre]; }}/>
-                        <img className="imagen-producto-detail" src={product.imagen || imageMap[product.nombre]} alt={product.nombre}
-                            onError={(e) => { e.currentTarget.src = imageMap[product.nombre]; }}
-                            style={{ transform: 'rotateY(180deg)' }} />
-                        <img className="imagen-producto-detail" src={product.imagen || imageMap[product.nombre]} alt={product.nombre}
-                            onError={(e) => { e.currentTarget.src = imageMap[product.nombre]; }}
-                            style={{ transform: 'rotateX(180deg)' }} />
+            <div className="d-flex flex-column col-md-8 col-sm-12">
+                        <div className="imagenes d-flex flex-wrap col-md-12 p-0 m-0">
+                            <img className="imagen-producto-detail col-6 p-1" src={imageMap[product.nombre]} alt={product.nombre}
+                                onError={(e) => { e.currentTarget.src = imageMap[product.nombre]; }} />
+                            <img className="imagen-producto-detail col-6 p-1" src={imageMap[product.nombre]} alt={product.nombre}
+                                onError={(e) => { e.currentTarget.src = imageMap[product.nombre]; }}
+                                style={{ transform: 'rotateY(180deg)' }} />
+                            <img className="imagen-producto-detail col-6 p-1" src={imageMap[product.nombre]} alt={product.nombre}
+                                onError={(e) => { e.currentTarget.src = imageMap[product.nombre]; }}
+                                style={{ transform: 'rotateX(180deg)' }} />
+                            <img className="imagen-producto-detail col-6 p-1" src={imageMap[product.nombre]} alt={product.nombre}
+                                onError={(e) => { e.currentTarget.src = imageMap[product.nombre]; }} />
+                        </div>
                     </div>
-                </div>
 
-                <div className="col-md-5 col-sm-12 negro product-detail-info">
+                <div className="col-md-4 col-sm-12 negro product-detail-info">
                     {product.stock > 0 ?
-                        (product.stock <= 10 ? <h6 className='fw-bold bg-danger text-white p-1 d-inline-block float-right'>Menos de {product.stock} unidades</h6> :
-                            <h6 className='fw-bold bg-success text-white p-1 d-inline-block float-right'>{product.stock} en stock</h6>) 
+                        (product.stock <= 10 ? <h6 className='fw-light bg-white text-danger border-1 border border-black p-1 d-inline-block float-right'>Menos de {product.stock} unidades</h6> :
+                            <h6 className='fw-light bg-white text-black p-1 d-inline-block float-right border-1 border border-black'>{product.stock} en stock</h6>) 
                             :
                             <h5 className='bg-danger text-white d-inline-block fst-italic p-1 float-right'>Agotado</h5>}
 
                     <Link to={`/${product.categoria}/${product.marca.toLowerCase()}`}>
-                        <h4 className='fw-light text-black-50 text-decoration-none negro'>{product.marca}</h4>
+                        <h4 className='fw-semibold text-black text-decoration-none negro'>{product.marca}</h4>
                     </Link>
                     
-                    <h2 className='display-4 mt-3 fw-light'>{product.nombre}</h2>
-                    <h5 className=' fw-light text-black-50'>{product.descripcion}</h5>
+                    <h2 className='display-7 mt-3 fw-light'>{product.nombre}</h2>
                     <div className={`${product.color}-color mt-3`} data-toggle="tooltip" data-placement="top" title={`${product.color}`} >{}</div>
-                    <h3 className='fw-light my-4'>{product.precio}€</h3>
+                    <h3 className='fw-light mt-3'>{product.precio}€</h3>
+                    <h6 className='fw-light mb-5'>Tasas de aduanas incluidas</h6>
 
                     {user ? (
                         product.stock <= 0 ? (
@@ -138,15 +144,6 @@ const ProductDetails= () => {
                         ) : (
                             <>
                             <a onClick={() => { handleAddToCart(); messageCart(); }} className='button fw-light' style={{ cursor: "pointer" }}>Añadir a la cesta</a>
-                            {
-                                product.stock <= 5 ? (
-                                    <>
-                                    <br/> 
-                                    <img src={productTendencia} className='producto-card-tendencia mt-4' alt="" width={100}/>
-                                    </>) 
-                                    : 
-                                    null
-                            }
                             <div className="message-cart fw-light">
                                 Producto añadido al carrito
                             </div>
@@ -156,7 +153,43 @@ const ProductDetails= () => {
                         <a href="/register" className='button fw-light'>Inicia sesión para comprar</a>
                     )}
 
-                    <details className="my-2 mt-5">
+                <h6 className='fw-light mt-5'>ENTREGA ESTIMADA</h6>
+                <h6 className='fw-light text-black-50'>Recíbelo entre el {day} y {day2} de {month}</h6>
+
+                <div className="container-registro">
+                    {
+                        user ? 
+                        <p className='text-black-50'>
+                        Utiliza el código SNV10 en el pago para obtener un -10% en tu primer pedido. Solo en la app y en 
+                        estilos seleccionados.
+                        </p>
+                        : (
+                            <>
+                            <h5>Registráte y obtén 10%</h5>
+                            <p className='text-black-50'>
+                            Utiliza el código SNV10 en el pago para obtener un -10% en tu primer pedido. Solo en la app y en 
+                            estilos seleccionados.
+                            </p>
+                            </>
+                        )
+                    }
+                </div>
+
+                </div>
+            </div>
+
+            <div className="container-fuid mt-5 m-5">
+            <h2 className="fw-light mb-4">Detalles del Producto</h2>
+            <p className="fw-light text-black-50">{product.descripcion}</p>
+
+            <SizeGuideModal product={product}/>
+
+            <br />
+            <a className="mt-5 fw-light text-decoration-none" data-toggle="modal" data-target="#myModal">
+                Guía de tallas
+            </a>
+
+            <details className="my-2 mt-5">
                         <summary className='p-2 border-bottom fw-light'>
                             Envíos
                         </summary>
@@ -202,15 +235,6 @@ const ProductDetails= () => {
                         </h6>
                     </details>
 
-
-                    <SizeGuideModal product={product}/>
-
-                    <br />
-                    <a className="mt-5 fw-light text-decoration-none" data-toggle="modal" data-target="#myModal">
-                        Guía de tallas
-                    </a>
-
-                </div>
             </div>
 
             {/* Productos Relacionados */}

@@ -109,7 +109,7 @@ const Products: React.FC<ProductProps> = () => {
 
     return (
         <>
-            <div className="container-fluid px-4">
+            <div className="container-fluid w-75 px-4">
                 <div className="row m-0 p-0 my-3 w-auto d-flex flex-row justify-content-between align-items-center">
                     <div className="col-4 w-auto m-0 p-0">
                         <h2 className='fw-light display-6 my-2 w-auto d-inline text-nowrap'>{categoria}</h2>
@@ -125,7 +125,7 @@ const Products: React.FC<ProductProps> = () => {
                     </div>
                 </div>
 
-                <div className="row w-100 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 row-cols-xl-5 g-0 z-0">
+                <div className="row w-100 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-0 z-0">
                 {sortedProducts.slice(0, visibleProducts).map(product => (
                     <div className="col" key={product.id}>
                         <ProductCard product={product} />

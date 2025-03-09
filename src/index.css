@@ -227,9 +227,6 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
-  outline: 1px solid #010101;
-  background-color: rgb(255, 255, 255);
   color: #010101;
   width: 100%;
   height: auto;
@@ -311,7 +308,6 @@ header {
   box-sizing: border-box;
   position: relative;
   z-index: 1;
-  outline: 1px solid #010101;
   background-color: white;
 }
 .producto-card-related {
@@ -366,23 +362,20 @@ header {
 /* ESTILOS DETALLE PRODUCTO */
 
 .imagen-producto-detail {
-  width: 100%;
-  height: auto;
-  padding: 30px;
   object-fit: contain;
-  max-height: 500px;
-  box-sizing: border-box;
   cursor: pointer;
   transition: transform 0.3s;
-  outline: 1px solid #010101;
-  background-color: white;
 }
 
 .productos-related-info {
   color: #010101;
 }
 
-
+.container-registro {
+  margin-top: 40px;
+  background: #f8f8f8;
+  padding: 20px;
+}
 
 
 
