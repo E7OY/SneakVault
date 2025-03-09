@@ -59,7 +59,7 @@ export function Cart({ toggleCart }: CartProps) {
                     </ul>
                 </div>
 
-                <div className="col-4 cart-payment">
+                <div className="col-4 cart-payment ">
                     <h4 className='fw-light'>Resumen</h4>
                     <h5 className='fw-light'>Subtotal<h5 className='d-inline float-end text-black-50 fw-light'> €{totalCart()} EUR</h5></h5>
                     <h5 className='fw-light'>Entrega<h5 className='d-inline float-end text-black-50 fw-light'>Gratis</h5></h5>
