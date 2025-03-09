@@ -22,11 +22,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
         <div className="producto-card h-100 w-100 p-3">
             <Link to={`/${product.categoria}/${product.marca}/${product.id}`}
                 className="text-decoration-none text-dark">
-                {product.stock <= 5 && (
-                    <img src={productTendencia} className='col-6 col-md-5 producto-card-tendencia position-absolute' alt="" width={100} />
-                )}
+            
                 <img
-                    className="producto-img img-fluid p-3 col-12"
+                    className="producto-img img-fluid p-3 col-12 z-1"
                     src={product.imagen || imageMap[product.nombre]}
                     alt={product.nombre}
                     onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }}

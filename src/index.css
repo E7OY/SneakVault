@@ -314,7 +314,18 @@ header {
   outline: 1px solid #010101;
   background-color: white;
 }
-
+.producto-card-related {
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  transition: 1s;
+}
+.producto-card-related:hover {
+  transform: perspective(200px) rotateY(5deg);
+  transition: 1s;
+}
 
 .producto-img img:hover {
   transform: scale(1.1);
@@ -331,6 +342,7 @@ header {
   box-sizing: border-box;
   cursor: pointer;
   transition: transform 0.3s;
+  z-index: 1;
 }
 
 .producto-img:hover {
@@ -367,8 +379,7 @@ header {
 }
 
 .productos-related-info {
-  background-color: #010101;
-  color: white;
+  color: #010101;
 }
 
 

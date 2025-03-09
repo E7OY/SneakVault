@@ -1,12 +1,13 @@
 import { signOut, getAuth } from "firebase/auth";
 import { useState, useEffect, useContext } from "react";
-import { Container, Nav, Navbar, NavDropdown, NavLink, Form, FormControl } from "react-bootstrap";
+import { Container, Nav, Navbar, NavLink, Form, FormControl } from "react-bootstrap";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import UserContext from "../../context/userContext";
 import '../../index.css';
 import carrito from '../../assets/carrito.webp';
 import { onValue, ref } from "firebase/database";
 import { db } from "../../utils/firebase.utils";
+import CategoryMenu from "../CategoryMenu";
 
 interface Category {
     name: string;
@@ -108,41 +109,19 @@ const NavBar = () => {
     return (
 
         <Navbar expand="lg" className="bg-white py-3 px-5 border-bottom border-dark">
-            <Link to="/home" className="h1  text-decoration-none negro mb-0 fw-light">SneakVault</Link>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" className="border-dark" />
+            <Link to="/home" className="h1 text-decoration-none negro mb-0 fw-light">SneakVault</Link>
+            <Navbar.Toggle aria-controls="basic-navbar-na" className="border-dark" />
 
             <Navbar.Collapse id="basic-navbar-nav">
 
-                <Container className="navbar d-flex justify-content-around w-100">
+                <Container className="navbar d-flex justify-content-between w-100">
 
                     <Nav className="d-flex flex-column flex-lg-row align-items-lg-left gap-3 w-auto">
                         <Link className="navbar-brand" to="/home" onClick={() => handleNavLinkClick('/home')}></Link>
                         <Nav.Link as={NavLink} to="/home" className="fw-light" onClick={() => handleNavLinkClick('/home')}>HOME</Nav.Link>
 
-                        {categories.map((category) => (
-                            <NavDropdown title={category.name.toUpperCase()} id={`${category.name}-dropdown`} key={category.name} className="fw-light">
-                                {category.brands.map((brand) => (
-                                    <NavDropdown.Item
-                                        as={NavLink}
-                                        to={`/${category.name}/${brand}`}
-                                        className="fw-light"
-                                        onClick={() => handleNavLinkClick(`/${category.name}/${brand}`)}
-                                        key={brand}>
-                                            {brand}
-                                    </NavDropdown.Item>
-                                ))}
+                        <CategoryMenu categories={categories} handleNavLinkClick={handleNavLinkClick} />
 
-                                <NavDropdown.Divider />
-
-                                <NavDropdown.Item
-                                    as={NavLink}
-                                    to={`/${category.name}`}
-                                    className="fw-light"
-                                    onClick={() => handleNavLinkClick(`/${category.name}`)}>
-                                        Ver todas
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                        ))}
                     </Nav>
 
                     <Form onSubmit={handleSearchSubmit} className="d-flex my-lg-0">
@@ -156,15 +135,18 @@ const NavBar = () => {
                         />
                     </Form>
 
-                    <div className="w-auto d-flex gap-2 align-items-center w mt-3 mt-lg-0">
+                </Container>
+            </Navbar.Collapse>
+
+            <div className="w-auto d-flex gap-2 justify-content-end mt-3 mt-lg-0">
                         {user ? (
                             <>
                                 <button className="button fw-light rounded-0" onClick={handleSignOut}>
                                     Cerrar Sesión
                                 </button>
                                 <Link to="/cart">
-                                    <button onClick={toggleCart} className="bg-transparent border-1 p-3 border-dark">
-                                        <img src={carrito} width={35} alt="imagen carrito" />
+                                    <button onClick={toggleCart} className="bg-transparent border-1 p-2 border-dark">
+                                        <img src={carrito} width={37} alt="imagen carrito" />
                                     </button>
                                 </Link>
                             </>
@@ -177,10 +159,7 @@ const NavBar = () => {
                                 Iniciar Sesión
                             </Link>
                         )}
-                    </div>
-
-                </Container>
-            </Navbar.Collapse>
+                 </div>
         </Navbar>
 
     );

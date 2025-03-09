@@ -15,7 +15,6 @@ interface Product {
     precio: number;
     descripcion: string;
 }
-
 interface ProductProps {
     products: Product[];
 }
@@ -29,11 +28,10 @@ const Products: React.FC<ProductProps> = () => {
     const [searchInput, setSearchInput] = useState('');
     // useLocation hook que permite acceder a la ubicación actual de la URL
     const location = useLocation();
-    const [visibleProducts, setVisibleProducts] = useState(16);
+    const [visibleProducts, setVisibleProducts] = useState(20);
     
-
     const loadMore = () => {
-        setVisibleProducts(prevVisibleProducts => prevVisibleProducts + 16);
+        setVisibleProducts(prevVisibleProducts => prevVisibleProducts + 20);
     };
 
     useEffect(() => {
@@ -127,7 +125,7 @@ const Products: React.FC<ProductProps> = () => {
                     </div>
                 </div>
 
-                <div className="row w-100 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-0 z-0">
+                <div className="row w-100 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 row-cols-xl-5 g-0 z-0">
                 {sortedProducts.slice(0, visibleProducts).map(product => (
                     <div className="col" key={product.id}>
                         <ProductCard product={product} />

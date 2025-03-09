@@ -10,6 +10,7 @@ import UserContext from '../context/userContext';
 
 import '../index.css';
 import { useCart } from '../context/cartContext';
+import SizeGuideModal from '../components/SizeGuideModal';
 
 const ProductDetails= () => {
     // este hook se usa para que el componente pueda acceder a los parametros de la URL
@@ -87,56 +88,40 @@ const ProductDetails= () => {
         }, 2000);
     };
 
+
     return (
         <main>
         <div>
             <div className="row d-flex flex-row mt-5 mx-auto justify-content-center align-items-center gap-5">
+
                 <div className="d-flex flex-column col-md-6 col-sm-12 g-0">
                     <img className='imagen-producto-detail col-sm-12 col-12 col-md-12' src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />
                     <div className="imagenes d-flex flex-row col-md-12 p-0 m-0">
-                        <img
-                            className="imagen-producto-detail"
-                            src={imageMap[product.nombre]}
-                            alt={product.nombre}
-                            onError={(e) => {
-                                e.currentTarget.src = imageMap[product.nombre];
-                            }}
-                        />
-
-                        <img
-                            className="imagen-producto-detail"
-                            src={product.imagen || imageMap[product.nombre]}
-                            alt={product.nombre}
-                            onError={(e) => {
-                                e.currentTarget.src = imageMap[product.nombre];
-                            }}
-                            style={{ transform: 'rotateY(180deg)' }}
-                        />
-                        <img
-                            className="imagen-producto-detail"
-                            src={product.imagen || imageMap[product.nombre]}
-                            alt={product.nombre}
-                            onError={(e) => {
-                                e.currentTarget.src = imageMap[product.nombre];
-                            }}
-                            style={{ transform: 'rotateX(180deg)' }}
-
-                        />
+                        <img className="imagen-producto-detail" src={imageMap[product.nombre]} alt={product.nombre}
+                            onError={(e) => { e.currentTarget.src = imageMap[product.nombre]; }}/>
+                        <img className="imagen-producto-detail" src={product.imagen || imageMap[product.nombre]} alt={product.nombre}
+                            onError={(e) => { e.currentTarget.src = imageMap[product.nombre]; }}
+                            style={{ transform: 'rotateY(180deg)' }} />
+                        <img className="imagen-producto-detail" src={product.imagen || imageMap[product.nombre]} alt={product.nombre}
+                            onError={(e) => { e.currentTarget.src = imageMap[product.nombre]; }}
+                            style={{ transform: 'rotateX(180deg)' }} />
                     </div>
                 </div>
+
                 <div className="col-md-5 col-sm-12 negro product-detail-info">
                     {product.stock > 0 ?
                         (product.stock <= 10 ? <h6 className='fw-bold bg-danger text-white p-1 d-inline-block float-right'>Menos de {product.stock} unidades</h6> :
-                            <h6 className='fw-bold bg-success text-white p-1 d-inline-block float-right'>{product.stock} en stock</h6>) :
-                        <h5 className='bg-danger text-white d-inline-block fst-italic p-1 float-right'>Agotado</h5>}
+                            <h6 className='fw-bold bg-success text-white p-1 d-inline-block float-right'>{product.stock} en stock</h6>) 
+                            :
+                            <h5 className='bg-danger text-white d-inline-block fst-italic p-1 float-right'>Agotado</h5>}
 
                     <Link to={`/${product.categoria}/${product.marca.toLowerCase()}`}>
                         <h4 className='fw-light text-black-50 text-decoration-none negro'>{product.marca}</h4>
                     </Link>
+                    
                     <h2 className='display-4 mt-3 fw-light'>{product.nombre}</h2>
                     <h5 className=' fw-light text-black-50'>{product.descripcion}</h5>
                     <div className={`${product.color}-color mt-3`} data-toggle="tooltip" data-placement="top" title={`${product.color}`} >{}</div>
-
                     <h3 className='fw-light my-4'>{product.precio}€</h3>
 
                     {user ? (
@@ -154,11 +139,14 @@ const ProductDetails= () => {
                             <>
                             <a onClick={() => { handleAddToCart(); messageCart(); }} className='button fw-light' style={{ cursor: "pointer" }}>Añadir a la cesta</a>
                             {
-                                            product.stock <= 5 ? (
-                                                <>
-                                                <br/> <img src={productTendencia} className='producto-card-tendencia mt-4' alt="" width={100}/>
-                                            </>) : null
-                                        }
+                                product.stock <= 5 ? (
+                                    <>
+                                    <br/> 
+                                    <img src={productTendencia} className='producto-card-tendencia mt-4' alt="" width={100}/>
+                                    </>) 
+                                    : 
+                                    null
+                            }
                             <div className="message-cart fw-light">
                                 Producto añadido al carrito
                             </div>
@@ -215,97 +203,7 @@ const ProductDetails= () => {
                     </details>
 
 
-                    <div id="myModal" className="modal fade" role="dialog">
-                        <div className="modal-dialog">
-                            <div className="modal-content p-3 rounded-0">
-                                <div className="modal-header">
-                                    <h4 className="text-start modal-title fw-medium">Guía de Tallas {product.categoria}</h4>
-                                    <button type="button" className="close" data-dismiss="modal">
-                                        &times;
-                                    </button>
-                                </div>
-                                <div className="modal-body">
-                                    <h5>{product.nombre}</h5>
-                                    <img className='imagen-producto mx-auto m-0' width={400} src={product.imagen || imageMap[product.nombre]} alt={product.nombre} onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }} />
-                                    {product.marca === 'yeezy' && (
-
-                                        <h5 className='my-4 text-black-50 fw-light'>Para zapatillas yeezy se recomienda una talla más de la habitual.</h5>
-                                    )}
-                                    <>
-                                        {product.categoria === 'zapatillas' ?
-                                            (
-                                                <>
-                                                    <table className="table table-bordered table-striped">
-                                                        <thead className="thead-dark">
-                                                            <tr>
-                                                                <th>Talla EU</th>
-                                                                <th>Talla US Hombre</th>
-                                                                <th>Talla UK Hombre</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr><td>35.5</td><td>3.5</td><td>2.5</td></tr>
-                                                            <tr><td>36</td><td>4</td><td>3</td></tr>
-                                                            <tr><td>36.5</td><td>4.5</td><td>3.5</td></tr>
-                                                            <tr><td>37.5</td><td>5</td><td>4</td></tr>
-                                                            <tr><td>38</td><td>5.5</td><td>4.5</td></tr>
-                                                            <tr><td>38.5</td><td>6</td><td>5</td></tr>
-                                                            <tr><td>39</td><td>6.5</td><td>5.5</td></tr>
-                                                            <tr><td>40</td><td>7</td><td>6</td></tr>
-                                                            <tr><td>40.5</td><td>7.5</td><td>6.5</td></tr>
-                                                            <tr><td>41</td><td>8</td><td>7</td></tr>
-                                                            <tr><td>42</td><td>8.5</td><td>7.5</td></tr>
-                                                            <tr><td>42.5</td><td>9</td><td>8</td></tr>
-                                                            <tr><td>43</td><td>9.5</td><td>8.5</td></tr>
-                                                            <tr><td>44</td><td>10</td><td>9</td></tr>
-                                                            <tr><td>44.5</td><td>10.5</td><td>9.5</td></tr>
-                                                            <tr><td>45</td><td>11</td><td>10</td></tr>
-                                                            <tr><td>45.5</td><td>11.5</td><td>10.5</td></tr>
-                                                            <tr><td>46</td><td>12</td><td>11</td></tr>
-                                                            <tr><td>47</td><td>12.5</td><td>11.5</td></tr>
-                                                            <tr><td>47.5</td><td>13</td><td>12</td></tr>
-                                                            <tr><td>48.5</td><td>14</td><td>13</td></tr>
-                                                            <tr><td>49.5</td><td>15</td><td>14</td></tr>
-                                                        </tbody>
-                                                    </table>
-                                                </>
-                                            )
-                                            :
-                                            (
-                                                <>
-                                                    <p>Para encontrar la talla correcta de camisetas, mide el contorno de tu pecho en su parte más ancha. Usa la tabla de tallas para encontrar la talla correspondiente.</p>
-                                                    <table className="table table-bordered table-striped">
-                                                        <thead className="thead-dark">
-                                                            <tr>
-                                                                <th>Talla</th>
-                                                                <th>Medidas (Pecho x Torso x Pierna)</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr><td>XS</td><td>3 x 10 x 12,5</td></tr>
-                                                            <tr><td>S</td><td>4 x 12 x 15</td></tr>
-                                                            <tr><td>M</td><td>5 x 15 x 17</td></tr>
-                                                            <tr><td>L</td><td>6 x 17 x 20</td></tr>
-                                                            <tr><td>XL</td><td>7 x 19 x 25</td></tr>
-                                                            <tr><td>XXL</td><td>8 x 21 x 29</td></tr>
-
-
-                                                        </tbody>
-                                                    </table>
-                                                </>
-                                            )
-
-                                        }
-                                    </>
-                                </div>
-                                <div className="modal-footer">
-                                    <button type="button" className="btn btn-default" data-dismiss="modal">
-                                        Cerrar
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <SizeGuideModal product={product}/>
 
                     <br />
                     <a className="mt-5 fw-light text-decoration-none" data-toggle="modal" data-target="#myModal">
@@ -318,8 +216,8 @@ const ProductDetails= () => {
             {/* Productos Relacionados */}
             <div className="container-fluid mt-5 m-5">
                 <h2 className="fw-light mb-4">Productos Relacionados</h2>
-                <div className="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 mr-5 g-2">
-                    {relatedProducts.slice(0, 8).map(relatedProduct => (
+                <div className="row row-cols-2 row-cols-md-3 row-cols-lg-5 row-cols-xl-5 mr-5 d-flex g-0 accordion-flush flex-row justify-content-start align-items-center">
+                    {relatedProducts.slice(0, 10).map(relatedProduct => (
                         <div className="col" key={relatedProduct.id}>
                             <div className="producto-card bg-white h-100">
                                 <Link
@@ -332,15 +230,26 @@ const ProductDetails= () => {
                                         alt={relatedProduct.nombre}
                                         onError={(e) => { e.currentTarget.src = imageMap[relatedProduct.nombre] }}
                                     />
-                                    <div className="p-3 productos-related-info">
-                                        <h6 className="mb-2 fw-light text-white-50">{relatedProduct.marca}</h6>
-                                        <h5 className="text-white fw-light  mb-2">{relatedProduct.nombre}</h5>
-                                        <h6 className="mb-0 fw-light text-white-50">Desde {relatedProduct.precio}€</h6>
+                                    <div className="px-3 pb-4 productos-related-info">
+                                        <h6 className="mb-2 fw-light text-black-50 ">{relatedProduct.marca}</h6>
+                                        <h5 className="text-black fw-light  mb-2">{relatedProduct.nombre}</h5>
+                                        <h6 className="mb-0 fw-light text-black-50">Desde {relatedProduct.precio}€</h6>
                                     </div>
                                 </Link>
                             </div>
                         </div>
                     ))}
+
+                        {relatedProducts.length < 10 && relatedProducts.length > 0 ? (
+                            <div className="col">
+                                <div className="producto-card-related">
+                                    <Link to={`/${product.categoria}/${product.marca.toLowerCase()}`} className="text-decoration-none text-dark h2 fw-light">
+                                        Ver más de <span className='text-decoration-underline'>{product.marca}</span>
+                                    </Link>
+                                </div>
+                            </div>
+                        ) : null}
+
                 </div>
             </div>
         </div>
