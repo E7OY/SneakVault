@@ -138,7 +138,7 @@ const Home = () => {
                                     esencial para tu colección. Gracias a su tecnología innovadora,
                                     te proporcionan comodidad durante todo el día.
                                 </p>
-                                <a href="/search?query=Air%20Jordan%201" className="border button border-black p-3 text-decoration-none fw-light">Explorar todas</a>
+                                <a href="/search?query=Air%20Jordan%201" className="border button border-black p-3 text-decoration-none negro fw-light border-0" style={{backgroundColor: "#151515", color: 'white'}}>Comprar ahora</a>
                             </div>
                             <div className="col-12 col-md-3">
                                 <img
@@ -162,28 +162,27 @@ const Home = () => {
                     <div className="carousel-item">
                     <div className="banner-home text-white text-start d-flex flex-column flex-md-row justify-content-center align-items-center">
                             <div className="col-12 col-md-4 mb-md-0 text-center">
-                                <h2 className="fw-medium text-black">nocta</h2>
-                                <h3 className="fw-light text-black">las mejores camisetas</h3>
+                                <h2 className="fw-light text-black">off-white x nike</h2>
+                                <h3 className="fw-light text-black">la mejor colaboración</h3>
                                 <p className="mb-5 text-black-50 fw-light text-center">
-                                    Las camisetas Nocta son perfectas para cualquier ocasión. Su diseño
-                                    minimalista y su tejido de alta calidad las convierten en una prenda
-                                    imprescindible para tu armario. Gracias a su tecnología innovadora,
-                                    te proporcionan comodidad durante todo el día.
+                                    Las zapatillas Nike Dunk Low Off-White University Red son una colaboración
+                                    entre Nike y Off-White. Estas zapatillas son una edición limitada
+                                    y están diseñadas por Virgil Abloh. Son perfectas para cualquier ocasión.
                                 </p>
-                                <a href="/camisetas/nike" className="border button-nocta border-black p-3 text-decoration-none negro fw-light">Comprar ahora</a>
+                                <a href="/zapatillas/nike" className="border button border-black p-3 text-decoration-none negro fw-light border-0" style={{backgroundColor: "#B80116", color: 'white'}}>Comprar ahora</a>
                             </div>
                             <div className="col-12 col-md-3">
                                 <img
                                     ref={imageRef}
-                                    src={noctahome}
+                                    src={imageMap['Nike Dunk Low Off-White University Red']}
                                     className="img-fluid"
-                                    width={250}
+                                    width={400}
                                     style={{
-                                                                                transform: ` scale(${calculateScale()})`,
-                                                                                transition: 'transform 0.5s ease-out',
-                                                                                position: 'absolute',
-                                                                                top: '-100px',
-                                                                                left: '70px',
+                                        transform: ` scale(${calculateScale()}) rotate(-20deg)`,
+                                        transition: 'transform 0.5s ease-out',
+                                        position: 'absolute',
+                                        top: '-120px',
+                                        left: '50px',
                                                                             }}
                                     alt="Yeezy 350 V2 Onyx"
                                 />
