@@ -33,8 +33,8 @@ const Home = () => {
 
 
     const calculateScale = () => {
-        const initialScale = 1.4;
-        const maxScale = 1.9;
+        const initialScale = 1.8;
+        const maxScale = 2.6;
         const scrollStart = 0;
         const scrollEnd = 800;
         if (scrollPosition < scrollStart) {
@@ -129,8 +129,8 @@ const Home = () => {
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <div className="banner-home text-white text-start d-flex flex-column flex-md-row justify-content-center align-items-center">
-                            <div className="col-12 col-md-4 mb-md-0 text-center">
-                                <h2 className="fw-light text-black">Jordan</h2>
+                            <div className="col-10 col-md-10 w-50 mb-md-0 text-center">
+                                <h2 className="fw-light text-black">Air Jordan 1</h2>
                                 <h3 className="fw-light text-black">La mejor zapatilla esta temporada...</h3>
                                 <p className="mb-5 text-black-50 fw-light text-center">
                                     Puedes combinar estas zapatillas Yeezy con cualquier estilo streetwear.
@@ -138,20 +138,21 @@ const Home = () => {
                                     esencial para tu colección. Gracias a su tecnología innovadora,
                                     te proporcionan comodidad durante todo el día.
                                 </p>
-                                <a href="/zapatillas/yeezy" className="border button-nocta border-black p-3 text-decoration-none negro fw-light">Comprar ahora</a>
+                                <a href="/search?query=Air%20Jordan%201" className="border button border-black p-3 text-decoration-none fw-light">Explorar todas</a>
                             </div>
                             <div className="col-12 col-md-3">
                                 <img
                                     ref={imageRef}
-                                    src={imageMap['Air Jordan 1 Retro Black Royal Blue']}
+                                    src={imageMap['Air Jordan 1 Retro High Satin Black Toe']}
                                     className="img-fluid"
                                     width={400}
                                     style={{
-                                                                                transform: ` scale(${calculateScale()}) rotate(-10deg)`,
+                                                                                transform: ` scale(${calculateScale()}) rotate(-20deg)`,
                                                                                 transition: 'transform 0.5s ease-out',
                                                                                 position: 'absolute',
                                                                                 top: '-120px',
-                                                                                left: '-5px',
+                                                                                left: '-125px',
+                                                                              
                                                                             }}
                                     alt="Yeezy 350 V2 Onyx"
                                 />

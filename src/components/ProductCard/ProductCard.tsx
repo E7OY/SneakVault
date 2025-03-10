@@ -25,6 +25,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
                     className="producto-img img-fluid p-3 col-12 z-1"
                     src={product.imagen || imageMap[product.nombre]}
                     alt={product.nombre}
+                    loading="lazy"
                     onError={(e) => { e.currentTarget.src = imageMap[product.nombre] }}
                     style={{ objectFit: 'cover', maxHeight: '400px', maxWidth: '400px' }}
                 />
