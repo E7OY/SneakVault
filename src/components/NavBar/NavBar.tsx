@@ -159,7 +159,7 @@ const NavBar = () => {
                                 Iniciar Sesión
                             </Link>
                         )}
-                 </div>
+                </div>
         </Navbar>
 
     );

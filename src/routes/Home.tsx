@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';import original from "../assets/original.webp";
 import envio from "../assets/envios.webp";
 import devolucion from "../assets/devolucion.webp";
-
+import noctahome from "../assets/nocta-nrg-rf-tee-home.webp";
 import { Link, useParams } from "react-router-dom";
 import { onValue, ref } from "firebase/database";
 import { db } from "../utils/firebase.utils";
@@ -162,7 +162,7 @@ const Home = () => {
                     <div className="banner-home text-white text-start d-flex flex-column flex-md-row justify-content-center align-items-center">
                             <div className="col-12 col-md-4 mb-md-0 text-center">
                                 <h2 className="fw-medium text-black">nocta</h2>
-                                <h3 className="fw-light text-black">las mejores camisetas para este verano</h3>
+                                <h3 className="fw-light text-black">las mejores camisetas</h3>
                                 <p className="mb-5 text-black-50 fw-light text-center">
                                     Las camisetas Nocta son perfectas para cualquier ocasión. Su diseño
                                     minimalista y su tejido de alta calidad las convierten en una prenda
@@ -174,15 +174,15 @@ const Home = () => {
                             <div className="col-12 col-md-3">
                                 <img
                                     ref={imageRef}
-                                    src={imageMap['Nike Nocta NRG RF Tee']}
+                                    src={noctahome}
                                     className="img-fluid"
-                                    width={400}
+                                    width={250}
                                     style={{
                                                                                 transform: ` scale(${calculateScale()})`,
                                                                                 transition: 'transform 0.5s ease-out',
                                                                                 position: 'absolute',
-                                                                                top: '-240px',
-                                                                                left: '',
+                                                                                top: '-100px',
+                                                                                left: '70px',
                                                                             }}
                                     alt="Yeezy 350 V2 Onyx"
                                 />
@@ -268,33 +268,33 @@ const Home = () => {
 
                     <div className="row d-flex flex-row justify-content-around align-items-center my-5">
                         <div className="col-3 w-auto marcas">
-                            <h3 className="text-center fw-light">
+                            <h3 className="text-center fw-light m-0 p-0">
                                 Yeezy
                             </h3>
                             <Link to={`/zapatillas/yeezy`}>
-                                <img src={imageMap['Yeezy 350 V2 Beluga']} width={250} alt="Yeezy 350 V2 Beluga" />
+                                <img src={imageMap['Yeezy 350 V2 Beluga']} width={200} alt="Yeezy 350 V2 Beluga" />
                             </Link>
                         </div>
                         <div className="col-3 w-auto marcas">
-                            <h3 className="text-center fw-light">
+                            <h3 className="text-center fw-light m-0 p-0">
                                 Jordan</h3>
                             <Link to={`/zapatillas/jordan`}>
-                                <img src={imageMap['Air Jordan 1 x Cactus Jack']} width={250} alt="Air Jordan 1 x Cactus Jack" />
+                                <img src={imageMap['Air Jordan 1 x Cactus Jack']} width={200} alt="Air Jordan 1 x Cactus Jack" />
                             </Link>
                         </div>
                         <div className="col-3 w-auto marcas">
-                            <h3 className="text-center fw-light">
+                            <h3 className="text-center fw-light m-0 p-0">
                                 Nike</h3>
                             <Link to={`/zapatillas/nike`}>
-                                <img src={imageMap['Nike Dunk Low Black Panda']} width={250} alt="Nike Dunk Low Black Panda" />
+                                <img src={imageMap['Nike Dunk Low Black Panda']} width={200} alt="Nike Dunk Low Black Panda" />
                             </Link>
 
                         </div>
                         <div className="col-3 w-auto marcas">
-                            <h3 className="text-center fw-light">
+                            <h3 className="text-center fw-light m-0 p-0">
                                 Adidas</h3>
                             <Link to={`/zapatillas/adidas`}>
-                                <img src={imageMap['Adidas Forum x Bad Bunny White']} width={250} alt="Adidas Forum x Bad Bunny White" />
+                                <img src={imageMap['Adidas Forum x Bad Bunny White']} width={200} alt="Adidas Forum x Bad Bunny White" />
                             </Link>
                         </div>
                     </div>
