@@ -4,14 +4,14 @@ import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
 import NotFoundPage from './pages/NotFoundPage';
 import RootLayout from './routes/RootLayout';
 import Home from './routes/Home';
-import Register from './routes/Register';
 import ErrorPage from './pages/ErrorPage';
 import Products from './routes/Products';
 import ProductDetails from './routes/ProductDetails';
-
 import { CartProvider } from './context/cartContext';
 import { UserProvider } from './context/userContext';
 import { Cart } from './routes/Cart';
+import Login from './routes/Login';
+import Register from './routes/Register';
 
 const App = () => {
 
@@ -34,6 +34,10 @@ const App = () => {
           element: <Cart toggleCart={function (): void {
             throw new Error('Function not implemented.');
           }} />,
+        },
+        {  //ruta login
+          path: 'login',
+          element: <Login/>,
         },
         {  //ruta register
           path: 'register',

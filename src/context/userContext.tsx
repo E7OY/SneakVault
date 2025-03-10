@@ -9,6 +9,8 @@ interface UserContextType {
     setUser: React.Dispatch<React.SetStateAction<User | null>>;
     register: (event: React.FormEvent<HTMLFormElement>, email: string, password: string) => Promise<void>;
     login: (event: React.FormEvent<HTMLFormElement>, email: string, password: string) => Promise<void>;
+    isSignUpMode: boolean;
+    setIsSignUpMode: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 // children es el contenido que se va a renderizar dentro del provider y es de tipo React.ReactNode
@@ -40,7 +42,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     //value define que datos se van a compartir a los componentes hijos; user el estado actual del usuario y setUser la funcion para actualizarlo
     //{children} es el contenido que se va a renderizar dentro del provider, al ponerlo indicamos que todo lo que este dentro de UserProvider va a tener acceso al contexto global
     return (
-        <UserContext.Provider value={{ user, setUser }}>
+        <UserContext.Provider value={{ user, setUser}}>
             {children}
         </UserContext.Provider>
     );

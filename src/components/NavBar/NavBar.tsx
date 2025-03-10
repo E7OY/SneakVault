@@ -152,9 +152,9 @@ const NavBar = () => {
                             </>
                         ) : (
                             <Link
-                                to="/register"
+                                to="/login"
                                 className="button fw-light"
-                                onClick={() => handleNavLinkClick('/register')}
+                                onClick={() => handleNavLinkClick('/login')}
                             >
                                 Iniciar Sesión
                             </Link>

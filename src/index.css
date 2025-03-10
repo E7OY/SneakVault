@@ -360,12 +360,9 @@ header {
 /* ESTILOS DETALLE PRODUCTO */
 
 .imagen-producto-detail {
-  object-fit: contain;
   cursor: pointer;
   transition: transform 0.3s;
 }
-
-
 
 .productos-related-info {
   color: #010101;

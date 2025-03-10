@@ -120,8 +120,8 @@ const ProductDetails= () => {
                             :
                             <h5 className='bg-white text-danger d-inline-block border border-1 border-black fst-italic p-1 float-right'>Agotado</h5>}
 
-                    <Link to={`/${product.categoria}/${product.marca.toLowerCase()}`}>
-                        <h4 className='fw-semibold text-black text-decoration-none negro'>{product.marca}</h4>
+                    <Link to={`/${product.categoria}/${product.marca.toLowerCase()}`} className='text-decoration-none fw-lighter negro'>
+                        <h4 className='fw-lighter text-black text-decoration-none negro'>{product.marca}</h4>
                     </Link>
                     
                     <h2 className='display-7 mt-3 fw-light'>{product.nombre}</h2>
@@ -149,7 +149,7 @@ const ProductDetails= () => {
                             </>
                         )
                     ) : (
-                        <a href="/register" className='button fw-light'>Inicia sesión para comprar</a>
+                        <a href="/login" className='button fw-light'>Inicia sesión para comprar</a>
                     )}
 
                 <h6 className='fw-light mt-5'>ENTREGA ESTIMADA</h6>
