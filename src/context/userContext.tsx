@@ -33,21 +33,15 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
         const isLogged = onAuthStateChanged(auth, (user) => {
             setUser(user);
         });
-        return () => isLogged();
     }, []);
 
-    //provider que nos permite usar el contexto global con las funciones y el estado
-    //este fragmento de codigo es la pare central del componente userProvider
-    //proporciona el estado delusuario (user) y la funcion para actualizarlo (setUser) a todos los componentes que esten envueltos dentro de este
-    //value define que datos se van a compartir a los componentes hijos; user el estado actual del usuario y setUser la funcion para actualizarlo
-    //{children} es el contenido que se va a renderizar dentro del provider, al ponerlo indicamos que todo lo que este dentro de UserProvider va a tener acceso al contexto global
     return (
-        <UserContext.Provider value={{ user, setUser}}>
+        <UserContext.Provider value={{ user, setUser }}>
             {children}
         </UserContext.Provider>
     );
 };
 
-//exportamos hook para usar el contexto global
+//el hook para poder user el contexto global
 export const useUser = () => useContext(UserContext);
 export default UserContext;
