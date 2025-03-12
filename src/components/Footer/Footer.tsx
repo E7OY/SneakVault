@@ -71,10 +71,6 @@ const Footer = () => {
                     ></iframe>
                 </div>
             </div>
-
-            <div className="mt-5 text-center">
-                <p className="texto-footer fw-bolder">SNEAKVAULT</p>
-            </div>
         </footer>
     );
 };

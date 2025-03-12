@@ -1,1 +1,1 @@
-make all the website responsive
+make cart responsive

@@ -248,7 +248,7 @@ const ProductDetails= () => {
                                     className="text-decoration-none text-dark"
                                 >
                                     <img
-                                        className="producto-img img-fluid p-3"
+                                        className="producto-img img-fluid p-0"
                                         src={relatedProduct.imagen || imageMap[relatedProduct.nombre]}
                                         alt={relatedProduct.nombre}
                                         onError={(e) => { e.currentTarget.src = imageMap[relatedProduct.nombre] }}

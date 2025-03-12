@@ -22,7 +22,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
                 className="text-decoration-none text-dark">
             
                 <img
-                    className="producto-img img-fluid p-3 col-12 z-1"
+                    className="producto-img img-fluid p-0 col-12 z-1"
                     src={product.imagen || imageMap[product.nombre]}
                     alt={product.nombre}
                     loading="lazy"

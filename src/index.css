@@ -126,11 +126,7 @@ header {
   color: #010101 !important;
 }
 
-.info:hover {
-  cursor: pointer;
-  background-color: #010101;
-  color: white;
-}
+ 
 
 .info img:hover {
   filter: brightness(0) invert(1);
@@ -148,11 +144,10 @@ header {
   padding: 60px 90px;
   background: #eeecec;
   position: absolute;
-  left: 13%;
-  top: 25%;
+  left: 15%;
   border-radius: 50px;
-  z-index: -123;
-}
+  z-index: -124;
+ }
 
 .marcas:hover {
   transform: scale(1.05);

@@ -16,38 +16,8 @@ const Home = () => {
     const [, setProduct] = useState<{ id: string; stock: number; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string } | null>(null);
     const [productos, setProductos] = useState<{ id: string; imagen: string; nombre: string; precio: number, categoria: string, marca: string }[]>([]);
     const imageRef = useRef<HTMLImageElement>(null);
-    const [scrollPosition, setScrollPosition] = useState(0);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrollPosition(window.scrollY);
-
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
 
 
-    const calculateScale = () => {
-        const initialScale = 1.8;
-        const maxScale = 2.6;
-        const scrollStart = 0;
-        const scrollEnd = 800;
-        if (scrollPosition < scrollStart) {
-            return initialScale;
-        }
-        if (scrollPosition > scrollEnd) {
-            return maxScale;
-        }
-        const scrollRange = scrollEnd - scrollStart;
-        const scrollProgress = (scrollPosition - scrollStart) / scrollRange;
-        const scaleIncrement = (maxScale - initialScale) * scrollProgress;
-        return initialScale + scaleIncrement;
-    };
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -121,90 +91,30 @@ const Home = () => {
 
     return (
         <>  
-            <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
-                <div className="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                </div>
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <div className="banner-home text-white text-start d-flex flex-column flex-md-row justify-content-center align-items-center">
-                            <div className="col-10 col-md-10 w-50 mb-md-0 text-center">
-                                <h2 className="fw-light text-black">Air Jordan 1</h2>
-                                <h3 className="fw-light text-black">La mejor zapatilla esta temporada...</h3>
-                                <p className="mb-5 text-black-50 fw-light text-center">
-                                    Puedes combinar estas zapatillas Yeezy con cualquier estilo streetwear.
-                                    Su diseño atemporal y su silueta única las convierten en un elemento
-                                    esencial para tu colección. Gracias a su tecnología innovadora,
-                                    te proporcionan comodidad durante todo el día.
-                                </p>
-                                <a href="/search?query=Air%20Jordan%201" className="border button border-black p-3 text-decoration-none fw-light">Explorar todas</a>
-                            </div>
-                            <div className="col-12 col-md-3">
-                                <img
-                                    ref={imageRef}
-                                    src={imageMap['Air Jordan 1 Retro High Satin Black Toe']}
-                                    className="img-fluid"
-                                    width={400}
-                                    style={{
-                                                                                transform: ` scale(${calculateScale()}) rotate(-20deg)`,
-                                                                                transition: 'transform 0.5s ease-out',
-                                                                                position: 'absolute',
-                                                                                top: '-120px',
-                                                                                left: '-125px',
-                                                                              
-                                                                            }}
-                                    alt="Yeezy 350 V2 Onyx"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="carousel-item">
+                <main className=" w-75 mx-auto">
                     <div className="banner-home text-white text-start d-flex flex-column flex-md-row justify-content-center align-items-center">
-                            <div className="col-12 col-md-4 mb-md-0 text-center">
-                                <h2 className="fw-medium text-black">nocta</h2>
-                                <h3 className="fw-light text-black">las mejores camisetas</h3>
-                                <p className="mb-5 text-black-50 fw-light text-center">
-                                    Las camisetas Nocta son perfectas para cualquier ocasión. Su diseño
-                                    minimalista y su tejido de alta calidad las convierten en una prenda
-                                    imprescindible para tu armario. Gracias a su tecnología innovadora,
-                                    te proporcionan comodidad durante todo el día.
-                                </p>
-                                <a href="/camisetas/nike" className="border button-nocta border-black p-3 text-decoration-none negro fw-light">Comprar ahora</a>
-                            </div>
-                            <div className="col-12 col-md-3">
-                                <img
-                                    ref={imageRef}
-                                    src={noctahome}
-                                    className="img-fluid"
-                                    width={250}
-                                    style={{
-                                                                                transform: ` scale(${calculateScale()})`,
-                                                                                transition: 'transform 0.5s ease-out',
-                                                                                position: 'absolute',
-                                                                                top: '-100px',
-                                                                                left: '70px',
-                                                                            }}
-                                    alt="Yeezy 350 V2 Onyx"
-                                />
-                            </div>
+                        <div className="col-12 col-md-6 mb-4 mb-md-0 text-center">
+                            <h2 className="fw-light text-black">Air Jordan 1</h2>
+                            <h3 className="fw-light text-black">La mejor zapatilla esta temporada...</h3>
+                            <p className="mb-5 text-black-50 fw-light text-center">
+                                Puedes combinar estas zapatillas Yeezy con cualquier estilo streetwear.
+                                Su diseño atemporal y su silueta única las convierten en un elemento
+                                esencial para tu colección.
+                            </p>
+                            <a href="/search?query=Air%20Jordan%201" className="border button border-black p-3 text-decoration-none fw-light">Explorar todas</a>
+                        </div>
+                        <div className="col-12 col-md-6 position-relative text-center">
+                            <img
+                                ref={imageRef}
+                                src={imageMap['Air Jordan 1 Retro High Satin Black Toe']}
+                                className="img-fluid"
+                                alt="Yeezy 350 V2 Onyx"
+                            />
                         </div>
                     </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next text-black" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
 
-
-                <main className="mx-1 px-5 mt-5 w-75 mx-auto">
                     {/* SLIDER YEEZY */}
-                    <div className="d-flex flex-row justify-content-between align-items-end">
+                    <div className="d-flex flex-row justify-content-between  align-items-end">
                         <div className="">
                             <h2 className="fw-light negro text-center display-6">
                                 YEEZY EN TENDENCIA
@@ -236,7 +146,7 @@ const Home = () => {
 
 
                     {/* SLIDER JORDAN */}
-                    <div className="d-flex flex-row justify-content-between align-items-end">
+                    <div className="d-flex flex-row justify-content-between gap-4 align-items-end">
                         <div className="">
                             <h2 className="fw-light negro text-center display-6">
                                 JORDAN DESTACADAS
@@ -329,38 +239,6 @@ const Home = () => {
                         <div className="swiper-button-prev text-black border border-1 border-black"></div>
                         <div className="swiper-button-next text-black border border-1 border-black"></div>
                     </div>
-
-                    {/*
-                <div className="row bg-black mt-5 p-5 mx-auto m-0 d-flex gap-5 justify-content-evenly align-items-center">
-                    <div className="col-12 col-md-4 py-5 mb-4 mb-md-0">
-                        {user ? (
-                            <>
-                                <h4 className="text-start text-white fw-light">
-                                    Tu cupón: BIENVENIDO30
-                                </h4>
-                                <span className="fw-light">*Para compras superiores a 49€</span>
-                            </>
-                        ) : (
-                            <h4 className="text-start fw-light text-white">
-                                Regístrate ahora y obtén un descuento del -30% en tu próxima compra
-                            </h4>
-                        )}
-                    </div>
-                    <div className="col-12 w-auto col-md-2 p-3 text-center">
-                        {user ? (
-                            <>
-                                <button className='fw-light bg-white border-0 text-black p-3 px-5' onClick={handleSignOut}>Cerrar Sesión en {user.email ? cutMail(user.email) : ''}</button>
-                            </>
-                        ) : (
-                            <>
-                                <NavLink to="/register" className='nav-link fw-light bg-white text-black p-3 px-5'>
-                                    Regístrate Ahora
-                                </NavLink>
-                            </>
-                        )}
-                    </div>
-                </div>
-                */}
 
                     <div className="row d-flex justify-content-around mt-5 m-0 p-0">
                         <div className="col-12 col-md-4 info p-4 mb-md-0">
