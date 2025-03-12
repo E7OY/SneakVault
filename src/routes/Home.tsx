@@ -91,6 +91,7 @@ const Home = () => {
 
     return (
         <>  
+<<<<<<< HEAD
                 <main className=" w-75 mx-auto">
                     <div className="banner-home text-white text-start d-flex flex-column flex-md-row justify-content-center align-items-center">
                         <div className="col-12 col-md-6 mb-4 mb-md-0 text-center">
@@ -110,6 +111,74 @@ const Home = () => {
                                 className="img-fluid"
                                 alt="Yeezy 350 V2 Onyx"
                             />
+=======
+            <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+                <div className="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div className="carousel-inner">
+                    <div className="carousel-item active">
+                        <div className="banner-home text-white text-start d-flex flex-column flex-md-row justify-content-center align-items-center">
+                            <div className="col-10 col-md-10 w-50 mb-md-0 text-center">
+                                <h2 className="fw-light text-black">Air Jordan 1</h2>
+                                <h3 className="fw-light text-black">La mejor zapatilla esta temporada...</h3>
+                                <p className="mb-5 text-black-50 fw-light text-center">
+                                    Puedes combinar estas zapatillas Yeezy con cualquier estilo streetwear.
+                                    Su diseño atemporal y su silueta única las convierten en un elemento
+                                    esencial para tu colección. Gracias a su tecnología innovadora,
+                                    te proporcionan comodidad durante todo el día.
+                                </p>
+                                <a href="/search?query=Air%20Jordan%201" className="border button border-black p-3 text-decoration-none negro fw-light border-0" style={{backgroundColor: "#151515", color: 'white'}}>Comprar ahora</a>
+                            </div>
+                            <div className="col-12 col-md-3">
+                                <img
+                                    ref={imageRef}
+                                    src={imageMap['Air Jordan 1 Retro High Satin Black Toe']}
+                                    className="img-fluid"
+                                    width={400}
+                                    style={{
+                                                                                transform: ` scale(${calculateScale()}) rotate(-20deg)`,
+                                                                                transition: 'transform 0.5s ease-out',
+                                                                                position: 'absolute',
+                                                                                top: '-120px',
+                                                                                left: '-125px',
+                                                                              
+                                                                            }}
+                                    alt="Yeezy 350 V2 Onyx"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="carousel-item">
+                    <div className="banner-home text-white text-start d-flex flex-column flex-md-row justify-content-center align-items-center">
+                            <div className="col-12 col-md-4 mb-md-0 text-center">
+                                <h2 className="fw-light text-black">off-white x nike</h2>
+                                <h3 className="fw-light text-black">la mejor colaboración</h3>
+                                <p className="mb-5 text-black-50 fw-light text-center">
+                                    Las zapatillas Nike Dunk Low Off-White University Red son una colaboración
+                                    entre Nike y Off-White. Estas zapatillas son una edición limitada
+                                    y están diseñadas por Virgil Abloh. Son perfectas para cualquier ocasión.
+                                </p>
+                                <a href="/zapatillas/nike" className="border button border-black p-3 text-decoration-none negro fw-light border-0" style={{backgroundColor: "#B80116", color: 'white'}}>Comprar ahora</a>
+                            </div>
+                            <div className="col-12 col-md-3">
+                                <img
+                                    ref={imageRef}
+                                    src={imageMap['Nike Dunk Low Off-White University Red']}
+                                    className="img-fluid"
+                                    width={400}
+                                    style={{
+                                        transform: ` scale(${calculateScale()}) rotate(-20deg)`,
+                                        transition: 'transform 0.5s ease-out',
+                                        position: 'absolute',
+                                        top: '-120px',
+                                        left: '50px',
+                                                                            }}
+                                    alt="Yeezy 350 V2 Onyx"
+                                />
+                            </div>
+>>>>>>> 61b283bb81b6cde3001c6918334036dbd339064e
                         </div>
                     </div>
 

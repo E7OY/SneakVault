@@ -1,7 +1,7 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 /* ESTILOS GLOBALES */
 body {
@@ -9,6 +9,12 @@ body {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
+}
+
+.banner-home p {
+  max-width: 60ch;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .text-black {
