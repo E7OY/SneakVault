@@ -12,6 +12,7 @@ import { UserProvider } from './context/userContext';
 import { Cart } from './routes/Cart';
 import Login from './routes/Login';
 import Register from './routes/Register';
+import SearchResults from './routes/SearchResults';
 
 const App = () => {
 
@@ -45,7 +46,7 @@ const App = () => {
         },
         {  //ruta busqueda
           path: 'search',
-          element: <Products products={[]} />,
+          element: <SearchResults />,
         },
         {  //filtra por categorias, es una ruta dinamica que se puede cambiar por cualquier categoria que se quiera buscar en la base de datos de productos 
           path: ':categoria',

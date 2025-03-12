@@ -110,7 +110,7 @@ const NavBar = () => {
 
         <Navbar expand="lg" className="bg-white py-3 px-5 border-bottom border-dark">
             <Link to="/home" className="h1 text-decoration-none negro mb-0 fw-light">SneakVault</Link>
-            <Navbar.Toggle aria-controls="basic-navbar-na" className="border-dark" />
+            <Navbar.Toggle aria-controls="basic-navbar-na" className="border-white rounded-0 text-white-50" />
 
             <Navbar.Collapse id="basic-navbar-nav">
 
@@ -136,9 +136,8 @@ const NavBar = () => {
                     </Form>
 
                 </Container>
-            </Navbar.Collapse>
 
-            <div className="w-auto d-flex gap-2 justify-content-end mt-3 mt-lg-0">
+            <div className="w-auto d-flex gap-2 justify-content-between   mt-lg-0">
                         {user ? (
                             <>
                                 <button className="button fw-light rounded-0" onClick={handleSignOut}>
@@ -152,14 +151,15 @@ const NavBar = () => {
                             </>
                         ) : (
                             <Link
-                                to="/login"
-                                className="button fw-light"
-                                onClick={() => handleNavLinkClick('/login')}
+                            to="/login"
+                            className="button fw-light"
+                            onClick={() => handleNavLinkClick('/login')}
                             >
                                 Iniciar Sesión
                             </Link>
                         )}
                 </div>
+                        </Navbar.Collapse>
         </Navbar>
 
     );

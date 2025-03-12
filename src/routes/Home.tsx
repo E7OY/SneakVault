@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';import original from "../assets/original.webp";
 import envio from "../assets/envios.webp";
 import devolucion from "../assets/devolucion.webp";
-import noctahome from "../assets/nocta-nrg-rf-tee-home.webp";
 import { Link, useParams } from "react-router-dom";
 import { onValue, ref } from "firebase/database";
 import { db } from "../utils/firebase.utils";
@@ -229,7 +228,7 @@ const Home = () => {
                             {productos.filter(producto => producto.categoria === 'camisetas').slice(0, 10).map((producto, index) => (
                                 <div key={index} className="swiper-slide text-start d-flex flex-column text-left justify-content-center">
                                     <Link to={`/${producto.categoria}/${producto.marca}/${producto.id}`}>
-                                        <img className='imagen-producto-home' width={200} src={imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />
+                                        <img className='imagen-producto-home w-100 h-100' src={imageMap[producto.nombre]} alt={producto.nombre} onError={(e) => { e.currentTarget.src = imageMap[producto.nombre] }} />
                                     </Link>
                                     <h5 className="fw-light text-start mt-3">{producto.nombre}</h5>
                                     <p className="fw-light text-black-50 m-0 p-0">Desde {producto.precio}€</p>

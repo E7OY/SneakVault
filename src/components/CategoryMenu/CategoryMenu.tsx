@@ -20,7 +20,7 @@ const CategoryMenu: React.FC<CategoryMenuProps> = ({ categories, handleNavLinkCl
                         <NavDropdown.Item
                             as={NavLink}
                             to={`/${category.name}/${brand}`}
-                            className="fw-light"
+                            className="fw-light px-3"
                             onClick={() => handleNavLinkClick(`/${category.name}/${brand}`)}
                             key={brand}>
                             {brand}
@@ -30,7 +30,7 @@ const CategoryMenu: React.FC<CategoryMenuProps> = ({ categories, handleNavLinkCl
                     <NavDropdown.Item
                         as={NavLink}
                         to={`/${category.name}`}
-                        className="fw-light"
+                        className="fw-light px-3"
                         onClick={() => handleNavLinkClick(`/${category.name}`)}>
                         Ver todas
                     </NavDropdown.Item>

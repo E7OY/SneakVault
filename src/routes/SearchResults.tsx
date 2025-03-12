@@ -1,38 +1,27 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { db } from '../utils/firebase.utils';
 import { onValue, ref } from 'firebase/database';
-import { useParams, useLocation } from 'react-router-dom';
-import '../index.css';
 import ProductCard from '../components/ProductCard';
 import ProductSort from '../components/ProductSort';
 
 interface Product {
-    categoria: string,
-    marca: string;
-    nombre: string;
+    id: string;
     imagen: string;
-    stock: number;
+    nombre: string;
     precio: number;
     descripcion: string;
-}
-interface ProductProps {
-    products: Product[];
+    categoria: string;
+    stock: number;
+    marca: string;
 }
 
-const Products: React.FC<ProductProps> = () => {
-    // useParams hook que permite acceder a los parámetros de la URL por ejemplo: /productos/:categoria/:marca
-    const { categoria, marca } = useParams<{ categoria: string, marca: string }>();
-    // useState hook que permite manejar el estado de los productos
-    const [products, setProducts] = useState<{ stock: number; id: string; categoria: string, imagen: string; marca: string; nombre: string; precio: number; descripcion: string }[]>([]);
-    const [orderBy, setOrderBy] = useState<'alphabetical' | 'price-asc' | 'price-desc' | 'stock-asc' | 'stock-desc'>('alphabetical');
-    const [searchInput, setSearchInput] = useState('');
-    // useLocation hook que permite acceder a la ubicación actual de la URL
+const SearchResults = () => {
     const location = useLocation();
-    const [visibleProducts, setVisibleProducts] = useState(20);
-    
-    const loadMore = () => {
-        setVisibleProducts(prevVisibleProducts => prevVisibleProducts + 20);
-    };
+    const searchParams = new URLSearchParams(location.search);
+    const query = searchParams.get('query') || '';
+    const [products, setProducts] = useState<Product[]>([]);
+    const [orderBy, setOrderBy] = useState<'alphabetical' | 'price-asc' | 'price-desc' | 'stock-asc' | 'stock-desc'>('alphabetical');
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -40,14 +29,10 @@ const Products: React.FC<ProductProps> = () => {
                 const productsRef = ref(db, 'productos');
                 onValue(productsRef, (snapshot) => {
                     const productsData = snapshot.val();
-                    const productsArray = [];
+                    const productsArray: Product[] = [];
 
                     for (const category in productsData) {
-                        if (categoria && category !== categoria) continue;
-
                         for (const brand in productsData[category]) {
-                            if (marca && brand !== marca) continue;
-
                             for (const productId in productsData[category][brand]) {
                                 const product = productsData[category][brand][productId];
                                 productsArray.push({
@@ -64,7 +49,12 @@ const Products: React.FC<ProductProps> = () => {
                         }
                     }
 
-                    setProducts(productsArray);
+                    const filteredProducts = productsArray.filter(product =>
+                        product.nombre.toLowerCase().includes(query.toLowerCase()) ||
+                        product.descripcion.toLowerCase().includes(query.toLowerCase())
+                    );
+
+                    setProducts(filteredProducts);
                 });
             } catch (error) {
                 console.error(error);
@@ -72,9 +62,8 @@ const Products: React.FC<ProductProps> = () => {
         };
 
         fetchProducts();
-    }, [categoria, marca]);
+    }, [query]);
 
-   
     const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setOrderBy(event.target.value as 'alphabetical' | 'price-asc' | 'price-desc' | 'stock-asc' | 'stock-desc');
     };
@@ -82,7 +71,7 @@ const Products: React.FC<ProductProps> = () => {
     const sortedProducts = [...products].sort((a, b) => {
         switch (orderBy) {
             case 'alphabetical':
-                return 0;
+                return a.nombre.localeCompare(b.nombre);
             case 'price-asc':
                 return a.precio - b.precio;
             case 'price-desc':
@@ -97,16 +86,9 @@ const Products: React.FC<ProductProps> = () => {
     });
 
     return (
-        <>
-            <div className="container-fluid w-75 px-4">
-                <div className="row m-0 p-0 my-3 w-auto d-flex flex-row justify-content-between align-items-center">
-                <h1 className="fw-light text-center mt-4">{categoria} <span className='text-black-50'>{marca}</span> </h1>
-                        {searchInput !== '' ? (
-                            <p className='display-6 fw-light text-black-50 text-center'>{`"${searchInput}" ${products.length} resultados`}</p>
-                        ) : (
-                            <p className='display-6 fw-light text-black-50 text-center'>{`${products.length} resultados`}</p>
-                        )}
-           
+        <div className="container-fluid w-75 px-4">
+            <h1 className="fw-light text-center mt-4">"{query}"</h1>
+            <h1 className='fw-light text-black-50 text-center '>{products.length} resultados</h1>
 
             <div className="row m-0 p-0 my-3 w-auto d-flex flex-row justify-content-between align-items-center">
                 <div className="col-4 w-auto col-sm-12 d-flex align-items-center m-0 p-0">
@@ -114,27 +96,15 @@ const Products: React.FC<ProductProps> = () => {
                 </div>
             </div>
 
-      
-                </div>
-
-                <div className="row w-100 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-0 z-0">
-                {sortedProducts.slice(0, visibleProducts).map(product => (
+            <div className="row w-100 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-0 z-0">
+                {sortedProducts.map((product) => (
                     <div className="col" key={product.id}>
                         <ProductCard product={product} />
                     </div>
                 ))}
-                </div>
-
-                {visibleProducts < sortedProducts.length && (
-                    <div className="text-center my-5">
-                        <button onClick={loadMore} className="button fw-light">
-                            Ver más productos
-                        </button>
-                    </div>
-                )}
             </div>
-        </>
+        </div>
     );
 };
 
-export default Products;
+export default SearchResults;
