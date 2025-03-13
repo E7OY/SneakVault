@@ -146,7 +146,7 @@ const ProductDetails = () => {
 
 
                         {user ? (
-                            product.stock <= 0 ? (
+                            product.stock <= 0 && user?.email !== 'admin@gmail.com' ? (
                                 <>
                                     <a onClick={() => messageCart()} className='btn rounded-0 btn-dark fw-light text-danger p-3'>
                                         <img src={prohibido} className='mx-1' width={20} alt="prohibido" />
@@ -166,9 +166,8 @@ const ProductDetails = () => {
                                             <div className="message-cart fw-light">
                                                 Producto añadido al carrito
                                             </div>
-
-                                        </>}
-
+                                        </>
+                                        }
                                 </>
                             )
                         ) : (
