@@ -17,7 +17,7 @@ interface ProductCardProps {
 const ProductCard = ({ product }: ProductCardProps) => {
     return (
 
-        <div className="producto-card h-100 w-100 p-3">
+        <div className="producto-card h-100 w-100 ">
             <Link to={`/${product.categoria}/${product.marca}/${product.id}`}
                 className="text-decoration-none text-dark">
             

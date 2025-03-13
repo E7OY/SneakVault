@@ -110,7 +110,7 @@
     
     //provider que nos permite usar el contexto global con las funciones y el estado
         return (
-            <CartContext.Provider value={{ cart, addToCart, removeFromCart, increaseQuantity, decreaseQuantity, totalCart, clearCart }}>
+            <CartContext.Provider value={{ cart, setCart, addToCart, removeFromCart, increaseQuantity, decreaseQuantity, totalCart, clearCart }}>
                 {children}
             </CartContext.Provider>
         );

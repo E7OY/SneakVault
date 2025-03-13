@@ -13,6 +13,7 @@ import { Cart } from './routes/Cart';
 import Login from './routes/Login';
 import Register from './routes/Register';
 import SearchResults from './routes/SearchResults';
+import AdminView from './routes/AdminView';
 
 const App = () => {
 
@@ -39,6 +40,10 @@ const App = () => {
         {  //ruta login
           path: 'login',
           element: <Login/>,
+        },
+        {
+          path: 'admin',
+          element: <AdminView />,
         },
         {  //ruta register
           path: 'register',

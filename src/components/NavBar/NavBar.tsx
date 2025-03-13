@@ -124,6 +124,13 @@ const NavBar = () => {
                         <Nav.Link as={NavLink} to="/home" className="fw-light" onClick={() => handleNavLinkClick('/home')}>HOME</Nav.Link>
                         <CategoryMenu categories={categories} handleNavLinkClick={handleNavLinkClick} />
                     </Nav>
+
+                    { user?.email === 'admin@gmail.com' ?
+                    <Link to={"/admin"} className="button">Admin</Link>
+                    :
+                    null
+                    }
+
                     <Form onSubmit={handleSearchSubmit} className="d-flex my-lg-0">
                         <FormControl
                             type="search"
@@ -139,7 +146,7 @@ const NavBar = () => {
                     {user ? (
                         <>
                             <button className="button fw-light rounded-0" onClick={handleSignOut}>
-                                Cerrar Sesión
+                                Logout
                             </button>
                             <Link to="/cart">
                                 <button onClick={toggleCart} className="bg-transparent border-1 p-2 border-dark">
@@ -153,7 +160,7 @@ const NavBar = () => {
                             className="button fw-light"
                             onClick={() => handleNavLinkClick('/login')}
                         >
-                            Iniciar Sesión
+                            Login
                         </Link>
                     )}
                 </div>

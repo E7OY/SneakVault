@@ -1,0 +1,8 @@
+// Example of UserContext
+const userContext = {
+    user: {
+        id: '123',
+        name: 'John Doe',
+        isAdmin: true, // Add this property
+    },
+};
