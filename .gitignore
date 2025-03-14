@@ -72,4 +72,4 @@ node_modules/
 # Ignore Firebase configuration files
 src/utils/firebase.utils.tsx
 .firebaserc
-bd.json
+firebase.json
