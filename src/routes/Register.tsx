@@ -18,7 +18,6 @@ const Register = () => {
     // user es el usuario actual, si no hay usuario es null
     const user = userContext ? userContext.user : null;
     const setUser = userContext ? userContext.setUser : () => { };
-    const errorMessage = document.getElementsByClassName('error');
 
     //mostrar contraseña
     const showPassWord = () => {
@@ -40,8 +39,8 @@ const Register = () => {
             await sendEmailVerification(user);  //email de verificacion
             setUser(user);
             navigate('/home');
-        } catch (error) {
-            setErrors(["Error en el registro. Por favor, inténtalo de nuevo."]);
+        } catch (e) {
+            setErrors(["Error en el registro. Por favor, inténtalo de nuevo." + e]);
         }
     };
 

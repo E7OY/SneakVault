@@ -17,7 +17,6 @@ const Home = () => {
     const imageRef = useRef<HTMLImageElement>(null);
 
 
-
     useEffect(() => {
         const fetchProduct = async () => {
             try {
@@ -29,18 +28,6 @@ const Home = () => {
                         for (const marca in productsData[categoria]) {
                             for (const productId in productsData[categoria][marca]) {
                                 const product = productsData[categoria][marca][productId];
-                                if (product.nombre === nombre) {
-                                    setProduct({
-                                        id: productId,
-                                        imagen: product.imagen || '',
-                                        nombre: product.nombre || '',
-                                        precio: product.precio || 0,
-                                        descripcion: product.descripcion || '',
-                                        categoria: product.categoria || '',
-                                        stock: product.stock || 0,
-                                        marca: product.marca || ''
-                                    });
-                                }
                                 productosList.push({
                                     id: productId,
                                     imagen: product.imagen || '',

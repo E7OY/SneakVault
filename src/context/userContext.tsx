@@ -2,8 +2,6 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
-import { get, ref } from 'firebase/database';
-import { db } from '../utils/firebase.utils';
 
 interface UserContextType {
     //le indicamos cada uno de los datos que va a tener el contexto global y su tipo
@@ -11,8 +9,6 @@ interface UserContextType {
     setUser: React.Dispatch<React.SetStateAction<User | null>>;
     register: (event: React.FormEvent<HTMLFormElement>, email: string, password: string) => Promise<void>;
     login: (event: React.FormEvent<HTMLFormElement>, email: string, password: string) => Promise<void>;
-    isSignUpMode: boolean;
-    setIsSignUpMode: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 // children es el contenido que se va a renderizar dentro del provider y es de tipo React.ReactNode
@@ -35,23 +31,11 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     //onAuthStateChanged de firebase, si el usuario está logueado setUser se actualiza con el usuario actual, si no setUser se actualiza con null
 
     useEffect(() => {
-        getAuth()
+        //getAuth() inicializa la autenticación de firebase
         const auth = getAuth();
-        const isLogged = onAuthStateChanged(auth, async (firebaseUser) => {
-            if (firebaseUser) {
-                const userRef = ref(db, `users/${firebaseUser.uid}`);
-                const snapshot = await get(userRef);
-                const userData = snapshot.val();
-                const extendedUser: ExtendedUser = {
-                    ...firebaseUser,
-                    role: userData?.role || 'user', // Asigna el rol del usuario, por defecto 'user'
-                };
-                setUser(extendedUser);
-            } else {
-                setUser(null);
-            }
+        const isLogged = onAuthStateChanged(auth, (user) => {
+            setUser(user);
         });
-
         return () => isLogged();
     }, []);
 

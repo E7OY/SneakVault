@@ -50,8 +50,6 @@ const AdminView = () => {
 
     return (
 
-
-
             <div className="container my-5 w-75 ">
             <h2 className="fw-light mb-4">Subir Producto</h2>
             <form onSubmit={handleSubmit}>
