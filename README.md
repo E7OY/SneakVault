@@ -93,5 +93,6 @@ Este proyecto consiste en una aplicación web de venta de zapatillas y camisetas
 
 ![FireShot Capture 002 - SneakVault -  localhost](https://github.com/user-attachments/assets/a52df0fd-c3c7-4560-a982-7f2fc077f257)
 
+![FireShot Capture 003 - SneakVault -  localhost](https://github.com/user-attachments/assets/1b21bc11-23e9-40bd-a258-9bc6f7fbba2a)
 
 
