@@ -89,6 +89,9 @@ Este proyecto consiste en una aplicación web de venta de zapatillas y camisetas
 *   **Firebase:** Plataforma de desarrollo de aplicaciones con servicios de autenticación y base de datos.
 *   **Framer Motion:** Librería para crear animaciones y transiciones en React.
 
-![FireShot Capture 050 - SneakVault - localhost](https://github.com/user-attachments/assets/edf41732-55fe-456d-b252-bd9511f3af8f)
+![FireShot Capture 001 - SneakVault -  localhost](https://github.com/user-attachments/assets/a539f23b-cd34-40f6-8f32-6a700e8ba9c3)
 
-![FireShot Capture 051 - SneakVault - localhost](https://github.com/user-attachments/assets/27ae6f2e-ad19-469d-b319-b8b175c80c1d)
+![FireShot Capture 002 - SneakVault -  localhost](https://github.com/user-attachments/assets/a52df0fd-c3c7-4560-a982-7f2fc077f257)
+
+
+
