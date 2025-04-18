@@ -231,6 +231,9 @@ header {
   width: 100%;
   height: auto;
   box-sizing: border-box;
+  outline: 1px solid #010101;
+  background-color: white;
+  padding: 20px;
 }
 
 .swiper-banner img {
@@ -309,6 +312,8 @@ header {
   position: relative;
   z-index: 1;
   background-color: white;
+  outline: 1px solid #010101;
+  padding: 25px;
 }
 .producto-card-related {
   transition: all 0.3s ease;
@@ -362,6 +367,8 @@ header {
 .imagen-producto-detail {
   cursor: pointer;
   transition: transform 0.3s;
+  outline: 1px solid #010101;
+  background-color: white;
 }
 
 .productos-related-info {
@@ -667,3 +674,20 @@ summary {
 
 
 
+.imagen-banner-home{
+  transform: rotate(-20deg);
+  width:  700px;
+  margin-left: -180px;
+  position: relative;
+  z-index: 2;
+}
+
+.imagen-banner-background {
+  position: absolute;
+  transform: rotate(-20deg);
+  width: 700px;
+  height: auto;
+  filter: blur(20px) opacity(0.7);
+  z-index: 1;
+  right: 0;
+}

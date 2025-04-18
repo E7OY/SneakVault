@@ -91,9 +91,14 @@ const Home = () => {
                         </div>
                         <div className="col-12 col-md-6 position-relative text-center">
                             <img
+                                src={imageMap['Air Jordan 1 Retro High Satin Black Toe']}
+                                className="imagen-banner-background"
+                                alt="Fondo Jordan 1"
+                            />
+                            <img
                                 ref={imageRef}
                                 src={imageMap['Air Jordan 1 Retro High Satin Black Toe']}
-                                className="img-fluid"
+                                className="imagen-banner-home"
                                 alt="Yeezy 350 V2 Onyx"
                             />
                         </div>

@@ -114,15 +114,15 @@ const ProductDetails = () => {
 
                     <div className="d-flex flex-column col-md-8 col-sm-12">
                         <div className="imagenes d-flex flex-wrap col-md-12 p-0 m-0 image-container">
-                            <img className="imagen-producto-detail col-6 p-1" src={imageMap[product.nombre]} alt={product.nombre}
+                            <img className="imagen-producto-detail col-6 p-5" src={imageMap[product.nombre]} alt={product.nombre}
                                 onError={(e) => { e.currentTarget.src = imageMap[product.nombre]; }} />
-                            <img className="imagen-producto-detail col-6 p-1" src={imageMap[product.nombre]} alt={product.nombre}
+                            <img className="imagen-producto-detail col-6 p-5" src={imageMap[product.nombre]} alt={product.nombre}
                                 onError={(e) => { e.currentTarget.src = imageMap[product.nombre]; }}
                                 style={{ transform: 'rotateY(180deg)' }} />
-                            <img className="imagen-producto-detail col-6 p-1" src={imageMap[product.nombre]} alt={product.nombre}
+                            <img className="imagen-producto-detail col-6 p-5" src={imageMap[product.nombre]} alt={product.nombre}
                                 onError={(e) => { e.currentTarget.src = imageMap[product.nombre]; }}
                                 style={{ transform: 'rotateX(180deg)' }} />
-                            <img className="imagen-producto-detail col-6 p-1" src={imageMap[product.nombre]} alt={product.nombre}
+                            <img className="imagen-producto-detail col-6 p-5" src={imageMap[product.nombre]} alt={product.nombre}
                                 onError={(e) => { e.currentTarget.src = imageMap[product.nombre]; }} />
                         </div>
                     </div>
