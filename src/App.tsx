@@ -14,6 +14,10 @@ import Login from './routes/Login';
 import Register from './routes/Register';
 import SearchResults from './routes/SearchResults';
 import AdminView from './routes/AdminView';
+import CookiesPolicy from './pages/CookiesPolicy';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import ReturnsPolicy from './pages/ReturnsPolicy';
+import ShippingPolicy from './pages/ShippingPolicy';
 
 const App = () => {
 
@@ -64,6 +68,23 @@ const App = () => {
         {  //ruta de detalles de producto
           path: ':categoria/:marca/:id',
           element: <ProductDetails />
+        },
+        //rutas de políticas
+        {
+          path: 'cookies-policy',
+          element: <CookiesPolicy />,
+        },
+        {
+          path: 'privacy-policy',
+          element: <PrivacyPolicy />,
+        },
+        {
+          path: 'returns-policy',
+          element: <ReturnsPolicy />,
+        },
+        {
+          path: 'shipping-policy',
+          element: <ShippingPolicy />,
         },
       ],
     },

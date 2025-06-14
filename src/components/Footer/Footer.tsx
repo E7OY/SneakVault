@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../index.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -7,8 +8,20 @@ const Footer = () => {
             <div className="container w-100 mx-auto d-flex flex-column flex-md-row align-items-center justify-content-between pt-5">
                 <div className="col-12 col-md-3 mb-4 mb-md-0">
                     <h5 className="fw-light text-white">Informacion</h5>
-                    <h6 className="fw-light text-white-50">+34-000-000-000</h6>
-                    <h6 className="fw-light text-white-50">C/Liceo La Paz</h6>
+                    <ul className="list-unstyled">
+                        <li className='fw-light text-white-50'>
+                            <Link to="/cookies-policy" className="text-white-50 text-decoration-none">Política de cookies</Link>
+                        </li>
+                        <li className='fw-light text-white-50'>
+                            <Link to="/privacy-policy" className="text-white-50 text-decoration-none">Política de privacidad</Link>
+                        </li>
+                        <li className='fw-light text-white-50'>
+                            <Link to="/returns-policy" className="text-white-50 text-decoration-none">Política de devoluciones</Link>
+                        </li>
+                        <li className='fw-light text-white-50'>
+                            <Link to="/shipping-policy" className="text-white-50 text-decoration-none">Política de envío</Link>
+                        </li>
+                    </ul>
                 </div>
 
                 <div className="col-12 col-md-3 mb-4 mb-md-0">
