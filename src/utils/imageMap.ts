@@ -262,5 +262,13 @@ export const imageMap: { [key: string]: string } = {
     'Stussy Shells Black Tee': "https://res.cloudinary.com/ddsdefx5z/image/upload/v1741592499/shells-black-tee_xtdr2u.webp",
     'Stussy Basic Stussy Tee Pigment Died White': "https://res.cloudinary.com/ddsdefx5z/image/upload/v1741592477/basic-stussy-tee-pigment-died-white_a5zqef.webp",
     'Yeezy 350 V2 Slate': "https://res.cloudinary.com/ddsdefx5z/image/upload/v1741592513/yeezy-350-slate_wjpmxy.webp",
-    "Off-White x Nike Spray Dot Black": "https://res.cloudinary.com/ddsdefx5z/image/upload/v1741592499/spray-dot-black_fdsake.webp"
+    "Off-White x Nike Spray Dot Black": "https://res.cloudinary.com/ddsdefx5z/image/upload/v1741592499/spray-dot-black_fdsake.webp",
+    "Royale heavyweight Tee black": "https://res.cloudinary.com/ddsdefx5z/image/upload/v1749939181/Disenosintitulo_1_ssgwsj.webp",
+    "Corteiz - OG Island Tee Triple Black": "https://res.cloudinary.com/ddsdefx5z/image/upload/v1749939371/WhatsAppImage2024-02-07at13.35.08_qggsj3.webp",
+    "Corteiz Guerillaz Cargo Pants Tonal Khaki": "https://res.cloudinary.com/ddsdefx5z/image/upload/v1749939471/corteiz-guerillaz-cargo-pants-tonal-khaki_final_ekxwxp.webp",
+    "Corteiz Alcatraz Baggy Jeans Washed Blue": "https://res.cloudinary.com/ddsdefx5z/image/upload/v1749939576/corteiz-alcatraz-baggy-jeans-washed-blue_final_arvbp8.webp",
+    "Corteiz C-Star Stitch-Down Denim Jacket Dark Wash": "https://res.cloudinary.com/ddsdefx5z/image/upload/v1749939658/corteiz-c-star-stitch-down-denim-jacket-dark-wash_final_xcmtcr.webp",
+    "Corteiz Yella Guerillaz Cargos Black Yellow": "https://res.cloudinary.com/ddsdefx5z/image/upload/v1749939746/corteiz-yella-guerillaz-cargos-black-yellow_final_emefe1.webp",
+    "Corteiz Og Island Tee Baby Blue": "https://res.cloudinary.com/ddsdefx5z/image/upload/v1749939832/plantilla-web-_58_5228d51e-e012-451d-9b23-e0069b74693a_f8wadz.webp",
+    "Corteiz 5 Starz Alcatraz Trucker Green": "https://res.cloudinary.com/ddsdefx5z/image/upload/v1749939934/corteiz-5-starz-alcatraz-trucker-green_final_kxve8l.webp"
 };

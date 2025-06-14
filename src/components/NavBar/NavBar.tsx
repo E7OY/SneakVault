@@ -114,57 +114,82 @@ const NavBar = () => {
     }, []);
 
     return (
-        <Navbar expand="lg" className="bg-white py-3 px-5 border-bottom border-dark">
-            <Link to="/home" className="h1 text-decoration-none negro mb-0 fw-light">SneakVault</Link>
-            <Navbar.Toggle aria-controls="basic-navbar-na" className="border-white rounded-0 text-white-50" />
-            <Navbar.Collapse id="basic-navbar-nav">
-                <Container className="navbar d-flex justify-content-between w-100">
-                    <Nav className="d-flex flex-column flex-lg-row align-items-lg-left gap-3 w-auto">
-                        <Link className="navbar-brand" to="/home" onClick={() => handleNavLinkClick('/home')}></Link>
-                        <Nav.Link as={NavLink} to="/home" className="fw-light" onClick={() => handleNavLinkClick('/home')}>HOME</Nav.Link>
+        <Navbar expand="lg" className="py-3 border-bottom border-dark sticky-top bg-white">
+            <Container fluid className="px-md-5">
+                <Link to="/home" className="navbar-brand">
+                    <span className="h2 fw-bold text-uppercase" style={{ letterSpacing: '2px' }}>
+                        <span className="negro">SNEAKVAULT</span>
+                    </span>
+                </Link>
+                
+                <Navbar.Toggle aria-controls="main-navbar" className="border-0">
+                    <span className="navbar-toggler-icon"></span>
+                </Navbar.Toggle>
+                
+                <Navbar.Collapse id="main-navbar">
+                    <Nav className="mx-auto d-flex align-items-center">
+                        <Nav.Link as={NavLink} to="/home" 
+                            className="mx-2 text-uppercase letter-spacing-1" 
+                            onClick={() => handleNavLinkClick('/home')}>
+                            Home
+                        </Nav.Link>
+                        
                         <CategoryMenu categories={categories} handleNavLinkClick={handleNavLinkClick} />
+                        
+                        {user?.email === 'admin@gmail.com' && (
+                            <Nav.Link as={Link} to="/admin" 
+                                className="fw-bold mx-2 text-uppercase text-danger">
+                                Admin
+                            </Nav.Link>
+                        )}
                     </Nav>
-
-                    { user?.email === 'admin@gmail.com' ?
-                    <Link to={"/admin"} className="button">Admin</Link>
-                    :
-                    null
-                    }
-
-                    <Form onSubmit={handleSearchSubmit} className="d-flex my-lg-0">
-                        <FormControl
-                            type="search"
-                            placeholder="Buscar"
-                            className="mr-2 rounded-0 px-5 py-4 border-1 fw-light text-black-50 border-black"
-                            aria-label="Search"
-                            value={searchInput}
-                            onChange={(e) => setSearchInput(e.target.value)}
-                        />
-                    </Form>
-                </Container>
-                <div className="w-auto d-flex gap-2 justify-content-between mt-lg-0">
-                    {user ? (
-                        <>
-                            <button className="button fw-light rounded-0" onClick={handleSignOut}>
+                    
+                    <div className="d-flex align-items-center gap-3">
+                        <Form onSubmit={handleSearchSubmit} className="d-flex position-relative rounded-0">
+                            <FormControl
+                                type="search"
+                                placeholder="BUSCAR"
+                                className="border border-dark py-2 ps-3 pe-4 rounded-0"
+                                style={{ width: '200px' }}
+                                value={searchInput}
+                                onChange={(e) => setSearchInput(e.target.value)}
+                            />
+                            <button type="submit" className="btn position-absolute end-0 top-50 translate-middle-y border-0">
+                                <i className="bi bi-search"></i>
+                            </button>
+                        </Form>
+                        
+                        {user ? (
+                            <button 
+                                className="button border border-dark px-4 py-2 text-uppercase"
+                                onClick={handleSignOut}>
                                 Logout
                             </button>
-                            <Link to="/cart">
-                                <button onClick={toggleCart} className="bg-transparent border-1 p-2 border-dark">
-                                    <img src={carrito} width={37} alt="imagen carrito" />
-                                </button>
+                        ) : (
+                            <Link
+                                to="/login"
+                                className="button border border-dark px-4 py-2 text-uppercase"
+                                onClick={() => handleNavLinkClick('/login')}>
+                                Login
                             </Link>
-                        </>
-                    ) : (
-                        <Link
-                            to="/login"
-                            className="button fw-light"
-                            onClick={() => handleNavLinkClick('/login')}
-                        >
-                            Login
-                        </Link>
-                    )}
-                </div>
-            </Navbar.Collapse>
+                        )}
+                        
+                        {user && (
+                            <Link to="/cart" className="position-relative ms-2">
+                                <button 
+                                    onClick={toggleCart} 
+                                    className="btn rounded-0 bg-negro border-dark p-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart-icon lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>                                </button>
+                                {cart && cart.length > 0 && (
+                                    <span className="position-absolute top-0 start-100 translate-middle badge bg-danger border border-white" style={{borderRadius: '0'}}>
+                                        {cart.length}
+                                    </span>
+                                )}
+                            </Link>
+                        )}
+                    </div>
+                </Navbar.Collapse>
+            </Container>
         </Navbar>
     );
 }

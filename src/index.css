@@ -408,16 +408,12 @@ summary {
   justify-content: space-between;
   align-items: center;
 }
-<<<<<<< HEAD
 
 summary::after {
   font-size: 1rem;
   margin-left: 10px;
   transition: transform 0.5s ease;
 }
-=======
- 
->>>>>>> 642df8522229824d698b742f1b4a89da31d196f1
 
 details[open] summary::after {
   transform: rotate(90deg);

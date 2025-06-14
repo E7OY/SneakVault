@@ -259,6 +259,88 @@
           "stock": 62
         }
       },
+      "corteiz": {
+        "royale-heavyweight-tee-black": {
+          "categoria": "camisetas",
+          "color": "negro",
+          "descripcion": "Camiseta negra de Corteiz con el diseño Royale Heavyweight. Estilo urbano y moderno, perfecta para los seguidores de la marca.",
+          "imagen": "../assets/royale-heavyweight-tee-black.png",
+          "marca": "corteiz",
+          "nombre": "Royale heavyweight Tee black",
+          "precio": 150,
+          "stock": 12
+        },
+        "og-island-tee-triple-black": {
+          "categoria": "camisetas",
+          "color": "negro",
+          "descripcion": "Camiseta negra de Corteiz con el diseño OG Island Tee Triple Black. Estilo urbano y moderno, perfecta para los seguidores de la marca.",
+          "imagen": "../assets/og-island-tee-triple-black.png",
+          "marca": "corteiz",
+          "nombre": "Corteiz - OG Island Tee Triple Black",
+          "precio": 160,
+          "stock": 12
+        },
+        "guerillaz-cargo-pants-tonal-khaki": {
+          "categoria": "camisetas",
+          "color": "khaki",
+          "descripcion": "Pantalones cargo de Corteiz con el diseño Guerillaz Cargo Pants Tonal Khaki. Estilo urbano y moderno, perfectos para un look casual y cómodo.",
+          "imagen": "../assets/guerillaz-cargo-pants-tonal-khaki.png",
+          "marca": "corteiz",
+          "nombre": "Corteiz Guerillaz Cargo Pants Tonal Khaki",
+          "precio": 360,
+          "stock": 12
+        },
+        "alcatraz-baggy-jeans-washed-blue": {
+          "categoria": "camisetas",
+          "color": "azul",
+          "descripcion": "Pantalones vaqueros baggy de Corteiz con el diseño Alcatraz Baggy Jeans Washed Blue. Estilo urbano y moderno, perfectos para un look casual y cómodo.",
+          "imagen": "../assets/alcatraz-baggy-jeans-washed-blue.png",
+          "marca": "corteiz",
+          "nombre": "Corteiz Alcatraz Baggy Jeans Washed Blue",
+          "precio": 300,
+          "stock": 12
+        },
+        "c-star-stitch-down-denim-jacket-dark-wash": {
+          "categoria": "camisetas",
+          "color": "azul",
+          "descripcion": "Chaqueta de mezclilla de Corteiz con el diseño C-Star Stitch-Down Denim Jacket Dark Wash. Estilo urbano y moderno, perfecta para los seguidores de la marca.",
+          "imagen": "../assets/c-star-stitch-down-denim-jacket-dark-wash.png",
+          "marca": "corteiz",
+          "nombre": "Corteiz C-Star Stitch-Down Denim Jacket Dark Wash",
+          "precio": 300,
+          "stock": 3
+        },
+       "yella-guerillaz-cargos-black-yellow": {
+          "categoria": "camisetas",
+          "color": "amarillo",
+          "descripcion": "Pantalones cargo de Corteiz con el diseño Yella Guerillaz Cargos Black Yellow. Estilo urbano y moderno, perfectos para un look casual y cómodo.",
+          "imagen": "../assets/yella-guerillaz-cargos-black-yellow.png",
+          "marca": "corteiz",
+          "nombre": "Corteiz Yella Guerillaz Cargos Black Yellow",
+          "precio":280,
+          "stock": 19
+        },
+        "og-island-tee-baby-blue": {
+          "categoria": "camisetas",
+          "color": "azul",
+          "descripcion": "Camiseta azul de Corteiz con el diseño OG Island Tee Baby Blue. Estilo urbano y moderno, perfecta para los seguidores de la marca.",
+          "imagen": "../assets/og-island-tee-baby-blue.png",
+          "marca": "corteiz",
+          "nombre": "Corteiz Og Island Tee Baby Blue",
+          "precio":130,
+          "stock": 0
+        },
+        "trucker-green": {
+          "categoria": "camisetas",
+          "color": "verde",
+          "descripcion": "Gorra trucker verde de Corteiz con el diseño 5 Starz Alcatraz. Estilo urbano y moderno, perfecta para los seguidores de la marca.",
+          "imagen": "../assets/trucker-green.png",
+          "marca": "corteiz",
+          "nombre": "Corteiz 5 Starz Alcatraz Trucker Green",
+          "precio":100,
+          "stock": 8
+        }
+      },
       "supreme": {
         "4-life-tee-white": {
           "categoria": "camisetas",
