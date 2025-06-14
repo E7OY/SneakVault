@@ -95,6 +95,7 @@ const ProductDetails = () => {
 
 
     const handleDelete = () => {
+        if (!product) return;
         try {
             const productRef = ref(db, `productos/${product.categoria}/${product.marca}/${product.id}`);
             remove(productRef);
@@ -159,7 +160,15 @@ const ProductDetails = () => {
                             ) : (
                                 <>
                                     {user?.email === 'admin@gmail.com' ?
-                                        <button className="button d-block my-3" onClick={ handleDelete}>Eliminar Producto</button>
+                                        <div className="admin-actions d-flex gap-2 my-3">
+                                            <button 
+                                                className="button" 
+                                                onClick={() => navigate(`/admin/edit/${product.categoria}/${product.marca}/${product.id}`)}
+                                            >
+                                                Editar Producto
+                                            </button>
+                                            <button className="button btn-danger" onClick={handleDelete}>Eliminar Producto</button>
+                                        </div>
                                         :
                                         <>
                                             <a onClick={() => { handleAddToCart(); messageCart(); }} className='button fw-light' style={{ cursor: "pointer" }}>Añadir a la cesta</a>
@@ -262,24 +271,27 @@ const ProductDetails = () => {
                 {/* Productos Relacionados */}
                 <div className="container-fluid mt-5 m-5">
                     <h2 className="fw-light mb-4">Productos Relacionados</h2>
-                    <div className="row row-cols-2 row-cols-md-3 row-cols-lg-5 row-cols-xl-5 mr-5 d-flex g-0 accordion-flush flex-row justify-content-start align-items-center">
+                    <div className="row row-cols-2 row-cols-md-3 row-cols-lg-5 row-cols-xl-5 mr-5 d-flex g-0  flex-row justify-content-start align-items-stretch">
                         {relatedProducts.slice(0, 10).map(relatedProduct => (
-                            <div className="col" key={relatedProduct.id}>
-                                <div className="producto-card bg-white h-100">
+                            <div className="col " key={relatedProduct.id}>
+                                <div className="producto-card bg-white h-100 d-flex flex-column">
                                     <Link
                                         to={`/${relatedProduct.categoria}/${relatedProduct.marca}/${encodeURIComponent(relatedProduct.id)}`}
-                                        className="text-decoration-none text-dark"
+                                        className="text-decoration-none text-dark d-flex flex-column h-100"
                                         onClick={() => scroll.scrollToTop()}
                                     >
-                                        <img
-                                            className="producto-img img-fluid p-0 w-100 h-100"
-                                            src={relatedProduct.imagen || imageMap[relatedProduct.nombre]}
-                                            alt={relatedProduct.nombre}
-                                            onError={(e) => { e.currentTarget.src = imageMap[relatedProduct.nombre] }}
-                                        />
-                                        <div className="px-3 pb-4 productos-related-info">
+                                        <div className="product-img-container" style={{  }}>
+                                            <img
+                                                className="producto-img img-fluid w-100 h-100"
+                                                src={relatedProduct.imagen || imageMap[relatedProduct.nombre]}
+                                                alt={relatedProduct.nombre}
+                                                onError={(e) => { e.currentTarget.src = imageMap[relatedProduct.nombre] }}
+                                                style={{ objectFit: "cover" }}
+                                            />
+                                        </div>
+                                        <div className="productos-related-info flex-grow-1 d-flex flex-column">
                                             <h6 className="mb-2 fw-light text-black-50 ">{relatedProduct.marca}</h6>
-                                            <h5 className="text-black fw-light  mb-2">{relatedProduct.nombre}</h5>
+                                            <h5 className="text-black fw-light">{relatedProduct.nombre}</h5>
                                             <h6 className="mb-0 fw-light text-black-50">Desde {relatedProduct.precio}€</h6>
                                         </div>
                                     </Link>
@@ -288,15 +300,14 @@ const ProductDetails = () => {
                         ))}
 
                         {relatedProducts.length < 10 && relatedProducts.length > 0 ? (
-                            <div className="col">
-                                <div className="producto-card-related">
+                            <div className="col mb-4">
+                                <div className="producto-card-related h-100 d-flex align-items-center justify-content-center">
                                     <Link to={`/${product.categoria}/${product.marca.toLowerCase()}`} className="text-decoration-none text-dark h2 fw-light">
                                         Ver más de <span className='text-decoration-underline'>{product.marca}</span>
                                     </Link>
                                 </div>
                             </div>
                         ) : null}
-
                     </div>
                 </div>
             </div>

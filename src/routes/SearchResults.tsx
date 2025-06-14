@@ -86,17 +86,17 @@ const SearchResults = () => {
     });
 
     return (
-        <div className="container-fluid w-75 px-4">
-            <h1 className="fw-light text-center mt-4">"{query}"</h1>
-            <h1 className='fw-light text-black-50 text-center '>{products.length} resultados</h1>
+        <div className="container-fluid px-4">
+                    <div className="row position-absolute m-0 p-0 my-4 w-auto d-flex flex-row justify-content-between align-items-center">
+                        <div className="col-4 w-auto col-sm-12 d-flex align-items-center m-0 p-0">
+                            <ProductSort orderBy={orderBy} handleSortChange={handleSortChange} />
+                        </div>
+                    </div>
+            <h1 className="fw-light text-right mt-4">"{query}"</h1>
+            <h1 className='fw-light text-black-50 text-right mb-4 '>{products.length} resultados</h1>
 
-            <div className="row m-0 p-0 my-3 w-auto d-flex flex-row justify-content-between align-items-center">
-                <div className="col-4 w-auto col-sm-12 d-flex align-items-center m-0 p-0">
-                    <ProductSort orderBy={orderBy} handleSortChange={handleSortChange} />
-                </div>
-            </div>
 
-            <div className="row w-100 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-0 z-0">
+            <div className="row w-100 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 row-cols-xl-6 g-0 z-0">
                 {sortedProducts.map((product) => (
                     <div className="col" key={product.id}>
                         <ProductCard product={product} />

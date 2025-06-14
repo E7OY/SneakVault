@@ -49,6 +49,10 @@ const App = () => {
           path: 'admin',
           element: <AdminView />,
         },
+        {
+          path: 'admin/edit/:categoria/:marca/:productId',
+          element: <AdminView />,
+        },
         {  //ruta register
           path: 'register',
           element: <Register/>,

@@ -29,7 +29,7 @@ const Products: React.FC<ProductProps> = () => {
     // useLocation hook que permite acceder a la ubicación actual de la URL
     const location = useLocation();
     const [visibleProducts, setVisibleProducts] = useState(20);
-    
+
     const loadMore = () => {
         setVisibleProducts(prevVisibleProducts => prevVisibleProducts + 20);
     };
@@ -74,7 +74,7 @@ const Products: React.FC<ProductProps> = () => {
         fetchProducts();
     }, [categoria, marca]);
 
-   
+
     const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setOrderBy(event.target.value as 'alphabetical' | 'price-asc' | 'price-desc' | 'stock-asc' | 'stock-desc');
     };
@@ -98,31 +98,31 @@ const Products: React.FC<ProductProps> = () => {
 
     return (
         <>
-            <div className="container-fluid w-75 px-4">
+            <div className="container-fluid px-4">
                 <div className="row m-0 p-0 my-3 w-auto d-flex flex-row justify-content-between align-items-center">
-                <h1 className="fw-light text-center mt-4">{categoria} <span className='text-black-50'>{marca}</span> </h1>
-                        {searchInput !== '' ? (
-                            <p className='display-6 fw-light text-black-50 text-center'>{`"${searchInput}" ${products.length} resultados`}</p>
-                        ) : (
-                            <p className='display-6 fw-light text-black-50 text-center'>{`${products.length} resultados`}</p>
-                        )}
-           
+                    <h1 className="fw-light text-right mt-4">{categoria} <span className='text-black-50'>{marca}</span> </h1>
+                    {searchInput !== '' ? (
+                        <p className='display-6 fw-light text-black-50 text-right'>{`"${searchInput}" ${products.length} resultados`}</p>
+                    ) : (
+                        <p className='display-6 fw-light text-black-50 text-right'>{`${products.length} resultados`}</p>
+                    )}
 
-            <div className="row m-0 p-0 my-3 w-auto d-flex flex-row justify-content-between align-items-center">
-                <div className="col-4 w-auto col-sm-12 d-flex align-items-center m-0 p-0">
-                    <ProductSort orderBy={orderBy} handleSortChange={handleSortChange} />
-                </div>
-            </div>
 
-      
-                </div>
-
-                <div className="row w-100 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 g-0 z-0">
-                {sortedProducts.slice(0, visibleProducts).map(product => (
-                    <div className="col" key={product.id}>
-                        <ProductCard product={product} />
+                    <div className="row position-absolute m-0 p-0 my-3 w-auto d-flex flex-row justify-content-between align-items-center">
+                        <div className="col-4 w-auto col-sm-12 d-flex align-items-center m-0 p-0">
+                            <ProductSort orderBy={orderBy} handleSortChange={handleSortChange} />
+                        </div>
                     </div>
-                ))}
+
+
+                </div>
+
+                <div className="row w-100 row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 row-cols-xl-6 g-0 z-0">
+                    {sortedProducts.slice(0, visibleProducts).map(product => (
+                        <div className="col" key={product.id}>
+                            <ProductCard product={product} />
+                        </div>
+                    ))}
                 </div>
 
                 {visibleProducts < sortedProducts.length && (
